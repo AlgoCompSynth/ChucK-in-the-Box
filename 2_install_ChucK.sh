@@ -2,56 +2,39 @@
 
 set -e
 
-echo "Defining environment variables"
-mkdir --parents $PWD/Logs
-export LOGFILE=$PWD/Logs/2_install_ChucK.log
+echo "Defining LOGFILE"
+mkdir --parents $PWD/../Logs
+export LOGFILE=$PWD/../Logs/install_ChucK.log
 rm --force $LOGFILE
-export CHUCK_VERSION="main"
-
-echo "Installing build dependencies"
-sudo apt-get update -qq
-/usr/bin/time sudo apt-get upgrade --yes \
-  >> $LOGFILE 2>&1
-/usr/bin/time sudo apt-get install --yes \
-  alsa-utils \
-  apt-file \
-  bison \
-  build-essential \
-  flex \
-  libasound2-dev \
-  libasound2-doc \
-  libsndfile1-dev \
-  plocate \
-  >> $LOGFILE 2>&1
 
 echo "Cloning repositories"
-pushd /tmp
-rm -fr miniAudicle
-/usr/bin/time git clone --recurse-submodules --branch $CHUCK_VERSION \
-  https://github.com/ccrma/miniAudicle.git \
-  >> $LOGFILE 2>&1
+export CHUCK_VERSION="chuck-1.5.5.0"
+mkdir --parents $HOME/Projects
+pushd $HOME/Projects
+  rm --force --recursive chuck chugins
+  /usr/bin/time git clone --branch $CHUCK_VERSION \
+    https://github.com/ccrma/chuck.git \
+    >> $LOGFILE 2>&1
+  /usr/bin/time git clone --branch $CHUCK_VERSION --recurse-submodules \
+    https://github.com/ccrma/chugins.git \
+    >> $LOGFILE 2>&1
+
+  echo "Building and installing chuck"
+  pushd chuck/src
+    /usr/bin/time make --jobs=1 linux-alsa \
+      >> $LOGFILE 2>&1
+    sudo make install \
+      >> $LOGFILE 2>&1
+  popd
+
+  echo "Building and installing chugins"
+  pushd chugins
+    /usr/bin/time make --jobs=1 linux \
+      >> $LOGFILE 2>&1
+    sudo make install \
+      >> $LOGFILE 2>&1
+  popd
+
 popd
 
-echo ""
-echo "Building ChucK"
-pushd /tmp/miniAudicle/src/chuck/src
-/usr/bin/time make linux-alsa \
-  >> $LOGFILE 2>&1
-echo ""
-echo "Installing ChucK"
-sudo make install \
-  >> $LOGFILE 2>&1
-popd
-
-echo ""
-echo "Building ChuGins"
-pushd /tmp/miniAudicle/src/chugins
-/usr/bin/time make linux \
-  >> $LOGFILE 2>&1
-echo ""
-echo "Installing ChuGins"
-sudo make install \
-  >> $LOGFILE 2>&1
-popd
-
-echo "Finished"
+echo "Finished!"
