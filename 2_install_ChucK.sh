@@ -32,12 +32,11 @@ rm -fr miniAudicle
   https://github.com/ccrma/miniAudicle.git \
   >> $LOGFILE 2>&1
 popd
-exit
 
 echo ""
 echo "Building ChucK"
 pushd /tmp/miniAudicle/src/chuck/src
-/usr/bin/time make linux-pulse \
+/usr/bin/time make linux-all \
   >> $LOGFILE 2>&1
 echo ""
 echo "Installing ChucK"
