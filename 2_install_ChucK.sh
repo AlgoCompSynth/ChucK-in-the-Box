@@ -4,7 +4,7 @@ set -e
 
 echo "Defining environment variables"
 mkdir --parents $PWD/Logs
-export LOGFILE=$PWD/Logs/install_ChucK.log
+export LOGFILE=$PWD/Logs/2_install_ChucK.log
 rm --force $LOGFILE
 export CHUCK_VERSION="main"
 
@@ -19,8 +19,7 @@ sudo apt-get update -qq
   build-essential \
   flex \
   libasound2-dev \
-  libjack-jackd2-dev \
-  libpulse-dev \
+  libasound2-doc \
   libsndfile1-dev \
   plocate \
   >> $LOGFILE 2>&1
@@ -36,7 +35,7 @@ popd
 echo ""
 echo "Building ChucK"
 pushd /tmp/miniAudicle/src/chuck/src
-/usr/bin/time make linux-all \
+/usr/bin/time make linux-alsa \
   >> $LOGFILE 2>&1
 echo ""
 echo "Installing ChucK"
