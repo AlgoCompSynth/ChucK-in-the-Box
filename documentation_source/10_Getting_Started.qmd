@@ -1,1 +1,0 @@
-# Getting Started on Windows 11 WSL Ubuntu 22.04
