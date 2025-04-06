@@ -14,7 +14,7 @@ will need to do
     ```
     git clone https://github.com/AlgoCompSynth/ChucK-in-the-Box.git
     cd ChucK-in-the-Box
-    ./0_pios_setup.sh 2>&1 | tee 0_setup.log
+    ./0_pios_setup.sh 2>&1 | tee 0_pios_setup.log
     ```
 
 3. Reboot
