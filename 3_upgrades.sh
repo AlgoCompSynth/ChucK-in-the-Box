@@ -4,7 +4,9 @@ set -e
 
 echo "Updating packages"
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get update -qq && sudo apt-get upgrade -qqy
+sudo apt-get update > /dev/null 2>&1
+sudo apt-get autoremove -y > /dev/null 2>&1
+sudo apt-get upgrade -y > /dev/null 2>&1
 
 echo "Updating apt-file database"
 sudo apt-file update > /dev/null 2>&1
