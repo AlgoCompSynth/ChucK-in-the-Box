@@ -66,6 +66,7 @@ time sudo apt-get install -y \
   libasound2-doc \
   libfftw3-bin \
   libfftw3-dev \
+  libsamplerate0-dev \
   libsndfile1-dev \
   libsox-dev \
   libsox-fmt-all \
