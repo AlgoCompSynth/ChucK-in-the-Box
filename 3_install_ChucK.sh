@@ -7,7 +7,7 @@ export CHUCK_VERSION="chuck-1.5.5.0"
 
 echo "Defining LOGFILE"
 mkdir --parents $PWD/Logs
-export LOGFILE=$PWD/Logs/install_miniaudicle.log
+export LOGFILE=$PWD/Logs/install_chuck.log
 rm --force $LOGFILE
 
 mkdir --parents $HOME/Projects
