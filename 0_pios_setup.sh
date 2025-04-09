@@ -48,6 +48,8 @@ sudo apt-get autoremove --assume-yes \
   >> $LOGFILE 2>&1
 sudo apt-get install --assume-yes --no-install-recommends \
   sysstat \
+  time \
+  vim \
   >> $LOGFILE 2>&1
 
 echo "Enabling sysstat"
