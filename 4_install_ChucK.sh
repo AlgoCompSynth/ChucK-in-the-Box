@@ -10,6 +10,18 @@ mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/install_chuck.log
 rm --force $LOGFILE
 
+echo "Installing build dependencies"
+export DEBIAN_FRONTEND=noninteractive
+/usr/bin/time sudo apt-get install --assume-yes --no-install-recommends \
+  alsa-utils \
+  bison \
+  flex \
+  jack-tools \
+  libasound2-dev \
+  libjack-jackd2-dev \
+  libsndfile1-dev \
+  >> $LOGFILE 2>&1
+
 mkdir --parents $HOME/Projects
 pushd $HOME/Projects
   echo ""
@@ -25,7 +37,7 @@ pushd $HOME/Projects/miniAudicle/src/chuck/src
   echo "Building ChucK"
   git checkout $CHUCK_VERSION \
     >> $LOGFILE 2>&1
-  /usr/bin/time make --jobs=1 linux-alsa \
+  /usr/bin/time make --jobs=1 linux-jack \
     >> $LOGFILE 2>&1
   echo ""
   echo "Installing ChucK"
