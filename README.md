@@ -22,8 +22,8 @@ will need to do
 4. After the reboot, run the install scripts:
 
     ```
-    ./1_global_installs.sh # Linux packages
-    ./2_local_installs.sh # command line conveniences
-    ./3_upgrades.sh # package database updates / upgrades
-    ./4_install_ChucK.sh # ChucK, ChuGins and Linux dependencies
+    ./1_terminal_setup.sh # Nerd fonts and Starship prompt
+    ./2_basic_devel.sh # basic development Linux packages
+    ./3_ChucK.sh # ChucK, ChuGins and Linux dependencies
+    ./pkg_db_updates.sh package database updates
     ```
