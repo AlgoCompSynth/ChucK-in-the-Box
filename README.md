@@ -4,7 +4,7 @@
 will need to do
 
     ```
-    sudo apt update && sudo apt install git -qqy --no-install-recommends
+    sudo apt update && sudo apt install -qqy --no-install-recommends git
     ```
 
     first.

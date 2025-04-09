@@ -38,7 +38,7 @@ rm --force $LOGFILE
 sudo cp locale.gen /etc/
 sudo locale-gen
 
-echo "Installing sysstat"
+echo "Upgrading system"
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update \
   >> $LOGFILE 2>&1
@@ -46,6 +46,8 @@ sudo apt-get upgrade --assume-yes \
   >> $LOGFILE 2>&1
 sudo apt-get autoremove --assume-yes \
   >> $LOGFILE 2>&1
+
+echo "Installing sysstat, time and vim"
 sudo apt-get install --assume-yes --no-install-recommends \
   sysstat \
   time \
