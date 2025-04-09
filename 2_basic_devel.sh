@@ -11,10 +11,6 @@ sudo cp locale.gen /etc/
 sudo locale-gen
 echo "Installing basic development packages"
 export DEBIAN_FRONTEND=noninteractive
-/usr/bin/time sudo apt-get update \
-  >> $LOGFILE 2>&1
-/usr/bin/time sudo apt-get upgrade --assume-yes \
-  >> $LOGFILE 2>&1
 /usr/bin/time sudo apt-get install --assume-yes --no-install-recommends \
   apt-file \
   bash-completion \
