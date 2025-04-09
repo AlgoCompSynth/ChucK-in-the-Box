@@ -10,6 +10,9 @@ mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/install_chuck.log
 rm --force $LOGFILE
 
+echo "Installing jackd2"
+sudo apt-get install --assume-yes --no-install-recommends jackd2
+
 echo "Installing build dependencies"
 export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get install --assume-yes --no-install-recommends \
