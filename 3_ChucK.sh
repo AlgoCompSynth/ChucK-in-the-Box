@@ -10,8 +10,22 @@ mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/install_chuck.log
 rm --force $LOGFILE
 
-echo "Installing jackd2"
+echo ""
+echo ""
+echo "Installing 'jackd2' first. There appears to be no way"
+echo "to keep it from configuring the realtime process priority"
+echo "option when the install runs in the background."
+echo ""
+echo "The default of 'No' is safest; if you want to experiment"
+echo "with realtime priority later, you can change it by running"
+echo ""
+echo "    sudo dpkg-reconfigure jackd2"
+echo ""
+read -p "Press 'Enter' to continue:"
 sudo apt-get install --assume-yes --no-install-recommends jackd2
+
+echo "Adding $USER to the audio group"
+sudo usermod --append --groups audio $USER
 
 echo "Installing build dependencies"
 export DEBIAN_FRONTEND=noninteractive

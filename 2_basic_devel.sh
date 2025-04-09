@@ -9,7 +9,7 @@ rm --force $LOGFILE
 
 sudo cp locale.gen /etc/
 sudo locale-gen
-echo "Installing base packages"
+echo "Installing basic development packages"
 export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get update \
   >> $LOGFILE 2>&1
