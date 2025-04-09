@@ -4,7 +4,7 @@ set -e
 
 echo "Defining LOGFILE"
 mkdir --parents "$PWD/Logs"
-export LOGFILE="$PWD/Logs/1_global_installs.log"
+export LOGFILE="$PWD/Logs/2_basic_devel.log"
 rm --force $LOGFILE
 
 echo "Installing basic development packages"

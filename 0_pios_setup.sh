@@ -32,7 +32,7 @@ sleep 5
 echo ""
 echo "Defining LOGFILE"
 mkdir --parents $PWD/Logs
-export LOGFILE=$PWD/Logs/linux_packages.log
+export LOGFILE=$PWD/Logs/0_pios_setup.log
 rm --force $LOGFILE
 
 sudo cp locale.gen /etc/
