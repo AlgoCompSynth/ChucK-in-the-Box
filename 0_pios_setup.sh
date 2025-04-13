@@ -72,4 +72,4 @@ echo "Restarting data collection"
 sudo systemctl daemon-reload
 sudo systemctl restart sysstat
 
-echo "Finished -- reboot!"
+echo "Finished"

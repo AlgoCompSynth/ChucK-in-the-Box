@@ -14,16 +14,11 @@ will need to do
     ```
     git clone https://github.com/AlgoCompSynth/ChucK-in-the-Box.git
     cd ChucK-in-the-Box
-    ./0_pios_setup.sh
-    ```
-
-3. Reboot
-
-4. After the reboot, run the install scripts:
-
-    ```
+    ./0_pios_setup.sh # system level configuration
     ./1_terminal_setup.sh # Nerd fonts and Starship prompt
     ./2_basic_devel.sh # basic development Linux packages
     ./3_ChucK.sh # ChucK, ChuGins and Linux dependencies
     ./pkg_db_updates.sh package database updates
     ```
+
+3. Reboot.
