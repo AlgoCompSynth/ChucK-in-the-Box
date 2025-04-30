@@ -15,6 +15,7 @@ export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get install --assume-yes --no-install-recommends \
   alsa-utils \
   bison \
+  bluez-alsa-utils \
   flex \
   libasound2-dev \
   libsndfile1-dev \
@@ -35,7 +36,7 @@ pushd $HOME/Projects/miniAudicle/src/chuck/src
   echo "Building ChucK"
   git checkout $CHUCK_VERSION \
     >> $LOGFILE 2>&1
-  /usr/bin/time make --jobs=1 linux-alsa \
+  /usr/bin/time make --jobs=2 linux-alsa \
     >> $LOGFILE 2>&1
   echo ""
   echo "Installing ChucK"
@@ -48,7 +49,7 @@ pushd $HOME/Projects/miniAudicle/src/chugins
   echo "Building ChuGins"
   git checkout $CHUCK_VERSION \
     >> $LOGFILE 2>&1
-  /usr/bin/time make --jobs=1 linux \
+  /usr/bin/time make --jobs=2 linux \
     >> $LOGFILE 2>&1
   echo ""
   echo "Installing ChuGins"
