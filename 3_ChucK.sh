@@ -10,16 +10,13 @@ mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/3_ChucK.log
 rm --force $LOGFILE
 
-echo "Installing build dependencies"
-export DEBIAN_FRONTEND=noninteractive
-/usr/bin/time sudo apt-get install --assume-yes --no-install-recommends \
-  alsa-utils \
-  bison \
-  bluez-alsa-utils \
-  flex \
-  libasound2-dev \
-  libsndfile1-dev \
-  >> $LOGFILE 2>&1
+#echo "Installing build dependencies"
+#export DEBIAN_FRONTEND=noninteractive
+#/usr/bin/time sudo apt-get install --assume-yes --no-install-recommends \
+  #bison \
+  #bluez-alsa-utils \
+  #flex \
+  #>> $LOGFILE 2>&1
 
 mkdir --parents $HOME/Projects
 pushd $HOME/Projects
