@@ -2,6 +2,9 @@
 
 set -e
 
+echo ""
+echo "*** Terminal Setup ***"
+
 echo "Creating $HOME/.local/bin and $HOME/bin"
 mkdir --parents $HOME/.local/bin
 mkdir --parents $HOME/bin
@@ -11,15 +14,13 @@ cp bashrc $HOME/.bashrc; source bashrc
 cp bash_aliases $HOME/.bash_aliases; source bash_aliases
 cp vimrc $HOME/.vimrc
 
-echo "Installing Meslo nerd fonts"
+echo "Downloading patched MesloLG Nerd fonts"
 pushd /tmp
-
-  echo "Downloading patched MesloLG Nerd fonts"
   rm --force --recursive Meslo*
   curl -sOL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
   mkdir Meslo
   cd Meslo
-  unzip ../Meslo.zip
+  unzip -qq ../Meslo.zip
 
   echo "Copying to $HOME/.fonts"
   mkdir --parents $HOME/.fonts
@@ -27,10 +28,8 @@ pushd /tmp
 
   popd
 
-# https://starship.rs/guide/#%F0%9F%9A%80-installation
 echo "Installing Starship"
-export BIN_DIR=$HOME/.local/bin
-curl -sS https://starship.rs/install.sh | sh
+./install_starship.sh
 mkdir --parents $HOME/.config
 cp starship.toml $HOME/.config/starship.toml
 
