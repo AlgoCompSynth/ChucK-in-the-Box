@@ -10,9 +10,21 @@ mkdir --parents "$PWD/Logs"
 export LOGFILE="$PWD/Logs/audio_base.log"
 rm --force $LOGFILE
 
-echo "Installing audio base packages"
+echo "Defining locales"
+sudo cp locale.gen /etc/
+sudo locale-gen
+
+echo "Upgrading system"
 export DEBIAN_FRONTEND=noninteractive
-/usr/bin/time sudo apt-get install --assume-yes --no-install-recommends \
+sudo apt-get update \
+  >> $LOGFILE 2>&1
+sudo apt-get upgrade --assume-yes \
+  >> $LOGFILE 2>&1
+sudo apt-get autoremove --assume-yes \
+  >> $LOGFILE 2>&1
+
+echo "Installing audio base packages"
+sudo apt-get install --assume-yes --no-install-recommends \
   alsa-utils \
   apt-file \
   bash-completion \
@@ -37,10 +49,12 @@ export DEBIAN_FRONTEND=noninteractive
   rtkit \
   screen \
   speedtest-cli \
+  time \
   tmux \
   tree \
   unzip \
   usbutils \
+  vim \
   wget \
   wireplumber \
   wireplumber-doc \
