@@ -26,13 +26,9 @@ export DEBIAN_FRONTEND=noninteractive
   minicom \
   ninja-build \
   pipewire-alsa \
-  pipewire-audio \
   pipewire-doc \
-  pipewire-jack \
-  pipewire-pulse \
   pkg-config \
   plocate \
-  pulseaudio-utils \
   python3-dev \
   python3-pip \
   python3-setuptools \
