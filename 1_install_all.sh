@@ -2,7 +2,7 @@
 
 set -e
 
-./terminal_setup.sh
+./edit_swapfile_size.sh
 ./apt_audio_base.sh
 ./install_sysstat.sh
 ./linux_dependencies.sh

@@ -4,15 +4,6 @@ set -e
 
 echo "*** Edit boot parameters ***"
 
-echo "Editing swapfile size"
-# https://pimylifeup.com/raspberry-pi-swap-file/
-sudo dphys-swapfile swapoff
-sleep 5
-diff dphys-swapfile /etc/dphys-swapfile || true
-sudo cp dphys-swapfile /etc/dphys-swapfile
-sudo dphys-swapfile setup
-sudo dphys-swapfile swapon
-
 sleep 5
 echo ""
 echo "Patching cmdline.txt"
