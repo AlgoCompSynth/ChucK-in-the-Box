@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "*** ChucK ***"
+echo "*** ChucK and ChuGins ***"
 
 echo "Setting ChucK version"
 export CHUCK_VERSION="chuck-1.5.5.0"
@@ -43,6 +43,16 @@ pushd $HOME/Projects/miniAudicle/src/chugins
   /usr/bin/time make --jobs=1 linux-alsa \
     >> $LOGFILE 2>&1
   echo "Installing ChuGins"
+  sudo make install \
+    >> $LOGFILE 2>&1
+popd > /dev/null
+
+echo ""
+echo "Building Faust ChuGin"
+pushd $HOME/Projects/miniAudicle/src/chugins/Faust
+  /usr/bin/time make --jobs=1 linux-alsa \
+    >> $LOGFILE 2>&1
+  echo "Installing Faust ChuGin"
   sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
