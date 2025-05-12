@@ -5,9 +5,8 @@ set -e
 echo ""
 echo "*** System Setup ***"
 
-echo "Creating $HOME/.local/bin and $HOME/bin"
-mkdir --parents $HOME/.local/bin
-mkdir --parents $HOME/bin
+echo "Creating $HOME/.local/bin, $HOME/bin, and $HOME/Projects"
+mkdir --parents $HOME/.local/bin $HOME/bin $HOME/Projects
 
 echo "Setting base configuration files"
 cp bashrc $HOME/.bashrc; source bashrc
