@@ -37,6 +37,7 @@ sudo apt-get install --assume-yes --no-install-recommends \
   fluid-soundfont-gs \
   fluidsynth \
   freepats \
+  git \
   libsox-fmt-all  \
   lsb-release \
   lynx \
