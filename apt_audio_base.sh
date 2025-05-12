@@ -32,10 +32,18 @@ sudo apt-get install --assume-yes --no-install-recommends \
   cmake \
   curl \
   file \
+  flac \
+  ffmpeg \
+  fluid-soundfont-gm \
+  fluid-soundfont-gs \
+  fluidsynth \
+  freepats \
+  libsox-fmt-all  \
   lsb-release \
   lynx \
   man-db \
   minicom \
+  mp3splt \
   ninja-build \
   pipewire-alsa \
   pipewire-doc \
@@ -48,6 +56,7 @@ sudo apt-get install --assume-yes --no-install-recommends \
   python3-wheel \
   rtkit \
   screen \
+  sox \
   speedtest-cli \
   time \
   tmux \
