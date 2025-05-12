@@ -33,7 +33,6 @@ sudo apt-get install --assume-yes --no-install-recommends \
   curl \
   file \
   flac \
-  ffmpeg \
   fluid-soundfont-gm \
   fluid-soundfont-gs \
   fluidsynth \
