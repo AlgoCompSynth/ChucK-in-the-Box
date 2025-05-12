@@ -12,5 +12,3 @@ diff dphys-swapfile /etc/dphys-swapfile || true
 sudo cp dphys-swapfile /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
-
-echo "Finished"

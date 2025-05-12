@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "*** Terminal Setup ***"
+echo "*** System Setup ***"
 
 echo "Creating $HOME/.local/bin and $HOME/bin"
 mkdir --parents $HOME/.local/bin
@@ -35,6 +35,9 @@ cp starship.toml $HOME/.config/starship.toml
 
 echo "Adding Starship prompt to bash"
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
+
+./edit_swapfile_size.sh
+./install_sysstat.sh
 
 echo ""
 echo "Restart bash to get new Starship prompt"
