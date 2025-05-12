@@ -10,20 +10,8 @@ mkdir --parents "$PWD/Logs"
 export LOGFILE="$PWD/Logs/audio_base.log"
 rm --force $LOGFILE
 
-echo "Defining locales"
-sudo cp locale.gen /etc/
-sudo locale-gen
-
-echo "Upgrading system"
-export DEBIAN_FRONTEND=noninteractive
-sudo apt-get update \
-  >> $LOGFILE 2>&1
-sudo apt-get upgrade --assume-yes \
-  >> $LOGFILE 2>&1
-sudo apt-get autoremove --assume-yes \
-  >> $LOGFILE 2>&1
-
 echo "Installing audio base packages"
+export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install --assume-yes --no-install-recommends \
   alsa-utils \
   apt-file \
@@ -37,7 +25,6 @@ sudo apt-get install --assume-yes --no-install-recommends \
   fluid-soundfont-gs \
   fluidsynth \
   freepats \
-  git \
   libsox-fmt-all  \
   lsb-release \
   lynx \
@@ -58,12 +45,10 @@ sudo apt-get install --assume-yes --no-install-recommends \
   screen \
   sox \
   speedtest-cli \
-  time \
   tmux \
   tree \
   unzip \
   usbutils \
-  vim \
   wget \
   wireplumber \
   wireplumber-doc \
