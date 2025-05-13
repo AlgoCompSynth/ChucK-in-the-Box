@@ -1,0 +1,5 @@
+*.html binary
+*.json binary
+*.woff binary
+*.css binary
+*,js binary
