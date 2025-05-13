@@ -11,6 +11,8 @@ book:
     - index.qmd
     - getting-the-hardware.qmd
     - installing-the-software.qmd
+    - connecting-to-windows-11.qmd
+    - connecting-to-linux.qmd
     - references.qmd
 
 bibliography: REFERENCES.bib
