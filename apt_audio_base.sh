@@ -36,6 +36,7 @@ sudo apt-get install --assume-yes --no-install-recommends \
   pipewire-doc \
   pkg-config \
   plocate \
+  pmidi \
   python3-dev \
   python3-pip \
   python3-setuptools \
@@ -45,6 +46,8 @@ sudo apt-get install --assume-yes --no-install-recommends \
   screen \
   sox \
   speedtest-cli \
+  timidity \
+  timidity-daemon \
   tmux \
   tree \
   unzip \
