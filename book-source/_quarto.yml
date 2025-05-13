@@ -3,8 +3,9 @@ project:
   output-dir: "../docs"
 
 book:
-  title: "book-source"
-  author: "Norah Jones"
+  title: "ChucK-in-the-Box"
+  subtitle: "A minimalist approach to live coding"
+  author: "M. Edward (Ed) Borasky"
   date: "5/13/2025"
   chapters:
     - index.qmd
@@ -12,7 +13,7 @@ book:
     - summary.qmd
     - references.qmd
 
-bibliography: references.bib
+bibliography: REFERENCES.bib
 
 format:
   html:
