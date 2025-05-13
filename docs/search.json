@@ -2,11 +2,11 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "book-source",
+    "title": "ChucK-in-the-Box",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "Introduction\nI have always been fascinated by the two extremes in computing: the very large and the very small. I’ve worked with computers as large as 1980s scientific supercomputers and as small as the Raspberry Pi Pico.\nChucK-in-the-Box resides on a small computer - the Raspberry Pi Zero 2 W. This $15US (2025 dollars) single-board computer isn’t the smallest I’ve ever programmed, but it is certainly the most powerful per dollar.\nThe fastest computer I ever used in the 1980s had a peak speed of 341 million 64-bit floating-point operations per second in assembly language and took up as much space as two refrigerators. The Raspberry Pi Zero 2 W peaks at 1.74 billion 64-bit floating-point operations per second in C. That’s about five times as fast!",
     "crumbs": [
-      "Preface"
+      "Introduction"
     ]
   },
   {

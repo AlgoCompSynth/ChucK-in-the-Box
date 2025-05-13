@@ -9,8 +9,8 @@ book:
   date: "5/13/2025"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - getting-the-hardware.qmd
+    - installing-the-software.qmd
     - references.qmd
 
 bibliography: REFERENCES.bib
