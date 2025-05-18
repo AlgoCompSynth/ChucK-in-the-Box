@@ -50,7 +50,7 @@ echo "Upgrading system"
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update \
   >> $LOGFILE 2>&1
-sudo apt-get upgrade --assume-yes \
+sudo apt-get full-upgrade --assume-yes \
   >> $LOGFILE 2>&1
 sudo apt-get autoremove --assume-yes \
   >> $LOGFILE 2>&1
