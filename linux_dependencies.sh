@@ -19,7 +19,6 @@ export DEBIAN_FRONTEND=noninteractive
   flex \
   libasound2-dev \
   libfaust2 \
-  libfluidsynth-dev \
   libsndfile1-dev \
   libssl-dev \
   libtinfo-dev \
