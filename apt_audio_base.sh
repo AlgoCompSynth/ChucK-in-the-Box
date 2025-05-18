@@ -26,7 +26,6 @@ sudo apt-get install --assume-yes --no-install-recommends \
   minicom \
   ninja-build \
   pipewire-alsa \
-  pipewire-doc \
   pkg-config \
   plocate \
   python3-dev \
@@ -42,8 +41,6 @@ sudo apt-get install --assume-yes --no-install-recommends \
   unzip \
   usbutils \
   wget \
-  wireplumber \
-  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 echo "Finished"
