@@ -14,15 +14,18 @@ echo "Installing Linux build dependencies"
 export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get install -qqy --no-install-recommends \
   bison \
+  clinfo \
+  clpeak \
   faust \
   faust-common \
   flex \
   libasound2-dev \
   libfaust2 \
+  libpocl2 \
   libsndfile1-dev \
   libssl-dev \
   libtinfo-dev \
-  llvm \
+  pocl-opencl-icd \
   >> $LOGFILE 2>&1
 
 echo "Finished"
