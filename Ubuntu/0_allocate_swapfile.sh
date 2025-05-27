@@ -16,6 +16,9 @@ then
   sudo swapon --show
 
   echo "Adding swap to fstab"
-  sudo cat fstab-swap >> /etc/fstab
-  cat /etc/fstab
+  cp /etc/fstab .
+  sudo sed -i "$ a /swapfile none swap sw 0 0" /etc/fstab
+  diff fstab /etc/fstab || true
 fi
+
+echo "Finished"
