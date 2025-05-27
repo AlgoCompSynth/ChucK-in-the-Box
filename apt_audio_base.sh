@@ -44,6 +44,8 @@ sudo apt-get install --assume-yes --no-install-recommends \
   unzip \
   usbutils \
   wget \
+  wireplumber \
+  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 echo "Finished"
