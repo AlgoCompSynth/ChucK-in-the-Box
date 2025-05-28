@@ -18,17 +18,13 @@ sudo apt-get install --assume-yes --no-install-recommends \
   bash-completion \
   build-essential \
   cmake \
-  csound \
-  csound-utils \
   curl \
   file \
   flac \
-  libopenblas0-pthread \
   libsox-fmt-all \
   libsox3 \
   libsoxr0 \
   lsb-release \
-  lua-luacsnd6 \
   lynx \
   man-db \
   minicom \
@@ -37,7 +33,6 @@ sudo apt-get install --assume-yes --no-install-recommends \
   pkg-config \
   plocate \
   pmidi \
-  python3-csound \
   python3-dev \
   python3-pip \
   python3-setuptools \
