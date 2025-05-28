@@ -18,8 +18,14 @@ sudo apt-get install --assume-yes --no-install-recommends \
   bash-completion \
   build-essential \
   cmake \
+  csound \
+  csound-utils \
   curl \
   file \
+  flac \
+  libsox-fmt-all \
+  libsox3 \
+  libsoxr0 \
   lsb-release \
   lynx \
   man-db \
@@ -36,9 +42,8 @@ sudo apt-get install --assume-yes --no-install-recommends \
   python3-wheel \
   rtkit \
   screen \
+  sox \
   speedtest-cli \
-  timidity \
-  timidity-daemon \
   tmux \
   tree \
   unzip \
