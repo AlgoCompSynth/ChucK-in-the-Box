@@ -28,6 +28,7 @@ sudo apt-get install --assume-yes --no-install-recommends \
   lynx \
   man-db \
   minicom \
+  mp3splt \
   ninja-build \
   pipewire-alsa \
   pkg-config \
