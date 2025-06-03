@@ -25,7 +25,14 @@ export DEBIAN_FRONTEND=noninteractive
   libsndfile1-dev \
   libssl-dev \
   libtinfo-dev \
+  pocl-doc \
   pocl-opencl-icd \
   >> $LOGFILE 2>&1
+
+echo "Measuring OpenCL peaks"
+clpeak --platform 0 --compute-sp \
+  2>&1 | tee --append $LOGFILE
+clpeak --platform 0 --compute-integer \
+  2>&1 | tee --append $LOGFILE
 
 echo "Finished"
