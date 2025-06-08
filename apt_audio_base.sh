@@ -17,6 +17,7 @@ sudo apt-get install --assume-yes --no-install-recommends \
   libsox-fmt-all \
   libsox3 \
   libsoxr0 \
+  libspa-0.2-bluetooth \
   mp3splt \
   pipewire-alsa \
   pmidi \
