@@ -5,7 +5,6 @@ set -e
 echo ""
 echo "*** Installing sysstat ***"
 
-echo "Defining LOGFILE"
 mkdir --parents "$PWD/Logs"
 export LOGFILE="$PWD/Logs/install_sysstat.log"
 rm --force $LOGFILE
@@ -28,7 +27,6 @@ diff sysstat-collect.timer /etc/systemd/system/sysstat.service.wants/sysstat-col
 sudo cp sysstat-collect.timer /etc/systemd/system/sysstat.service.wants/sysstat-collect.timer
 
 sleep 5
-echo ""
 echo "Restarting data collection"
 sudo systemctl daemon-reload
 sudo systemctl restart sysstat

@@ -5,7 +5,6 @@ set -e
 echo ""
 echo "*** System Setup ***"
 
-echo "Defining LOGFILE"
 mkdir --parents "$PWD/Logs"
 export LOGFILE="$PWD/Logs/system_setup.log"
 rm --force $LOGFILE
@@ -40,7 +39,7 @@ cp starship.toml $HOME/.config/starship.toml
 echo "Adding Starship prompt to bash"
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
 
-./edit_swapfile_size.sh
+./pios_edit_swapfile_size.sh
 
 echo "Defining locales"
 sudo cp locale.gen /etc/
@@ -55,33 +54,10 @@ sudo apt-get full-upgrade --assume-yes \
 sudo apt-get autoremove --assume-yes \
   >> $LOGFILE 2>&1
 
-echo "Installing git, sysstat, time, and vim"
-sudo apt-get install --assume-yes --no-install-recommends \
-  git \
-  sysstat \
-  time \
-  vim \
-  >> $LOGFILE 2>&1
-
-echo "Enabling sysstat"
-# https://wiki.debian.org/sysstat
-sudo systemctl enable --now sysstat.service
-systemctl status sysstat.service
-
-echo "Stopping data collections"
-sudo systemctl stop sysstat
-
-echo "Editing sample time"
-diff sysstat-collect.timer /etc/systemd/system/sysstat.service.wants/sysstat-collect.timer || true
-sudo cp sysstat-collect.timer /etc/systemd/system/sysstat.service.wants/sysstat-collect.timer
-
-sleep 5
-echo ""
-echo "Restarting data collection"
-sudo systemctl daemon-reload
-sudo systemctl restart sysstat
+./apt_command_line_tools.sh
+./apt_install_sysstat.sh
 
 echo ""
-echo "Restart bash to get new Starship prompt"
+echo "Reboot to finish upgrades"
 
 echo "Finished"

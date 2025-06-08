@@ -1,1 +1,0 @@
-../3_edit_boot_params.sh

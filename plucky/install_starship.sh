@@ -1,1 +1,0 @@
-../install_starship.sh

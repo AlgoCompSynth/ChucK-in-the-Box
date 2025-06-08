@@ -2,7 +2,8 @@
 
 set -e
 
-echo "*** Edit swapfile size ***"
+echo ""
+echo "*** Edit Swapfile Size ***"
 
 echo "Editing swapfile size"
 # https://pimylifeup.com/raspberry-pi-swap-file/
@@ -12,3 +13,4 @@ diff dphys-swapfile /etc/dphys-swapfile || true
 sudo cp dphys-swapfile /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
+echo ""
