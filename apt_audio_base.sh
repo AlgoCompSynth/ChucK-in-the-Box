@@ -27,4 +27,7 @@ sudo apt-get install --assume-yes --no-install-recommends \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
+echo "Enabling/starting wireplumber service"
+# https://wiki.debian.org/PipeWire
+systemctl --user --now enable wireplumber.service
 echo "Finished"
