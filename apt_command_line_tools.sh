@@ -5,7 +5,6 @@ set -e
 echo ""
 echo "*** Command Line Tools ***"
 
-echo "Defining LOGFILE"
 mkdir --parents "$PWD/Logs"
 export LOGFILE="$PWD/Logs/command_line_tools.log"
 rm --force $LOGFILE
