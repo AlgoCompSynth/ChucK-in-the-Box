@@ -9,7 +9,6 @@ mkdir --parents "$PWD/Logs"
 export LOGFILE="$PWD/Logs/system_upgrade.log"
 rm --force $LOGFILE
 
-echo "Defining locales"
 sudo cp locale.gen /etc/
 sudo locale-gen
 
