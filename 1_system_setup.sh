@@ -8,6 +8,7 @@ pushd Scripts > /dev/null
   ./apt_system_upgrade.sh
   ./apt_command_line_tools.sh
   ./apt_install_sysstat.sh
+  ./apt_check_for_desktop.sh
 popd > /dev/null
 
 echo ""
