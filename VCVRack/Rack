@@ -1,7 +1,0 @@
-#! /usr/bin/env bash
-
-set -e
-
-pushd $HOME/Projects/Rack
-pw-jack make run
-popd
