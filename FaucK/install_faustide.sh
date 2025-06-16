@@ -13,6 +13,12 @@ mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/install_faustide.log
 rm --force $LOGFILE
 
+echo "Installing Linux dependencies"
+export DEBIAN_FRONTEND=noninteractive
+/usr/bin/time sudo apt-get install -qqy --no-install-recommends \
+  npm \
+  >> $LOGFILE 2>&1
+
 # https://github.com/grame-cncm/faustlive/blob/master/Build/README.md
 mkdir --parents $FAUSTIDE_PATH
 rm --force --recursive $FAUSTIDE_PATH

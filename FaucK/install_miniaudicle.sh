@@ -15,6 +15,20 @@ mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/install_miniaudicle.log
 rm --force $LOGFILE
 
+echo "Installing Linux dependencies"
+export DEBIAN_FRONTEND=noninteractive
+/usr/bin/time sudo apt-get install -qqy --no-install-recommends \
+  bison \
+  flex \
+  libasound2-dev \
+  libfluidsynth-dev \
+  libqscintilla2-qt6-dev \
+  libsndfile1-dev \
+  qt6-base-dev \
+  qt6-base-dev-tools \
+  qt6-wayland \
+  >> $LOGFILE 2>&1
+
 mkdir --parents $HOME/Projects
 echo "Cloning repository"
 pushd $HOME/Projects > /dev/null
@@ -28,7 +42,7 @@ echo "Building ChucK"
 pushd $HOME/Projects/miniAudicle/src/chuck/src > /dev/null
   git checkout $CHUCK_VERSION \
     >> $LOGFILE 2>&1
-  /usr/bin/time make --jobs=`nproc` linux-pulse \
+  /usr/bin/time make --jobs=`nproc` linux-alsa linux-pulse \
     >> $LOGFILE 2>&1
   echo "Installing ChucK"
   sudo make install \
@@ -72,7 +86,7 @@ echo "Building miniAudicle"
 pushd $HOME/Projects/miniAudicle/src > /dev/null
   git checkout $CHUCK_VERSION \
     >> $LOGFILE 2>&1
-  /usr/bin/time make --jobs=`nproc` linux-pulse \
+  /usr/bin/time make --jobs=`nproc` linux-alsa linux-pulse \
     >> $LOGFILE 2>&1
   echo "Installing miniAudicle"
   sudo make install \

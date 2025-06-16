@@ -4,7 +4,6 @@ set -e
 
 pushd Scripts > /dev/null
   ./apt_audio_base.sh
-  ./apt_command_line_synths.sh
 popd > /dev/null
 
 echo ""
@@ -20,19 +19,12 @@ then
   popd > /dev/null
 else
   echo "GUI apps enabled"
-  for app in \
-    OpenCL \
-    FaucK \
-    VCVRack
-  do
-    echo ""
-    echo "* Begin $app"
-    sleep 15
-    pushd $app > /dev/null
-      ./install_all.sh
-    popd > /dev/null
-    echo "* End $app"
-  done
+  pushd Scripts > /dev/null
+    ./apt_command_line_synths.sh
+  popd > /dev/null
+  pushd FaucK > /dev/null
+    ./install_all.sh
+  popd > /dev/null
 fi
 
 pushd Scripts > /dev/null

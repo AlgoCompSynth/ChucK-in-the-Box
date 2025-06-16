@@ -14,6 +14,16 @@ mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/install_faust.log
 rm --force $LOGFILE
 
+echo "Installing Linux dependencies"
+export DEBIAN_FRONTEND=noninteractive
+/usr/bin/time sudo apt-get install -qqy --no-install-recommends \
+  libmicrohttpd-dev \
+  libpolly-14-dev \
+  libzstd-dev \
+  llvm \
+  llvm-dev \
+  >> $LOGFILE 2>&1
+
 # https://github.com/grame-cncm/faust/wiki/Building
 mkdir --parents $FAUST_PATH
 rm --force --recursive $FAUST_PATH
@@ -31,7 +41,6 @@ pushd $FAUST_PATH > /dev/null
   /usr/bin/time make all \
     >> $LOGFILE 2>&1
   echo "Installing Faust"
-  export CMAKE_INSTALL_PARALLEL_LEVEL=`nproc`
   /usr/bin/time sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
