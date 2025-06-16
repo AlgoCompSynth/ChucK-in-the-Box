@@ -7,14 +7,23 @@ pushd Scripts > /dev/null
   ./apt_system_upgrade.sh
   ./apt_base_packages.sh
   ./terminal_setup.sh
-  ./apt_install_xpra.sh
   ./apt_install_sysstat.sh
-popd > /dev/null
 
-echo "Switching to graphical.target"
-sudo systemctl set-default graphical.target
+  echo ""
+  echo ""
+  source ram_kbytes.sh
+  if [[ "$RAM_KBYTES" -lt "3500000" ]]
+  then
+    echo "Insufficient RAM for GUI apps"
+    sudo systemctl set-default multi-user.target
+  else
+    echo "Enabling GUI apps"
+    ./apt_install_xpra.sh
+    sudo systemctl set-default graphical.target
+  fi
+
+popd > /dev/null
 
 echo ""
 echo "Reboot to finish upgrades"
-
 echo "Finished"
