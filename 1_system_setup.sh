@@ -11,8 +11,8 @@ pushd Scripts > /dev/null
   ./apt_install_sysstat.sh
 popd > /dev/null
 
-  echo "Switching to graphical.target"
-  sudo systemctl set-default graphical.target
+echo "Switching to graphical.target"
+sudo systemctl set-default graphical.target
 
 echo ""
 echo "Reboot to finish upgrades"
