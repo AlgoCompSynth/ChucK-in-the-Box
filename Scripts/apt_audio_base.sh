@@ -9,7 +9,6 @@ mkdir --parents "$PWD/Logs"
 export LOGFILE="$PWD/Logs/audio_base.log"
 rm --force $LOGFILE
 
-echo "Installing audio base packages"
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install --assume-yes --no-install-recommends \
   alsa-utils \
@@ -17,17 +16,11 @@ sudo apt-get install --assume-yes --no-install-recommends \
   libsox-fmt-all \
   libsox3 \
   libsoxr0 \
-  libspa-0.2-bluetooth \
   mp3splt \
-  pipewire-alsa \
+  pipewire-doc \
   pmidi \
   rtkit \
   sox \
-  wireplumber \
-  wireplumber-doc \
   >> $LOGFILE 2>&1
 
-echo "Enabling/starting wireplumber service"
-# https://wiki.debian.org/PipeWire
-systemctl --user --now enable wireplumber.service
 echo "Finished"

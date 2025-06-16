@@ -12,7 +12,6 @@ rm --force $LOGFILE
 sudo cp locale.gen /etc/
 sudo locale-gen
 
-echo "Upgrading system"
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update \
   >> $LOGFILE 2>&1

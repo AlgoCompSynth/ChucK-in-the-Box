@@ -9,7 +9,7 @@ mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/install_pocl.log
 rm --force $LOGFILE
 
-echo "Installing Linux build dependencies"
+echo "Installing Linux packages"
 export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get install -qqy --no-install-recommends \
   clinfo \

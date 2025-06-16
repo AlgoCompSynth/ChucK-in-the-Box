@@ -5,7 +5,7 @@ set -e
 echo ""
 echo "*** Terminal Setup ***"
 
-echo "Creating HOME/Projects, HOME/.local/bin, and HOME/bin"
+echo "Creating \$HOME/Projects, \$HOME/.local/bin, and \$HOME/bin"
 mkdir --parents $HOME/Projects
 mkdir --parents $HOME/.local/bin
 mkdir --parents $HOME/bin
@@ -23,7 +23,7 @@ pushd /tmp > /dev/null
   cd Meslo
   unzip -qq ../Meslo.zip
 
-  echo "Copying to HOME/.fonts"
+  echo "Copying to \$HOME/.fonts"
   mkdir --parents $HOME/.fonts
   cp *.ttf $HOME/.fonts
 

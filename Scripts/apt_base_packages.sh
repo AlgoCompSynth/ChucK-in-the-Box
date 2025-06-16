@@ -3,13 +3,12 @@
 set -e
 
 echo ""
-echo "*** Command Line Tools ***"
+echo "*** Base Packages ***"
 
 mkdir --parents "$PWD/Logs"
-export LOGFILE="$PWD/Logs/command_line_tools.log"
+export LOGFILE="$PWD/Logs/base_packages.log"
 rm --force $LOGFILE
 
-echo "Installing command line tools"
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install --assume-yes --no-install-recommends \
   apt-file \
@@ -20,12 +19,18 @@ sudo apt-get install --assume-yes --no-install-recommends \
   curl \
   file \
   git \
+  gpg-agent \
   lsb-release \
   lynx \
   man-db \
   minicom \
   pkg-config \
   plocate \
+  python3-dev \
+  python3-pip \
+  python3-setuptools \
+  python3-venv \
+  python3-wheel \
   screen \
   speedtest-cli \
   time \
@@ -37,9 +42,4 @@ sudo apt-get install --assume-yes --no-install-recommends \
   wget \
   >> $LOGFILE 2>&1
 
-echo "Reconfiguring Bluetooth"
-# https://wiki.debian.org/BluetoothUser
-sudo service bluetooth stop
-diff main.conf /etc/bluetooth/main.conf || true
-sudo cp main.conf /etc/bluetooth/main.conf
-sudo service bluetooth start
+echo "Finished"

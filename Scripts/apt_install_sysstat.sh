@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "*** Installing sysstat ***"
+echo "*** Sysstat ***"
 
 mkdir --parents "$PWD/Logs"
 export LOGFILE="$PWD/Logs/install_sysstat.log"
