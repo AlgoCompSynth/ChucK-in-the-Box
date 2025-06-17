@@ -13,7 +13,6 @@ if [[ "$RAM_KBYTES" -lt "3500000" ]]
 then
   echo "Insufficient RAM for GUI apps"
   pushd Scripts > /dev/null
-    ./apt_linux_dependencies.sh
     ./install_chuck.sh
     ./apt_pkg_db_updates.sh
   popd > /dev/null

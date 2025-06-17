@@ -21,6 +21,15 @@ pushd $HOME/Projects > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
+echo "Installing ChucK build dependencies"
+export DEBIAN_FRONTEND=noninteractive
+/usr/bin/time sudo apt-get install -qqy --no-install-recommends \
+  bison \
+  flex \
+  libasound2-dev \
+  libsndfile1-dev \
+  >> $LOGFILE 2>&1
+
 echo "Building ChucK"
 pushd $HOME/Projects/miniAudicle/src/chuck/src > /dev/null
   git checkout $CHUCK_VERSION \
@@ -42,6 +51,16 @@ pushd $HOME/Projects/miniAudicle/src/chugins > /dev/null
   sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
+
+echo "Installing Faust ChuGin build dependencies"
+/usr/bin/time sudo apt-get install -qqy --no-install-recommends \
+  faust \
+  faust-common \
+  libncurses-dev \
+  libssl-dev \
+  llvm \
+  llvm-dev \
+  >> $LOGFILE 2>&1
 
 echo "Building Faust ChuGin"
 pushd $HOME/Projects/miniAudicle/src/chugins/Faust > /dev/null
