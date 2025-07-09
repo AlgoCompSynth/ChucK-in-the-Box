@@ -7,7 +7,6 @@ pushd /tmp > /dev/null
   rm --force install-rustup.sh
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > install-rustup.sh
   chmod +x install-rustup.sh
-  ./install-rustup.sh -y > /dev/null
+  ./install-rustup.sh -y > /dev/null 2>&1
   . "$HOME/.cargo/env"
-  echo "PATH: $PATH"
 popd > /dev/null

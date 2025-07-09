@@ -12,13 +12,15 @@ rm --force $LOGFILE
 sudo cp locale.gen /etc/
 sudo locale-gen
 
-echo "Upgrading system"
 export DEBIAN_FRONTEND=noninteractive
+echo "Update"
 sudo apt-get update \
   >> $LOGFILE 2>&1
+echo "Full upgrade"
 sudo apt-get full-upgrade --assume-yes \
   >> $LOGFILE 2>&1
+echo "Autoremove"
 sudo apt-get autoremove --assume-yes \
   >> $LOGFILE 2>&1
 
-echo "Finished"
+echo "*** Finished ***"
