@@ -10,23 +10,33 @@ export LOGFILE=$PWD/Logs/linux_dependencies.log
 rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
+export LLVM_VERSION=19
 /usr/bin/time sudo apt-get install -qqy --no-install-recommends \
-  clang-15 \
-  libclang-common-15-dev \
-  libclang-cpp15-dev \
-  libclang-15-dev \
+  apt-utils \
+  build-essential \
+  clang-${LLVM_VERSION} \
+  clinfo \
+  cmake \
+  dialog \
+  git \
+  libclang-${LLVM_VERSION}-dev \
+  libclang-cpp${LLVM_VERSION} \
+  libclang-cpp${LLVM_VERSION}-dev \
   libhwloc-dev \
-  libllvmspirvlib-15-dev \
-  llvm-15-dev \
-  llvm-15-linker-tools \
-  llvm-15-runtime \
-  llvm-15-tools \
-  llvm-spirv-15 \
+  libpython3-dev \
+  libxml2-dev \
+  llvm-${LLVM_VERSION} \
+  llvm-${LLVM_VERSION}-dev
+  make \
+  ninja-build \
   ocl-icd-dev \
   ocl-icd-libopencl1 \
+  ocl-icd-libopencl1 \
   ocl-icd-opencl-dev \
-  spirv-tools \
+  pkg-config \
+  python3-dev \
+  zlib1g \
   zlib1g-dev \
   >> $LOGFILE 2>&1
 
-echo "Finished"
+echo "*** Finished Linux Dependencies ***"
