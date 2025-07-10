@@ -10,8 +10,9 @@ export LOGFILE=$PWD/Logs/linux_dependencies.log
 rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
+# https://portablecl.org/docs/html/install.html
 export LLVM_VERSION=19
-/usr/bin/time sudo apt-get install -qqy --no-install-recommends \
+/usr/bin/time sudo apt-get install -qqy \
   apt-utils \
   build-essential \
   clang-${LLVM_VERSION} \
