@@ -26,13 +26,15 @@ pushd $HOME/Projects > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-echo "Building PoCL"
 pushd $HOME/Projects/pocl > /dev/null
   mkdir build; cd build
-  export CMAKE_INCLUDE_PATH=/usr/include/LLVMSPIRVLib
-  cmake -DLLC_HOST_CPU=cortex-a53 -DCLANG_MARCH_FLAG=cortex-a53 .. \
+  echo "Configuring PoCL"
+  export CMAKE_BUILD_PARALLEL_LEVEL=1
+  /usr/bin/time cmake \
+    -DCMAKE_BUILD_TYPE=Release \
+    .. \
     >> $LOGFILE 2>&1
-  #/usr/bin/time make --jobs=`nproc` \
+  echo "Compiling PoCL"
   /usr/bin/time make --jobs=1 \
     >> $LOGFILE 2>&1
   echo "Installing Pocl"
@@ -70,6 +72,6 @@ pushd $HOME/Projects/clpeak > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-clpeak --platform 0 --compute-sp 2>&1 | tee --append $LOGFILE
+clpeak --platform 0 2>&1 | tee --append $LOGFILE
 
 echo "*** Finished PoCL, clinfo, and clpeak ***"
