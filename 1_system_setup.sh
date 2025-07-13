@@ -7,7 +7,6 @@ pushd Scripts > /dev/null
   ./pios_edit_swapfile_size.sh
   ./apt_system_upgrade.sh
   ./apt_base_packages.sh
-  ./apt_install_sysstat.sh
 
   echo ""
   echo "Patching cmdline.txt"
