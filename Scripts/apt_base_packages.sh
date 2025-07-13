@@ -13,29 +13,18 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install --assume-yes --no-install-recommends \
   apt-file \
   bash-completion \
+  bluetooth \
   build-essential \
-  ccache \
   cmake \
   curl \
-  distcc \
-  distcc-pump \
-  dmucs \
   file \
   git \
-  g++-12-multilib-x86-64-linux-gnu \
-  gcc-12-multilib-x86-64-linux-gnu \
-  gpg-agent \
   lsb-release \
   lynx \
   man-db \
   minicom \
   pkg-config \
   plocate \
-  python3-dev \
-  python3-pip \
-  python3-setuptools \
-  python3-venv \
-  python3-wheel \
   screen \
   speedtest-cli \
   time \
@@ -47,4 +36,10 @@ sudo apt-get install --assume-yes --no-install-recommends \
   wget \
   >> $LOGFILE 2>&1
 
-echo "*** Finished ***"
+echo "Reconfiguring Bluetooth"
+# https://wiki.debian.org/BluetoothUser
+sudo service bluetooth stop
+diff main.conf /etc/bluetooth/main.conf || true
+sudo cp main.conf /etc/bluetooth/main.conf
+sudo service bluetooth start
+echo "*** Finished Base Packages ***"
