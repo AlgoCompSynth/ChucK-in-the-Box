@@ -23,4 +23,4 @@ echo "Autoremove"
 sudo apt-get autoremove --assume-yes \
   >> $LOGFILE 2>&1
 
-echo "*** Finished ***"
+echo "*** Finished System Upgrade ***"

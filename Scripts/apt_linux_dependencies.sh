@@ -9,7 +9,6 @@ mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/linux_dependencies.log
 rm --force $LOGFILE
 
-echo "Installing Linux build dependencies"
 export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get install -qqy --no-install-recommends \
   bison \
@@ -26,3 +25,4 @@ export DEBIAN_FRONTEND=noninteractive
   >> $LOGFILE 2>&1
 
 echo "Finished"
+echo "*** Finished Linux Dependencies ***"

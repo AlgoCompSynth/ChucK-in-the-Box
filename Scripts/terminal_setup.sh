@@ -22,4 +22,4 @@ mkdir --parents $HOME/.config
 echo "Adding Starship prompt to bash"
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
 
-echo "*** Finished ***"
+echo "*** Finished Terminal Setup ***"

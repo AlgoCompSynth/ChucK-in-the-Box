@@ -6,7 +6,7 @@ echo ""
 echo "*** ChucK and ChuGins ***"
 
 echo "Setting ChucK version"
-export CHUCK_VERSION="chuck-1.5.5.0"
+export CHUCK_VERSION="chuck-1.5.5.1"
 
 mkdir --parents $PWD/Logs
 export LOGFILE=$PWD/Logs/install_chuck.log
@@ -52,4 +52,4 @@ pushd $HOME/Projects/miniAudicle/src/chugins/Faust > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-echo "Finished"
+echo "*** Finished ChucK and ChuGins ***"

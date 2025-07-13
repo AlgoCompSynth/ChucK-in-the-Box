@@ -21,4 +21,4 @@ echo "Updating manual database"
 sudo mandb \
   >> $LOGFILE 2>&1
 
-echo "*** Finished ***"
+echo "*** Finished Package Database Updates ***"

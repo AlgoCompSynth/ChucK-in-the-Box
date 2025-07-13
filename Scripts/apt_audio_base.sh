@@ -29,4 +29,4 @@ sudo apt-get install --assume-yes --no-install-recommends \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
-echo "*** Finished ***"
+echo "*** Finished Audio Base Packages ***"

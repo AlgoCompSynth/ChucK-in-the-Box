@@ -42,4 +42,5 @@ sudo service bluetooth stop
 diff main.conf /etc/bluetooth/main.conf || true
 sudo cp main.conf /etc/bluetooth/main.conf
 sudo service bluetooth start
+
 echo "*** Finished Base Packages ***"
