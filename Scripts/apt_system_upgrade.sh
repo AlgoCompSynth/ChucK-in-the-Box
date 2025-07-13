@@ -13,14 +13,14 @@ sudo cp locale.gen /etc/
 sudo locale-gen
 
 export DEBIAN_FRONTEND=noninteractive
+echo "Enable backports"
+echo "deb http://deb.debian.org/debian bookworm-backports main contrib non-free" \
+  | sudo tee /etc/apt/sources.list.d/bookworm-backports.list
 echo "Update"
 sudo apt-get update \
   >> $LOGFILE 2>&1
 echo "Full upgrade"
 sudo apt-get full-upgrade --assume-yes \
-  >> $LOGFILE 2>&1
-echo "Autoremove"
-sudo apt-get autoremove --assume-yes \
   >> $LOGFILE 2>&1
 
 echo "*** Finished System Upgrade ***"
