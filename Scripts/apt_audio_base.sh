@@ -13,6 +13,8 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install --assume-yes --no-install-recommends \
   alsa-utils \
   flac \
+  libasound2-dev \
+  libsndfile1-dev \
   libsox3 \
   libsox-dev \
   libsox-fmt-all \

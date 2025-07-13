@@ -15,14 +15,11 @@ export DEBIAN_FRONTEND=noninteractive
   faust \
   faust-common \
   flex \
-  libasound2-dev \
   libfaust2 \
-  libsndfile1-dev \
   libssl-dev \
   libtinfo-dev \
   llvm-dev \
   zlib1g-dev \
   >> $LOGFILE 2>&1
 
-echo "Finished"
 echo "*** Finished Linux Dependencies ***"
