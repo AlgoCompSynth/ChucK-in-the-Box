@@ -2,6 +2,9 @@
 
 set -e
 
+echo ""
+echo "** System Setup ***"
+
 pushd Scripts > /dev/null
   ./terminal_setup.sh
   ./pios_edit_swapfile_size.sh
@@ -25,10 +28,9 @@ pushd Scripts > /dev/null
   sudo sed -i '$ a dtoverlay=dwc2' /boot/firmware/config.txt
   diff config.txt /boot/firmware/config.txt || true
 
-  echo ""
-  echo "Configuring multi-user.target"
-  sudo systemctl set-default multi-user.target
 popd > /dev/null
 
 echo ""
 echo "Reboot to finish upgrades"
+echo ""
+echo "** Finished System Setup ***"

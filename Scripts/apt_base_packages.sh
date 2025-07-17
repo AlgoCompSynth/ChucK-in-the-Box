@@ -10,6 +10,7 @@ export LOGFILE="$PWD/Logs/base_packages.log"
 rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
+echo "Installing packages"
 sudo apt-get install --assume-yes --no-install-recommends \
   apt-file \
   bash-completion \

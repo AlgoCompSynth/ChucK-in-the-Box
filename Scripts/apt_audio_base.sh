@@ -12,8 +12,14 @@ rm --force $LOGFILE
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install --assume-yes --no-install-recommends \
   alsa-utils \
+  ffmpeg \
   flac \
+  fluid-soundfont-gm \
+  fluid-soundfont-gs \
+  fluidsynth \
+  freepats \
   libasound2-dev \
+  libfluidsynth-dev \
   libsndfile1-dev \
   libsox3 \
   libsox-dev \

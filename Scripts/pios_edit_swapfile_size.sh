@@ -5,7 +5,6 @@ set -e
 echo ""
 echo "*** Edit Swapfile Size ***"
 
-echo "Editing swapfile size"
 # https://pimylifeup.com/raspberry-pi-swap-file/
 sudo dphys-swapfile swapoff
 sleep 5
