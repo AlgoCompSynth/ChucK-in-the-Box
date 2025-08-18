@@ -51,4 +51,4 @@ echo "ldconfig" | tee --append $LOGFILE
 sudo /sbin/ldconfig --verbose \
   >> $LOGFILE 2>&1
 
-echo "*** Finished ChuGL ***"
+echo "*** Finished ChuGL ***" | tee --append $LOGFILE

@@ -5,16 +5,11 @@ set -e
 echo ""
 echo "*** ChucK ***"
 
-export CHUCK_VERSION="chuck-1.5.5.2"
-export MAKE_PARALLEL_LEVEL=$(nproc)
-#export MAKE_PARALLEL_LEVEL=1 # for low-RAM systems
-export LOGFILES=$HOME/Logfiles
-
+source ../set_envars.sh
 export LOGFILE=$LOGFILES/chuck.log
 rm --force $LOGFILE
 
 echo "Installing Linux dependencies" | tee --append $LOGFILE
-export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get install --assume-yes \
   bison \
   build-essential \
@@ -56,4 +51,4 @@ pushd $HOME/Projects/chuck/examples/book/digital-artists/chapter1 > /dev/null
   sleep 5
 popd > /dev/null
 
-echo "*** Finished ChucK ***"
+echo "*** Finished ChucK ***" | tee --append $LOGFILE

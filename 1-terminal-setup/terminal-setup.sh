@@ -18,4 +18,4 @@ echo "Installing Starship"
 echo "Installing 'nerd fonts'"
 ./nerd_fonts.sh
 
-echo "*** Finished Terminal Setup ***"
+echo "*** Finished Terminal Setup ***" | tee --append $LOGFILE

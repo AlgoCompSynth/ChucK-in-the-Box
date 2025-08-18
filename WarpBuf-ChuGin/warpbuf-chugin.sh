@@ -3,14 +3,18 @@
 set -e
 
 echo ""
-echo "*** WarpBuf ***"
+echo "*** WarpBuf ChuGin ***"
 
-export LOGFILE=$LOGFILES/warpbuf.log
+source ../set_envars.sh
+export LOGFILE=$LOGFILES/warpbuf-chugin.log
 rm --force $LOGFILE
 
-echo "Installing Linux dependencies"
-export DEBIAN_FRONTEND=noninteractive
+echo "Installing Linux dependencies" | tee --append $LOGFILE
 /usr/bin/time sudo apt-get install --assume-yes \
+  cmake \
+  libmp3lame-dev \
+  libspeex-dev \
+  libsqlite3-dev \
   >> $LOGFILE 2>&1
 
 pushd $HOME/Projects/chugins/WarpBuf > /dev/null
@@ -22,7 +26,7 @@ pushd $HOME/Projects/chugins/WarpBuf > /dev/null
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Installing WarpBuf ChuGin" | tee --append $LOGFILE
-  sudo cp build/WarpBuf.chug /usr/local/lib/chuck/
+  cp build/WarpBuf.chug $CHUGIN_PATH/
 popd > /dev/null
 
-echo "*** Finished ChuGins ***"
+echo "*** Finished WarpBuf ChuGin ***" | tee --append $LOGFILE
