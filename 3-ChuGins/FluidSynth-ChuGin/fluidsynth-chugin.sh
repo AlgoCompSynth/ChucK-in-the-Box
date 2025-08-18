@@ -5,7 +5,7 @@ set -e
 echo ""
 echo "*** FluidSynth ChuGin ***"
 
-source ../set_envars.sh
+source ../../set_envars.sh
 export LOGFILE=$LOGFILES/fluidsynth-chugin.log
 rm --force $LOGFILE
 

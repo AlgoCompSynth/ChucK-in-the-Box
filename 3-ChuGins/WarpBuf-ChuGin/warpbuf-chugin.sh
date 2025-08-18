@@ -5,7 +5,7 @@ set -e
 echo ""
 echo "*** WarpBuf ChuGin ***"
 
-source ../set_envars.sh
+source ../../set_envars.sh
 export LOGFILE=$LOGFILES/warpbuf-chugin.log
 rm --force $LOGFILE
 

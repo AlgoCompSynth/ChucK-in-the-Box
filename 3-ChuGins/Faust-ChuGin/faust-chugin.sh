@@ -5,7 +5,7 @@ set -e
 echo ""
 echo "*** Faust ChuGin ***"
 
-source ../set_envars.sh
+source ../../set_envars.sh
 export LOGFILE=$LOGFILES/faust-chugin.log
 rm --force $LOGFILE
 
