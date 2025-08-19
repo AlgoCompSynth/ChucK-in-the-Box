@@ -37,7 +37,7 @@ pushd $HOME/Projects/chuck/src > /dev/null
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Installing ChucK" | tee --append $LOGFILE
-  make DESTDIR=$HOME/.local/bin install \
+  sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
 

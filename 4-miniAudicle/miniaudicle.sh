@@ -39,7 +39,8 @@ pushd $HOME/Projects/miniAudicle/src > /dev/null
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Installing miniAudicle" | tee --append $LOGFILE
-  cp miniAudicle $HOME/.local/bin
+  sudo make install \
+    >> $LOGFILE 2>&1
 popd > /dev/null
 
 echo "*** Finished miniAudicle ***" | tee --append $LOGFILE

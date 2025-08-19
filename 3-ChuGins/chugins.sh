@@ -27,7 +27,7 @@ pushd $HOME/Projects/chugins > /dev/null
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Installing ChuGins" | tee --append $LOGFILE
-  make DESTDIR=$CHUGIN_DEST install \
+  sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
 

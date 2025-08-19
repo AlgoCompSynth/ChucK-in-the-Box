@@ -24,6 +24,9 @@ sudo apt-get install --assume-yes \
   cinnamon-core \
   > $LOGFILE 2>&1
 
+echo "Installing container hosting"
+./podman-distrobox-hosting.sh
+
 echo "Manual configuration required via 'sudo raspi-config!'"
 echo ""
 echo "    1. System Options > Boot > Desktop GUI"

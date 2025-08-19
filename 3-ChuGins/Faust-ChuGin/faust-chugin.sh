@@ -27,7 +27,7 @@ pushd $HOME/Projects/chugins/Faust > /dev/null
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Installing Faust ChuGin" | tee --append $LOGFILE
-  cp Faust.chug $CHUGIN_PATH/
+  sudo cp Faust.chug $CHUGIN_PATH/
 popd > /dev/null
 
 echo "*** Finished Faust ChuGin ***" | tee --append $LOGFILE

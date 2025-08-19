@@ -20,9 +20,9 @@ pushd $HOME/Projects/chugins/FluidSynth > /dev/null
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
-  #echo "Installing FluidSynth ChuGin" | tee --append $LOGFILE
-  #sudo make install \
-    #>> $LOGFILE 2>&1
+  echo "Installing FluidSynth ChuGin" | tee --append $LOGFILE
+  sudo make install \
+    >> $LOGFILE 2>&1
 popd > /dev/null
 
 echo "*** Finished FluidSynth ChuGin ***" | tee --append $LOGFILE

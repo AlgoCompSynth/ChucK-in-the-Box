@@ -26,7 +26,7 @@ pushd $HOME/Projects/chugins/WarpBuf > /dev/null
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Installing WarpBuf ChuGin" | tee --append $LOGFILE
-  cp build/WarpBuf.chug $CHUGIN_PATH/
+  sudo cp build/WarpBuf.chug $CHUGIN_PATH/
 popd > /dev/null
 
 echo "*** Finished WarpBuf ChuGin ***" | tee --append $LOGFILE
