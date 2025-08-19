@@ -1,5 +1,0 @@
-  3736 total
-  1202 task-cinnamon-desktop.inst
-  1178 cinnamon-desktop-environment.inst
-   678 cinnamon.inst
-   678 cinnamon-core.inst
