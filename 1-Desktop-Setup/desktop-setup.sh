@@ -64,7 +64,7 @@ pushd $HOME/.fonts > /dev/null
   curl -sOL \
     https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
   unzip -qqo Meslo.zip
-  rm --force Meslo.zip
+  rm --force Meslo.zip LICENSE.txt README.md
 popd > /dev/null
 
 echo "Installing container hosting"

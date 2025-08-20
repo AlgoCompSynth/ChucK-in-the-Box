@@ -67,7 +67,7 @@ echo "with home directory $DBX_CONTAINER_CUSTOM_HOME"
 echo ""
 echo "Entering $DBX_CONTAINER_NAME to install additional packages."
 echo "This will take some time."
-distrobox enter --no-tty $DBX_CONTAINER_NAME -- echo "Exiting container!"
+/usr/bin/time distrobox enter --no-tty $DBX_CONTAINER_NAME -- echo "Exiting container!"
 
 echo ""
 echo "Distrobox containers:"
