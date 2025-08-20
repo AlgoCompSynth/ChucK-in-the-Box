@@ -55,15 +55,13 @@ cp starship.toml $HOME/.config/starship.toml
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
 
 echo "Installing 'nerd fonts'"
-pushd /tmp > /dev/null
-  rm --force --recursive Meslo*
+mkdir --parents $HOME/.fonts
+pushd $HOME/.fonts > /dev/null
+  rm --force Meslo.zip
   curl -sOL \
     https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
-  mkdir Meslo
-  cd Meslo
-  unzip -qq ../Meslo.zip
-  mkdir --parents $HOME/.fonts
-  cp *.ttf $HOME/.fonts
+  unzip -qqo Meslo.zip
+  rm Meslo.zip
 popd > /dev/null
 
 echo "Installing container hosting"
