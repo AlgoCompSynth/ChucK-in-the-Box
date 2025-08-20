@@ -15,6 +15,9 @@ echo "Setting base configuration files"
 cp bash_aliases $HOME/.bash_aliases; source bash_aliases
 cp vimrc $HOME/.vimrc
 
+echo "Enabling backports"
+sudo cp backports.list /etc/apt/sources.list.d/
+
 echo "Upgrading system"
 sudo apt-get update \
   >> $LOGFILE 2>&1
@@ -55,15 +58,13 @@ cp starship.toml $HOME/.config/starship.toml
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
 
 echo "Installing 'nerd fonts'"
-pushd /tmp > /dev/null
-  rm --force --recursive Meslo*
+mkdir --parents $HOME/.fonts
+pushd $HOME/.fonts > /dev/null
+  rm --force Meslo.zip
   curl -sOL \
     https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
-  mkdir Meslo
-  cd Meslo
-  unzip -qq ../Meslo.zip
-  mkdir --parents $HOME/.fonts
-  cp *.ttf $HOME/.fonts
+  unzip -qqo Meslo.zip
+  rm --force Meslo.zip
 popd > /dev/null
 
 echo "Installing container hosting"
