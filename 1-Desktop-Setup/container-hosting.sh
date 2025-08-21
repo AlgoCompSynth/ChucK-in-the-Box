@@ -6,15 +6,17 @@ echo ""
 echo "*** Container Hosting ***"
 
 source ../set_envars.sh
-echo "Creating \$HOME/Projects, $LOGFILES, and \$HOME/.local/bin"
-mkdir --parents $HOME/Projects $LOGFILES $HOME/.local/bin
 export LOGFILE=$LOGFILES/container-hosting.log
 rm --force $LOGFILE
 
-sudo apt-get install --assume-yes \
-  podman \
-  uidmap \
-  >> $LOGFILE 2>&1
+distributor=$(lsb_release --id --short)
+if [[ "$distributor" == "Ubuntu" || "$distributor" == "Debian" ]]
+then
+  sudo apt-get install --assume-yes \
+    podman \
+    uidmap \
+    >> $LOGFILE 2>&1
+fi
 
 pushd $HOME/Projects > /dev/null
   rm -fr distrobox
