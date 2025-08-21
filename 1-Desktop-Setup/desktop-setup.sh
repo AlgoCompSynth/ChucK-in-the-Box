@@ -15,9 +15,6 @@ echo "Setting base configuration files"
 cp bash_aliases $HOME/.bash_aliases; source bash_aliases
 cp vimrc $HOME/.vimrc
 
-echo "Enabling backports"
-sudo cp backports.list /etc/apt/sources.list.d/
-
 echo "Upgrading system"
 sudo apt-get update \
   >> $LOGFILE 2>&1
@@ -65,21 +62,6 @@ pushd $HOME/.fonts > /dev/null
     https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
   unzip -qqo Meslo.zip
   rm --force Meslo.zip LICENSE.txt README.md
-popd > /dev/null
-
-echo "Installing container hosting"
-sudo apt-get install --assume-yes \
-  podman \
-  uidmap \
-  >> $LOGFILE 2>&1
-
-pushd $HOME/Projects > /dev/null
-  rm -fr distrobox
-  git clone https://github.com/89luca89/distrobox.git \
-    >> $LOGFILE 2>&1
-  cd distrobox
-  sudo ./install \
-    >> $LOGFILE 2>&1
 popd > /dev/null
 
 echo "*** Finished Desktop Setup ***" | tee --append $LOGFILE

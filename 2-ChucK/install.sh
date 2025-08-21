@@ -47,7 +47,7 @@ pushd $HOME/Projects/chuck/examples/book/digital-artists/chapter1 > /dev/null
   echo "You should hear random notes"
   echo "Press 'CTRL-C' to exit"
   sleep 5
-  chuck WowExample.ck
+  chuck WowExample.ck || true
   sleep 5
 popd > /dev/null
 

@@ -3,10 +3,10 @@
 set -e
 
 echo ""
-echo "*** Container Setup ***"
+echo "*** New Container ***"
 
 source ../set_envars.sh
-export LOGFILE=$LOGFILES/container-setup.log
+export LOGFILE=$LOGFILES/new-container.log
 rm --force $LOGFILE
 
 if [[ "$(distrobox list | grep $DBX_CONTAINER_NAME | wc -l)" -gt "0" ]]
@@ -61,7 +61,6 @@ echo "with home directory $DBX_CONTAINER_CUSTOM_HOME"
 /usr/bin/time distrobox create \
   --pull \
   --additional-packages "apt-file file git lsb-release plocate time tree vim" \
-  --additional-packages "starship fonts-font-awesome fonts-material-design-icons-iconfont fonts-weather-icons" \
   >> $LOGFILE 2>&1
 
 echo ""
@@ -81,10 +80,30 @@ mkdir --parents $DBX_CONTAINER_CUSTOM_HOME/.config
 cp starship.toml $DBX_CONTAINER_CUSTOM_HOME/.config/starship.toml
 echo 'eval "$(starship init bash)"' >> $DBX_CONTAINER_CUSTOM_HOME/.bashrc
 
+while true; do
+  echo ""
+  echo "If you will be cloning git repos into the container,"
+  echo "it is recommended to copy your host '\$HOME/.ssh'"
+  echo "directory into the container's '\$HOME'."
+  echo ""
+  read -p "Do you want to copy it (y/n)?" yn
+  case $yn in
+    [Yy]* )
+      cp --recursive $HOME/.ssh $DBX_CONTAINER_CUSTOM_HOME
+      break
+      ;;
+    [Nn]* ) 
+      break
+      ;;
+    * ) echo "Please answer yes or no."
+      ;;
+  esac
+done
+
 echo ""
 echo "To use the container, type"
 echo ""
 echo "  distrobox enter $DBX_CONTAINER_NAME"
 echo ""
 
-echo "*** Finished Container Setup ***" | tee --append $LOGFILE
+echo "*** Finished New Container ***" | tee --append $LOGFILE
