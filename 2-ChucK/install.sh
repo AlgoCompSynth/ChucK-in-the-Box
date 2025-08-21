@@ -15,8 +15,6 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   build-essential \
   flex \
   libasound2-dev \
-  libjack-jackd2-dev \
-  libpulse-dev \
   libsndfile1-dev \
   >> $LOGFILE 2>&1
 
@@ -33,7 +31,7 @@ popd > /dev/null
 pushd $HOME/Projects/chuck/src > /dev/null
   echo "" >> $LOGFILE
   echo "Building ChucK" | tee --append $LOGFILE
-  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux-all \
+  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux-alsa \
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Installing ChucK" | tee --append $LOGFILE

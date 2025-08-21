@@ -23,7 +23,7 @@ then
       [Nn]* ) 
         echo ""
         echo "Container $DBX_CONTAINER_NAME and container"
-        echo "home directory $DBX_CONTAINER_CUSTOM_HOME"
+        echo "home directory $DBX_CONTAINER_DIRECTORY"
         echo "will not be touched!"
         echo ""
         echo "*** Finished Container Setup ***" | tee --append $LOGFILE
@@ -35,15 +35,15 @@ then
   done
 fi
 
-if [[ -d $DBX_CONTAINER_CUSTOM_HOME ]]
+if [[ -d $DBX_CONTAINER_DIRECTORY ]]
 then
   while true; do
     echo ""
-    echo "Container home directory $DBX_CONTAINER_CUSTOM_HOME exists."
+    echo "Container home directory $DBX_CONTAINER_DIRECTORY exists."
     read -p "Do you want to recursively force-remove it (y/n)?" yn
     case $yn in
       [Yy]* )
-        rm --force --recursive $DBX_CONTAINER_CUSTOM_HOME
+        rm --recursive --force $DBX_CONTAINER_DIRECTORY
         break
         ;;
       [Nn]* ) 
@@ -57,28 +57,21 @@ fi
 
 echo ""
 echo "Creating Distrobox container $DBX_CONTAINER_NAME"
-echo "with home directory $DBX_CONTAINER_CUSTOM_HOME"
+echo "with home directory $DBX_CONTAINER_DIRECTORY"
 /usr/bin/time distrobox create \
   --pull \
-  --additional-packages "apt-file file git lsb-release plocate time tree vim" \
+  --additional-packages "apt-file file git lsb-release pipewire-alsa plocate time tree vim" \
+  --additional-flags "--env LIBGL_ALWAYS_SOFTWARE=1" \
   >> $LOGFILE 2>&1
 
 echo ""
-echo "Entering $DBX_CONTAINER_NAME to install additional packages."
+echo "Entering $DBX_CONTAINER_NAME to perform setup."
 echo "This will take some time."
-/usr/bin/time distrobox enter --no-tty $DBX_CONTAINER_NAME -- echo "Exiting container!"
+/usr/bin/time distrobox enter --no-tty $DBX_CONTAINER_NAME -- ./container-setup.sh
 
 echo ""
 echo "Distrobox containers:"
 distrobox list
-
-echo ""
-echo "Setting up container command line"
-cp bash_aliases $DBX_CONTAINER_CUSTOM_HOME/.bash_aliases
-cp vimrc $DBX_CONTAINER_CUSTOM_HOME/.vimrc
-mkdir --parents $DBX_CONTAINER_CUSTOM_HOME/.config
-cp starship.toml $DBX_CONTAINER_CUSTOM_HOME/.config/starship.toml
-echo 'eval "$(starship init bash)"' >> $DBX_CONTAINER_CUSTOM_HOME/.bashrc
 
 while true; do
   echo ""
@@ -89,7 +82,7 @@ while true; do
   read -p "Do you want to copy it (y/n)?" yn
   case $yn in
     [Yy]* )
-      cp --recursive $HOME/.ssh $DBX_CONTAINER_CUSTOM_HOME
+      cp --recursive $HOME/.ssh $DBX_CONTAINER_DIRECTORY
       break
       ;;
     [Nn]* ) 

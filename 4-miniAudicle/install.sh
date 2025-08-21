@@ -35,7 +35,7 @@ popd > /dev/null
 pushd $HOME/Projects/miniAudicle/src > /dev/null
   echo "" >> $LOGFILE
   echo "Building miniAudicle" | tee --append $LOGFILE
-  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux-all \
+  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux-alsa \
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Installing miniAudicle" | tee --append $LOGFILE

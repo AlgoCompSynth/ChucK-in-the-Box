@@ -11,6 +11,7 @@ rm --force $LOGFILE
 
 echo "Installing Linux dependencies"
 /usr/bin/time sudo apt-get install --assume-yes \
+  cmake \
   libcanberra-gtk3-module \
   libgl-dev \
   libwayland-bin \
@@ -42,6 +43,7 @@ pushd $HOME/Projects/chugl/src > /dev/null
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Installing ChuGL" | tee --append $LOGFILE
+  sudo mkdir --parents $CHUGIN_PATH
   sudo cp ChuGL.chug $CHUGIN_PATH/
 popd > /dev/null
 

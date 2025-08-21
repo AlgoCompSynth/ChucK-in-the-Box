@@ -5,10 +5,6 @@ set -e
 echo ""
 echo "* Install All *"
 
-pushd ./1-Desktop-Setup > /dev/null
-  ./desktop-setup.sh
-popd >/dev/null
-
 for repo in \
   2-ChucK \
   3-ChuGins \

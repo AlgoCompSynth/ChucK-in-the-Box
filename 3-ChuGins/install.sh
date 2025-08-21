@@ -46,6 +46,7 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   libncurses-dev \
   libssl-dev \
   llvm-$LLVM_VERSION \
+  zlib1g-dev \
   >> $LOGFILE 2>&1
 
 if [[ "$(lsb_release --codename --short)" != "bookworm" ]]

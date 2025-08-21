@@ -18,7 +18,7 @@ then
     >> $LOGFILE 2>&1
 fi
 
-pushd $HOME/Projects > /dev/null
+pushd $PROJECTS > /dev/null
   rm -fr distrobox
   git clone https://github.com/89luca89/distrobox.git \
     >> $LOGFILE 2>&1
