@@ -5,7 +5,7 @@
 ChucK-in-the-Box is a container-based computer music development
 environment. The 10,000-foot level overview:
 
-    - Containers: ChucK-in-the-Box uses
+- Containers: ChucK-in-the-Box uses
 [Distrobox](https://distrobox.it/) containers. A Distrobox container
 can run on most recent Linux hosts. The host runs the Linux kernel,
 manages all the devices, processes, and memory. The container runs
