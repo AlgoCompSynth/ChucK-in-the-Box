@@ -20,7 +20,7 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
 
 echo "" >> $LOGFILE
 echo "Cloning chuck repository" | tee --append $LOGFILE
-pushd $HOME/Projects > /dev/null
+pushd $PROJECTS > /dev/null
   rm -fr chuck
   /usr/bin/time git clone \
     --branch ${CHUCK_VERSION} \
@@ -28,7 +28,7 @@ pushd $HOME/Projects > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-pushd $HOME/Projects/chuck/src > /dev/null
+pushd $PROJECTS/chuck/src > /dev/null
   echo "" >> $LOGFILE
   echo "Building ChucK" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux-alsa \
@@ -39,7 +39,7 @@ pushd $HOME/Projects/chuck/src > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-pushd $HOME/Projects/chuck/examples/book/digital-artists/chapter1 > /dev/null
+pushd $PROJECTS/chuck/examples/book/digital-artists/chapter1 > /dev/null
   echo "" >> $LOGFILE
   echo "Testing ChucK" | tee --append $LOGFILE
   echo "You should hear random notes"

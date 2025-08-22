@@ -11,7 +11,7 @@ rm --force $LOGFILE
 
 echo "" >> $LOGFILE
 echo "Cloning chugins repository" | tee --append $LOGFILE
-pushd $HOME/Projects > /dev/null
+pushd $PROJECTS > /dev/null
   rm -fr chugins
   /usr/bin/time git clone \
     --recurse-submodules \
@@ -20,7 +20,7 @@ pushd $HOME/Projects > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-pushd $HOME/Projects/chugins > /dev/null
+pushd $PROJECTS/chugins > /dev/null
   echo "" >> $LOGFILE
   echo "Building ChuGins" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
@@ -59,7 +59,7 @@ fi
 export PATH=/usr/lib/llvm-$LLVM_VERSION/bin:$PATH
 echo $PATH | tee --append $LOGFILE
 
-pushd $HOME/Projects/chugins/Faust > /dev/null
+pushd $PROJECTS/chugins/Faust > /dev/null
   echo "" >> $LOGFILE
   echo "Building Faust ChuGin" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
@@ -82,7 +82,7 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   libfluidsynth-dev \
   >> $LOGFILE 2>&1
 
-pushd $HOME/Projects/chugins/FluidSynth > /dev/null
+pushd $PROJECTS/chugins/FluidSynth > /dev/null
   echo "" >> $LOGFILE
   echo "Building FluidSynth ChuGin" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
@@ -109,7 +109,7 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   libsqlite3-dev \
   >> $LOGFILE 2>&1
 
-pushd $HOME/Projects/chugins/WarpBuf > /dev/null
+pushd $PROJECTS/chugins/WarpBuf > /dev/null
   echo "" >> $LOGFILE
   echo "Building WarpBuf ChuGin" | tee --append $LOGFILE
   git submodule update --init --recursive \

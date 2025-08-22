@@ -94,9 +94,8 @@ while true; do
 done
 
 echo ""
-echo "To use the container, type"
-echo ""
-echo "  distrobox enter $DBX_CONTAINER_NAME"
-echo ""
+echo "Entering the container"
+echo "Exit with CTRL-D or 'exit'"
+distrobox enter $DBX_CONTAINER_NAME
 
 echo "*** Finished New Container ***" | tee --append $LOGFILE

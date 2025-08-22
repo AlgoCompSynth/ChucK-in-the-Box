@@ -1,0 +1,274 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+cmake is already the newest version (3.25.1-1).
+libcanberra-gtk3-module is already the newest version (0.30-10).
+libgl-dev is already the newest version (1.6.0-1).
+libwayland-bin is already the newest version (1.21.0-1).
+libwayland-dev is already the newest version (1.21.0-1).
+libx11-dev is already the newest version (2:1.8.4-2+deb12u2).
+libxcursor-dev is already the newest version (1:1.2.1-1).
+libxi-dev is already the newest version (2:1.8-1+b1).
+libxinerama-dev is already the newest version (2:1.1.4-3).
+libxkbcommon-x11-dev is already the newest version (1.5.0-1).
+libxrandr-dev is already the newest version (2:1.5.2-2+b1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+0.00user 0.00system 0:01.36elapsed 0%CPU (0avgtext+0avgdata 4736maxresident)k
+0inputs+0outputs (0major+231minor)pagefaults 0swaps
+
+Checking package versions
+ii cmake 3.25.1-1 arm64 cross-platform, open-source make system
+ii libcanberra-gtk3-module:arm64 0.30-10 arm64 translates GTK3 widgets signals to event sounds
+ii libgl-dev:arm64 1.6.0-1 arm64 Vendor neutral GL dispatch library -- GL development files
+ii libwayland-bin 1.21.0-1 arm64 wayland compositor infrastructure - binary utilities
+ii libwayland-dev:arm64 1.21.0-1 arm64 wayland compositor infrastructure - development files
+ii libx11-dev:arm64 2:1.8.4-2+deb12u2 arm64 X11 client-side library (development headers)
+ii libxcursor-dev:arm64 1:1.2.1-1 arm64 X cursor management library (development files)
+ii libxi-dev:arm64 2:1.8-1+b1 arm64 X11 Input extension library (development headers)
+ii libxinerama-dev:arm64 2:1.1.4-3 arm64 X11 Xinerama extension library (development headers)
+ii libxkbcommon-x11-dev:arm64 1.5.0-1 arm64 library to create keymaps with the XKB X11 protocol - development files
+ii libxrandr-dev:arm64 2:1.5.2-2+b1 arm64 X11 RandR extension library (development headers)
+
+Done!
+
+Cloning ChuGL repository
+Cloning into 'chugl'...
+2.34user 0.19system 0:03.88elapsed 65%CPU (0avgtext+0avgdata 83184maxresident)k
+0inputs+173248outputs (0major+15254minor)pagefaults 0swaps
+
+Building ChuGL
+-- The CXX compiler identification is GNU 12.2.0
+-- The C compiler identification is GNU 12.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Using static wgpu-native backend for WebGPU v22.1.0.5
+-- Using WebGPU backend from '/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/build-release/_deps/webgpu-src/lib/linux-aarch64/libwgpu_native.a'
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Including Wayland support
+-- Looking for memfd_create
+-- Looking for memfd_create - found
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Checking for modules 'wayland-client>=0.2.7;wayland-cursor>=0.2.7;wayland-egl>=0.2.7;xkbcommon>=0.5.0'
+--   Found wayland-client, version 1.21.0
+--   Found wayland-cursor, version 1.21.0
+--   Found wayland-egl, version 18.1.0
+--   Found xkbcommon, version 1.5.0
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Box2D using Unix
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/build-release
+[  0%] Built target simde
+[  0%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/aabb.c.o
+[  1%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/allocate.c.o
+[  2%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/array.c.o
+[  3%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/bitset.c.o
+[  3%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/block_array.c.o
+[  4%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/body.c.o
+[  5%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/broad_phase.c.o
+[  5%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/constraint_graph.c.o
+[  6%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/contact.c.o
+[  7%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/contact_solver.c.o
+[  8%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/core.c.o
+[  8%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/distance.c.o
+[  9%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/distance_joint.c.o
+[ 10%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/dynamic_tree.c.o
+[ 10%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/geometry.c.o
+[ 11%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/hull.c.o
+[ 12%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/id_pool.c.o
+[ 12%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/island.c.o
+[ 13%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/joint.c.o
+[ 14%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/manifold.c.o
+[ 15%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/math_functions.c.o
+[ 15%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/motor_joint.c.o
+[ 16%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/mouse_joint.c.o
+[ 17%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/prismatic_joint.c.o
+[ 17%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/revolute_joint.c.o
+[ 18%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/shape.c.o
+[ 19%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/solver.c.o
+[ 19%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/solver_set.c.o
+[ 20%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/stack_allocator.c.o
+[ 21%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/table.c.o
+[ 22%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/timer.c.o
+[ 22%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/types.c.o
+[ 23%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/weld_joint.c.o
+[ 24%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/wheel_joint.c.o
+[ 24%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/world.c.o
+[ 25%] Linking C static library libbox2d.a
+[ 25%] Built target box2d
+[ 26%] Generating xdg-shell-client-protocol.h
+[ 26%] Generating fractional-scale-v1-client-protocol-code.h
+[ 27%] Generating fractional-scale-v1-client-protocol.h
+[ 28%] Generating idle-inhibit-unstable-v1-client-protocol-code.h
+[ 28%] Generating idle-inhibit-unstable-v1-client-protocol.h
+[ 28%] Generating pointer-constraints-unstable-v1-client-protocol-code.h
+[ 29%] Generating pointer-constraints-unstable-v1-client-protocol.h
+[ 30%] Generating relative-pointer-unstable-v1-client-protocol-code.h
+[ 31%] Generating relative-pointer-unstable-v1-client-protocol.h
+[ 31%] Generating viewporter-client-protocol-code.h
+[ 32%] Generating viewporter-client-protocol.h
+[ 33%] Generating wayland-client-protocol-code.h
+[ 34%] Generating wayland-client-protocol.h
+[ 35%] Generating xdg-activation-v1-client-protocol-code.h
+[ 36%] Generating xdg-activation-v1-client-protocol.h
+[ 37%] Generating xdg-decoration-unstable-v1-client-protocol-code.h
+[ 37%] Generating xdg-decoration-unstable-v1-client-protocol.h
+[ 38%] Generating xdg-shell-client-protocol-code.h
+[ 39%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o
+[ 39%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o
+[ 40%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o
+[ 41%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o
+[ 42%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/platform.c.o
+[ 42%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o
+[ 43%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o
+[ 44%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o
+[ 44%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o
+[ 45%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/null_init.c.o
+[ 46%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o
+[ 47%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/null_window.c.o
+[ 47%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o
+[ 48%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o
+[ 49%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o
+[ 49%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o
+[ 50%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o
+[ 51%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o
+[ 51%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o
+[ 52%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o
+[ 53%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o
+[ 54%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o
+[ 54%] Linking C static library libglfw3.a
+[ 54%] Built target glfw
+[ 55%] Building C object vendor/glfw3webgpu/CMakeFiles/glfw3webgpu.dir/glfw3webgpu.c.o
+[ 56%] Linking C static library libglfw3webgpu.a
+[ 56%] Built target glfw3webgpu
+[ 56%] Building C object vendor/sr_webcam/CMakeFiles/sr_webcam.dir/src/sr_webcam.c.o
+[ 57%] Building C object vendor/sr_webcam/CMakeFiles/sr_webcam.dir/src/sr_webcam_lin.c.o
+[ 58%] Linking C static library libsr_webcam.a
+[ 58%] Built target sr_webcam
+[ 59%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/autofit/autofit.c.o
+[ 60%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftbase.c.o
+[ 60%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftbbox.c.o
+[ 61%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftbdf.c.o
+[ 62%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftbitmap.c.o
+[ 62%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftcid.c.o
+[ 63%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftfstype.c.o
+[ 64%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftgasp.c.o
+[ 64%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftglyph.c.o
+[ 65%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftgxval.c.o
+[ 66%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftinit.c.o
+[ 67%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftmm.c.o
+[ 67%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftotval.c.o
+[ 68%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftpatent.c.o
+[ 69%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftpfr.c.o
+[ 69%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftstroke.c.o
+[ 70%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftsynth.c.o
+[ 71%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/fttype1.c.o
+[ 72%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o
+[ 72%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/bdf/bdf.c.o
+[ 73%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o
+[ 74%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/cache/ftcache.c.o
+[ 74%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/cff/cff.c.o
+[ 75%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/cid/type1cid.c.o
+[ 76%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o
+[ 76%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o
+[ 77%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/pcf/pcf.c.o
+[ 78%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/pfr/pfr.c.o
+[ 79%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/psaux/psaux.c.o
+[ 79%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.o
+[ 80%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/psnames/psnames.c.o
+[ 81%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/raster/raster.c.o
+[ 81%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/sdf/sdf.c.o
+[ 82%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o
+[ 83%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/smooth/smooth.c.o
+[ 83%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/svg/svg.c.o
+[ 84%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/truetype/truetype.c.o
+[ 85%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/type1/type1.c.o
+[ 86%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/type42/type42.c.o
+[ 86%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o
+[ 87%] Building C object vendor/freetype/CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o
+[ 88%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftdebug.c.o
+[ 88%] Linking C static library libfreetype.a
+[ 88%] Built target freetype
+[ 88%] Building CXX object CMakeFiles/ChuGL.dir/ChuGL.cpp.o
+[ 89%] Building C object CMakeFiles/ChuGL.dir/core/log.c.o
+cc1: warning: command-line option ‘-Wno-class-memaccess’ is valid for C++/ObjC++ but not for C
+[ 90%] Building C object CMakeFiles/ChuGL.dir/core/hashmap.c.o
+cc1: warning: command-line option ‘-Wno-class-memaccess’ is valid for C++/ObjC++ but not for C
+[ 90%] Building CXX object CMakeFiles/ChuGL.dir/core/memory.cpp.o
+[ 91%] Building CXX object CMakeFiles/ChuGL.dir/implementations.cpp.o
+[ 92%] Building C object CMakeFiles/ChuGL.dir/vendor/mikktspace/mikktspace.c.o
+cc1: warning: command-line option ‘-Wno-class-memaccess’ is valid for C++/ObjC++ but not for C
+[ 92%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/cimgui.cpp.o
+[ 93%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui.cpp.o
+[ 94%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui_draw.cpp.o
+[ 95%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui_demo.cpp.o
+[ 95%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui_widgets.cpp.o
+[ 96%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui_tables.cpp.o
+[ 97%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/misc/cpp/imgui_stdlib.cpp.o
+[ 97%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/backends/imgui_impl_glfw.cpp.o
+[ 98%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/backends/imgui_impl_wgpu.cpp.o
+[100%] Linking CXX shared library ChuGL.chug
+[100%] Built target ChuGL
+129.10user 2.37system 2:13.01elapsed 98%CPU (0avgtext+0avgdata 822912maxresident)k
+0inputs+122816outputs (0major+459736minor)pagefaults 0swaps
+
+Installing ChuGL
+[chuck:2:SYSTEM]: chugin system: ON
+[chuck:2:SYSTEM]: chugin host API version: 10.2
+[chuck:2:SYSTEM]:  | chugin major version must == host major version
+[chuck:2:SYSTEM]:  | chugin minor version must <= host minor version
+[chuck:2:SYSTEM]:  | language version: 1.5.5.2 (chai)
+[chuck:2:SYSTEM]: probing chugins (.chug)...
+[chuck:2:SYSTEM]: probing specified chugins (e.g., via --chugin)...
+[chuck:2:SYSTEM]: probing chugins in search paths...
+[chuck:2:SYSTEM]:  | searching '/usr/lib/chuck/'
+[chuck:2:SYSTEM]:  | searching '/usr/local/lib/chuck/'
+[chuck:2:SYSTEM]:  |  | [chugin] ChuGL.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  |  | version: 0.2.6 (alpha)
+[chuck:2:SYSTEM]:  |  |  | author: Andrew Zhu Aday & Ge Wang
+[chuck:2:SYSTEM]:  | searching '/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/.chuck/packages/'
+[chuck:2:SYSTEM]:  | searching '/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/.chuck/lib/'
+[chuck:2:SYSTEM]: probing chuck files (.ck)...
+[chuck:2:SYSTEM]: global cleanup initiating...
+[chuck:2:SYSTEM]: shutting down ChucK instance...
+[chuck:2:SYSTEM]:  | ChucK instance shutdown complete.
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+[chuck]: 0-length packet...
+[chuck]: 0-length packet...
+[chuck]: 0-length packet...
+[chuck]: 0-length packet...
+[chuck]: 0-length packet...
+[chuck]: 0-length packet...
+[chuck]: (VM) removing all (1) shreds...
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+[chuck]: (VM) removing all (2) shreds...
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+*** Finished ChuGL ***

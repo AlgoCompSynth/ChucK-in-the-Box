@@ -24,7 +24,7 @@ export PATH=/usr/lib/qt6/bin:$PATH
 
 echo "" >> $LOGFILE
 echo "Cloning miniAudicle repository - this takes some time" | tee --append $LOGFILE
-pushd $HOME/Projects > /dev/null
+pushd $PROJECTS > /dev/null
   rm -fr miniAudicle
   /usr/bin/time git clone --recurse-submodules \
     --branch $CHUCK_VERSION \
@@ -32,7 +32,7 @@ pushd $HOME/Projects > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-pushd $HOME/Projects/miniAudicle/src > /dev/null
+pushd $PROJECTS/miniAudicle/src > /dev/null
   echo "" >> $LOGFILE
   echo "Building miniAudicle" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux-alsa \

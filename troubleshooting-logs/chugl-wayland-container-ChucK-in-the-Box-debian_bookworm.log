@@ -1,0 +1,731 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  at-spi2-core cmake-data dconf-gsettings-backend dconf-service
+  gsettings-desktop-schemas libarchive13 libatk-bridge2.0-0 libatspi2.0-0
+  libcanberra-gtk3-0 libcanberra0 libcolord2 libdconf1 libepoxy0 libffi-dev
+  libglx-dev libgtk-3-0 libgtk-3-bin libgtk-3-common libjsoncpp25 liblcms2-2
+  libltdl7 libpthread-stubs0-dev librhash0 libtdb1 libuv1 libwayland-cursor0
+  libwayland-egl1 libxau-dev libxcb-xkb-dev libxcb-xkb1 libxcb1-dev
+  libxdmcp-dev libxext-dev libxfixes-dev libxkbcommon-dev libxkbcommon-x11-0
+  libxkbcommon0 libxrender-dev libxtst6 sound-theme-freedesktop x11-common
+  x11proto-dev xkb-data xorg-sgml-doctools xtrans-dev
+Suggested packages:
+  cmake-doc cmake-format elpa-cmake-mode ninja-build lrzip libcanberra-gtk0
+  libcanberra-pulse colord gvfs liblcms2-utils libwayland-doc libx11-doc
+  libxcb-doc libxext-doc
+The following NEW packages will be installed:
+  at-spi2-core cmake cmake-data dconf-gsettings-backend dconf-service
+  gsettings-desktop-schemas libarchive13 libatk-bridge2.0-0 libatspi2.0-0
+  libcanberra-gtk3-0 libcanberra-gtk3-module libcanberra0 libcolord2 libdconf1
+  libepoxy0 libffi-dev libgl-dev libglx-dev libgtk-3-0 libgtk-3-bin
+  libgtk-3-common libjsoncpp25 liblcms2-2 libltdl7 libpthread-stubs0-dev
+  librhash0 libtdb1 libuv1 libwayland-bin libwayland-cursor0 libwayland-dev
+  libwayland-egl1 libx11-dev libxau-dev libxcb-xkb-dev libxcb-xkb1 libxcb1-dev
+  libxcursor-dev libxdmcp-dev libxext-dev libxfixes-dev libxi-dev
+  libxinerama-dev libxkbcommon-dev libxkbcommon-x11-0 libxkbcommon-x11-dev
+  libxkbcommon0 libxrandr-dev libxrender-dev libxtst6 sound-theme-freedesktop
+  x11-common x11proto-dev xkb-data xorg-sgml-doctools xtrans-dev
+0 upgraded, 56 newly installed, 0 to remove and 0 not upgraded.
+Need to get 22.5 MB of archives.
+After this operation, 107 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main arm64 libatspi2.0-0 arm64 2.46.0-5 [71.0 kB]
+Get:2 http://deb.debian.org/debian bookworm/main arm64 x11-common all 1:7.7+23 [252 kB]
+Get:3 http://deb.debian.org/debian bookworm/main arm64 libxtst6 arm64 2:1.2.3-1.1 [27.8 kB]
+Get:4 http://deb.debian.org/debian bookworm/main arm64 libdconf1 arm64 0.40.0-4 [39.2 kB]
+Get:5 http://deb.debian.org/debian bookworm/main arm64 dconf-service arm64 0.40.0-4 [30.0 kB]
+Get:6 http://deb.debian.org/debian bookworm/main arm64 dconf-gsettings-backend arm64 0.40.0-4 [26.3 kB]
+Get:7 http://deb.debian.org/debian bookworm/main arm64 gsettings-desktop-schemas all 43.0-1 [643 kB]
+Get:8 http://deb.debian.org/debian bookworm/main arm64 at-spi2-core arm64 2.46.0-5 [56.0 kB]
+Get:9 http://deb.debian.org/debian bookworm/main arm64 libarchive13 arm64 3.6.2-1+deb12u2 [316 kB]
+Get:10 http://deb.debian.org/debian bookworm/main arm64 libjsoncpp25 arm64 1.9.5-4 [72.3 kB]
+Get:11 http://deb.debian.org/debian bookworm/main arm64 librhash0 arm64 1.4.3-3 [131 kB]
+Get:12 http://deb.debian.org/debian bookworm/main arm64 libuv1 arm64 1.44.2-1+deb12u1 [130 kB]
+Get:13 http://deb.debian.org/debian bookworm/main arm64 cmake-data all 3.25.1-1 [2,026 kB]
+Get:14 http://deb.debian.org/debian bookworm/main arm64 cmake arm64 3.25.1-1 [6,806 kB]
+Get:15 http://deb.debian.org/debian bookworm/main arm64 libatk-bridge2.0-0 arm64 2.46.0-5 [61.4 kB]
+Get:16 http://deb.debian.org/debian bookworm/main arm64 libltdl7 arm64 2.4.7-7~deb12u1 [392 kB]
+Get:17 http://deb.debian.org/debian bookworm/main arm64 libtdb1 arm64 1.4.8-2 [43.6 kB]
+Get:18 http://deb.debian.org/debian bookworm/main arm64 sound-theme-freedesktop all 0.8-2 [384 kB]
+Get:19 http://deb.debian.org/debian bookworm/main arm64 libcanberra0 arm64 0.30-10 [38.3 kB]
+Get:20 http://deb.debian.org/debian bookworm/main arm64 liblcms2-2 arm64 2.14-2 [143 kB]
+Get:21 http://deb.debian.org/debian bookworm/main arm64 libcolord2 arm64 1.4.6-2.2 [126 kB]
+Get:22 http://deb.debian.org/debian bookworm/main arm64 libepoxy0 arm64 1.5.10-1 [198 kB]
+Get:23 http://deb.debian.org/debian bookworm/main arm64 libwayland-cursor0 arm64 1.21.0-1 [14.1 kB]
+Get:24 http://deb.debian.org/debian bookworm/main arm64 libwayland-egl1 arm64 1.21.0-1 [8,696 B]
+Get:25 http://deb.debian.org/debian bookworm/main arm64 xkb-data all 2.35.1-1 [764 kB]
+Get:26 http://deb.debian.org/debian bookworm/main arm64 libxkbcommon0 arm64 1.5.0-1 [100 kB]
+Get:27 http://deb.debian.org/debian bookworm/main arm64 libgtk-3-common all 3.24.38-2~deb12u3 [3,895 kB]
+Get:28 http://deb.debian.org/debian bookworm/main arm64 libgtk-3-0 arm64 3.24.38-2~deb12u3 [2,620 kB]
+Get:29 http://deb.debian.org/debian bookworm/main arm64 libcanberra-gtk3-0 arm64 0.30-10 [12.3 kB]
+Get:30 http://deb.debian.org/debian bookworm/main arm64 libcanberra-gtk3-module arm64 0.30-10 [14.2 kB]
+Get:31 http://deb.debian.org/debian bookworm/main arm64 libffi-dev arm64 3.4.4-1 [56.0 kB]
+Get:32 http://deb.debian.org/debian bookworm/main arm64 xorg-sgml-doctools all 1:1.11-1.1 [22.1 kB]
+Get:33 http://deb.debian.org/debian bookworm/main arm64 x11proto-dev all 2022.1-1 [599 kB]
+Get:34 http://deb.debian.org/debian bookworm/main arm64 libxau-dev arm64 1:1.0.9-1 [23.2 kB]
+Get:35 http://deb.debian.org/debian bookworm/main arm64 libxdmcp-dev arm64 1:1.1.2-3 [41.2 kB]
+Get:36 http://deb.debian.org/debian bookworm/main arm64 xtrans-dev all 1.4.0-1 [98.7 kB]
+Get:37 http://deb.debian.org/debian bookworm/main arm64 libpthread-stubs0-dev arm64 0.4-1 [5,336 B]
+Get:38 http://deb.debian.org/debian bookworm/main arm64 libxcb1-dev arm64 1.15-1 [182 kB]
+Get:39 http://deb.debian.org/debian bookworm/main arm64 libx11-dev arm64 2:1.8.4-2+deb12u2 [818 kB]
+Get:40 http://deb.debian.org/debian bookworm/main arm64 libglx-dev arm64 1.6.0-1 [15.3 kB]
+Get:41 http://deb.debian.org/debian bookworm/main arm64 libgl-dev arm64 1.6.0-1 [100 kB]
+Get:42 http://deb.debian.org/debian bookworm/main arm64 libgtk-3-bin arm64 3.24.38-2~deb12u3 [80.9 kB]
+Get:43 http://deb.debian.org/debian bookworm/main arm64 libwayland-bin arm64 1.21.0-1 [22.5 kB]
+Get:44 http://deb.debian.org/debian bookworm/main arm64 libwayland-dev arm64 1.21.0-1 [72.5 kB]
+Get:45 http://deb.debian.org/debian bookworm/main arm64 libxcb-xkb1 arm64 1.15-1 [128 kB]
+Get:46 http://deb.debian.org/debian bookworm/main arm64 libxcb-xkb-dev arm64 1.15-1 [139 kB]
+Get:47 http://deb.debian.org/debian bookworm/main arm64 libxrender-dev arm64 1:0.9.10-1.1 [40.5 kB]
+Get:48 http://deb.debian.org/debian bookworm/main arm64 libxfixes-dev arm64 1:6.0.0-2 [25.2 kB]
+Get:49 http://deb.debian.org/debian bookworm/main arm64 libxcursor-dev arm64 1:1.2.1-1 [52.2 kB]
+Get:50 http://deb.debian.org/debian bookworm/main arm64 libxext-dev arm64 2:1.3.4-1+b1 [107 kB]
+Get:51 http://deb.debian.org/debian bookworm/main arm64 libxi-dev arm64 2:1.8-1+b1 [244 kB]
+Get:52 http://deb.debian.org/debian bookworm/main arm64 libxinerama-dev arm64 2:1.1.4-3 [20.1 kB]
+Get:53 http://deb.debian.org/debian bookworm/main arm64 libxkbcommon-dev arm64 1.5.0-1 [51.0 kB]
+Get:54 http://deb.debian.org/debian bookworm/main arm64 libxkbcommon-x11-0 arm64 1.5.0-1 [14.6 kB]
+Get:55 http://deb.debian.org/debian bookworm/main arm64 libxkbcommon-x11-dev arm64 1.5.0-1 [6,792 B]
+Get:56 http://deb.debian.org/debian bookworm/main arm64 libxrandr-dev arm64 2:1.5.2-2+b1 [46.9 kB]
+Fetched 22.5 MB in 2s (12.5 MB/s)
+Selecting previously unselected package libatspi2.0-0:arm64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 35307 files and directories currently installed.)
+Preparing to unpack .../00-libatspi2.0-0_2.46.0-5_arm64.deb ...
+Unpacking libatspi2.0-0:arm64 (2.46.0-5) ...
+Selecting previously unselected package x11-common.
+Preparing to unpack .../01-x11-common_1%3a7.7+23_all.deb ...
+Unpacking x11-common (1:7.7+23) ...
+Selecting previously unselected package libxtst6:arm64.
+Preparing to unpack .../02-libxtst6_2%3a1.2.3-1.1_arm64.deb ...
+Unpacking libxtst6:arm64 (2:1.2.3-1.1) ...
+Selecting previously unselected package libdconf1:arm64.
+Preparing to unpack .../03-libdconf1_0.40.0-4_arm64.deb ...
+Unpacking libdconf1:arm64 (0.40.0-4) ...
+Selecting previously unselected package dconf-service.
+Preparing to unpack .../04-dconf-service_0.40.0-4_arm64.deb ...
+Unpacking dconf-service (0.40.0-4) ...
+Selecting previously unselected package dconf-gsettings-backend:arm64.
+Preparing to unpack .../05-dconf-gsettings-backend_0.40.0-4_arm64.deb ...
+Unpacking dconf-gsettings-backend:arm64 (0.40.0-4) ...
+Selecting previously unselected package gsettings-desktop-schemas.
+Preparing to unpack .../06-gsettings-desktop-schemas_43.0-1_all.deb ...
+Unpacking gsettings-desktop-schemas (43.0-1) ...
+Selecting previously unselected package at-spi2-core.
+Preparing to unpack .../07-at-spi2-core_2.46.0-5_arm64.deb ...
+Unpacking at-spi2-core (2.46.0-5) ...
+Selecting previously unselected package libarchive13:arm64.
+Preparing to unpack .../08-libarchive13_3.6.2-1+deb12u2_arm64.deb ...
+Unpacking libarchive13:arm64 (3.6.2-1+deb12u2) ...
+Selecting previously unselected package libjsoncpp25:arm64.
+Preparing to unpack .../09-libjsoncpp25_1.9.5-4_arm64.deb ...
+Unpacking libjsoncpp25:arm64 (1.9.5-4) ...
+Selecting previously unselected package librhash0:arm64.
+Preparing to unpack .../10-librhash0_1.4.3-3_arm64.deb ...
+Unpacking librhash0:arm64 (1.4.3-3) ...
+Selecting previously unselected package libuv1:arm64.
+Preparing to unpack .../11-libuv1_1.44.2-1+deb12u1_arm64.deb ...
+Unpacking libuv1:arm64 (1.44.2-1+deb12u1) ...
+Selecting previously unselected package cmake-data.
+Preparing to unpack .../12-cmake-data_3.25.1-1_all.deb ...
+Unpacking cmake-data (3.25.1-1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../13-cmake_3.25.1-1_arm64.deb ...
+Unpacking cmake (3.25.1-1) ...
+Selecting previously unselected package libatk-bridge2.0-0:arm64.
+Preparing to unpack .../14-libatk-bridge2.0-0_2.46.0-5_arm64.deb ...
+Unpacking libatk-bridge2.0-0:arm64 (2.46.0-5) ...
+Selecting previously unselected package libltdl7:arm64.
+Preparing to unpack .../15-libltdl7_2.4.7-7~deb12u1_arm64.deb ...
+Unpacking libltdl7:arm64 (2.4.7-7~deb12u1) ...
+Selecting previously unselected package libtdb1:arm64.
+Preparing to unpack .../16-libtdb1_1.4.8-2_arm64.deb ...
+Unpacking libtdb1:arm64 (1.4.8-2) ...
+Selecting previously unselected package sound-theme-freedesktop.
+Preparing to unpack .../17-sound-theme-freedesktop_0.8-2_all.deb ...
+Unpacking sound-theme-freedesktop (0.8-2) ...
+Selecting previously unselected package libcanberra0:arm64.
+Preparing to unpack .../18-libcanberra0_0.30-10_arm64.deb ...
+Unpacking libcanberra0:arm64 (0.30-10) ...
+Selecting previously unselected package liblcms2-2:arm64.
+Preparing to unpack .../19-liblcms2-2_2.14-2_arm64.deb ...
+Unpacking liblcms2-2:arm64 (2.14-2) ...
+Selecting previously unselected package libcolord2:arm64.
+Preparing to unpack .../20-libcolord2_1.4.6-2.2_arm64.deb ...
+Unpacking libcolord2:arm64 (1.4.6-2.2) ...
+Selecting previously unselected package libepoxy0:arm64.
+Preparing to unpack .../21-libepoxy0_1.5.10-1_arm64.deb ...
+Unpacking libepoxy0:arm64 (1.5.10-1) ...
+Selecting previously unselected package libwayland-cursor0:arm64.
+Preparing to unpack .../22-libwayland-cursor0_1.21.0-1_arm64.deb ...
+Unpacking libwayland-cursor0:arm64 (1.21.0-1) ...
+Selecting previously unselected package libwayland-egl1:arm64.
+Preparing to unpack .../23-libwayland-egl1_1.21.0-1_arm64.deb ...
+Unpacking libwayland-egl1:arm64 (1.21.0-1) ...
+Selecting previously unselected package xkb-data.
+Preparing to unpack .../24-xkb-data_2.35.1-1_all.deb ...
+Unpacking xkb-data (2.35.1-1) ...
+Selecting previously unselected package libxkbcommon0:arm64.
+Preparing to unpack .../25-libxkbcommon0_1.5.0-1_arm64.deb ...
+Unpacking libxkbcommon0:arm64 (1.5.0-1) ...
+Selecting previously unselected package libgtk-3-common.
+Preparing to unpack .../26-libgtk-3-common_3.24.38-2~deb12u3_all.deb ...
+Unpacking libgtk-3-common (3.24.38-2~deb12u3) ...
+Selecting previously unselected package libgtk-3-0:arm64.
+Preparing to unpack .../27-libgtk-3-0_3.24.38-2~deb12u3_arm64.deb ...
+Unpacking libgtk-3-0:arm64 (3.24.38-2~deb12u3) ...
+Selecting previously unselected package libcanberra-gtk3-0:arm64.
+Preparing to unpack .../28-libcanberra-gtk3-0_0.30-10_arm64.deb ...
+Unpacking libcanberra-gtk3-0:arm64 (0.30-10) ...
+Selecting previously unselected package libcanberra-gtk3-module:arm64.
+Preparing to unpack .../29-libcanberra-gtk3-module_0.30-10_arm64.deb ...
+Unpacking libcanberra-gtk3-module:arm64 (0.30-10) ...
+Selecting previously unselected package libffi-dev:arm64.
+Preparing to unpack .../30-libffi-dev_3.4.4-1_arm64.deb ...
+Unpacking libffi-dev:arm64 (3.4.4-1) ...
+Selecting previously unselected package xorg-sgml-doctools.
+Preparing to unpack .../31-xorg-sgml-doctools_1%3a1.11-1.1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1.1) ...
+Selecting previously unselected package x11proto-dev.
+Preparing to unpack .../32-x11proto-dev_2022.1-1_all.deb ...
+Unpacking x11proto-dev (2022.1-1) ...
+Selecting previously unselected package libxau-dev:arm64.
+Preparing to unpack .../33-libxau-dev_1%3a1.0.9-1_arm64.deb ...
+Unpacking libxau-dev:arm64 (1:1.0.9-1) ...
+Selecting previously unselected package libxdmcp-dev:arm64.
+Preparing to unpack .../34-libxdmcp-dev_1%3a1.1.2-3_arm64.deb ...
+Unpacking libxdmcp-dev:arm64 (1:1.1.2-3) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../35-xtrans-dev_1.4.0-1_all.deb ...
+Unpacking xtrans-dev (1.4.0-1) ...
+Selecting previously unselected package libpthread-stubs0-dev:arm64.
+Preparing to unpack .../36-libpthread-stubs0-dev_0.4-1_arm64.deb ...
+Unpacking libpthread-stubs0-dev:arm64 (0.4-1) ...
+Selecting previously unselected package libxcb1-dev:arm64.
+Preparing to unpack .../37-libxcb1-dev_1.15-1_arm64.deb ...
+Unpacking libxcb1-dev:arm64 (1.15-1) ...
+Selecting previously unselected package libx11-dev:arm64.
+Preparing to unpack .../38-libx11-dev_2%3a1.8.4-2+deb12u2_arm64.deb ...
+Unpacking libx11-dev:arm64 (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libglx-dev:arm64.
+Preparing to unpack .../39-libglx-dev_1.6.0-1_arm64.deb ...
+Unpacking libglx-dev:arm64 (1.6.0-1) ...
+Selecting previously unselected package libgl-dev:arm64.
+Preparing to unpack .../40-libgl-dev_1.6.0-1_arm64.deb ...
+Unpacking libgl-dev:arm64 (1.6.0-1) ...
+Selecting previously unselected package libgtk-3-bin.
+Preparing to unpack .../41-libgtk-3-bin_3.24.38-2~deb12u3_arm64.deb ...
+Unpacking libgtk-3-bin (3.24.38-2~deb12u3) ...
+Selecting previously unselected package libwayland-bin.
+Preparing to unpack .../42-libwayland-bin_1.21.0-1_arm64.deb ...
+Unpacking libwayland-bin (1.21.0-1) ...
+Selecting previously unselected package libwayland-dev:arm64.
+Preparing to unpack .../43-libwayland-dev_1.21.0-1_arm64.deb ...
+Unpacking libwayland-dev:arm64 (1.21.0-1) ...
+Selecting previously unselected package libxcb-xkb1:arm64.
+Preparing to unpack .../44-libxcb-xkb1_1.15-1_arm64.deb ...
+Unpacking libxcb-xkb1:arm64 (1.15-1) ...
+Selecting previously unselected package libxcb-xkb-dev:arm64.
+Preparing to unpack .../45-libxcb-xkb-dev_1.15-1_arm64.deb ...
+Unpacking libxcb-xkb-dev:arm64 (1.15-1) ...
+Selecting previously unselected package libxrender-dev:arm64.
+Preparing to unpack .../46-libxrender-dev_1%3a0.9.10-1.1_arm64.deb ...
+Unpacking libxrender-dev:arm64 (1:0.9.10-1.1) ...
+Selecting previously unselected package libxfixes-dev:arm64.
+Preparing to unpack .../47-libxfixes-dev_1%3a6.0.0-2_arm64.deb ...
+Unpacking libxfixes-dev:arm64 (1:6.0.0-2) ...
+Selecting previously unselected package libxcursor-dev:arm64.
+Preparing to unpack .../48-libxcursor-dev_1%3a1.2.1-1_arm64.deb ...
+Unpacking libxcursor-dev:arm64 (1:1.2.1-1) ...
+Selecting previously unselected package libxext-dev:arm64.
+Preparing to unpack .../49-libxext-dev_2%3a1.3.4-1+b1_arm64.deb ...
+Unpacking libxext-dev:arm64 (2:1.3.4-1+b1) ...
+Selecting previously unselected package libxi-dev:arm64.
+Preparing to unpack .../50-libxi-dev_2%3a1.8-1+b1_arm64.deb ...
+Unpacking libxi-dev:arm64 (2:1.8-1+b1) ...
+Selecting previously unselected package libxinerama-dev:arm64.
+Preparing to unpack .../51-libxinerama-dev_2%3a1.1.4-3_arm64.deb ...
+Unpacking libxinerama-dev:arm64 (2:1.1.4-3) ...
+Selecting previously unselected package libxkbcommon-dev:arm64.
+Preparing to unpack .../52-libxkbcommon-dev_1.5.0-1_arm64.deb ...
+Unpacking libxkbcommon-dev:arm64 (1.5.0-1) ...
+Selecting previously unselected package libxkbcommon-x11-0:arm64.
+Preparing to unpack .../53-libxkbcommon-x11-0_1.5.0-1_arm64.deb ...
+Unpacking libxkbcommon-x11-0:arm64 (1.5.0-1) ...
+Selecting previously unselected package libxkbcommon-x11-dev:arm64.
+Preparing to unpack .../54-libxkbcommon-x11-dev_1.5.0-1_arm64.deb ...
+Unpacking libxkbcommon-x11-dev:arm64 (1.5.0-1) ...
+Selecting previously unselected package libxrandr-dev:arm64.
+Preparing to unpack .../55-libxrandr-dev_2%3a1.5.2-2+b1_arm64.deb ...
+Unpacking libxrandr-dev:arm64 (2:1.5.2-2+b1) ...
+Setting up liblcms2-2:arm64 (2.14-2) ...
+Setting up libarchive13:arm64 (3.6.2-1+deb12u2) ...
+Setting up libtdb1:arm64 (1.4.8-2) ...
+Setting up x11-common (1:7.7+23) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of restart.
+Setting up xkb-data (2.35.1-1) ...
+Setting up libatspi2.0-0:arm64 (2.46.0-5) ...
+Setting up libffi-dev:arm64 (3.4.4-1) ...
+Setting up libpthread-stubs0-dev:arm64 (0.4-1) ...
+Setting up libcolord2:arm64 (1.4.6-2.2) ...
+Setting up libxcb-xkb1:arm64 (1.15-1) ...
+Setting up libdconf1:arm64 (0.40.0-4) ...
+Setting up libatk-bridge2.0-0:arm64 (2.46.0-5) ...
+Setting up xtrans-dev (1.4.0-1) ...
+Setting up libwayland-bin (1.21.0-1) ...
+Setting up libuv1:arm64 (1.44.2-1+deb12u1) ...
+Setting up libepoxy0:arm64 (1.5.10-1) ...
+Setting up libjsoncpp25:arm64 (1.9.5-4) ...
+Setting up libltdl7:arm64 (2.4.7-7~deb12u1) ...
+Setting up sound-theme-freedesktop (0.8-2) ...
+Setting up librhash0:arm64 (1.4.3-3) ...
+Setting up libwayland-cursor0:arm64 (1.21.0-1) ...
+Setting up xorg-sgml-doctools (1:1.11-1.1) ...
+Setting up cmake-data (3.25.1-1) ...
+Setting up libwayland-egl1:arm64 (1.21.0-1) ...
+Setting up libxkbcommon0:arm64 (1.5.0-1) ...
+Setting up libcanberra0:arm64 (0.30-10) ...
+Setting up libxtst6:arm64 (2:1.2.3-1.1) ...
+Setting up libxkbcommon-dev:arm64 (1.5.0-1) ...
+Setting up dconf-service (0.40.0-4) ...
+Setting up libwayland-dev:arm64 (1.21.0-1) ...
+Setting up libxkbcommon-x11-0:arm64 (1.5.0-1) ...
+Setting up cmake (3.25.1-1) ...
+Setting up dconf-gsettings-backend:arm64 (0.40.0-4) ...
+Setting up libgtk-3-common (3.24.38-2~deb12u3) ...
+Setting up gsettings-desktop-schemas (43.0-1) ...
+Processing triggers for libglib2.0-0:arm64 (2.74.6-2+deb12u6) ...
+Setting up libgtk-3-0:arm64 (3.24.38-2~deb12u3) ...
+Processing triggers for libc-bin (2.36-9+deb12u10) ...
+Setting up libgtk-3-bin (3.24.38-2~deb12u3) ...
+Setting up libcanberra-gtk3-0:arm64 (0.30-10) ...
+Processing triggers for man-db (2.11.2-2) ...
+Setting up libcanberra-gtk3-module:arm64 (0.30-10) ...
+Setting up at-spi2-core (2.46.0-5) ...
+Processing triggers for sgml-base (1.31) ...
+Setting up x11proto-dev (2022.1-1) ...
+Setting up libxau-dev:arm64 (1:1.0.9-1) ...
+Setting up libxdmcp-dev:arm64 (1:1.1.2-3) ...
+Setting up libxcb1-dev:arm64 (1.15-1) ...
+Setting up libxcb-xkb-dev:arm64 (1.15-1) ...
+Setting up libx11-dev:arm64 (2:1.8.4-2+deb12u2) ...
+Setting up libxfixes-dev:arm64 (1:6.0.0-2) ...
+Setting up libxext-dev:arm64 (2:1.3.4-1+b1) ...
+Setting up libglx-dev:arm64 (1.6.0-1) ...
+Setting up libxi-dev:arm64 (2:1.8-1+b1) ...
+Setting up libxrender-dev:arm64 (1:0.9.10-1.1) ...
+Setting up libgl-dev:arm64 (1.6.0-1) ...
+Setting up libxkbcommon-x11-dev:arm64 (1.5.0-1) ...
+Setting up libxcursor-dev:arm64 (1:1.2.1-1) ...
+Setting up libxrandr-dev:arm64 (2:1.5.2-2+b1) ...
+Setting up libxinerama-dev:arm64 (2:1.1.4-3) ...
+Processing triggers for libc-bin (2.36-9+deb12u10) ...
+0.00user 0.00system 0:14.67elapsed 0%CPU (0avgtext+0avgdata 4752maxresident)k
+0inputs+0outputs (0major+230minor)pagefaults 0swaps
+
+Checking package versions
+ii cmake 3.25.1-1 arm64 cross-platform, open-source make system
+ii libcanberra-gtk3-module:arm64 0.30-10 arm64 translates GTK3 widgets signals to event sounds
+ii libgl-dev:arm64 1.6.0-1 arm64 Vendor neutral GL dispatch library -- GL development files
+ii libwayland-bin 1.21.0-1 arm64 wayland compositor infrastructure - binary utilities
+ii libwayland-dev:arm64 1.21.0-1 arm64 wayland compositor infrastructure - development files
+ii libx11-dev:arm64 2:1.8.4-2+deb12u2 arm64 X11 client-side library (development headers)
+ii libxcursor-dev:arm64 1:1.2.1-1 arm64 X cursor management library (development files)
+ii libxi-dev:arm64 2:1.8-1+b1 arm64 X11 Input extension library (development headers)
+ii libxinerama-dev:arm64 2:1.1.4-3 arm64 X11 Xinerama extension library (development headers)
+ii libxkbcommon-x11-dev:arm64 1.5.0-1 arm64 library to create keymaps with the XKB X11 protocol - development files
+ii libxrandr-dev:arm64 2:1.5.2-2+b1 arm64 X11 RandR extension library (development headers)
+
+Done!
+
+Cloning ChuGL repository
+Cloning into 'chugl'...
+2.34user 0.19system 0:03.87elapsed 65%CPU (0avgtext+0avgdata 82704maxresident)k
+0inputs+173248outputs (0major+15244minor)pagefaults 0swaps
+
+Building ChuGL
+-- The CXX compiler identification is GNU 12.2.0
+-- The C compiler identification is GNU 12.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Using static wgpu-native backend for WebGPU v22.1.0.5
+-- Using WebGPU backend from '/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/build-debug/_deps/webgpu-src/lib/linux-aarch64/libwgpu_native.a'
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Including Wayland support
+-- Looking for memfd_create
+-- Looking for memfd_create - found
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Checking for modules 'wayland-client>=0.2.7;wayland-cursor>=0.2.7;wayland-egl>=0.2.7;xkbcommon>=0.5.0'
+--   Found wayland-client, version 1.21.0
+--   Found wayland-cursor, version 1.21.0
+--   Found wayland-egl, version 18.1.0
+--   Found xkbcommon, version 1.5.0
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Box2D using Unix
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/build-debug
+[  0%] Built target simde
+[  0%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/aabb.c.o
+[  1%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/allocate.c.o
+[  2%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/array.c.o
+[  3%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/bitset.c.o
+[  3%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/block_array.c.o
+[  4%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/body.c.o
+[  5%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/broad_phase.c.o
+[  5%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/constraint_graph.c.o
+[  6%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/contact.c.o
+[  7%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/contact_solver.c.o
+[  8%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/core.c.o
+[  8%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/distance.c.o
+[  9%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/distance_joint.c.o
+[ 10%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/dynamic_tree.c.o
+[ 10%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/geometry.c.o
+[ 11%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/hull.c.o
+[ 12%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/id_pool.c.o
+[ 12%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/island.c.o
+[ 13%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/joint.c.o
+[ 14%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/manifold.c.o
+[ 15%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/math_functions.c.o
+[ 15%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/motor_joint.c.o
+[ 16%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/mouse_joint.c.o
+[ 17%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/prismatic_joint.c.o
+[ 17%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/revolute_joint.c.o
+[ 18%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/shape.c.o
+[ 19%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/solver.c.o
+[ 19%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/solver_set.c.o
+[ 20%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/stack_allocator.c.o
+[ 21%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/table.c.o
+[ 22%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/timer.c.o
+[ 22%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/types.c.o
+[ 23%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/weld_joint.c.o
+[ 24%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/wheel_joint.c.o
+[ 24%] Building C object vendor/box2d/src/CMakeFiles/box2d.dir/world.c.o
+[ 25%] Linking C static library libbox2d.a
+[ 25%] Built target box2d
+[ 26%] Generating xdg-shell-client-protocol.h
+[ 26%] Generating fractional-scale-v1-client-protocol-code.h
+[ 27%] Generating fractional-scale-v1-client-protocol.h
+[ 28%] Generating idle-inhibit-unstable-v1-client-protocol-code.h
+[ 28%] Generating idle-inhibit-unstable-v1-client-protocol.h
+[ 28%] Generating pointer-constraints-unstable-v1-client-protocol-code.h
+[ 29%] Generating pointer-constraints-unstable-v1-client-protocol.h
+[ 30%] Generating relative-pointer-unstable-v1-client-protocol-code.h
+[ 31%] Generating relative-pointer-unstable-v1-client-protocol.h
+[ 31%] Generating viewporter-client-protocol-code.h
+[ 32%] Generating viewporter-client-protocol.h
+[ 33%] Generating wayland-client-protocol-code.h
+[ 34%] Generating wayland-client-protocol.h
+[ 35%] Generating xdg-activation-v1-client-protocol-code.h
+[ 36%] Generating xdg-activation-v1-client-protocol.h
+[ 37%] Generating xdg-decoration-unstable-v1-client-protocol-code.h
+[ 37%] Generating xdg-decoration-unstable-v1-client-protocol.h
+[ 38%] Generating xdg-shell-client-protocol-code.h
+[ 39%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o
+[ 39%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o
+[ 40%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o
+[ 41%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o
+[ 42%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/platform.c.o
+[ 42%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o
+[ 43%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o
+[ 44%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o
+[ 44%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o
+[ 45%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/null_init.c.o
+[ 46%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o
+[ 47%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/null_window.c.o
+[ 47%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o
+[ 48%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o
+[ 49%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o
+[ 49%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o
+[ 50%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o
+[ 51%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o
+[ 51%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o
+[ 52%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o
+[ 53%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o
+[ 54%] Building C object vendor/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o
+[ 54%] Linking C static library libglfw3.a
+[ 54%] Built target glfw
+[ 55%] Building C object vendor/glfw3webgpu/CMakeFiles/glfw3webgpu.dir/glfw3webgpu.c.o
+[ 56%] Linking C static library libglfw3webgpu.a
+[ 56%] Built target glfw3webgpu
+[ 56%] Building C object vendor/sr_webcam/CMakeFiles/sr_webcam.dir/src/sr_webcam.c.o
+[ 57%] Building C object vendor/sr_webcam/CMakeFiles/sr_webcam.dir/src/sr_webcam_lin.c.o
+[ 58%] Linking C static library libsr_webcam.a
+[ 58%] Built target sr_webcam
+[ 59%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/autofit/autofit.c.o
+[ 60%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftbase.c.o
+[ 60%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftbbox.c.o
+[ 61%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftbdf.c.o
+[ 62%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftbitmap.c.o
+[ 62%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftcid.c.o
+[ 63%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftfstype.c.o
+[ 64%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftgasp.c.o
+[ 64%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftglyph.c.o
+[ 65%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftgxval.c.o
+[ 66%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftinit.c.o
+[ 67%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftmm.c.o
+[ 67%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftotval.c.o
+[ 68%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftpatent.c.o
+[ 69%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftpfr.c.o
+[ 69%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftstroke.c.o
+[ 70%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftsynth.c.o
+[ 71%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/fttype1.c.o
+[ 72%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o
+[ 72%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/bdf/bdf.c.o
+[ 73%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o
+[ 74%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/cache/ftcache.c.o
+[ 74%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/cff/cff.c.o
+[ 75%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/cid/type1cid.c.o
+[ 76%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o
+[ 76%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o
+[ 77%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/pcf/pcf.c.o
+[ 78%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/pfr/pfr.c.o
+[ 79%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/psaux/psaux.c.o
+[ 79%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.o
+[ 80%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/psnames/psnames.c.o
+[ 81%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/raster/raster.c.o
+[ 81%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/sdf/sdf.c.o
+[ 82%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o
+[ 83%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/smooth/smooth.c.o
+[ 83%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/svg/svg.c.o
+[ 84%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/truetype/truetype.c.o
+[ 85%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/type1/type1.c.o
+[ 86%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/type42/type42.c.o
+[ 86%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o
+[ 87%] Building C object vendor/freetype/CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o
+[ 88%] Building C object vendor/freetype/CMakeFiles/freetype.dir/src/base/ftdebug.c.o
+[ 88%] Linking C static library libfreetyped.a
+[ 88%] Built target freetype
+[ 88%] Building CXX object CMakeFiles/ChuGL.dir/ChuGL.cpp.o
+[ 89%] Building C object CMakeFiles/ChuGL.dir/core/log.c.o
+cc1: warning: command-line option ‘-Wno-class-memaccess’ is valid for C++/ObjC++ but not for C
+[ 90%] Building C object CMakeFiles/ChuGL.dir/core/hashmap.c.o
+cc1: warning: command-line option ‘-Wno-class-memaccess’ is valid for C++/ObjC++ but not for C
+[ 90%] Building CXX object CMakeFiles/ChuGL.dir/core/memory.cpp.o
+[ 91%] Building CXX object CMakeFiles/ChuGL.dir/implementations.cpp.o
+[ 92%] Building C object CMakeFiles/ChuGL.dir/vendor/mikktspace/mikktspace.c.o
+cc1: warning: command-line option ‘-Wno-class-memaccess’ is valid for C++/ObjC++ but not for C
+[ 92%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/cimgui.cpp.o
+[ 93%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui.cpp.o
+[ 94%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui_draw.cpp.o
+[ 95%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui_demo.cpp.o
+[ 95%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui_widgets.cpp.o
+[ 96%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/imgui_tables.cpp.o
+[ 97%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/misc/cpp/imgui_stdlib.cpp.o
+[ 97%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/backends/imgui_impl_glfw.cpp.o
+[ 98%] Building CXX object CMakeFiles/ChuGL.dir/vendor/cimgui/imgui/backends/imgui_impl_wgpu.cpp.o
+[100%] Linking CXX shared library ChuGL.chug
+[100%] Built target ChuGL
+44.71user 2.29system 0:48.64elapsed 96%CPU (0avgtext+0avgdata 773376maxresident)k
+0inputs+379968outputs (3major+433755minor)pagefaults 0swaps
+
+Installing ChuGL
+[chuck:2:SYSTEM]: chugin system: ON
+[chuck:2:SYSTEM]: chugin host API version: 10.2
+[chuck:2:SYSTEM]:  | chugin major version must == host major version
+[chuck:2:SYSTEM]:  | chugin minor version must <= host minor version
+[chuck:2:SYSTEM]:  | language version: 1.5.5.2 (chai)
+[chuck:2:SYSTEM]: probing chugins (.chug)...
+[chuck:2:SYSTEM]: probing specified chugins (e.g., via --chugin)...
+[chuck:2:SYSTEM]: probing chugins in search paths...
+[chuck:2:SYSTEM]:  | searching '/usr/lib/chuck/'
+[chuck:2:SYSTEM]:  | searching '/usr/local/lib/chuck/'
+[chuck:2:SYSTEM]:  |  | [chugin] ChuGL.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  |  | version: 0.2.6 (alpha)
+[chuck:2:SYSTEM]:  |  |  | author: Andrew Zhu Aday & Ge Wang
+[chuck:2:SYSTEM]:  | searching '/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/.chuck/packages/'
+[chuck:2:SYSTEM]:  | searching '/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/.chuck/lib/'
+[chuck:2:SYSTEM]: probing chuck files (.ck)...
+[chuck:2:SYSTEM]: global cleanup initiating...
+[chuck:2:SYSTEM]: shutting down ChucK instance...
+[chuck:2:SYSTEM]:  | ChucK instance shutdown complete.
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:257:[0minitializing WebGPU context
+Authorization required, but no authorization protocol specified
+
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:282:[0mWebGPU instance created
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:287:[0mWebGPU surface created
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:295:[0madapter created
+[ChuGL]: 22:07:53 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:300:[0mAdapter vendor: llvmpipe
+[ChuGL]: 22:07:53 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:301:[0mAdapter architecture: 
+[ChuGL]: 22:07:53 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:302:[0mAdapter device: llvmpipe (LLVM 15.0.6, 128 bits)
+[ChuGL]: 22:07:53 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:303:[0mAdapter description: Mesa 22.3.6 (LLVM 15.0.6)
+[ChuGL]: 22:07:53 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:304:[0mAdapter backend type: Vulkan
+[ChuGL]: 22:07:53 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:306:[0mAdapter type: CPU
+[ChuGL]: 22:07:53 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:308:[0mAdapter vendor ID: 65541
+[ChuGL]: 22:07:53 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:309:[0mAdapter device ID: 0
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:199:[0mSupported limits:
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:200:[0mmaxBindGroups: 8
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:201:[0mmaxBindingsPerBindGroup: 1000
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:202:[0mminUniformBufferOffsetAlignment 32
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:204:[0mminStorageBufferOffsetAlignment 32
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:335:[0mrequired features: 2
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:360:[0mdevice created
+[ChuGL]: 22:07:53 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:399:[0mSurface texture format: BGRA8Unorm
+[ChuGL]: 22:07:53 [36mDEBUG[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.cpp:3108:[0mCreating new R_Font with font path: chugl:cousine-regular
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:1244:[0mwindow resized: 1280, 960
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:468:[0mentering  main loop
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:1244:[0mwindow resized: 1280, 960
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[1|White Pixel] creating WGPUTexture(0x55564588fac0)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[2|Default Render Texture] creating WGPUTexture(0x5556458c6190)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[3|Black Pixel] creating WGPUTexture(0x5556458c8080)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[4|Magenta Pixel] creating WGPUTexture(0x555645a0e650)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[5|Default Normal Map Pixel] creating WGPUTexture(0x55564588fa00)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[6|Default Cubemap] creating WGPUTexture(0x555645a10d10)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:659:[0mRebuilding ScenePass[26:ChuGL Default ScenePass] depth texture, dims: 1280x960, address: 0x555645ba8c30
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:680:[0mRebuilding ScenePass[26:ChuGL Default ScenePass] 4xMultisampled texture, dims: 1280x960, address: 0x555645b790b0
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x555645b9b880], creating new from Texture[0x555645b790b0] mips[0:0]
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x555645b9ba30], creating new from Texture[0x5556458c6190] mips[0:0]
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x555645b9bbe0], creating new from Texture[0x555645ba8c30] mips[0:0]
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1265:[0mCache miss [RenderPipeline], creating new from Shader[19:Skybox]
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(0)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x555645b25310], creating new from Texture[0x555645a10d10] mips[0:0]
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x555645b9bd40
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555645b9c140
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(1)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(1) creating new for layout 0x555645b9bd70
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555645c3b630
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1265:[0mCache miss [RenderPipeline], creating new from Shader[10:Tonemap]
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(0)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x555645d7ae50
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555645bd01e0
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(1)
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x555645bb5860], creating new from Texture[0x5556458c6190] mips[0:10]
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(1) creating new for layout 0x555645d7aec0
+[ChuGL]: 22:07:53 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555645dc3ff0
+[ChuGL]: 22:29:21 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:1200:[0mclosing window
+[ChuGL]: 22:29:21 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:518:[0mExiting main loop
+[chuck]: (VM) removing all (1) shreds...
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:257:[0minitializing WebGPU context
+Authorization required, but no authorization protocol specified
+
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:282:[0mWebGPU instance created
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:287:[0mWebGPU surface created
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:295:[0madapter created
+[ChuGL]: 22:29:23 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:300:[0mAdapter vendor: llvmpipe
+[ChuGL]: 22:29:23 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:301:[0mAdapter architecture: 
+[ChuGL]: 22:29:23 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:302:[0mAdapter device: llvmpipe (LLVM 15.0.6, 128 bits)
+[ChuGL]: 22:29:23 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:303:[0mAdapter description: Mesa 22.3.6 (LLVM 15.0.6)
+[ChuGL]: 22:29:23 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:304:[0mAdapter backend type: Vulkan
+[ChuGL]: 22:29:23 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:306:[0mAdapter type: CPU
+[ChuGL]: 22:29:23 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:308:[0mAdapter vendor ID: 65541
+[ChuGL]: 22:29:23 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:309:[0mAdapter device ID: 0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:199:[0mSupported limits:
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:200:[0mmaxBindGroups: 8
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:201:[0mmaxBindingsPerBindGroup: 1000
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:202:[0mminUniformBufferOffsetAlignment 32
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:204:[0mminStorageBufferOffsetAlignment 32
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:335:[0mrequired features: 2
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:360:[0mdevice created
+[ChuGL]: 22:29:23 [32mINFO [0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/graphics.cpp:399:[0mSurface texture format: BGRA8Unorm
+[ChuGL]: 22:29:23 [36mDEBUG[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.cpp:3108:[0mCreating new R_Font with font path: chugl:cousine-regular
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:1244:[0mwindow resized: 1280, 960
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:468:[0mentering  main loop
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:1244:[0mwindow resized: 1280, 960
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[1|White Pixel] creating WGPUTexture(0x555578e53a80)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[2|Default Render Texture] creating WGPUTexture(0x555578e3cb80)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[3|Black Pixel] creating WGPUTexture(0x555578e3f460)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[4|Magenta Pixel] creating WGPUTexture(0x555578468890)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[5|Default Normal Map Pixel] creating WGPUTexture(0x555578e539c0)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[6|Default Cubemap] creating WGPUTexture(0x55557900aa40)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:305:[0mR_Texture[30|] creating WGPUTexture(0x5555791b2f10)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:659:[0mRebuilding ScenePass[26:ChuGL Default ScenePass] depth texture, dims: 1280x960, address: 0x555579136040
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:680:[0mRebuilding ScenePass[26:ChuGL Default ScenePass] 4xMultisampled texture, dims: 1280x960, address: 0x5555791872a0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555791be490], creating new from Texture[0x5555791872a0] mips[0:0]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555791be640], creating new from Texture[0x555578e3cb80] mips[0:0]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555791be880], creating new from Texture[0x555579136040] mips[0:0]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1265:[0mCache miss [RenderPipeline], creating new from Shader[7:Lines2D]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(0)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555791c06a0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555791c2200
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(1)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(1) creating new for layout 0x5555791c2350
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555791c0c50
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(2)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(2) creating new for layout 0x5555791c1170
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555791c06d0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(3)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(3) creating new for layout 0x5555791c6100
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555791f6870
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1265:[0mCache miss [RenderPipeline], creating new from Shader[19:Skybox]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(0)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555791cd740], creating new from Texture[0x55557900aa40] mips[0:0]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555791c5010
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555791c4260
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(1)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(1) creating new for layout 0x5555791f7920
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555791dafb0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x55557921d790], creating new from Texture[0x555578e3cb80] mips[1:1]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1265:[0mCache miss [RenderPipeline], creating new from Shader[11:BloomDownsample]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(0)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555792b4bf0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x55557921ef70
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x555579519ee0], creating new from Texture[0x555578e3cb80] mips[2:2]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555792b4bf0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555579592a60
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555795929d0], creating new from Texture[0x555578e3cb80] mips[3:3]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555792b4bf0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555796d7070
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555791be610], creating new from Texture[0x555578e3cb80] mips[4:4]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555792b4bf0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555579510e50
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555796d6cb0], creating new from Texture[0x555578e3cb80] mips[5:5]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555792b4bf0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555795170f0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x555579516d70], creating new from Texture[0x555578e3cb80] mips[6:6]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555792b4bf0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555782f0540
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555782f0e90], creating new from Texture[0x5555791b2f10] mips[5:5]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1265:[0mCache miss [RenderPipeline], creating new from Shader[12:BloomUpsample]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(0)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555782f1110
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555579565f60
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555782f10e0], creating new from Texture[0x5555791b2f10] mips[4:4]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555782f1110
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555782f14e0
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x55557921d550], creating new from Texture[0x5555791b2f10] mips[3:3]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555782f1110
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555796f4c10
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555796f47c0], creating new from Texture[0x5555791b2f10] mips[2:2]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555782f1110
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555796f7610
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555791d1160], creating new from Texture[0x5555791b2f10] mips[1:1]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555782f1110
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555579710760
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555796f5010], creating new from Texture[0x5555791b2f10] mips[0:0]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x5555782f1110
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555798ddc80
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1265:[0mCache miss [RenderPipeline], creating new from Shader[10:Tonemap]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(0)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(0) creating new for layout 0x555579771c30
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x5555798e2570
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:988:[0mcalling wgpuRenderPipelineGetBindGroupLayout(1)
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1449:[0mCache miss [TextureView: 0x5555796e9160], creating new from Texture[0x5555791b2f10] mips[0:10]
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(1) creating new for layout 0x5555796e8a20
+[ChuGL]: 22:29:23 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555579773040
+[ChuGL]: 22:29:24 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1525:[0mCache miss [BindGroup] @group(3) creating new for layout 0x5555791c6100
+[ChuGL]: 22:29:24 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1570:[0mcreated bind group 0x555579a90bb0
+[ChuGL]: 22:29:34 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/r_component.h:1624:[0mdeleting expired bindgroup 0x5555791f6870
+[ChuGL]: 22:37:11 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:1200:[0mclosing window
+[ChuGL]: 22:37:11 [94mTRACE[0m [90m/home/znmeb/dbx-homes/ChucK-in-the-Box-debian_bookworm/Projects/chugl/src/app.cpp:518:[0mExiting main loop
+[chuck]: (VM) removing all (2) shreds...
+*** Finished ChuGL ***
