@@ -1,29 +1,35 @@
-# Usage notes
+# ChucK-in-the-Box - computer music in a container!
 
-1. `git` is not installed by default on PiOS Lite 32-bit. So you
-will need to do
+## What is this?
 
-    ```
-    sudo apt update && sudo apt install -qqy --no-install-recommends git
-    ```
+ChucK-in-the-Box is a container-based computer music development
+environment. The 10,000-foot level overview:
 
-    first.
+    - Containers: ChucK-in-the-Box uses
+[Distrobox](https://distrobox.it/) containers. A Distrobox container
+can run on most recent Linux hosts. The host runs the Linux kernel,
+manages all the devices, processes, and memory. The container runs
+the application software and has both access to the user's home files
+and its own dedicated files.
 
-2. Once you have `git` installed, do
+    The key advantages of containers:
 
-    ```
-    git clone https://github.com/AlgoCompSynth/ChucK-in-the-Box.git
-    cd ChucK-in-the-Box
-    ./0_pios_setup.sh
-    ```
+        1. Efficiency - unlike a full virtual machine, a container's processes
+           are managed directly by the host OS - there's no hypervisor overhead.
+        2. Flexibility - a Distrobox container can use any Linux distribution
+           for which a base image exists. For example, my primary container host
+           is [Universal Blue Bluefin](https://projectbluefin.io/), which is
+           based on Fedora Linux, but the ChucK-in-the-Box containers run on
+           Debian 12 or 13 or Ubuntu 24.04 LTS or Ubuntu 25.04.
+        3. Access to host devices and files - like an [Appimage](https://appimage.org/)
+           or [Flatpak](https://flatpak.org/), applications in a Distrobox container
+           can show up on the host desktop. But a Distrobox container can export
+           multiple applications instead of being a packaged single application like
+           an Appimage or Flatpak.
 
-3. Reboot
+    - Computer music: ChucK-in-the-Box contains
 
-4. After the reboot, run the install scripts:
-
-    ```
-    ./1_terminal_setup.sh # Nerd fonts and Starship prompt
-    ./2_basic_devel.sh # basic development Linux packages
-    ./3_ChucK.sh # ChucK, ChuGins and Linux dependencies
-    ./pkg_db_updates.sh package database updates
-    ```
+        1. The [ChucK](https://chuck.stanford.edu/) ecosystem: ChucK,
+           miniAudicle, ChuGins and [ChuGL](https://chuck.stanford.edu/chugl/),
+        2. [FluidSynth](https://www.fluidsynth.org/) SoundFont-based tools, and
+        3. The [Faust](https://faust.grame.fr/) audio programming language.  
