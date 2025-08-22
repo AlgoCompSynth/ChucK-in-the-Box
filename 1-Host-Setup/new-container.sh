@@ -55,13 +55,43 @@ then
   done
 fi
 
+echo "Creating manifest file distrobox.ini"
+echo "[$DBX_CONTAINER_NAME]" > distrobox.ini
+echo "image=$DBX_CONTAINER_IMAGE" >> distrobox.ini
+echo "home=$DBX_CONTAINER_DIRECTORY" >> distrobox.ini
+echo "init=false" >> distrobox.ini
+echo "pull=true" >> distrobox.ini
+echo "root=false" >> distrobox.ini
+echo "replace=false" >> distrobox.ini
+echo "start_now=false" >> distrobox.ini
+echo \
+  "additional_packages=\"apt-file file git lsb-release pipewire-alsa plocate time tree vim\"" \
+  >> distrobox.ini
+echo \
+  "additional_packages=\"keyboard-configuration libicu-dev\"" \
+  >> distrobox.ini
+
+if [[ "$RENDER_MODE" == "CPU" ]]
+then
+  echo "nvidia=false" >> distrobox.ini
+  echo \
+    "additional_flags="--env LIBGL_ALWAYS_SOFTWARE=1"" \
+    >> distrobox.ini
+elif [[ "$RENDER_MODE" == "NVIDIA" ]]
+then
+  echo "nvidia=true" >> distrobox.ini
+  echo \
+    "additional_packages=\"libffmpeg-nvenc-dev nvidia-vaapi-driver\"" \
+    >> distrobox.ini
+  echo \
+    "additional_packages=\"libnvidia-egl-wayland1 libnvidia-egl-wayland-dev\"" \
+    >> distrobox.ini
+fi  
+
 echo ""
 echo "Creating Distrobox container $DBX_CONTAINER_NAME"
 echo "with home directory $DBX_CONTAINER_DIRECTORY"
-/usr/bin/time distrobox create \
-  --pull \
-  --additional-packages "apt-file file git lsb-release pipewire-alsa plocate time tree vim" \
-  --additional-flags "--env LIBGL_ALWAYS_SOFTWARE=1" \
+/usr/bin/time distrobox assemble create \
   >> $LOGFILE 2>&1
 
 echo ""

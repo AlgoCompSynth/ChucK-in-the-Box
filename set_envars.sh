@@ -2,9 +2,13 @@ echo "Setting environment variables"
 ## user-defined variables
 export CHUCK_VERSION=chuck-1.5.5.2
 export CHUGL_VERSION=main
+export CONTAINER_DISTRO=debian:bookworm
+
 export MAKE_PARALLEL_LEVEL=$(nproc)
 #export MAKE_PARALLEL_LEVEL=1 # use this if needed on low-RAM systems
-export CONTAINER_DISTRO=debian:bookworm
+
+#export RENDER_MODE=CPU
+export RENDER_MODE=NVIDIA # use this if you have an NVIDIA GPU
 
 ## you shouldn't need to change anything below here
 export ARCH=$(uname -m)
@@ -17,7 +21,7 @@ export DBX_CONTAINER_MANAGER=podman
 export DBX_CONTAINER_HOME_PREFIX=$HOME/dbx-homes
 export CONTAINER_DISTRO_4FILENAME=$(echo $CONTAINER_DISTRO | sed 's/:/_/' | sed 's/-/_/')
 export DBX_CONTAINER_IMAGE=docker.io/library/${CONTAINER_DISTRO}
-export DBX_CONTAINER_NAME=CitB-${CONTAINER_DISTRO_4FILENAME}-$ARCH
+export DBX_CONTAINER_NAME=CitB-${CONTAINER_DISTRO_4FILENAME}-$ARCH-$RENDER_MODE
 export DBX_CONTAINER_DIRECTORY=$DBX_CONTAINER_HOME_PREFIX/$DBX_CONTAINER_NAME
 export DBX_CONTAINER_HOSTNAME=dbx-$DBX_CONTAINER_NAME
 
