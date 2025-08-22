@@ -33,3 +33,15 @@ host and its own dedicated files.
      ChuGins and [ChuGL](https://chuck.stanford.edu/chugl/),
     2. [FluidSynth](https://www.fluidsynth.org/) SoundFont-based tools, and
     3. The [Faust](https://faust.grame.fr/) audio programming language.  
+
+## Status / Roadmap
+
+My main deployment at the moment is on a 2020-vintage gaming PC with an 8-core
+Intel i7 CPU and an NVIDIA RTX 3090 GPU. I have some experimental builds for
+a 16 GB Raspberry Pi 5, and ChucK, most of the ChuGins and the miniAudicle seem
+to be working. However, the ChuGL graphics library is not working on the Pi.
+
+So I'm going to call this release 0.2.5. I have a ChuGL project in the works
+that I'm going to do using the gaming PC and the fallout from that should
+take ChucK-in-the-Box to at least 0.7.5. Somewhere in the process I'll be
+adding some R tools so everything I use is packaged together.
