@@ -6,7 +6,7 @@ echo ""
 echo "*** ChuGL ***"
 
 source ../set_envars.sh
-export LOGFILE=$LOGFILES/chugl-x11-$(hostname).log
+export LOGFILE=$LOGFILES/chugl-x11-debug-$(hostname).log
 rm --force $LOGFILE
 
 echo "Installing Linux dependencies"

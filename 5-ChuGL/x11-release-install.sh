@@ -6,7 +6,7 @@ echo ""
 echo "*** ChuGL ***"
 
 source ../set_envars.sh
-export LOGFILE=$LOGFILES/chugl-both-debug-$(hostname).log
+export LOGFILE=$LOGFILES/chugl-x11-release-$(hostname).log
 rm --force $LOGFILE
 
 echo "Installing Linux dependencies"
@@ -41,9 +41,9 @@ popd > /dev/null
 pushd $PROJECTS/chugl/src > /dev/null
   echo "" >> $LOGFILE
   echo "Building ChuGL" | tee --append $LOGFILE
-  cmake -B build-debug -DCMAKE_BUILD_TYPE=Debug \
+  cmake -B build-release -DCMAKE_BUILD_TYPE=Release -DGLFW_BUILD_WAYLAND=OFF \
     >> $LOGFILE 2>&1
-  cd build-debug
+  cd build-release
   /usr/bin/time make \
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
