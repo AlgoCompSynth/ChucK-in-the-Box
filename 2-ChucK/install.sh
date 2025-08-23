@@ -11,12 +11,20 @@ rm --force $LOGFILE
 
 echo "Installing Linux dependencies" | tee --append $LOGFILE
 /usr/bin/time sudo apt-get install --assume-yes \
+  alsa-utils \
   bison \
   build-essential \
+  ffmpeg \
   flex \
   libasound2-dev \
   libsndfile1-dev \
+  libsoxr-dev \
+  libsox-dev \
+  libsox-fmt-all \
+  sox \
   >> $LOGFILE 2>&1
+
+../apt_pkg_db_updates.sh
 
 echo "" >> $LOGFILE
 echo "Cloning chuck repository" | tee --append $LOGFILE

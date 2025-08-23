@@ -18,12 +18,14 @@ echo "Installing Linux dependencies"
   qt6-wayland \
   >> $LOGFILE 2>&1
 
+../apt_pkg_db_updates.sh
+
 echo "Setting Qt version"
 export QT_SELECT=qt6
 export PATH=/usr/lib/qt6/bin:$PATH
 
 echo "" >> $LOGFILE
-echo "Cloning miniAudicle repository - this takes some time" | tee --append $LOGFILE
+echo "Recursively cloning miniAudicle repository - this takes some time" | tee --append $LOGFILE
 pushd $PROJECTS > /dev/null
   rm -fr miniAudicle
   /usr/bin/time git clone --recurse-submodules \
@@ -42,5 +44,8 @@ pushd $PROJECTS/miniAudicle/src > /dev/null
   sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
+
+echo "Starting miniAudicle" | tee --append $LOGFILE
+miniAudicle
 
 echo "*** Finished miniAudicle ***" | tee --append $LOGFILE

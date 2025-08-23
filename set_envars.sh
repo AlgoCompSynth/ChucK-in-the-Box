@@ -7,8 +7,8 @@ export CONTAINER_DISTRO=debian:bookworm
 export MAKE_PARALLEL_LEVEL=$(nproc)
 #export MAKE_PARALLEL_LEVEL=1 # use this if needed on low-RAM systems
 
-#export RENDER_MODE=CPU
-export RENDER_MODE=NVIDIA # use this if you have an NVIDIA GPU
+export RENDER_MODE=cpu
+#export RENDER_MODE=nvidia # use this if you have an NVIDIA GPU
 
 ## you shouldn't need to change anything below here
 export ARCH=$(uname -m)

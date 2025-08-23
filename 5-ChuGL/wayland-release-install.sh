@@ -26,6 +26,8 @@ echo "Installing Linux dependencies"
 
 ./package-versions.sh
 
+../apt_pkg_db_updates.sh
+
 echo "" >> $LOGFILE
 echo "Cloning ChuGL repository" | tee --append $LOGFILE
 pushd $PROJECTS > /dev/null

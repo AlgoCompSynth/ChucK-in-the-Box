@@ -79,7 +79,13 @@ rm --force $LOGFILE
 
 echo "Installing Linux dependencies" | tee --append $LOGFILE
 /usr/bin/time sudo apt-get install --assume-yes \
+  fluidsynth \
+  fluid-soundfont-gm \
+  fluid-soundfont-gs \
+  freepats \
   libfluidsynth-dev \
+  opl3-soundfont \
+  polyphone \
   >> $LOGFILE 2>&1
 
 pushd $PROJECTS/chugins/FluidSynth > /dev/null
@@ -108,6 +114,8 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   libspeex-dev \
   libsqlite3-dev \
   >> $LOGFILE 2>&1
+
+../apt_pkg_db_updates.sh
 
 pushd $PROJECTS/chugins/WarpBuf > /dev/null
   echo "" >> $LOGFILE

@@ -71,13 +71,13 @@ echo \
   "additional_packages=\"keyboard-configuration libicu-dev\"" \
   >> distrobox.ini
 
-if [[ "$RENDER_MODE" == "CPU" ]]
+if [[ "$RENDER_MODE" == "cpu" ]]
 then
   echo "nvidia=false" >> distrobox.ini
   echo \
     "additional_flags="--env LIBGL_ALWAYS_SOFTWARE=1"" \
     >> distrobox.ini
-elif [[ "$RENDER_MODE" == "NVIDIA" ]]
+elif [[ "$RENDER_MODE" == "nvidia" ]]
 then
   echo "nvidia=true" >> distrobox.ini
   echo \

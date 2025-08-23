@@ -24,6 +24,8 @@ echo "Installing Linux dependencies"
   libxrandr-dev \
   >> $LOGFILE 2>&1
 
+../apt_pkg_db_updates.sh
+
 ./package-versions.sh
 
 echo "" >> $LOGFILE

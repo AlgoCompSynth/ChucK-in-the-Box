@@ -44,6 +44,8 @@ then
     uidmap \
     vim \
     >> $LOGFILE 2>&1
+
+  ../apt_pkg_db_updates.sh
 fi
 
 echo "Installing Distrobox globally"
