@@ -70,6 +70,9 @@ echo \
 echo \
   "additional_packages=\"keyboard-configuration libicu-dev\"" \
   >> distrobox.ini
+echo \
+  "additional_packages=\"libcanberra-gtk3-module libsecret-1-0 qpwgraph tilix\"" \
+  >> distrobox.ini
 
 if [[ "$RENDER_MODE" == "cpu" ]]
 then
