@@ -1,8 +1,8 @@
 ## greeting
 echo "Setting environment variables"
 
-#export RENDER_MODE=cpu
-export RENDER_MODE=nvidia # use this if you have an NVIDIA GPU
+export RENDER_MODE=cpu
+#export RENDER_MODE=nvidia # use this if you have an NVIDIA GPU
 
 ## user-defined variables
 export CHUCK_VERSION=chuck-1.5.5.2
