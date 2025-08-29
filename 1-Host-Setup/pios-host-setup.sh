@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "*** Host Setup ***"
+echo "*** PiOS Host Setup ***"
 
 source ../set_envars.sh
 echo "Creating $PROJECTS $LOGFILES $LOCALBIN"
@@ -15,8 +15,7 @@ echo "Setting base configuration files"
 cp bash_aliases $HOME/.bash_aliases; source bash_aliases
 cp vimrc $HOME/.vimrc
 
-distributor=$(lsb_release --id --short)
-if [[ "$distributor" == "Ubuntu" || "$distributor" == "Debian" ]]
+if [[ "$(uname --kernel-release)" =~ "rpt-rpi-v8" ]]
 then
   echo "Upgrading system"
   sudo apt-get update \
@@ -82,4 +81,4 @@ pushd $HOME/.fonts > /dev/null
   rm --force Meslo.zip LICENSE.txt README.md
 popd > /dev/null
 
-echo "*** Finished Host Setup ***" | tee --append $LOGFILE
+echo "*** Finished PiOS Host Setup ***" | tee --append $LOGFILE
