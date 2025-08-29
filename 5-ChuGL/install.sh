@@ -1,1 +1,1 @@
-both-release-install.sh
+x11-release-install.sh

@@ -17,6 +17,8 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   ffmpeg \
   flex \
   libasound2-dev \
+  libjack-jackd2-dev \
+  libpulse-dev \
   libsndfile1-dev \
   libsoxr-dev \
   libsox-dev \

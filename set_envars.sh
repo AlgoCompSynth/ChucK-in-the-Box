@@ -1,33 +1,42 @@
+## greeting
 echo "Setting environment variables"
+
+#export RENDER_MODE=cpu
+export RENDER_MODE=nvidia # use this if you have an NVIDIA GPU
+
 ## user-defined variables
 export CHUCK_VERSION=chuck-1.5.5.2
 export CHUGL_VERSION=main
-export CONTAINER_DISTRO=debian:bookworm
+export POSITRON_VERSION="2025.08.0-130"
 
 export MAKE_PARALLEL_LEVEL=$(nproc)
 #export MAKE_PARALLEL_LEVEL=1 # use this if needed on low-RAM systems
 
-export RENDER_MODE=cpu
-#export RENDER_MODE=nvidia # use this if you have an NVIDIA GPU
-
 ## you shouldn't need to change anything below here
+export LLVM_VERSION=19
 export ARCH=$(uname -m)
 export LOGFILES=$HOME/Logfiles
 export PROJECTS=$HOME/Projects
 export LOCALBIN=$HOME/.local/bin
-export DEBIAN_FRONTEND=noninteractive
 export CHUGIN_PATH=/usr/local/lib/chuck
+export DEBIAN_FRONTEND=noninteractive
+
 export DBX_CONTAINER_MANAGER=podman
 export DBX_CONTAINER_HOME_PREFIX=$HOME/dbx-homes
-export CONTAINER_DISTRO_4FILENAME=$(echo $CONTAINER_DISTRO | sed 's/:/_/' | sed 's/-/_/')
-export DBX_CONTAINER_IMAGE=docker.io/library/${CONTAINER_DISTRO}
-export DBX_CONTAINER_NAME=CitB-${CONTAINER_DISTRO_4FILENAME}-$ARCH-$RENDER_MODE
-export DBX_CONTAINER_DIRECTORY=$DBX_CONTAINER_HOME_PREFIX/$DBX_CONTAINER_NAME
+export DBX_CONTAINER_NAME=CitB-$ARCH-$RENDER_MODE
 export DBX_CONTAINER_HOSTNAME=dbx-$DBX_CONTAINER_NAME
+export DBX_CONTAINER_IMAGE=quay.io/toolbx/ubuntu-toolbox:24.04
+export DBX_CONTAINER_DIRECTORY=$DBX_CONTAINER_HOME_PREFIX/$DBX_CONTAINER_NAME
 
-if [[ "$CONTAINER_DISTRO" == "debian:bookworm" ]]
+if [[ "$ARCH" = "x86_64" ]]
 then
-  export LLVM_VERSION=14
+  export POSITRON_PACKAGE=Positron-$POSITRON_VERSION-x64.deb
+  export POSITRON_URL=https://cdn.posit.co/positron/dailies/deb/x86_64/$POSITRON_PACKAGE
+elif [[ "$ARCH" = "aarch64" ]]
+then
+  export POSITRON_PACKAGE=Positron-$POSITRON_VERSION-arm64.deb
+  export POSITRON_URL=https://cdn.posit.co/positron/dailies/deb/arm64/$POSITRON_PACKAGE
 else
-  export LLVM_VERSION=19
+  echo "Unsupported architecture!"
+  exit -1
 fi

@@ -64,14 +64,26 @@ echo "pull=true" >> distrobox.ini
 echo "root=false" >> distrobox.ini
 echo "replace=false" >> distrobox.ini
 echo "start_now=false" >> distrobox.ini
-echo \
-  "additional_packages=\"apt-file file git lsb-release pipewire-alsa plocate time tree vim\"" \
+
+echo "additional_packages=\"alsa-utils apt-file ca-certificates cmake dirmngr ffmpeg file flac\"" \
   >> distrobox.ini
-echo \
-  "additional_packages=\"keyboard-configuration libicu-dev\"" \
+echo "additional_packages=\"libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev\"" \
   >> distrobox.ini
-echo \
-  "additional_packages=\"libcanberra-gtk3-module libsecret-1-0 qpwgraph tilix\"" \
+echo "additional_packages=\"libpostproc-dev libsdl2-dev libswresample-dev libswscale-dev\"" \
+  >> distrobox.ini
+echo "additional_packages=\"fluid-soundfont-gm fluid-soundfont-gs fluidsynth libfluidsynth-dev\"" \ \
+  >> distrobox.ini
+echo "additional_packages=\"freepats git gnupg keyboard-configuration libicu-dev\"" \
+  >> distrobox.ini
+echo "additional_packages=\"libsox-dev libsox-fmt-all libsoxr-dev sox\"" \
+  >> distrobox.ini
+echo "additional_packages=\"lsb-release mp3splt opl3-soundfont\"" \
+  >> distrobox.ini
+echo "additional_packages=\"pipewire-alsa pipewire-doc \"" \
+  >> distrobox.ini
+echo "additional_packages=\"plocate pmidi polyphone rtkit software-properties-common\"" \
+  >> distrobox.ini
+echo "additional_packages=\"time tree vim wget wireplumber-doc\"" \
   >> distrobox.ini
 
 if [[ "$RENDER_MODE" == "cpu" ]]
@@ -106,25 +118,10 @@ echo ""
 echo "Distrobox containers:"
 distrobox list
 
-while true; do
-  echo ""
-  echo "If you will be cloning git repos into the container,"
-  echo "it is recommended to copy your host '\$HOME/.ssh'"
-  echo "directory into the container's '\$HOME'."
-  echo ""
-  read -p "Do you want to copy it (y/n)?" yn
-  case $yn in
-    [Yy]* )
-      cp --recursive $HOME/.ssh $DBX_CONTAINER_DIRECTORY
-      break
-      ;;
-    [Nn]* ) 
-      break
-      ;;
-    * ) echo "Please answer yes or no."
-      ;;
-  esac
-done
+echo ""
+echo "Copying '$HOME/.ssh' into '$DBX_CONTAINER_DIRECTORY'"
+echo "to enable full 'git' functionality."
+cp --recursive $HOME/.ssh $DBX_CONTAINER_DIRECTORY
 
 echo ""
 echo "Entering the container"

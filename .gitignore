@@ -1,4 +1,4 @@
 *.log
 cmdline.txt
 config.txt
-.Rproj.user
+.R*

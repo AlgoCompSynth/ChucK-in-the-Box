@@ -57,13 +57,13 @@ popd > /dev/null
 echo "Testing"
 export RUST_BACKTRACE=full
 echo "ChuGin probe"
-chuck --chugin-probe 2>&1 | tee --append $LOGFILE
+chuck --chugin-probe 2>&1 | tee --append $LOGFILE || true
 echo "Minimal example - ESC to exit"
-chuck startup-test.ck 2>&1 | tee --append $LOGFILE
+chuck startup-test.ck 2>&1 | tee --append $LOGFILE || true
 
 echo "Complex example - runs in bookworm container and crashes in PiOS host"
 pushd $PROJECTS/chugl/examples/basic
-  chuck lissajous.ck 2>&1 | tee --append $LOGFILE
+  chuck lissajous.ck 2>&1 | tee --append $LOGFILE || true
 popd
 
 echo "*** Finished ChuGL ***" | tee --append $LOGFILE

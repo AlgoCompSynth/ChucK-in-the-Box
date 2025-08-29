@@ -77,16 +77,16 @@ echo "*** FluidSynth ChuGin ***"
 export LOGFILE=$LOGFILES/fluidsynth-chugin.log
 rm --force $LOGFILE
 
-echo "Installing Linux dependencies" | tee --append $LOGFILE
-/usr/bin/time sudo apt-get install --assume-yes \
-  fluidsynth \
-  fluid-soundfont-gm \
-  fluid-soundfont-gs \
-  freepats \
-  libfluidsynth-dev \
-  opl3-soundfont \
-  polyphone \
-  >> $LOGFILE 2>&1
+#echo "Installing Linux dependencies" | tee --append $LOGFILE
+#/usr/bin/time sudo apt-get install --assume-yes \
+  #fluidsynth \
+  #fluid-soundfont-gm \
+  #fluid-soundfont-gs \
+  #freepats \
+  #libfluidsynth-dev \
+  #opl3-soundfont \
+  #polyphone \
+  #>> $LOGFILE 2>&1
 
 pushd $PROJECTS/chugins/FluidSynth > /dev/null
   echo "" >> $LOGFILE
@@ -109,7 +109,6 @@ rm --force $LOGFILE
 
 echo "Installing Linux dependencies" | tee --append $LOGFILE
 /usr/bin/time sudo apt-get install --assume-yes \
-  cmake \
   libmp3lame-dev \
   libspeex-dev \
   libsqlite3-dev \
