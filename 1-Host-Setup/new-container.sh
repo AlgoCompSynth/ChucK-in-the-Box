@@ -124,8 +124,12 @@ echo "to enable full 'git' functionality."
 cp --recursive $HOME/.ssh $DBX_CONTAINER_DIRECTORY
 
 echo ""
-echo "Entering the container"
-echo "Exit with CTRL-D or 'exit'"
+echo "Entering the container--"
+echo "    Exit with CTRL-D or 'exit'."
+echo "    Re-enter with"
+echo ""
+echo "    distrobox enter $DBX_CONTAINER_NAME"
+
 distrobox enter $DBX_CONTAINER_NAME
 
 echo "*** Finished New Container ***" | tee --append $LOGFILE
