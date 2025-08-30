@@ -8,7 +8,7 @@ echo "*** PiOS Host Setup ***"
 source ../set_envars.sh
 echo "Creating $PROJECTS $LOGFILES $LOCALBIN"
 mkdir --parents $PROJECTS $LOGFILES $LOCALBIN
-export LOGFILE=$LOGFILES/desktop-setup.log
+export LOGFILE=$LOGFILES/pios-host-setup.log
 rm --force $LOGFILE
 
 echo "Setting base configuration files"
@@ -31,20 +31,43 @@ then
   echo "Installing utilities" | tee --append $LOGFILE
   sudo apt-get install --assume-yes \
     apt-file \
+    bash-completion \
+    bluetooth \
+    build-essential \
+    cmake \
+    curl \
     file \
     git \
     lsb-release \
+    lynx \
+    man-db \
+    minicom \
+    pkg-config \
     plocate \
     podman \
     qpwgraph \
+    screen \
+    speedtest-cli \
     tilix \
     time \
+    tmux \
     tree \
     uidmap \
+    unzip \
+    usbutils \
     vim \
+    wget \
     >> $LOGFILE 2>&1
 
+  echo "Reconfiguring Bluetooth"
+  # https://wiki.debian.org/BluetoothUser
+  sudo service bluetooth stop
+  diff main.conf /etc/bluetooth/main.conf || true
+  sudo cp main.conf /etc/bluetooth/main.conf
+  sudo service bluetooth start
+
   ../apt_pkg_db_updates.sh
+
 fi
 
 echo "Installing Distrobox globally"
