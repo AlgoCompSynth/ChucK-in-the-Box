@@ -1,0 +1,19 @@
+#! /usr/bin/env bash
+
+set -e
+
+echo ""
+echo "* Install All *"
+
+for repo in \
+  2-ChucK \
+  3-ChuGins
+do
+  echo ""
+  echo "Installing repo $repo"
+  pushd ./$repo > /dev/null
+    /usr/bin/time ./install.sh
+  popd > /dev/null
+done
+
+echo "* Finished Install All *"

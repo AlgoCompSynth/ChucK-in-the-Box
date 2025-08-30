@@ -114,8 +114,6 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   libsqlite3-dev \
   >> $LOGFILE 2>&1
 
-../apt_pkg_db_updates.sh
-
 pushd $PROJECTS/chugins/WarpBuf > /dev/null
   echo "" >> $LOGFILE
   echo "Building WarpBuf ChuGin" | tee --append $LOGFILE

@@ -26,8 +26,6 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   sox \
   >> $LOGFILE 2>&1
 
-../apt_pkg_db_updates.sh
-
 echo "" >> $LOGFILE
 echo "Cloning chuck repository" | tee --append $LOGFILE
 pushd $PROJECTS > /dev/null

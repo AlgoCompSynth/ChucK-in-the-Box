@@ -18,8 +18,6 @@ echo "Installing Linux dependencies"
   qt6-wayland \
   >> $LOGFILE 2>&1
 
-../apt_pkg_db_updates.sh
-
 echo "Setting Qt version"
 export QT_SELECT=qt6
 export PATH=/usr/lib/qt6/bin:$PATH
