@@ -44,6 +44,6 @@ pushd $PROJECTS/miniAudicle/src > /dev/null
 popd > /dev/null
 
 echo "Starting miniAudicle" | tee --append $LOGFILE
-miniAudicle
+miniAudicle || true
 
 echo "*** Finished miniAudicle ***" | tee --append $LOGFILE

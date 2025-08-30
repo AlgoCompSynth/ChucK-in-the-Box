@@ -9,7 +9,7 @@ for repo in \
   2-ChucK \
   3-ChuGins \
   4-miniAudicle \
-  5-ChuGL
+  5-R-Audio
 do
   echo ""
   echo "Installing repo $repo"

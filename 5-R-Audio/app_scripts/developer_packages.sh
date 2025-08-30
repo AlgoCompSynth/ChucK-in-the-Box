@@ -15,6 +15,7 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   libfontconfig1-dev \
   libfreetype6-dev \
   libfribidi-dev \
+  libgit2-dev \
   libharfbuzz-dev \
   libjpeg-dev \
   libpng-dev \

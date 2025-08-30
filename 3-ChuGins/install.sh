@@ -22,11 +22,11 @@ popd > /dev/null
 
 pushd $PROJECTS/chugins > /dev/null
   echo "" >> $LOGFILE
-  echo "Building ChuGins" | tee --append $LOGFILE
+  echo "Building default ChuGins" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
     >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
-  echo "Installing ChuGins" | tee --append $LOGFILE
+  echo "Installing default ChuGins" | tee --append $LOGFILE
   sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
