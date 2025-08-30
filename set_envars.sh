@@ -9,12 +9,23 @@ export CHUCK_VERSION=chuck-1.5.5.2
 export CHUGL_VERSION=main
 export POSITRON_VERSION="2025.08.0-130"
 
-#export MAKE_PARALLEL_LEVEL=$(nproc)
-export MAKE_PARALLEL_LEVEL=1 # use this if needed on low-RAM systems
-
 ## you shouldn't need to change anything below here
 export LLVM_VERSION=19
 export ARCH=$(uname -m)
+echo "ARCH: $ARCH"
+
+export RAM_KBYTES=$(grep 'MemTotal:' /proc/meminfo | sed 's/MemTotal:  *//' | sed 's/ .*$//')
+echo "RAM_KBYTES: $RAM_KBYTES"
+if [[ "$RAM_KBYTES" -gt "3500000" ]]
+then
+  export CMAKE_PARALLEL_LEVEL=$(nproc)
+else
+  export CMAKE_PARALLEL_LEVEL=1 # use this if needed on low-RAM systems
+fi
+echo "CMAKE_PARALLEL_LEVEL: $CMAKE_PARALLEL_LEVEL"
+export MAKE_PARALLEL_LEVEL=$CMAKE_PARALLEL_LEVEL
+echo "MAKE_PARALLEL_LEVEL: $MAKE_PARALLEL_LEVEL"
+
 export LOGFILES=$HOME/Logfiles
 export PROJECTS=$HOME/Projects
 export LOCALBIN=$HOME/.local/bin
