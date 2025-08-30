@@ -42,7 +42,7 @@ echo "Installing bibtool, pandoc, r-base-dev and qpdf"
   qpdf \
   >> $LOGFILE 2>&1
 
-echo "Setting R config files $HOME/.Rprofile and $HOME/.Renviron"
+echo "Setting R config files \$HOME/.Rprofile and \$HOME/.Renviron"
 sed "s/MAKE_PARALLEL_LEVEL/$MAKE_PARALLEL_LEVEL/" Rprofile > $HOME/.Rprofile
 # https://forum.posit.co/t/timedatectl-had-status-1/72060/5
 cp Renviron $HOME/.Renviron
