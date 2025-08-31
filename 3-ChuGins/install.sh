@@ -76,6 +76,16 @@ echo "*** FluidSynth ChuGin ***"
 export LOGFILE=$LOGFILES/fluidsynth-chugin.log
 rm --force $LOGFILE
 
+echo "Installing Linux dependencies" | tee --append $LOGFILE
+/usr/bin/time sudo apt-get install --assume-yes --no-install-recommends \
+  fluid-soundfont-gm \
+  fluid-soundfont-gs \
+  fluidsynth \
+  freepats \
+  opl3-soundfont \
+  polyphone \
+  >> $LOGFILE 2>&1
+
 pushd $PROJECTS/chugins/FluidSynth > /dev/null
   echo "" >> $LOGFILE
   echo "Building FluidSynth ChuGin" | tee --append $LOGFILE

@@ -6,13 +6,6 @@ echo ""
 echo "*** miniAudicle ***"
 
 source ../set_envars.sh
-if [[ "$LOW_CAPACITY" == "1" ]]
-then
-  echo "LOW CAPACITY SYSTEM!"
-  echo "Not installing miniAudicle"
-  exit 0
-fi
-
 export LOGFILE=$LOGFILES/miniaudicle.log
 rm --force $LOGFILE
 

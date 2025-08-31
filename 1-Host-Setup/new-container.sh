@@ -65,25 +65,7 @@ echo "root=false" >> distrobox.ini
 echo "replace=false" >> distrobox.ini
 echo "start_now=false" >> distrobox.ini
 
-echo "additional_packages=\"alsa-utils apt-file ca-certificates cmake dirmngr ffmpeg file flac\"" \
-  >> distrobox.ini
-echo "additional_packages=\"libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev\"" \
-  >> distrobox.ini
-echo "additional_packages=\"libpostproc-dev libsdl2-dev libswresample-dev libswscale-dev\"" \
-  >> distrobox.ini
-echo "additional_packages=\"fluid-soundfont-gm fluid-soundfont-gs fluidsynth libfluidsynth-dev\"" \ \
-  >> distrobox.ini
-echo "additional_packages=\"freepats git gnupg keyboard-configuration libicu-dev\"" \
-  >> distrobox.ini
-echo "additional_packages=\"libsox-dev libsox-fmt-all libsoxr-dev sox\"" \
-  >> distrobox.ini
-echo "additional_packages=\"lsb-release mp3splt opl3-soundfont\"" \
-  >> distrobox.ini
-echo "additional_packages=\"pipewire-alsa pipewire-doc \"" \
-  >> distrobox.ini
-echo "additional_packages=\"plocate pmidi polyphone rtkit software-properties-common\"" \
-  >> distrobox.ini
-echo "additional_packages=\"time tree vim wget wireplumber-doc\"" \
+echo "additional_packages=\"keyboard-configuration libicu-dev\"" \
   >> distrobox.ini
 
 if [[ "$RENDER_MODE" == "cpu" ]]

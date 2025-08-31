@@ -6,7 +6,7 @@ echo ""
 echo "*** Zero 2 W Host Setup ***"
 
 source ../set_envars.sh
-export LOGFILE=$LOGFILES/zero2w-host-setup.log
+export LOGFILE=$LOGFILES/additional-zero2w-host-setup.log
 rm --force $LOGFILE
 
 echo "Editing swapfile size"
