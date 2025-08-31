@@ -26,6 +26,14 @@ echo "CMAKE_PARALLEL_LEVEL: $CMAKE_PARALLEL_LEVEL"
 export MAKE_PARALLEL_LEVEL=$CMAKE_PARALLEL_LEVEL
 echo "MAKE_PARALLEL_LEVEL: $MAKE_PARALLEL_LEVEL"
 
+if [[ "$RAM_KBYTES" -le "3500000" || "$(nproc)" -lt "4" ]]
+then
+  export LOW_CAPACITY=1
+  echo "LOW CAPACITY SYSTEM!"
+else
+  export LOW_CAPACITY=0
+fi
+
 export LOGFILES=$HOME/Logfiles
 export PROJECTS=$HOME/Projects
 export LOCALBIN=$HOME/.local/bin
