@@ -29,6 +29,12 @@ if [[ "$ARCH" == "aarch64" ]]
 then
   echo "deb [arch=arm64] https://r2u.stat.illinois.edu/ubuntu noble main" \
     | sudo tee /etc/apt/sources.list.d/cranapt.list
+
+elif [[ "$ARCH" == "x86_64" ]]
+then
+  echo "deb [arch=amd64] https://r2u.stat.illinois.edu/ubuntu noble main" \
+    | sudo tee /etc/apt/sources.list.d/cranapt.list
+
 fi
 
 sudo apt-get update \

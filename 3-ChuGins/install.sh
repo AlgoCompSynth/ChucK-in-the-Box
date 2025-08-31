@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "*** ChuGins ***"
+echo "*** Default ChuGins ***"
 
 source ../set_envars.sh
 export LOGFILE=$LOGFILES/chugins.log
@@ -31,7 +31,7 @@ pushd $PROJECTS/chugins > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-echo "*** Finished ChuGins ***" | tee --append $LOGFILE
+echo "*** Finished Default ChuGins ***" | tee --append $LOGFILE
 
 echo ""
 echo "*** Faust ChuGin ***"
@@ -57,7 +57,6 @@ then
     >> $LOGFILE 2>&1
 fi
 export PATH=/usr/lib/llvm-$LLVM_VERSION/bin:$PATH
-echo $PATH | tee --append $LOGFILE
 
 pushd $PROJECTS/chugins/Faust > /dev/null
   echo "" >> $LOGFILE
@@ -76,17 +75,6 @@ echo "*** FluidSynth ChuGin ***"
 
 export LOGFILE=$LOGFILES/fluidsynth-chugin.log
 rm --force $LOGFILE
-
-#echo "Installing Linux dependencies" | tee --append $LOGFILE
-#/usr/bin/time sudo apt-get install --assume-yes \
-  #fluidsynth \
-  #fluid-soundfont-gm \
-  #fluid-soundfont-gs \
-  #freepats \
-  #libfluidsynth-dev \
-  #opl3-soundfont \
-  #polyphone \
-  #>> $LOGFILE 2>&1
 
 pushd $PROJECTS/chugins/FluidSynth > /dev/null
   echo "" >> $LOGFILE
