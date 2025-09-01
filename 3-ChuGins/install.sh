@@ -16,5 +16,7 @@ then
 
 fi
 
+chuck --chugin-probe 2>&1 | tee --append $LOGFILE
+
 echo "** Finished ChuGins **" | tee --append $LOGFILE
 echo ""
