@@ -15,22 +15,24 @@ then
   /usr/bin/time sudo apt-get install -qqy --no-install-recommends \
     libfaust-static \
     >> $LOGFILE 2>&1
-  export LLVM_VERSION=19
-
-else
-  export LLVM_VERSION=14
 
 fi
-echo "LLVM_VERSION: $LLVM_VERSION"
 
-echo "Installing Linux dependencies" | tee --append $LOGFILE
+echo "Installing Faust and FaustWorks" | tee --append $LOGFILE
 /usr/bin/time sudo apt-get install -qqy --no-install-recommends \
   faust \
   faust-common \
+  faustworks \
   libncurses-dev \
   libssl-dev \
-  llvm-$LLVM_VERSION \
   zlib1g-dev \
+  >> $LOGFILE 2>&1
+export LLVM_VERSION=$(faust --version | grep "LLVM version" | sed "s/^.*version //" | sed "s/\..*$//")
+echo "LLVM_VERSION: $LLVM_VERSION"
+echo "Installing LLVM"
+/usr/bin/time sudo apt-get install -qqy --no-install-recommends \
+  llvm-$LLVM_VERSION \
+  llvm-$LLVM_VERSION-dev \
   >> $LOGFILE 2>&1
 export PATH=/usr/lib/llvm-$LLVM_VERSION/bin:$PATH
 
