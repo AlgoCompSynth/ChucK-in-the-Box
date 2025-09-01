@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "*** New Container ***"
+echo "* New Container *"
 
 source ../set_envars.sh
 export LOGFILE=$LOGFILES/new-container.log
@@ -114,4 +114,4 @@ echo "    distrobox enter $DBX_CONTAINER_NAME"
 
 distrobox enter $DBX_CONTAINER_NAME
 
-echo "*** Finished New Container ***" | tee --append $LOGFILE
+echo "* Finished New Container *" | tee --append $LOGFILE

@@ -10,20 +10,11 @@ export LOGFILE=$LOGFILES/chuck.log
 rm --force $LOGFILE
 
 echo "Installing Linux dependencies" | tee --append $LOGFILE
-/usr/bin/time sudo apt-get install --assume-yes \
-  alsa-utils \
+/usr/bin/time sudo apt-get install -qqy --no-install-recommends \
   bison \
-  build-essential \
-  ffmpeg \
   flex \
   libasound2-dev \
-  libjack-jackd2-dev \
-  libpulse-dev \
   libsndfile1-dev \
-  libsoxr-dev \
-  libsox-dev \
-  libsox-fmt-all \
-  sox \
   >> $LOGFILE 2>&1
 
 echo "" >> $LOGFILE

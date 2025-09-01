@@ -21,16 +21,12 @@ pushd $HOME/.fonts > /dev/null
   rm --force Meslo.zip LICENSE.txt README.md
 popd > /dev/null
 
-./apt-command-line-audio.sh
+./command-line-audio.sh
 
 echo "Installing Linux packages" | tee --append $LOGFILE
-sudo apt-get update \
-  >> $LOGFILE 2>&1
-sudo apt-get install --assume-yes --no-install-recommends \
+sudo apt-get install -qqy --no-install-recommends \
   bluetooth \
   pipewire-doc \
-  podman \
-  uidmap \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
@@ -41,15 +37,24 @@ diff main.conf /etc/bluetooth/main.conf || true
 sudo cp main.conf /etc/bluetooth/main.conf
 sudo service bluetooth start
 
-echo "Installing Distrobox globally"
-pushd $PROJECTS > /dev/null
-  rm -fr distrobox
-  git clone https://github.com/89luca89/distrobox.git \
+if [[ "$LOW_CAPACITY_SYSTEM" == "0" ]]
+then
+  sudo apt-get install -qqy --no-install-recommends \
+    podman \
+    uidmap \
     >> $LOGFILE 2>&1
-  cd distrobox
-  sudo ./install \
-    >> $LOGFILE 2>&1
-popd > /dev/null
+
+  echo "Installing Distrobox globally"
+  pushd $PROJECTS > /dev/null
+    rm -fr distrobox
+    git clone https://github.com/89luca89/distrobox.git \
+      >> $LOGFILE 2>&1
+    cd distrobox
+    sudo ./install \
+      >> $LOGFILE 2>&1
+  popd > /dev/null
+
+fi
 
 echo "Updating locate database"
 sudo updatedb \

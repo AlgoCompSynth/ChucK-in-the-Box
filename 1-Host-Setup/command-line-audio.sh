@@ -10,9 +10,9 @@ cp bash_aliases $HOME/.bash_aliases; source bash_aliases
 cp vimrc $HOME/.vimrc
 
 echo "Installing Linux packages" | tee --append $LOGFILE
-sudo apt-get update \
+sudo apt-get update -qq \
   >> $LOGFILE 2>&1
-sudo apt-get install --assume-yes --no-install-recommends \
+sudo apt-get install -qqy --no-install-recommends \
   alsa-utils \
   apt-file \
   bash-completion \

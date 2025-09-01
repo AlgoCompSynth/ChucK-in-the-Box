@@ -10,7 +10,7 @@ export LOGFILE=$LOGFILES/chugl-both-release-$(hostname).log
 rm --force $LOGFILE
 
 echo "Installing Linux dependencies"
-/usr/bin/time sudo apt-get install --assume-yes \
+/usr/bin/time sudo apt-get install -qqy --no-install-recommends \
   libcanberra-gtk3-module \
   libgl-dev \
   libwayland-bin \

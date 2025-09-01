@@ -10,26 +10,23 @@ function install_repo {
   echo ""
   echo "Installing repo $repo"
   pushd ./$repo > /dev/null
-    /usr/bin/time ./install.sh
+    /usr/bin/time ./install.sh || true
   popd > /dev/null
 }
 
-for repo in \
-  2-ChucK \
-  3-ChuGins
-do
-  install_repo $repo
-done
+install_repo 2-ChucK
+install_repo 3-ChuGins
 
 if [[ "$LOW_CAPACITY_SYSTEM" == "0" ]]
 then
+  install_repo 4-miniAudicle
+  install_repo 5-R-Audio
 
-  for repo in \
-    4-miniAudicle \
-    5-R-Audio
-  do
-    install_repo $repo
-  done
+  if [[ "$ARCH" == "x86_64" ]]
+  then
+    install_repo 6-ChuGL
+
+  fi
 
 fi
 
