@@ -65,7 +65,7 @@ echo "root=false" >> distrobox.ini
 echo "replace=false" >> distrobox.ini
 echo "start_now=false" >> distrobox.ini
 
-echo "additional_packages=\"keyboard-configuration libicu-dev\"" \
+echo "additional_packages=\"keyboard-configuration libicu-dev lsb-release\"" \
   >> distrobox.ini
 
 if [[ "$RENDER_MODE" == "cpu" ]]
