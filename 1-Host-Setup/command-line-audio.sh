@@ -28,6 +28,7 @@ sudo apt-get install -qqy --no-install-recommends \
   lsb-release \
   mp3splt \
   pipewire-alsa \
+  pipewire-doc \
   pkg-config \
   plocate \
   pmidi \
@@ -39,6 +40,7 @@ sudo apt-get install -qqy --no-install-recommends \
   usbutils \
   vim \
   wget \
+  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 echo "Updating apt-file database"

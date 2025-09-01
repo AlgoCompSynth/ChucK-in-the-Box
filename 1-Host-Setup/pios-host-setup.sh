@@ -26,8 +26,6 @@ popd > /dev/null
 echo "Installing Linux packages" | tee --append $LOGFILE
 sudo apt-get install -qqy --no-install-recommends \
   bluetooth \
-  pipewire-doc \
-  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 echo "Reconfiguring Bluetooth"
