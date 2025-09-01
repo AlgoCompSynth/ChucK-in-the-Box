@@ -17,8 +17,12 @@ wget -qO- \
   https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc \
   | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 # add the repo from CRAN -- lsb_release adjusts to 'noble' or 'jammy' or ... as needed
+sudo apt-get install -qqy --no-install-recommends \
+  software-properties-common \
+  >> $LOGFILE 2>&1
 sudo add-apt-repository --yes \
-  "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+  "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/" \
+  >> $LOGFILE 2>&1
 
 # https://eddelbuettel.github.io/r2u/
 echo "Setting up r2u"
@@ -37,7 +41,7 @@ then
 
 fi
 
-sudo apt-get update \
+sudo apt-get update -qq \
   >> $LOGFILE 2>&1
 
 echo "Installing bibtool, pandoc, r-base-dev and qpdf"
