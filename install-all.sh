@@ -14,6 +14,8 @@ function install_repo {
   popd > /dev/null
 }
 
+source ./set_envars.sh
+
 install_repo 2-ChucK
 install_repo 3-ChuGins
 
