@@ -24,10 +24,11 @@ sudo apt-get install -qqy --no-install-recommends \
   file \
   flac \
   git \
-  libsox-fmt-all \
   lsb-release \
+  lynx \
   mp3splt \
   pipewire-alsa \
+  pipewire-bin \
   pipewire-doc \
   pkg-config \
   plocate \
@@ -40,8 +41,6 @@ sudo apt-get install -qqy --no-install-recommends \
   usbutils \
   vim \
   wget \
-  wireplumber \
-  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 echo "Updating apt-file database"
