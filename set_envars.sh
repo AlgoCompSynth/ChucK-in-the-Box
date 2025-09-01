@@ -10,9 +10,12 @@ export CHUGL_VERSION=main
 export POSITRON_VERSION="2025.08.0-130"
 
 ## you shouldn't need to change anything below here
-export LLVM_VERSION=19
 export ARCH=$(uname -m)
 echo "ARCH: $ARCH"
+export DISTRIBUTOR_ID=$(lsb_release --id --short 2> /dev/null)
+echo "DISTRIBUTOR_ID: $DISTRIBUTOR_ID"
+export CODENAME=$(lsb_release --codename --short 2> /dev/null)
+echo "CODENAME: $CODENAME"
 
 export RAM_KBYTES=$(grep 'MemTotal:' /proc/meminfo | sed 's/MemTotal:  *//' | sed 's/ .*$//')
 echo "RAM_KBYTES: $RAM_KBYTES"

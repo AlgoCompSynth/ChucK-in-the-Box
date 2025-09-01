@@ -9,7 +9,7 @@ source ../set_envars.sh
 export LOGFILE=$LOGFILES/faust-chugin.log
 rm --force $LOGFILE
 
-if [[ "$(lsb_release --codename --short)" != "bookworm" ]]
+if [[ "$CODENAME" != "bookworm" ]]
 then
   echo "Installing libfaust-static"
   /usr/bin/time sudo apt-get install -qqy --no-install-recommends \

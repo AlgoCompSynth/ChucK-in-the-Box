@@ -36,6 +36,7 @@ pushd $PROJECTS/chuck/src > /dev/null
   echo "Installing ChucK" | tee --append $LOGFILE
   sudo make install \
     >> $LOGFILE 2>&1
+  chuck --probe 2>&1 | tee --append $LOGFILE
 popd > /dev/null
 
 pushd $PROJECTS/chuck/examples/book/digital-artists/chapter1 > /dev/null
