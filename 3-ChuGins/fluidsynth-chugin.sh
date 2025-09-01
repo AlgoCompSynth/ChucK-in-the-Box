@@ -15,6 +15,7 @@ echo "Installing Linux dependencies" | tee --append $LOGFILE
   fluid-soundfont-gs \
   fluidsynth \
   freepats \
+  libfluidsynth-dev \
   opl3-soundfont \
   polyphone \
   >> $LOGFILE 2>&1
