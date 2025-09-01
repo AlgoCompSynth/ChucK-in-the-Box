@@ -3,11 +3,15 @@
 set -e
 
 echo ""
-echo "*** Zero 2 W Host Setup ***"
+echo "* Zero 2 W Host Setup *"
 
 source ../set_envars.sh
-export LOGFILE=$LOGFILES/additional-zero2w-host-setup.log
+mkdir --parents $LOGFILES
+export LOGFILE=$LOGFILES/zero2w-host-setup.log
 rm --force $LOGFILE
+
+echo "Listing 'before' configuration"
+./alsa-lists.sh | tee --append $LOGFILE > alsa-before.txt
 
 echo "Editing swapfile size"
 # https://pimylifeup.com/raspberry-pi-swap-file/
@@ -35,4 +39,6 @@ cp /boot/firmware/config.txt .
 sudo sed -i '$ a dtoverlay=dwc2' /boot/firmware/config.txt
 diff config.txt /boot/firmware/config.txt || true
 
-echo "*** Finished Zero 2 W Host Setup ***" | tee --append $LOGFILE
+echo "Reboot to enable USB audio / MIDI"
+
+echo "* Finished Zero 2 W Host Setup *" | tee --append $LOGFILE
