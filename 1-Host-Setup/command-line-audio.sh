@@ -40,6 +40,7 @@ sudo apt-get install -qqy --no-install-recommends \
   usbutils \
   vim \
   wget \
+  wireplumber \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
