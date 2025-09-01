@@ -47,8 +47,7 @@ export DBX_CONTAINER_MANAGER=podman
 export DBX_CONTAINER_HOME_PREFIX=$HOME/dbx-homes
 export DBX_CONTAINER_NAME=CitB-$ARCH-$RENDER_MODE
 export DBX_CONTAINER_HOSTNAME=dbx-$DBX_CONTAINER_NAME
-#export DBX_CONTAINER_IMAGE=quay.io/toolbx/ubuntu-toolbox:24.04
-export DBX_CONTAINER_IMAGE=docker.io/library/ubuntu:noble
+export DBX_CONTAINER_IMAGE=docker.io/library/ubuntu:plucky
 export DBX_CONTAINER_DIRECTORY=$DBX_CONTAINER_HOME_PREFIX/$DBX_CONTAINER_NAME
 
 if [[ "$ARCH" = "x86_64" ]]
