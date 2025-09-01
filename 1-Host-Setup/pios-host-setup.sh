@@ -53,6 +53,8 @@ then
     sudo ./install \
       >> $LOGFILE 2>&1
   popd > /dev/null
+  which distrobox
+  distrobox --version
 
 fi
 

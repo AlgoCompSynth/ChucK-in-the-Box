@@ -28,11 +28,11 @@ echo "MAKE_PARALLEL_LEVEL: $MAKE_PARALLEL_LEVEL"
 
 if [[ "$RAM_KBYTES" -le "3500000" || "$(nproc)" -lt "4" ]]
 then
-  export LOW_CAPACITY=1
-  echo "LOW CAPACITY SYSTEM!"
+  export LOW_CAPACITY_SYSTEM=1
 else
-  export LOW_CAPACITY=0
+  export LOW_CAPACITY_SYSTEM=0
 fi
+echo "LOW_CAPACITY_SYSTEM: $LOW_CAPACITY_SYSTEM"
 
 export LOGFILES=$HOME/Logfiles
 export PROJECTS=$HOME/Projects
