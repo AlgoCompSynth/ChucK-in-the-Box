@@ -37,9 +37,9 @@ else
 fi
 echo "LOW_CAPACITY_SYSTEM: $LOW_CAPACITY_SYSTEM"
 
-export LOGFILES=$HOME/Logfiles
-export PROJECTS=$HOME/Projects
-export LOCALBIN=$HOME/.local/bin
+export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES
+export PROJECTS=$HOME/Projects; mkdir --parents $PROJECTS
+export LOCALBIN=$HOME/.local/bin; mkdir --parents $LOCALBIN
 export CHUGIN_PATH=/usr/local/lib/chuck
 export DEBIAN_FRONTEND=noninteractive
 
