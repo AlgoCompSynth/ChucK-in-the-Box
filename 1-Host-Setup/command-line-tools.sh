@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "*** Command Line Audio ***"
+echo "*** Command Line Tools ***"
 
 echo "Setting base configuration files"
 cp bash_aliases $HOME/.bash_aliases; source bash_aliases
@@ -13,7 +13,6 @@ echo "Installing Linux packages" | tee --append $LOGFILE
 sudo apt-get update -qq \
   >> $LOGFILE 2>&1
 sudo apt-get install -qqy --no-install-recommends \
-  alsa-utils \
   apt-file \
   bash-completion \
   build-essential \
@@ -22,19 +21,11 @@ sudo apt-get install -qqy --no-install-recommends \
   cmake \
   curl \
   file \
-  flac \
   git \
   lsb-release \
   lynx \
-  mp3splt \
-  pipewire-alsa \
-  pipewire-bin \
-  pipewire-doc \
   pkg-config \
   plocate \
-  pmidi \
-  rtkit \
-  sox \
   time \
   tree \
   unzip \
@@ -65,5 +56,5 @@ echo "Updating locate database"
 sudo updatedb \
   >> $LOGFILE 2>&1
 
-echo "*** Finished Command Line Audio ***" | tee --append $LOGFILE
+echo "*** Finished Command Line Tools ***" | tee --append $LOGFILE
 echo ""

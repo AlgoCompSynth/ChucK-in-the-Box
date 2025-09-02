@@ -6,8 +6,6 @@ echo ""
 echo "** PiOS Host Setup **"
 
 source ../set_envars.sh
-echo "Creating $PROJECTS $LOGFILES $LOCALBIN"
-mkdir --parents $PROJECTS $LOGFILES $LOCALBIN
 export LOGFILE=$LOGFILES/pios-host-setup.log
 rm --force $LOGFILE
 
@@ -21,15 +19,13 @@ pushd $HOME/.fonts > /dev/null
   rm --force Meslo.zip LICENSE.txt README.md
 popd > /dev/null
 
-./command-line-audio.sh
+./command-line-tools.sh
 
-echo "Installing Linux packages" | tee --append $LOGFILE
+# https://wiki.debian.org/BluetoothUser
+echo "Reconfiguring Bluetooth" | tee --append $LOGFILE
 sudo apt-get install -qqy --no-install-recommends \
   bluetooth \
   >> $LOGFILE 2>&1
-
-echo "Reconfiguring Bluetooth"
-# https://wiki.debian.org/BluetoothUser
 sudo service bluetooth stop
 diff main.conf /etc/bluetooth/main.conf || true
 sudo cp main.conf /etc/bluetooth/main.conf
