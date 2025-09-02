@@ -18,15 +18,15 @@ then
 
 fi
 
-echo "Installing Faust and FaustWorks" | tee --append $LOGFILE
+echo "Installing Faust and build dependencies" | tee --append $LOGFILE
 /usr/bin/time sudo apt-get install -qqy --no-install-recommends \
   faust \
   faust-common \
-  faustworks \
   libncurses-dev \
   libssl-dev \
   zlib1g-dev \
   >> $LOGFILE 2>&1
+
 export LLVM_VERSION=$(faust --version | grep "LLVM version" | sed "s/^.*version //" | sed "s/\..*$//")
 echo "LLVM_VERSION: $LLVM_VERSION"
 echo "Installing LLVM"
@@ -35,6 +35,15 @@ echo "Installing LLVM"
   llvm-$LLVM_VERSION-dev \
   >> $LOGFILE 2>&1
 export PATH=/usr/lib/llvm-$LLVM_VERSION/bin:$PATH
+
+if [[ "$LOW_CAPACITY_SYSTEM" == "0" ]]
+then
+  echo "Installing FaustWorks"
+  /usr/bin/time sudo apt-get install -qqy --no-install-recommends \
+    faustworks \
+    >> $LOGFILE 2>&1
+
+fi
 
 pushd $PROJECTS/chugins/Faust > /dev/null
   echo "" >> $LOGFILE
