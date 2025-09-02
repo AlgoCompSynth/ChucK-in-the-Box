@@ -35,6 +35,7 @@ if [[ "$LOW_CAPACITY_SYSTEM" == "0" ]]
 then
   sudo apt-get install -qqy --no-install-recommends \
     podman \
+    qpwgraph \
     uidmap \
     >> $LOGFILE 2>&1
 
