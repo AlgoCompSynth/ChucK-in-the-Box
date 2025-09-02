@@ -65,7 +65,7 @@ echo "root=false" >> distrobox.ini
 echo "replace=false" >> distrobox.ini
 echo "start_now=false" >> distrobox.ini
 
-echo "additional_packages=\"keyboard-configuration libicu-dev lsb-release\"" \
+echo "additional_packages=\"keyboard-configuration libicu-dev lsb-release pipewire-alsa\"" \
   >> distrobox.ini
 
 if [[ "$RENDER_MODE" == "cpu" ]]
@@ -94,7 +94,7 @@ echo "with home directory $DBX_CONTAINER_DIRECTORY"
 echo ""
 echo "Entering $DBX_CONTAINER_NAME to perform setup."
 echo "This will take some time."
-/usr/bin/time distrobox enter --no-tty $DBX_CONTAINER_NAME -- ./container-setup.sh
+/usr/bin/time distrobox enter --no-tty $DBX_CONTAINER_NAME -- ./command-line-tools.sh
 
 echo ""
 echo "Distrobox containers:"
