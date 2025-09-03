@@ -38,3 +38,11 @@ options(
   timeout = 60,
   width = 120
 )
+
+# bspm options
+suppressMessages(bspm::enable())
+options(bspm.backend.check=FALSE)
+options(bspm.version.check=FALSE)
+options(bspm.sudo.autodetect=TRUE)
+options(bspm.sudo=TRUE)
+

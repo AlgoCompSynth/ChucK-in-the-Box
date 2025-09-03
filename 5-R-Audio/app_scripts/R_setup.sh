@@ -60,7 +60,11 @@ cp Renviron $HOME/.Renviron
 echo "Installing bspm"
 sudo Rscript -e 'install.packages("bspm", repos="https://cran.r-project.org")' \
   >> $LOGFILE 2>&1
-echo "suppressMessages(bspm::enable())"| sudo tee --append /etc/R/Rprofile.site
+#echo "suppressMessages(bspm::enable())"| sudo tee --append /etc/R/Rprofile.site
+echo "Setting /etc/R/Rprofile.site"
+diff Rprofile.site /etc/R/Rprofile.site || true
+sleep 10
+sudo cp Rprofile.site /etc/R/Rprofile.site
 
 echo "Updating the system library"
 sudo Rscript -e 'update.packages(ask=FALSE, repos="https://cran.r-project.org")' \
