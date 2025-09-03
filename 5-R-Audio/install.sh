@@ -8,8 +8,7 @@ pushd app_scripts > /dev/null
 for script in \
   R_setup.sh \
   developer_packages.sh \
-  audio_packages.sh \
-  Positron.sh
+  audio_packages.sh
 do
   ./$script
 done
