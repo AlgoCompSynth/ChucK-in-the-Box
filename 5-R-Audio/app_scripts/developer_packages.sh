@@ -13,7 +13,7 @@ echo "Installing R developer packages as 'root' - this takes some time."
 /usr/bin/time sudo ./developer_packages.R \
   >> $LOGFILE 2>&1
 
-echo "Installing TinyTeX"
+echo "Installing TinyTeX as '$USER'"
 /usr/bin/time Rscript -e "tinytex::install_tinytex(force = TRUE)" \
   >> $LOGFILE 2>&1
 
