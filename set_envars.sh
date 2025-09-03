@@ -7,7 +7,7 @@ export RENDER_MODE=cpu
 ## user-defined variables
 export CHUCK_VERSION=chuck-1.5.5.2
 export CHUGL_VERSION=main
-export POSITRON_VERSION="2025.08.0-130"
+export POSITRON_VERSION="2025.09.0-139"
 
 ## you shouldn't need to change anything below here
 export ARCH=$(uname -m)
