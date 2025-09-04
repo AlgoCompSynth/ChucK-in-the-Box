@@ -24,6 +24,8 @@ sudo apt-get install -qqy --no-install-recommends \
   git \
   lsb-release \
   lynx \
+  pipewire-alsa \
+  pipewire-doc \
   pkg-config \
   plocate \
   time \
