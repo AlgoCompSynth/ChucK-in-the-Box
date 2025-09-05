@@ -48,11 +48,9 @@ Pisound and Raspberry Pi audio hardware.
           Subdevice #0: subdevice #0
         ```
 
-        My Raspberry Pi 5 has two HDMI adapters. The first two cards
-        in this list are the audio channels for those adapters.
-
-        The third card is the Blokas Pisound. Your system may vary but
-        you should see the Pisound and the HDMI adapters.
+        My Raspberry Pi 5 has two HDMI adapters. The first two cards in this list are
+        the audio channels for those adapters. The third card is the Blokas Pisound.
+        Your system may vary but you should see the Pisound and all HDMI adapters.
 
     - Capture devices:
 
