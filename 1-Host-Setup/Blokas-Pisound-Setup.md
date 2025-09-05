@@ -89,6 +89,7 @@ Pisound and Raspberry Pi audio hardware.
     on any Raspberry Pi system. Client 24 is the Pisound hardware MIDI
     connectors. Clients 142 and 143 are part of the
     [PipeWire](https://www.pipewire.org/) multimedia management system.
+
     PipeWire is a relative newcomer to Linux audio tooling. For more
     information on how PipeWire integrates with the base Debian
     `bookworm` system on a Raspberry Pi, see
