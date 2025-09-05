@@ -1,5 +1,4 @@
-# Setting up ChucK-in-the-Box on a Raspberry Pi with a
-[Blokas Pisound Card](https://blokas.io/pisound/docs/)
+# Setting up ChucK-in-the-Box on a Raspberry Pi with a [Blokas Pisound Card](https://blokas.io/pisound/docs/)
 
 ## Formatting the microSD card
 
