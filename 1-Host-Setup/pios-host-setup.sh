@@ -23,35 +23,31 @@ popd > /dev/null
 
 # https://wiki.debian.org/BluetoothUser
 echo "Reconfiguring Bluetooth" | tee --append $LOGFILE
-sudo apt-get install -qqy --no-install-recommends \
-  bluetooth \
-  >> $LOGFILE 2>&1
 sudo service bluetooth stop
 diff main.conf /etc/bluetooth/main.conf || true
 sudo cp main.conf /etc/bluetooth/main.conf
 sudo service bluetooth start
 
-if [[ "$LOW_CAPACITY_SYSTEM" == "0" ]]
+if [[ "$NO_GUI" == "0" ]]
 then
+  echo "GUI system - installing qpwgraph"
   sudo apt-get install -qqy --no-install-recommends \
-    podman \
     qpwgraph \
-    uidmap \
     >> $LOGFILE 2>&1
 
-  echo "Installing Distrobox globally"
-  pushd $PROJECTS > /dev/null
-    rm -fr distrobox
-    git clone https://github.com/89luca89/distrobox.git \
-      >> $LOGFILE 2>&1
-    cd distrobox
-    sudo ./install \
-      >> $LOGFILE 2>&1
-  popd > /dev/null
-  which distrobox
-  distrobox --version
+fi
+
+if [[ "$BLOKAS_PISOUND" == "1" ]]
+then
+  echo "Installing Blokas Pisound software"
+  curl --silent https://blokas.io/pisound/install.sh | sh \
+    >> $LOGFILE 2>&1
 
 fi
+
+echo "Updating apt-file database"
+sudo apt-file update \
+  >> $LOGFILE 2>&1
 
 echo "Updating locate database"
 sudo updatedb \

@@ -15,6 +15,7 @@ sudo apt-get update -qq \
 sudo apt-get install -qqy --no-install-recommends \
   apt-file \
   bash-completion \
+  bluetooth \
   build-essential \
   byobu \
   ca-certificates \
@@ -53,10 +54,6 @@ popd > /dev/null
 mkdir --parents $HOME/.config
 cp starship.toml $HOME/.config/starship.toml
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
-
-echo "Updating locate database"
-sudo updatedb \
-  >> $LOGFILE 2>&1
 
 echo "*** Finished Command Line Tools ***" | tee --append $LOGFILE
 echo ""

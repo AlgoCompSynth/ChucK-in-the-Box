@@ -1,13 +1,11 @@
-## greeting
 echo "Setting environment variables"
-
-export RENDER_MODE=cpu
-#export RENDER_MODE=nvidia # use this if you have an NVIDIA GPU
 
 ## user-defined variables
 export CHUCK_VERSION=chuck-1.5.5.2
-export CHUGL_VERSION=main
-export POSITRON_VERSION="2025.09.0-139"
+echo "CHUCK_VERSION: $CHUCK_VERSION"
+#export BLOKAS_PISOUND=0
+export BLOKAS_PISOUND=1
+echo "BLOKAS_PISOUND: $BLOKAS_PISOUND"
 
 ## you shouldn't need to change anything below here
 export ARCH=$(uname -m)
@@ -42,23 +40,3 @@ export PROJECTS=$HOME/Projects; mkdir --parents $PROJECTS
 export LOCALBIN=$HOME/.local/bin; mkdir --parents $LOCALBIN
 export CHUGIN_PATH=/usr/local/lib/chuck
 export DEBIAN_FRONTEND=noninteractive
-
-export DBX_CONTAINER_MANAGER=podman
-export DBX_CONTAINER_HOME_PREFIX=$HOME/dbx-homes
-export DBX_CONTAINER_NAME=CitB-$ARCH-$RENDER_MODE
-export DBX_CONTAINER_HOSTNAME=dbx-$DBX_CONTAINER_NAME
-export DBX_CONTAINER_IMAGE=docker.io/library/ubuntu:noble
-export DBX_CONTAINER_DIRECTORY=$DBX_CONTAINER_HOME_PREFIX/$DBX_CONTAINER_NAME
-
-if [[ "$ARCH" = "x86_64" ]]
-then
-  export POSITRON_PACKAGE=Positron-$POSITRON_VERSION-x64.deb
-  export POSITRON_URL=https://cdn.posit.co/positron/dailies/deb/x86_64/$POSITRON_PACKAGE
-elif [[ "$ARCH" = "aarch64" ]]
-then
-  export POSITRON_PACKAGE=Positron-$POSITRON_VERSION-arm64.deb
-  export POSITRON_URL=https://cdn.posit.co/positron/dailies/deb/arm64/$POSITRON_PACKAGE
-else
-  echo "Unsupported architecture!"
-  exit -1
-fi
