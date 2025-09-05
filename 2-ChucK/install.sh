@@ -39,14 +39,4 @@ pushd $PROJECTS/chuck/src > /dev/null
   chuck --probe 2>&1 | tee --append $LOGFILE
 popd > /dev/null
 
-pushd $PROJECTS/chuck/examples/book/digital-artists/chapter1 > /dev/null
-  echo "" >> $LOGFILE
-  echo "Testing ChucK" | tee --append $LOGFILE
-  echo "You should hear random notes"
-  echo "Press 'CTRL-C' to exit"
-  sleep 5
-  chuck WowExample.ck || true
-  sleep 5
-popd > /dev/null
-
 echo "*** Finished ChucK ***" | tee --append $LOGFILE

@@ -28,9 +28,9 @@ diff main.conf /etc/bluetooth/main.conf || true
 sudo cp main.conf /etc/bluetooth/main.conf
 sudo service bluetooth start
 
-if [[ "$NO_GUI" == "0" ]]
+if [[ "$LOW_CAPACITY_SYSTEM" == "0" ]]
 then
-  echo "GUI system - installing qpwgraph"
+  echo "Full capacity system - installing qpwgraph"
   sudo apt-get install -qqy --no-install-recommends \
     qpwgraph \
     >> $LOGFILE 2>&1

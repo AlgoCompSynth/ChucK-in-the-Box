@@ -5,7 +5,6 @@ set -e
 echo ""
 echo "*** Default ChuGins ***"
 
-source ../set_envars.sh
 export LOGFILE=$LOGFILES/default-chugins.log
 rm --force $LOGFILE
 
