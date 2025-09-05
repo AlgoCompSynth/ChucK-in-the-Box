@@ -16,12 +16,10 @@ On the "Services" tab, make sure the "Use password authentication" radio
 button is selected. Then press the "Save" button and continue with the
 formatting.
 
-## Setting up remote access
+## Verifying the hardware accessibility
 
 Insert the formatted microSD card in the Raspberry Pi and boot the system
-up. The Blokas Pisound hardware and software are designed for headless
-operation, so even if you have an attached keyboard, video monitor and
-mouse, you should set up remote access.
+up. Then
 
 1. Use Secure Shell (`ssh`) to log in with the username and password you
 set when you formatted the microSD card.
@@ -95,3 +93,9 @@ Pisound and Raspberry Pi audio hardware.
     `bookworm` system on a Raspberry Pi, see
     <https://wiki.debian.org/PipeWire#Debian_12>.
 
+
+## Setting up remote access
+
+The Blokas Pisound hardware and software are designed for headless
+operation, so even if you have an attached keyboard, video monitor and
+mouse, you should set up remote access.
