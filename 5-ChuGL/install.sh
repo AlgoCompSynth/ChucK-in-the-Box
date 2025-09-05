@@ -1,1 +1,0 @@
-x11-release-install.sh

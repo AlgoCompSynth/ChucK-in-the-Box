@@ -23,12 +23,6 @@ if [[ "$LOW_CAPACITY_SYSTEM" == "0" ]]
 then
   install_repo 4-miniAudicle
 
-  if [[ "$ARCH" == "x86_64" ]]
-  then
-    install_repo 5-ChuGL
-
-  fi
-
 fi
 
 echo "* Finished Install All *"
