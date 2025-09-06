@@ -1,11 +1,12 @@
 # Setting up ChucK-in-the-Box on a Raspberry Pi with a [Blokas Pisound Card](https://blokas.io/pisound/docs/)
 
-## Formatting the microSD card
+## Flashing the microSD card
 
 Use the
 [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
-to format the card. Use the default Raspberry Pi OS and make sure you
-have the settings filled out. On the "General" tab, you will need to set
+to flash the card. Use the default Raspberry Pi OS (64-bit) and make
+sure you have the settings filled out. On the "General" tab, you will
+need to set
 
 1. the hostname,
 2. the username and password,
@@ -14,15 +15,42 @@ have the settings filled out. On the "General" tab, you will need to set
 
 On the "Services" tab, make sure the "Use password authentication" radio
 button is selected. Then press the "Save" button and continue with the
-formatting.
+flashing.
 
-## Verifying the hardware accessibility
+Once the flashing is complete, remove the card from the writer, insert
+it into the Raspberry Pi and boot the system up. Then use Secure Shell
+(`ssh`) to log in and verify that the system is accessible.
 
-Insert the formatted microSD card in the Raspberry Pi and boot the system
-up. Then
+## Setting up remote access
+
+The Blokas Pisound hardware and software are designed for headless
+operation, so even if you have an attached keyboard, video monitor and
+mouse, you should set up remote access.
+
+As noted above, you should already have command line remote access on
+your local area network (LAN) via `ssh`. But if you plan to use the
+ChucK
+[miniAudicle](https://github.com/ccrma/miniAudicle/blob/main/README.md)
+interactive development environment (IDE) from ChucK-in-the-Box,
+the Pure Data GUI from the Blokas Pisound software that ChucK-in-the-Box
+installs, or any other desktop audio application, you will need either a
+video monitor or remote desktop access.
+
+The instructions for setting up remote access are here:
+<https://www.raspberrypi.com/documentation/computers/remote-access.html>.
+In the remainder of this guide, I will only be using command-line access
+via `ssh`.
+
+## Verifying the Pisound hardware is accessible to Linux
 
 1. Use Secure Shell (`ssh`) to log in with the username and password you
-set when you formatted the microSD card.
+set when you formatted the microSD card. For example, my system is
+`partch.local` on my WiFi network, so I do
+
+    ```
+    ssh partch.local
+    ```
+
 2. Verify that the PiOS operating system software can access the Blokas
 Pisound and Raspberry Pi audio hardware.
 
@@ -93,9 +121,49 @@ Pisound and Raspberry Pi audio hardware.
     `bookworm` system on a Raspberry Pi, see
     <https://wiki.debian.org/PipeWire#Debian_12>.
 
+## Full software upgrade
 
-## Setting up remote access
+Before proceeding further, do a package database update
 
-The Blokas Pisound hardware and software are designed for headless
-operation, so even if you have an attached keyboard, video monitor and
-mouse, you should set up remote access.
+    `sudo apt update`
+
+    and then a full system upgrade
+
+    `sudo apt full-upgrade -qqy`
+
+    ```
+    znmeb@partch:~ $ sudo apt update # update the package database
+    Hit:1 http://deb.debian.org/debian bookworm InRelease
+    Get:2 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+    Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+    Get:4 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [273 kB]
+    Get:5 http://deb.debian.org/debian-security bookworm-security/main armhf Packages [258 kB]
+    Hit:6 http://archive.raspberrypi.com/debian bookworm InRelease
+    Fetched 634 kB in 6s (114 kB/s)
+    Reading package lists... Done
+    Building dependency tree... Done
+    Reading state information... Done
+    223 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    znmeb@partch:~ $ sudo apt full-upgrade -qqy # be as quiet as possible
+    ```
+
+At the time of this writing (2025-09-05), upgrading a freshly-installed
+system will stop for user input:
+
+    ```
+    Configuration file '/etc/initramfs-tools/initramfs.conf'
+     ==> Modified (by you or by a script) since installation.
+     ==> Package distributor has shipped an updated version.
+       What would you like to do about it ?  Your options are:
+        Y or I  : install the package maintainer's version
+        N or O  : keep your currently-installed version
+          D     : show the differences between the versions
+          Z     : start a shell to examine the situation
+     The default action is to keep your current version.
+    *** initramfs.conf (Y/I/N/O/D/Z) [default=N] ?
+    ```
+
+    If this happens, answer "Y".
+
+When the upgrade finishes, reboot the system with `sudo reboot` and
+log back in again.
