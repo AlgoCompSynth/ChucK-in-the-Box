@@ -45,11 +45,18 @@ via `ssh`.
 
 1. Use Secure Shell (`ssh`) to log in with the username and password you
 set when you formatted the microSD card. For example, my system is
-`partch.local` on my WiFi network, so I do
+`partch.local` on my WiFi network, so I do `ssh partch.local`:
 
-    ```
-    ssh partch.local
-    ```
+    ❯ ssh partch.local 
+    Linux partch 6.12.34+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.34-1+rpt1~bookworm (2025-06-26) aarch64
+
+    The programs included with the Debian GNU/Linux system are free software;
+    the exact distribution terms for each program are described in the
+    individual files in /usr/share/doc/*/copyright.
+
+    Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+    permitted by applicable law.
+    Last login: Fri Sep  5 21:55:37 2025
 
 2. Verify that the PiOS operating system software can access the Blokas
 Pisound and Raspberry Pi audio hardware.
@@ -58,10 +65,10 @@ Pisound and Raspberry Pi audio hardware.
     [Advanced Linux Sound Architecture](https://www.alsa-project.org/wiki/Main_Page)
     (ALSA) subsystem. ALSA provides playback, capture and sequencing capabilities.
 
-    - Playback devices:
+    - Playback devices - `aplay -l`:
 
         ```
-        znmeb@partch:~ $ aplay -l
+        $ aplay -l
         **** List of PLAYBACK Hardware Devices ****
         card 0: vc4hdmi0 [vc4-hdmi-0], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
           Subdevices: 1/1
@@ -78,10 +85,10 @@ Pisound and Raspberry Pi audio hardware.
         the audio channels for those adapters. The third card is the Blokas Pisound.
         Your system may vary but you should see the Pisound and all HDMI adapters.
 
-    - Capture devices:
+    - Capture devices - `arecord -l`:
 
         ```
-        znmeb@partch:~ $ arecord -l
+        $ arecord -l
         **** List of CAPTURE Hardware Devices ****
         card 2: pisound [pisound], device 0: PS-21N472P snd-soc-dummy-dai-0 [PS-21N472P snd-soc-dummy-dai-0]
           Subdevices: 1/1
@@ -91,10 +98,10 @@ Pisound and Raspberry Pi audio hardware.
         On my system, the only capture device I have is the Blokas Pisound,
         and it has the same card number - 2 - as the Pisound playback device.
 
-    - Sequencer connections:
+    - Sequencer connections - `aconnect -l`:
 
         ```
-        znmeb@partch:~ $ aconnect -l
+        $ aconnect -l
         client 0: 'System' [type=kernel]
             0 'Timer           '
 	        Connecting To: 142:0
@@ -126,7 +133,7 @@ Pisound and Raspberry Pi audio hardware.
 Before proceeding further, do a package database update - `sudo apt update` - 
 and then a full system upgrade - `sudo apt full-upgrade -qqy`.
 
-    znmeb@partch:~ $ sudo apt update # update the package database
+    $ sudo apt update # update the package database
     Hit:1 http://deb.debian.org/debian bookworm InRelease
     Get:2 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
     Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
@@ -138,7 +145,7 @@ and then a full system upgrade - `sudo apt full-upgrade -qqy`.
     Building dependency tree... Done
     Reading state information... Done
     223 packages can be upgraded. Run 'apt list --upgradable' to see them.
-    znmeb@partch:~ $ sudo apt full-upgrade -qqy # be as quiet as possible
+    $ sudo apt full-upgrade -qqy # be as quiet as possible
 
 At the time of this writing (2025-09-05), upgrading a freshly-installed
 system will stop for user input:
@@ -158,3 +165,17 @@ If this happens, answer "Y".
 
 When the upgrade finishes, reboot the system with `sudo reboot` and
 log back in again.
+
+## Installing the ChucK-in-the-Box software
+
+Currently, ChucK-in-the-Box is in a pre-release state and the way
+to install it is from a `git` repository. First, log in with `ssh`
+and create a `Projects` directory. `cd` into this directory and
+clone the repository.
+
+```
+cd ~
+mkdir Projects
+cd Projects
+git clone https://github.com/AlgoCompSynth/ChucK-in-the-Box.git
+```
