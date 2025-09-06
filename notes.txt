@@ -1,7 +1,0 @@
-1. Flash PiOS Lite 64 bit with WiFi and SSH enabled.
-2. SSH into the box
-3. sudo apt update && sudo apt dist-upgrade && sudo apt install apt-file git plocate time tree vim
-4. sudo apt autoremove
-5. ssh-keygen -t ed25519, upload key and clone repo
-6. terminal setup
-7. chuck
