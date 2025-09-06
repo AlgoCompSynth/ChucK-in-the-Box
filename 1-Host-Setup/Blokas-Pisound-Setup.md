@@ -123,15 +123,9 @@ Pisound and Raspberry Pi audio hardware.
 
 ## Full software upgrade
 
-Before proceeding further, do a package database update
+Before proceeding further, do a package database update - `sudo apt update` - 
+and then a full system upgrade - `sudo apt full-upgrade -qqy`.
 
-    `sudo apt update`
-
-    and then a full system upgrade
-
-    `sudo apt full-upgrade -qqy`
-
-    ```
     znmeb@partch:~ $ sudo apt update # update the package database
     Hit:1 http://deb.debian.org/debian bookworm InRelease
     Get:2 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
@@ -145,12 +139,10 @@ Before proceeding further, do a package database update
     Reading state information... Done
     223 packages can be upgraded. Run 'apt list --upgradable' to see them.
     znmeb@partch:~ $ sudo apt full-upgrade -qqy # be as quiet as possible
-    ```
 
 At the time of this writing (2025-09-05), upgrading a freshly-installed
 system will stop for user input:
 
-    ```
     Configuration file '/etc/initramfs-tools/initramfs.conf'
      ==> Modified (by you or by a script) since installation.
      ==> Package distributor has shipped an updated version.
@@ -161,9 +153,8 @@ system will stop for user input:
           Z     : start a shell to examine the situation
      The default action is to keep your current version.
     *** initramfs.conf (Y/I/N/O/D/Z) [default=N] ?
-    ```
 
-    If this happens, answer "Y".
+If this happens, answer "Y".
 
 When the upgrade finishes, reboot the system with `sudo reboot` and
 log back in again.
