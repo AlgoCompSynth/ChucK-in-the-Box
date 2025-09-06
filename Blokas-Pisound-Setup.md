@@ -24,24 +24,21 @@ it into the Raspberry Pi and boot the system up. Then use Secure Shell
 ## Setting up remote access
 
 The Blokas Pisound hardware and software are designed for headless
-operation, so even if you have an attached keyboard, video monitor and
-mouse, you should set up remote access.
-
-As noted above, you should already have command line remote access on
-your local area network (LAN) via `ssh`. But if you plan to use the
-ChucK
+operation. As noted above, you should already have command line
+remote access on your local area network (LAN) via `ssh`. But if you
+plan to use the ChucK
 [miniAudicle](https://github.com/ccrma/miniAudicle/blob/main/README.md)
 interactive development environment (IDE) from ChucK-in-the-Box,
 the Pure Data GUI from the Blokas Pisound software that ChucK-in-the-Box
 installs, or any other desktop audio application, you will need either a
-video monitor or remote desktop access.
+keyboard, video monitor and mouse or remote desktop access.
 
 The instructions for setting up remote access are here:
 <https://www.raspberrypi.com/documentation/computers/remote-access.html>.
 In the remainder of this guide, I will only be using command-line access
 via `ssh`.
 
-## Verifying the Pisound hardware is accessible to Linux
+## Verifying that Linux can access the Pisound hardware
 
 1. Use Secure Shell (`ssh`) to log in with the username and password you
 set when you formatted the microSD card. For example, my system is
@@ -59,11 +56,11 @@ set when you formatted the microSD card. For example, my system is
     Last login: Fri Sep  5 21:55:37 2025
 
 2. Verify that the PiOS operating system software can access the Blokas
-Pisound and Raspberry Pi audio hardware.
-
-    At the base level, Linux audio is managed by the
-    [Advanced Linux Sound Architecture](https://www.alsa-project.org/wiki/Main_Page)
-    (ALSA) subsystem. ALSA provides playback, capture and sequencing capabilities.
+Pisound and Raspberry Pi audio hardware: At the base level, Linux audio
+is managed by the
+[Advanced Linux Sound Architecture](https://www.alsa-project.org/wiki/Main_Page)
+(ALSA) subsystem. ALSA provides playback, capture and sequencing
+capabilities.
 
     - Playback devices - `aplay -l`:
 
@@ -168,6 +165,8 @@ log back in again.
 
 ## Installing the ChucK-in-the-Box software
 
+### Cloning the GitHub repository
+
 Currently, ChucK-in-the-Box is in a pre-release state and the way
 to install it is from a `git` repository. First, log in with `ssh`
 and create a `Projects` directory. `cd` into this directory and
@@ -179,3 +178,198 @@ mkdir Projects
 cd Projects
 git clone https://github.com/AlgoCompSynth/ChucK-in-the-Box.git
 ```
+
+### Setting up the PiOS host software
+
+The script `1-pios-host-setup.sh` installs some base Linux packages,
+including the dependencies for building ChucK and the miniAudicle.
+Then it patches the Bluetooth configuration to eliminate some errors
+in the system logs.  Finally it installs the Blokas Pisound software.
+
+```
+$ cd ~/Projects/ChucK-in-the-Box
+$ ./1-pios-host-setup.sh 
+
+* PiOS Host Setup *
+LOGFILE: /home/znmeb/Logfiles/pios-host-setup.log
+Installing Linux base tools
+Reconfiguring Bluetooth
+117c117
+< Experimental = true
+---
+> #Experimental = false
+Installing Blokas Pisound software
+Updating apt-file database
+Updating locate database
+* Finished PiOS Host Setup *
+```
+
+If you don't see the "* Finished PiOS Host Setup *" message,
+the script probably has a bug. In that case, open a GitHub
+issue at
+<https://github.com/AlgoCompSynth/ChucK-in-the-Box/issues/new>
+and attach the LOGFILE so I can troubleshoot it on my machine.
+Note that the LOGFILE will probably be in a different place
+on your machine!!
+
+### Installing ChucK, the ChuGins and the miniAudicle
+
+Script `2-install-miniAudicle.sh` recursively clones the
+miniAudicle GitHub repository, which includes ChucK and the
+ChuGins. Then it builds ChucK, the ChuGins and the miniAudicle
+from source and installs them in `/usr/local`.
+
+```
+$ cd ~/Projects/ChucK-in-the-Box
+$ ./2-install-miniAudicle.sh 
+
+* miniAudicle *
+LOGFILE: /home/znmeb/Logfiles/miniaudicle.log
+Setting Qt version
+Recursively cloning miniAudicle repository - this takes some time
+Building ChucK
+Installing ChucK
+chuck --probe
+[chuck]: [ALSA] driver found 4 audio device(s)...
+[chuck]: 
+[chuck]: ------( audio device: 1 )------
+[chuck]: device name = "default"
+[chuck]: probe [success]...
+[chuck]: # output channels = 64
+[chuck]: # input channels  = 64
+[chuck]: # duplex Channels = 64
+[chuck]: default output = YES
+[chuck]: default input = YES
+[chuck]: natively supported data formats:
+[chuck]:   16-bit int
+[chuck]:   24-bit int
+[chuck]:   32-bit int
+[chuck]:   32-bit float
+[chuck]: supported sample rates:
+[chuck]:   4000 Hz
+[chuck]:   5512 Hz
+[chuck]:   8000 Hz
+[chuck]:   9600 Hz
+[chuck]:   11025 Hz
+[chuck]:   16000 Hz
+[chuck]:   22050 Hz
+[chuck]:   32000 Hz
+[chuck]:   44100 Hz
+[chuck]:   48000 Hz
+[chuck]:   88200 Hz
+[chuck]:   96000 Hz
+[chuck]:   176400 Hz
+[chuck]:   192000 Hz
+[chuck]: 
+[chuck]: 
+[chuck]: 
+[chuck]: ------( audio device: 4 )------
+[chuck]: device name = "hw:pisound,0"
+[chuck]: probe [success]...
+[chuck]: # output channels = 2
+[chuck]: # input channels  = 2
+[chuck]: # duplex Channels = 2
+[chuck]: default output = NO
+[chuck]: default input = NO
+[chuck]: natively supported data formats:
+[chuck]:   16-bit int
+[chuck]:   24-bit int
+[chuck]:   32-bit int
+[chuck]: supported sample rates:
+[chuck]:   48000 Hz
+[chuck]:   96000 Hz
+[chuck]:   192000 Hz
+[chuck]: 
+[chuck]: 
+[chuck]: ------( 3 MIDI inputs  )------
+[chuck]:     [0] : "Midi Through:Midi Through Port-0 14:0"
+[chuck]:     [1] : "pisound:pisound MIDI PS-21N472P 24:0"
+[chuck]:     [2] : "pisound-ctl:pisound-ctl 128:0"
+[chuck]: 
+[chuck]: ------( 3 MIDI outputs )-----
+[chuck]:     [0] : "Midi Through:Midi Through Port-0 14:0"
+[chuck]:     [1] : "pisound:pisound MIDI PS-21N472P 24:0"
+[chuck]:     [2] : "pisound-ctl:pisound-ctl 128:0"
+[chuck]: 
+[chuck]: ------( 3 keyboard devices )------
+[chuck]:     [0] : "vc4-hdmi-1 HDMI Jack"
+[chuck]:     [1] : "vc4-hdmi-0 HDMI Jack"
+[chuck]:     [2] : "pwr_button"
+[chuck]: 
+```
+
+The above listing shows the audio hardware visible to ChucK.
+It is saved on the LOGFILE, which you should keep for
+reference in coding.
+
+```
+Building ChuGins
+Installing ChuGins
+chuck --chugin-probe
+[chuck:2:SYSTEM]: chugin system: ON
+[chuck:2:SYSTEM]: chugin host API version: 10.2
+[chuck:2:SYSTEM]:  | chugin major version must == host major version
+[chuck:2:SYSTEM]:  | chugin minor version must <= host minor version
+[chuck:2:SYSTEM]:  | language version: 1.5.5.2 (chai)
+[chuck:2:SYSTEM]: probing chugins (.chug)...
+[chuck:2:SYSTEM]: probing specified chugins (e.g., via --chugin)...
+[chuck:2:SYSTEM]: probing chugins in search paths...
+[chuck:2:SYSTEM]:  | searching '/usr/lib/chuck/'
+[chuck:2:SYSTEM]:  | searching '/usr/local/lib/chuck/'
+[chuck:2:SYSTEM]:  |  | [chugin] ABSaturator.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] AmbPan.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Binaural.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Bitcrusher.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Elliptic.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] ExpDelay.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] ExpEnv.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] FIR.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] FoldbackSaturator.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] GVerb.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] KasFilter.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Ladspa.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Line.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] MagicSine.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Mesh2D.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Multicomb.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] NHHall.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Overdrive.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] PanN.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Patch.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Perlin.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] PitchTrack.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] PowerADSR.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Random.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Range.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] RegEx.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Sigmund.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Spectacle.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] Wavetable.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] WinFuncEnv.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] WPDiodeLadder.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] WPKorg35.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  |  | [chugin] XML.chug [OK] (API version: 10.2)
+[chuck:2:SYSTEM]:  | searching '/home/znmeb/.chuck/packages/'
+[chuck:2:SYSTEM]:  | searching '/home/znmeb/.chuck/lib/'
+[chuck:2:SYSTEM]: probing chuck files (.ck)...
+[chuck:2:SYSTEM]: global cleanup initiating...
+[chuck:2:SYSTEM]: shutting down ChucK instance...
+[chuck:2:SYSTEM]:  | ChucK instance shutdown complete.
+```
+
+The above listing shows the ChuGins that were installed.
+Those are the defaults; there are some others in the
+repository that have more dependencies and are thus not
+installed by default. This list is also saved to LOGFILE.
+
+```
+Building miniAudicle
+Installing miniAudicle
+* Finished miniAudicle *
+```
+
+As with the first script, if you don't see the "* Finished
+miniAudicle *" message, the script probably has a bug and
+you should open a GitHub issue at
+<https://github.com/AlgoCompSynth/ChucK-in-the-Box/issues/new>
+and attach the LOGFILE so I can troubleshoot it on my machine.
