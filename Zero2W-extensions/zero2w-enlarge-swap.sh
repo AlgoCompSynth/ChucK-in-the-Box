@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "* PiOS Elnarge Swap *"
+echo "* PiOS Enlarge Swap *"
 
 # https://pimylifeup.com/raspberry-pi-swap-file/
 sudo dphys-swapfile swapoff
@@ -13,4 +13,4 @@ sudo cp dphys-swapfile /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 
-echo "* Finished PiOS Elnarge Swap *"
+echo "* Finished PiOS Enlarge Swap *"
