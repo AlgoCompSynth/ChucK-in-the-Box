@@ -14,7 +14,7 @@ then
   export MAKE_PARALLEL_LEVEL=$(nproc)
 
 else
-  export MAKE_PARALLEL_LEVEL=1 # use this if needed on low-RAM systems
+  export MAKE_PARALLEL_LEVEL=1
 
 fi
 

@@ -3,10 +3,10 @@
 set -e
 
 echo ""
-echo "* PiOS Host Setup *"
+echo "* PiOS Lite Setup *"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/pios-host-setup.log
+export LOGFILE=$LOGFILES/pios-lite-setup.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
@@ -26,18 +26,11 @@ sudo apt-get install -qqy --no-install-recommends \
   flex \
   git \
   libasound2-dev \
-  libcanberra-gtk3-module \
-  libqscintilla2-qt6-dev \
   libsndfile1-dev \
   lsb-release \
   lynx \
-  pipewire-alsa \
-  pipewire-doc \
   pkg-config \
   plocate \
-  qt6-base-dev \
-  qt6-base-dev-tools \
-  qt6-wayland \
   time \
   tree \
   unzip \
@@ -69,4 +62,4 @@ echo "Updating locate database"
 sudo updatedb \
   >> $LOGFILE 2>&1
 
-echo "* Finished PiOS Host Setup *" | tee --append $LOGFILE
+echo "* Finished PiOS Lite Setup *" | tee --append $LOGFILE
