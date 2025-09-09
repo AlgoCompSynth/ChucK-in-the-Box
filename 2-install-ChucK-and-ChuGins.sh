@@ -10,10 +10,6 @@ export LOGFILE=$LOGFILES/chuck-and-chugins.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
-echo "Setting Qt version"
-export QT_SELECT=qt6
-export PATH=/usr/lib/qt6/bin:$PATH
-
 echo "Recursively cloning miniAudicle repository - this takes some time" | tee --append $LOGFILE
 pushd $PROJECTS > /dev/null
   rm -fr miniAudicle
