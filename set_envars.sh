@@ -1,5 +1,5 @@
 export CHUCK_VERSION=chuck-1.5.5.2
-export CHUCK_DRIVERS="linux-alsa linux-jack"
+export CHUCK_DRIVERS="linux-alsa linux-pulse"
 export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES
 export PROJECTS=$HOME/Projects; mkdir --parents $PROJECTS
 export LOCALBIN=$HOME/.local/bin; mkdir --parents $LOCALBIN

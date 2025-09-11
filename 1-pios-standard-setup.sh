@@ -27,12 +27,14 @@ sudo apt-get install -qqy --no-install-recommends \
   git \
   libasound2-dev \
   libcanberra-gtk3-module \
+  libpulse-dev \
   libqscintilla2-qt6-dev \
   libsndfile1-dev \
   lsb-release \
   lynx \
   pipewire-alsa \
   pipewire-doc \
+  pipewire-pulse \
   pkg-config \
   plocate \
   qt6-base-dev \
@@ -44,6 +46,7 @@ sudo apt-get install -qqy --no-install-recommends \
   usbutils \
   vim \
   wget \
+  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 # https://wiki.debian.org/BluetoothUser
