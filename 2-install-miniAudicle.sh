@@ -26,7 +26,7 @@ popd > /dev/null
 
 pushd $CHUCK_PATH > /dev/null
   echo "Building ChucK" | tee --append $LOGFILE
-  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux-alsa \
+  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
     >> $LOGFILE 2>&1
   echo "Installing ChucK" | tee --append $LOGFILE
   sudo make install \
@@ -50,7 +50,7 @@ chuck --chugin-probe | tee --append $LOGFILE
 pushd $MINIAUDICLE_PATH > /dev/null
   echo "" | tee --append $LOGFILE
   echo "Building miniAudicle" | tee --append $LOGFILE
-  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux-alsa \
+  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
     >> $LOGFILE 2>&1
   echo "Installing miniAudicle" | tee --append $LOGFILE
   sudo make install \
