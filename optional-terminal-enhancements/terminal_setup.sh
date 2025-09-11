@@ -5,6 +5,9 @@ set -e
 echo ""
 echo "*** Terminal Setup ***"
 
+echo "Installing vim"
+sudo apt-get install -qqy vim
+
 echo "Setting base configuration files"
 cp bash_aliases $HOME/.bash_aliases; source bash_aliases
 cp vimrc $HOME/.vimrc
