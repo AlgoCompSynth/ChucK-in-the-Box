@@ -12,17 +12,9 @@ rm --force $LOGFILE
 
 echo "Installing host tools"
 sudo apt-get install -qqy --no-install-recommends \
-  bluetooth \
   podman \
   uidmap \
   >> $LOGFILE 2>&1
-
-# https://wiki.debian.org/BluetoothUser
-echo "Reconfiguring Bluetooth" | tee --append $LOGFILE
-sudo service bluetooth stop
-diff bluetooth-main.conf /etc/bluetooth/main.conf || true
-sudo cp bluetooth-main.conf /etc/bluetooth/main.conf
-sudo service bluetooth start
 
 echo "Installing distrobox from git repo" | tee --append $LOGFILE
 pushd $HOME/Projects
