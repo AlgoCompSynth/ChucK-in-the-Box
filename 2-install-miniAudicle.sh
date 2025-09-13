@@ -24,6 +24,16 @@ pushd $PROJECTS > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
+echo "Installing ChucK build dependencies" | tee --append $LOGFILE
+sudo apt-get install -qqy --no-install-recommends \
+  bison \
+  flex \
+  libasound2-dev \
+  libjack-jackd2-dev \
+  libpulse-dev \
+  libsndfile1-dev \
+  >> $LOGFILE 2>&1
+
 pushd $CHUCK_PATH > /dev/null
   echo "Building ChucK" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
@@ -46,6 +56,15 @@ pushd $CHUGINS_PATH > /dev/null
 popd > /dev/null
 echo "chuck --chugin-probe" | tee --append $LOGFILE
 chuck --chugin-probe | tee --append $LOGFILE
+
+echo "Installing miniAudicle build dependencies" | tee --append $LOGFILE
+sudo apt-get install -qqy --no-install-recommends \
+  libcanberra-gtk3-module \
+  libqscintilla2-qt6-dev \
+  qt6-base-dev \
+  qt6-base-dev-tools \
+  qt6-wayland \
+  >> $LOGFILE 2>&1
 
 pushd $MINIAUDICLE_PATH > /dev/null
   echo "" | tee --append $LOGFILE

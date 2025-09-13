@@ -3,14 +3,14 @@
 set -e
 
 echo ""
-echo "* PiOS Container Hosting *"
+echo "** PiOS Container Hosting **"
 
-source ./set_envars.sh
+source ../set_envars.sh
 export LOGFILE=$LOGFILES/pios-container-hosting.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
-echo "Installing host tools"
+echo "Installing podman and uidmap"
 sudo apt-get install -qqy --no-install-recommends \
   podman \
   uidmap \
@@ -26,4 +26,5 @@ pushd $HOME/Projects
     >> $LOGFILE 2>&1
 popd
 
-echo "* Finished PiOS Container Hosting *" | tee --append $LOGFILE
+echo "** Finished PiOS Container Hosting **" | tee --append $LOGFILE
+echo ""

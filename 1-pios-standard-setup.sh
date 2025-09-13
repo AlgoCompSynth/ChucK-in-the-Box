@@ -16,30 +16,21 @@ sudo apt-get update -qq \
 sudo apt-get install -qqy --no-install-recommends \
   apt-file \
   bash-completion \
-  bison \
   bluetooth \
   build-essential \
   ca-certificates \
   cmake \
   curl \
   file \
-  flex \
   git \
-  libasound2-dev \
-  libcanberra-gtk3-module \
-  libpulse-dev \
-  libqscintilla2-qt6-dev \
-  libsndfile1-dev \
   lsb-release \
   lynx \
   pipewire-alsa \
   pipewire-doc \
+  pipewire-jack \
   pipewire-pulse \
   pkg-config \
   plocate \
-  qt6-base-dev \
-  qt6-base-dev-tools \
-  qt6-wayland \
   time \
   tree \
   unzip \
