@@ -32,7 +32,10 @@ sudo apt-get install -qqy --no-install-recommends \
   pipewire-pulse \
   pkg-config \
   plocate \
+  screen \
+  speedtest-cli \
   time \
+  tmux \
   tree \
   unzip \
   usbutils \
