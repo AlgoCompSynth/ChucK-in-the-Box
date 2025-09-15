@@ -40,6 +40,31 @@ pushd $CHUGINS_PATH > /dev/null
   sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
+
+pushd $CHUGINS_PATH/FluidSynth > /dev/null
+  echo "" | tee --append $LOGFILE
+  echo "Building FluidSynth ChuGin" | tee --append $LOGFILE
+  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
+    >> $LOGFILE 2>&1
+  echo "Installing FluidSynth ChuGin" | tee --append $LOGFILE
+  sudo make install \
+    >> $LOGFILE 2>&1
+popd > /dev/null
+
+pushd $CHUGINS_PATH/WarpBuf > /dev/null
+  echo "" | tee --append $LOGFILE
+  echo "Configuring WarpBuf ChuGin" | tee --append $LOGFILE
+  rm --force --recursive build; mkdir --parents build; cd build
+  /usr/bin/time cmake .. \
+    >> $LOGFILE 2>&1
+  echo "Building WarpBuf ChuGin" | tee --append $LOGFILE
+  /usr/bin/time make \
+    >> $LOGFILE 2>&1
+  echo "Installing WarpBuf ChuGin" | tee --append $LOGFILE
+  sudo cp WarpBuf.chug $CHUGINS_LIB_PATH/
+    >> $LOGFILE 2>&1
+popd > /dev/null
+
 echo "chuck --chugin-probe" | tee --append $LOGFILE
 chuck --chugin-probe | tee --append $LOGFILE
 

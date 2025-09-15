@@ -20,7 +20,7 @@ pushd $MINIAUDICLE_PATH > /dev/null
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
     >> $LOGFILE 2>&1
   echo "Installing miniAudicle" | tee --append $LOGFILE
-  sudo make install \
+  /usr/bin/time sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
 

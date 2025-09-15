@@ -36,7 +36,8 @@ sudo apt-get install -qqy --no-install-recommends \
   git \
   libasound2-dev \
   libcanberra-gtk3-module \
-  libjack-jackd2-dev \
+  libfftw3-dev \
+  libfluidsynth-dev \
   libpulse-dev \
   libqscintilla2-qt6-dev \
   libsndfile1-dev \
@@ -44,7 +45,6 @@ sudo apt-get install -qqy --no-install-recommends \
   lynx \
   pipewire-alsa \
   pipewire-doc \
-  pipewire-jack \
   pipewire-pulse \
   pkg-config \
   plocate \

@@ -1,5 +1,5 @@
 export CHUCK_VERSION=chuck-1.5.5.2
-export CHUCK_DRIVERS="linux-all"
+export CHUCK_DRIVERS="linux-alsa"
 export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES
 export PROJECTS=$HOME/Projects; mkdir --parents $PROJECTS
 export LOCALBIN=$HOME/.local/bin; mkdir --parents $LOCALBIN
@@ -7,6 +7,7 @@ export MINIAUDICLE_URL=https://github.com/ccrma/miniAudicle.git
 export MINIAUDICLE_PATH=$PROJECTS/miniAudicle/src
 export CHUCK_PATH=$MINIAUDICLE_PATH/chuck/src
 export CHUGINS_PATH=$MINIAUDICLE_PATH/chugins
+export CHUGINS_LIB_PATH=/usr/local/lib/chuck
 export DEBIAN_FRONTEND=noninteractive
 
 export RAM_KBYTES=$(grep 'MemTotal:' /proc/meminfo | sed 's/MemTotal:  *//' | sed 's/ .*$//')
