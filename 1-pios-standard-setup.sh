@@ -6,16 +6,25 @@ echo ""
 echo "* PiOS Standard Setup *"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/pios-standard-setup.log
+export LOGFILE=$LOGFILES/1-pios-standard-setup.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
-echo "Installing Linux base tools"
+echo "Upgrading system"
+# https://debian-handbook.info/browse/stable/sect.automatic-upgrades.html
+export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update -qq \
   >> $LOGFILE 2>&1
+yes '' | sudo apt-get -qqy \
+  -o Dpkg::Options::="--force-confdef" \
+  -o Dpkg::Options::="--force-confold" \
+  dist-upgrade \
+  >> $LOGFILE 2>&1
+echo "Installing Linux packages"
 sudo apt-get install -qqy --no-install-recommends \
   apt-file \
   bash-completion \
+  bison \
   bluetooth \
   build-essential \
   byobu \
@@ -23,7 +32,14 @@ sudo apt-get install -qqy --no-install-recommends \
   cmake \
   curl \
   file \
+  flex \
   git \
+  libasound2-dev \
+  libcanberra-gtk3-module \
+  libjack-jackd2-dev \
+  libpulse-dev \
+  libqscintilla2-qt6-dev \
+  libsndfile1-dev \
   lsb-release \
   lynx \
   pipewire-alsa \
@@ -32,6 +48,9 @@ sudo apt-get install -qqy --no-install-recommends \
   pipewire-pulse \
   pkg-config \
   plocate \
+  qt6-base-dev \
+  qt6-base-dev-tools \
+  qt6-wayland \
   screen \
   speedtest-cli \
   time \
