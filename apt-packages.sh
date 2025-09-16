@@ -61,10 +61,10 @@ sudo apt-get install --assume-yes \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
-dpkg-query --list > dpkg-query-list.log 2>&1
+dpkg-query --list > dpkg-query-list.log
 pw-jack chuck --version 2> chuck-probe.log
-pw-jack chuck --probe >> chuck-probe.log 2>&1
-faust --version > faust-version.log 2>&1
+pw-jack chuck --probe 2>> chuck-probe.log
+faust --version > faust-version.log
 
 echo "** Finished Apt Packages **" | tee --append $LOGFILE
 echo ""
