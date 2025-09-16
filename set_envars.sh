@@ -28,9 +28,3 @@ else
   export BLOKAS_PISOUND=0
 
 fi
-
-export DBX_CONTAINER_MANAGER="podman"
-export DBX_CONTAINER_NAME="trixie-backports"
-export DBX_CONTAINER_IMAGE="docker.io/library/debian:trixie-backports"
-export DBX_CONTAINER_HOME_PREFIX="$HOME/dbx-homes"
-export DBX_CONTAINER_DIRECTORY="$DBX_CONTAINER_HOME_PREFIX/$DBX_CONTAINER_NAME"

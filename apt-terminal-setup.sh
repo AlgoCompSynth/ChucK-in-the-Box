@@ -3,24 +3,7 @@
 set -e
 
 echo ""
-echo "* Apt Terminal Setup *"
-
-sudo apt-get install -qqy --no-install-recommends \
-  apt-file \
-  byobu \
-  curl \
-  git \
-  lsb-release \
-  lynx \
-  plocate \
-  podman \
-  speedtest-cli \
-  time \
-  tree \
-  uidmap \
-  unzip \
-  vim \
-  wget
+echo "** Apt Terminal Setup **"
 
 echo "Setting base configuration files"
 echo "source $HOME/.bash_aliases" >> $HOME/.bashrc
@@ -42,4 +25,5 @@ pushd $HOME/Projects
   ./install
 popd
 
-echo "* Finished Apt Terminal Setup *"
+echo "** Finished Apt Terminal Setup **"
+echo ""

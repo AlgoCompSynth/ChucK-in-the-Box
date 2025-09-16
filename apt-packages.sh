@@ -1,7 +1,6 @@
 #! /usr/bin/env bash
 
 set -e
-set -v
 
 echo ""
 echo "** Apt Packages **"
@@ -23,7 +22,8 @@ yes '' | sudo apt-get -qqy \
   full-upgrade \
   >> $LOGFILE 2>&1
 echo "Installing Linux packages" | tee --append $LOGFILE
-sudo apt-get install --assume-yes \
+rm --force faust-version.log
+sudo apt-get install -qqy \
   apt-file \
   bash-completion \
   bluetooth \
@@ -61,10 +61,10 @@ sudo apt-get install --assume-yes \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
-dpkg-query --list > dpkg-query-list.log
-pw-jack chuck --version 2> chuck-probe.log
-pw-jack chuck --probe 2>> chuck-probe.log
-faust --version > faust-version.log
+dpkg-query --list 2>&1 | tee dpkg-query-list.log
+pw-jack chuck --version 2>&1 | tee chuck-probe.log
+pw-jack chuck --probe 2>&1 | tee --append chuck-probe.log
+faust --version 2>&1 | tee faust-version.log
 
 echo "** Finished Apt Packages **" | tee --append $LOGFILE
 echo ""
