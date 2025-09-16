@@ -31,7 +31,6 @@ sudo apt-get install -qqy \
   byobu \
   ca-certificates \
   cmake \
-  chuck \
   curl \
   faust* \
   file \
@@ -43,7 +42,6 @@ sudo apt-get install -qqy \
   lynx \
   opl3-soundfont \
   pipewire-doc \
-  pipewire-jack \
   pkg-config \
   plocate \
   podman \
@@ -62,8 +60,6 @@ sudo apt-get install -qqy \
   >> $LOGFILE 2>&1
 
 dpkg-query --list 2>&1 | tee dpkg-query-list.log
-pw-jack chuck --version 2>&1 | tee chuck-probe.log
-pw-jack chuck --probe 2>&1 | tee --append chuck-probe.log
 faust --version 2>&1 | tee faust-version.log
 
 echo "** Finished Apt Packages **" | tee --append $LOGFILE

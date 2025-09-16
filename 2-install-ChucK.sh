@@ -3,10 +3,10 @@
 set -e
 
 echo ""
-echo "* ChucK *"
+echo "* ChuGins *"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/2-install-ChucK.log
+export LOGFILE=$LOGFILES/2-install-ChuGins.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
@@ -29,14 +29,14 @@ pushd $CHUCK_PATH > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 echo "chuck --probe" | tee --append $LOGFILE
-chuck --probe | tee --append $LOGFILE
+chuck --probe | tee --append $LOGFILE > chuck-probe.log
 
 pushd $CHUGINS_PATH > /dev/null
   echo "" | tee --append $LOGFILE
-  echo "Building ChuGins" | tee --append $LOGFILE
+  echo "Building default ChuGins" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
     >> $LOGFILE 2>&1
-  echo "Installing ChuGins" | tee --append $LOGFILE
+  echo "Installing default ChuGins" | tee --append $LOGFILE
   sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
@@ -66,6 +66,6 @@ pushd $CHUGINS_PATH/WarpBuf > /dev/null
 popd > /dev/null
 
 echo "chuck --chugin-probe" | tee --append $LOGFILE
-chuck --chugin-probe | tee --append $LOGFILE
+chuck --chugin-probe | tee --append $LOGFILE >> chuck-probe.log
 
 echo "* Finished ChucK *" | tee --append $LOGFILE
