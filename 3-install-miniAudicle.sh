@@ -10,6 +10,15 @@ export LOGFILE=$LOGFILES/3-install-miniAudicle.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
+echo "Installing miniAudicle build dependencies" | tee --append $LOGFILE
+sudo apt-get install -qqy \
+  libcanberra-gtk3-module \
+  libqscintilla2-qt6-dev \
+  qt6-base-dev \
+  qt6-base-dev-tools \
+  qt6-wayland \
+  >> $LOGFILE 2>&1
+
 echo "Setting Qt version"
 export QT_SELECT=qt6
 export PATH=/usr/lib/qt6/bin:$PATH
@@ -25,3 +34,4 @@ pushd $MINIAUDICLE_PATH > /dev/null
 popd > /dev/null
 
 echo "* Finished miniAudicle *" | tee --append $LOGFILE
+echo ""

@@ -32,20 +32,13 @@ sudo apt-get install -qqy \
   ca-certificates \
   cmake \
   curl \
-  faust* \
   file \
-  fluidsynth \
-  fluid-soundfont-gm \
-  fluid-soundfont-gs \
   git \
-  libfluidsynth-dev \
   lynx \
-  opl3-soundfont \
   pipewire-doc \
   pkg-config \
   plocate \
   podman \
-  polyphone \
   screen \
   speedtest-cli \
   time \
@@ -60,7 +53,6 @@ sudo apt-get install -qqy \
   >> $LOGFILE 2>&1
 
 dpkg-query --list 2>&1 | tee dpkg-query-list.log
-faust --version 2>&1 | tee faust-version.log
 
 echo "** Finished Apt Packages **" | tee --append $LOGFILE
 echo ""
