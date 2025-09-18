@@ -16,14 +16,5 @@ echo "Installing Starship"
 echo "Installing 'nerd fonts'"
 ./nerd-fonts.sh
 
-echo "Installing distrobox from git repo" | tee --append $LOGFILE
-mkdir --parents $HOME/Projects
-pushd $HOME/Projects
-  rm -fr distrobox
-  git clone --quiet https://github.com/89luca89/distrobox.git
-  cd distrobox
-  ./install
-popd
-
 echo "** Finished Apt Terminal Setup **"
 echo ""
