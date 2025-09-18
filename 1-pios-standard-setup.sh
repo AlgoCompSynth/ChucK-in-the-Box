@@ -37,4 +37,5 @@ echo "Updating locate database"
 sudo updatedb \
   >> $LOGFILE 2>&1
 
+echo "Reboot before proceeding!"
 echo "* Finished PiOS Standard Setup *" | tee --append $LOGFILE

@@ -21,7 +21,7 @@ pushd $PROJECTS > /dev/null
 popd > /dev/null
 
 echo "Installing ChucK build dependencies" | tee --append $LOGFILE
-sudo apt-get install -qqy \
+sudo apt-get install -qqy --no-install-recommends \
   bison \
   flex \
   libasound2-dev \
@@ -49,7 +49,7 @@ popd > /dev/null
 
 echo "" | tee --append $LOGFILE
 echo "Installing FluidSynth ChuGin build dependencies" | tee --append $LOGFILE
-sudo apt-get install -qqy \
+sudo apt-get install -qqy --no-install-recommends \
   fluid-soundfont-gm \
   fluid-soundfont-gs \
   fluidsynth \
@@ -83,14 +83,14 @@ popd > /dev/null
 
 echo "" | tee --append $LOGFILE
 echo "Installing Faust ChuGin build dependencies" | tee --append $LOGFILE
-sudo apt-get install -qqy \
+sudo apt-get install -qqy --no-install-recommends \
   "faust*" \
   "libfaust*" \
   libssl-dev \
   >> $LOGFILE 2>&1
 faust --version > faust-version.log
 export LLVM_VERSION=$(grep "LLVM version" faust-version.log | sed 's/^.*version //' | sed 's/\..*$//')
-sudo apt-get install -qqy \
+sudo apt-get install -qqy --no-install-recommends \
   llvm-${LLVM_VERSION}-dev \
   >> $LOGFILE 2>&1
 export PATH=/usr/lib/llvm-${LLVM_VERSION}/bin:$PATH

@@ -11,7 +11,7 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 echo "Installing miniAudicle build dependencies" | tee --append $LOGFILE
-sudo apt-get install -qqy \
+sudo apt-get install -qqy --no-install-recommends \
   libcanberra-gtk3-module \
   libqscintilla2-qt6-dev \
   qt6-base-dev \

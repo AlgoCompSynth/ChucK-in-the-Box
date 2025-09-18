@@ -22,8 +22,7 @@ yes '' | sudo apt-get -qqy \
   full-upgrade \
   >> $LOGFILE 2>&1
 echo "Installing Linux packages" | tee --append $LOGFILE
-rm --force faust-version.log
-sudo apt-get install -qqy \
+sudo apt-get install -qqy --no-install-recommends \
   apt-file \
   bash-completion \
   bluetooth \
@@ -35,10 +34,10 @@ sudo apt-get install -qqy \
   file \
   git \
   lynx \
-  pipewire-doc \
   pkg-config \
   plocate \
   podman \
+  pulseaudio \
   screen \
   speedtest-cli \
   time \
@@ -49,7 +48,6 @@ sudo apt-get install -qqy \
   usbutils \
   vim \
   wget \
-  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 dpkg-query --list 2>&1 | tee dpkg-query-list.log
