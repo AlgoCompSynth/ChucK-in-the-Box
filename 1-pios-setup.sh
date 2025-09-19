@@ -3,10 +3,10 @@
 set -e
 
 echo ""
-echo "* PiOS Standard Setup *"
+echo "* PiOS Setup *"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/1-pios-standard-setup.log
+export LOGFILE=$LOGFILES/1-pios-setup.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
@@ -29,6 +29,7 @@ then
 fi
 
 ./apt-terminal-setup.sh
+source $HOME/.bash_aliases
 
 echo "Installing distrobox from git repo" | tee --append $LOGFILE
 mkdir --parents $HOME/Projects
@@ -74,4 +75,4 @@ sudo updatedb \
   >> $LOGFILE 2>&1
 
 echo "Reboot before proceeding!"
-echo "* Finished PiOS Standard Setup *" | tee --append $LOGFILE
+echo "* Finished PiOS Setup *" | tee --append $LOGFILE
