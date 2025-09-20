@@ -1,4 +1,4 @@
-export CHUCK_VERSION=chuck-1.5.5.2
+export CHUCK_VERSION=chuck-1.5.5.0
 export CHUCK_DRIVERS="linux-alsa"
 export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES
 export PROJECTS=$HOME/Projects; mkdir --parents $PROJECTS
