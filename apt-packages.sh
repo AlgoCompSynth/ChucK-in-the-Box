@@ -23,6 +23,7 @@ yes '' | sudo apt-get -qqy \
   >> $LOGFILE 2>&1
 echo "Installing Linux packages" | tee --append $LOGFILE
 sudo apt-get install -qqy --no-install-recommends \
+  alsa-utils \
   apt-file \
   bash-completion \
   bluetooth \
@@ -34,6 +35,9 @@ sudo apt-get install -qqy --no-install-recommends \
   file \
   git \
   lynx \
+  pipewire \
+  pipewire-doc \
+  pipewire-pulse \
   pkg-config \
   plocate \
   podman \
@@ -48,6 +52,8 @@ sudo apt-get install -qqy --no-install-recommends \
   usbutils \
   vim \
   wget \
+  wireplumber \
+  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 dpkg-query --list 2>&1 | tee dpkg-query-list.log
