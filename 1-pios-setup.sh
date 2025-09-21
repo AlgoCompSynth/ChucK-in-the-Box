@@ -58,12 +58,11 @@ echo "This will take some time."
 
 if [[ "$(systemctl get-default)" == "graphical.target" ]]
 then
-  ./xpra-bookworm.sh
-
   echo "Installing miniAudicle in debian-trixie -"
   echo "This will take some time."
   /usr/bin/time distrobox enter debian-trixie -- ./install-miniAudicle.sh \
     >> $LOGFILE 2>&1
+
 fi
 
 echo "Updating apt-file database"
