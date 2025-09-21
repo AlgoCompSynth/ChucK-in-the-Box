@@ -35,5 +35,8 @@ pushd $MINIAUDICLE_PATH > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
+echo "Exporting miniAudicle to host"
+distrobox-export --bin "$(which miniAudicle)"
+
 echo "* Finished miniAudicle *" | tee --append $LOGFILE
 echo ""

@@ -98,5 +98,8 @@ chuck --probe | tee --append $LOGFILE > chuck-probe.log
 echo "chuck --chugin-probe" | tee --append $LOGFILE
 chuck --chugin-probe | tee --append $LOGFILE >> chuck-probe.log
 
+echo "Exporting ChucK to host"
+distrobox-export --bin "$(which chuck)"
+
 echo "* Finished ChuGins *" | tee --append $LOGFILE
 echo ""
