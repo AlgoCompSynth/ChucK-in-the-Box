@@ -42,6 +42,8 @@ sudo apt-get install -qqy --no-install-recommends \
   plocate \
   podman \
   pulseaudio \
+  pulseaudio-module-bluetooth \
+  pulseaudio-utils \
   screen \
   speedtest-cli \
   time \
