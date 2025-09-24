@@ -10,6 +10,8 @@ export LOGFILE=$LOGFILES/1-pios-setup.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
+./enlarge-swap.sh
+
 sudo cp bookworm-backports.list /etc/apt/sources.list.d/
 ./apt-packages.sh
 
@@ -22,6 +24,8 @@ sudo service bluetooth start
 
 if [[ "$BLOKAS_PISOUND" == "1" ]]
 then
+  echo ""
+  echo ""
   echo "Installing Blokas Pisound software"
   curl --silent https://blokas.io/pisound/install.sh | sh \
     >> $LOGFILE 2>&1
@@ -40,24 +44,30 @@ pushd $HOME/Projects
   ./install
 popd
 
+echo ""
+echo ""
 echo "Creating debian-trixie distrobox -"
 echo "This will take some time to download"
 echo "and install packages."
-/usr/bin/time distrobox assemble create \
-  >> $LOGFILE 2>&1
+/usr/bin/time distrobox assemble create
 
+echo ""
+echo ""
 echo "Setting up debian-trixie command line"
 /usr/bin/time distrobox enter debian-trixie -- ./apt-terminal-setup.sh \
   >> $LOGFILE 2>&1
 cp --recursive $HOME/.ssh $HOME/dbx-homes/debian-trixie/
 
-echo "Installing ChuGins in debian-trixie -"
+echo ""
+echo ""
+echo "Installing ChucK and ChuGins in debian-trixie -"
 echo "This will take some time."
-/usr/bin/time distrobox enter debian-trixie -- ./install-ChuGins.sh \
-  >> $LOGFILE 2>&1
+/usr/bin/time distrobox enter debian-trixie -- ./install-ChucK.sh
 
-if [[ "$(systemctl get-default)" == "graphical.target" ]]
+if [[ "$GRAPHICAL_TARGET" == "1" ]]
 then
+  echo ""
+  echo ""
   echo "Installing miniAudicle in debian-trixie -"
   echo "This will take some time."
   /usr/bin/time distrobox enter debian-trixie -- ./install-miniAudicle.sh \
@@ -65,6 +75,8 @@ then
 
 fi
 
+echo ""
+echo ""
 echo "Updating apt-file database"
 sudo apt-file update \
   >> $LOGFILE 2>&1
@@ -74,4 +86,6 @@ sudo updatedb \
   >> $LOGFILE 2>&1
 
 echo "Reboot before proceeding!"
+echo ""
+echo ""
 echo "* Finished PiOS Setup *" | tee --append $LOGFILE

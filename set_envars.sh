@@ -1,4 +1,4 @@
-export CHUCK_VERSION=chuck-1.5.5.0
+export CHUCK_VERSION=chuck-1.5.5.5
 export CHUCK_DRIVERS="linux-alsa"
 export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES
 export PROJECTS=$HOME/Projects; mkdir --parents $PROJECTS
@@ -26,5 +26,14 @@ then
 
 else
   export BLOKAS_PISOUND=0
+
+fi
+
+if [[ "$(systemctl get-default)" == "graphical.target" ]]
+then
+  export GRAPHICAL_TARGET=1
+
+else
+  export GRAPHICAL_TARGET=0
 
 fi

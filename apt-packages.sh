@@ -59,7 +59,7 @@ sudo apt-get install -qqy --no-install-recommends \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
-dpkg-query --list 2>&1 | tee dpkg-query-list.log
+dpkg-query --list > dpkg-query-list.log
 
 echo "** Finished Apt Packages **" | tee --append $LOGFILE
 echo ""
