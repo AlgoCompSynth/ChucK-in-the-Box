@@ -28,11 +28,5 @@ cp --recursive $HOME/.ssh $HOME/dbx-homes/debian-trixie/
 /usr/bin/time distrobox enter debian-trixie -- ./clone-ccrma-repos.sh
 /usr/bin/time distrobox enter debian-trixie -- ./install-default-deps.sh
 
-if [[ "$GRAPHICAL_TARGET" == "1" ]]
-then
-  /usr/bin/time distrobox enter debian-trixie -- ./install-gui-deps.sh
-
-fi
-
 echo "* Finished Trixie Container Init *" | tee --append $LOGFILE
 echo ""
