@@ -72,5 +72,14 @@ pushd $CHUGINS_PATH/Faust > /dev/null
   sudo cp Faust.chug $CHUGINS_LIB_PATH/
 popd > /dev/null
 
+pushd $CHUGINS_PATH/FluidSynth > /dev/null
+  echo "Building FluidSynth ChuGin" | tee --append $LOGFILE
+  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
+    >> $LOGFILE 2>&1
+  echo "Installing FluidSynth ChuGin" | tee --append $LOGFILE
+  sudo make install \
+    >> $LOGFILE 2>&1
+popd > /dev/null
+
 echo "* Finished ChucK and ChuGins *" | tee --append $LOGFILE
 echo ""
