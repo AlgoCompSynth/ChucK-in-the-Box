@@ -10,53 +10,42 @@ export LOGFILE=$LOGFILES/apt-packages.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
-echo "Upgrading system" | tee --append $LOGFILE
-# https://debian-handbook.info/browse/stable/sect.automatic-upgrades.html
 export DEBIAN_FRONTEND=noninteractive
-sudo cp bookworm-backports.list /etc/apt/sources.list.d/
-sudo apt-get update -qq \
-  >> $LOGFILE 2>&1
-yes '' | sudo apt-get -qqy \
-  -o Dpkg::Options::="--force-confdef" \
-  -o Dpkg::Options::="--force-confold" \
-  full-upgrade \
-  >> $LOGFILE 2>&1
-echo "Installing Linux packages" | tee --append $LOGFILE
+  #alsa-utils \
+  #bluetooth \
+  #bluez-alsa-utils \
+  #build-essential \
+  #ca-certificates \
+  #cmake \
+  #lynx \
+  #pipewire \
+  #pipewire-doc \
+  #pipewire-pulse \
+  #pkg-config \
+  #pulseaudio \
+  #pulseaudio-module-bluetooth \
+  #pulseaudio-utils \
+  #screen \
+  #speedtest-cli \
+  #tmux \
+  #wireplumber \
+  #wireplumber-doc \
 sudo apt-get install -qqy --no-install-recommends \
-  alsa-utils \
   apt-file \
   bash-completion \
-  bluetooth \
-  bluez-alsa-utils \
-  build-essential \
   byobu \
-  ca-certificates \
-  cmake \
   curl \
   file \
   git \
-  lynx \
-  pipewire \
-  pipewire-doc \
-  pipewire-pulse \
-  pkg-config \
   plocate \
   podman \
-  pulseaudio \
-  pulseaudio-module-bluetooth \
-  pulseaudio-utils \
-  screen \
-  speedtest-cli \
   time \
-  tmux \
   tree \
   uidmap \
   unzip \
   usbutils \
   vim \
   wget \
-  wireplumber \
-  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 dpkg-query --list > dpkg-query-list.log
