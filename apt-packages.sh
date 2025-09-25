@@ -11,34 +11,25 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
-  #alsa-utils \
-  #bluetooth \
-  #bluez-alsa-utils \
-  #build-essential \
-  #ca-certificates \
-  #cmake \
-  #lynx \
-  #pipewire \
-  #pipewire-doc \
-  #pipewire-pulse \
-  #pkg-config \
-  #pulseaudio \
-  #pulseaudio-module-bluetooth \
-  #pulseaudio-utils \
-  #screen \
-  #speedtest-cli \
-  #tmux \
-  #wireplumber \
-  #wireplumber-doc \
 sudo apt-get install -qqy --no-install-recommends \
   apt-file \
   bash-completion \
   byobu \
   curl \
   file \
+  fluidsynth \
+  fluid-soundfont-gm \
+  fluid-soundfont-gs \
   git \
+  libspa-0.2-bluetooth \
+  lynx \
+  pipewire \
+  pipewire-doc \
+  pipewire-pulse \
   plocate \
   podman \
+  pulseaudio \
+  rtkit \
   time \
   tree \
   uidmap \
@@ -46,6 +37,8 @@ sudo apt-get install -qqy --no-install-recommends \
   usbutils \
   vim \
   wget \
+  wireplumber \
+  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 dpkg-query --list > dpkg-query-list.log
