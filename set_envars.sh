@@ -16,24 +16,24 @@ then
   export MAKE_PARALLEL_LEVEL=$(nproc)
 
 else
-  export MAKE_PARALLEL_LEVEL=1
+  export MAKE_PARALLEL_LEVEL="1"
 
 fi
 
 if [[ "$(aplay -l | grep pisound | wc -l)" -gt "0" ]]
 then
-  export BLOKAS_PISOUND=1
+  export BLOKAS_PISOUND="1"
 
 else
-  export BLOKAS_PISOUND=0
+  export BLOKAS_PISOUND="0"
 
 fi
 
 if [[ "$(systemctl get-default)" == "graphical.target" ]]
 then
-  export GRAPHICAL_TARGET=1
+  export GRAPHICAL_TARGET="1"
 
 else
-  export GRAPHICAL_TARGET=0
+  export GRAPHICAL_TARGET="0"
 
 fi

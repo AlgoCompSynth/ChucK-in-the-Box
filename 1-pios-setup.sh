@@ -35,6 +35,8 @@ fi
 ./apt-terminal-setup.sh
 source $HOME/.bash_aliases
 
+echo ""
+echo ""
 echo "Installing distrobox from git repo" | tee --append $LOGFILE
 mkdir --parents $HOME/Projects
 pushd $HOME/Projects
@@ -49,6 +51,8 @@ echo ""
 echo "Creating debian-trixie distrobox -"
 echo "This will take some time to download"
 echo "and install packages."
+echo ""
+echo ""
 /usr/bin/time distrobox assemble create
 
 echo ""
@@ -62,7 +66,19 @@ echo ""
 echo ""
 echo "Installing ChucK and ChuGins in debian-trixie -"
 echo "This will take some time."
-/usr/bin/time distrobox enter debian-trixie -- ./install-ChucK.sh
+/usr/bin/time distrobox enter debian-trixie -- ./install-ChucK-ChuGins.sh
+
+if [[ "$GRAPHICAL_TARGET" == "1" ]]
+then
+  echo ""
+  echo ""
+  /usr/bin/time distrobox enter debian-trixie -- ./install-FluidSynth-ChuGin.sh
+
+fi
+
+echo ""
+echo ""
+distrobox enter debian-trixie -- ./probe-ChucK.sh
 
 if [[ "$GRAPHICAL_TARGET" == "1" ]]
 then
@@ -70,6 +86,8 @@ then
   echo ""
   echo "Installing miniAudicle in debian-trixie -"
   echo "This will take some time."
+  echo ""
+  echo ""
   /usr/bin/time distrobox enter debian-trixie -- ./install-miniAudicle.sh \
     >> $LOGFILE 2>&1
 

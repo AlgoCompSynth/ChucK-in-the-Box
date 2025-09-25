@@ -3,10 +3,10 @@
 set -e
 
 echo ""
-echo "* ChuGins *"
+echo "* ChucK and ChuGins *"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/install-ChuGins.log
+export LOGFILE=$LOGFILES/install-ChucK-ChuGins.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
@@ -20,11 +20,31 @@ pushd $PROJECTS > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-echo "Installing ChuGins build dependencies" | tee --append $LOGFILE
+echo "Installing ChucK build dependencies" | tee --append $LOGFILE
 sudo apt-get install -qqy --no-install-recommends \
-  build-essential \
-  cmake \
+  libasound2-dev \
+  libsndfile1-dev \
   >> $LOGFILE 2>&1
+
+pushd $CHUCK_PATH > /dev/null
+  echo "Building ChucK" | tee --append $LOGFILE
+  if [[ $MAKE_PARALLEL_LEVEL != "1" ]]
+  then 
+    /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
+      >> $LOGFILE 2>&1
+
+  else
+    /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
+      2>&1 | tee --append $LOGFILE
+
+  fi
+  echo "Installing ChucK" | tee --append $LOGFILE
+  sudo make install \
+    >> $LOGFILE 2>&1
+popd > /dev/null
+
+echo "Exporting ChucK to host" | tee --append $LOGFILE
+distrobox-export --bin "$(which chuck)"
 
 pushd $CHUGINS_PATH > /dev/null
   echo "" | tee --append $LOGFILE
@@ -32,26 +52,6 @@ pushd $CHUGINS_PATH > /dev/null
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
     >> $LOGFILE 2>&1
   echo "Installing default ChuGins" | tee --append $LOGFILE
-  sudo make install \
-    >> $LOGFILE 2>&1
-popd > /dev/null
-
-echo "" | tee --append $LOGFILE
-echo "Installing FluidSynth ChuGin build dependencies" | tee --append $LOGFILE
-sudo apt-get install -qqy --no-install-recommends \
-  fluid-soundfont-gm \
-  fluid-soundfont-gs \
-  fluidsynth \
-  libfluidsynth-dev \
-  opl3-soundfont \
-  polyphone \
-  >> $LOGFILE 2>&1
-
-pushd $CHUGINS_PATH/FluidSynth > /dev/null
-  echo "Building FluidSynth ChuGin" | tee --append $LOGFILE
-  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
-    >> $LOGFILE 2>&1
-  echo "Installing FluidSynth ChuGin" | tee --append $LOGFILE
   sudo make install \
     >> $LOGFILE 2>&1
 popd > /dev/null
@@ -77,6 +77,8 @@ sudo apt-get install -qqy --no-install-recommends \
   "libfaust*" \
   libssl-dev \
   >> $LOGFILE 2>&1
+
+echo "Getting LLVM version" | tee --append $LOGFILE
 faust --version > faust-version.log
 export LLVM_VERSION=$(grep "LLVM version" faust-version.log | sed 's/^.*version //' | sed 's/\..*$//')
 sudo apt-get install -qqy --no-install-recommends \
@@ -92,14 +94,5 @@ pushd $CHUGINS_PATH/Faust > /dev/null
   sudo cp Faust.chug $CHUGINS_LIB_PATH/
 popd > /dev/null
 
-echo "" | tee --append $LOGFILE
-echo "chuck --probe" | tee --append $LOGFILE
-chuck --probe | tee --append $LOGFILE > chuck-probe.log
-echo "chuck --chugin-probe" | tee --append $LOGFILE
-chuck --chugin-probe | tee --append $LOGFILE >> chuck-probe.log
-
-echo "Exporting ChucK to host"
-distrobox-export --bin "$(which chuck)"
-
-echo "* Finished ChuGins *" | tee --append $LOGFILE
+echo "* Finished ChucK and ChuGins *" | tee --append $LOGFILE
 echo ""
