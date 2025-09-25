@@ -10,22 +10,6 @@ export LOGFILE=$LOGFILES/install-ChucK-ChuGins.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
-echo "Recursively cloning miniAudicle repository - this takes some time" | tee --append $LOGFILE
-pushd $PROJECTS > /dev/null
-  rm -fr miniAudicle
-  /usr/bin/time git clone \
-    --recurse-submodules \
-    --branch $CHUCK_VERSION \
-    https://github.com/ccrma/miniAudicle.git \
-    >> $LOGFILE 2>&1
-popd > /dev/null
-
-echo "Installing ChucK build dependencies" | tee --append $LOGFILE
-sudo apt-get install -qqy --no-install-recommends \
-  libasound2-dev \
-  libsndfile1-dev \
-  >> $LOGFILE 2>&1
-
 pushd $CHUCK_PATH > /dev/null
   echo "Building ChucK" | tee --append $LOGFILE
   if [[ $MAKE_PARALLEL_LEVEL != "1" ]]
@@ -71,16 +55,10 @@ pushd $CHUGINS_PATH/WarpBuf > /dev/null
 popd > /dev/null
 
 echo "" | tee --append $LOGFILE
-echo "Installing Faust ChuGin build dependencies" | tee --append $LOGFILE
-sudo apt-get install -qqy --no-install-recommends \
-  faust \
-  "libfaust*" \
-  libssl-dev \
-  >> $LOGFILE 2>&1
-
 echo "Getting LLVM version" | tee --append $LOGFILE
 faust --version > faust-version.log
 export LLVM_VERSION=$(grep "LLVM version" faust-version.log | sed 's/^.*version //' | sed 's/\..*$//')
+echo "Installing llvm-${LLVM_VERSION}-dev"
 sudo apt-get install -qqy --no-install-recommends \
   llvm-${LLVM_VERSION}-dev \
   >> $LOGFILE 2>&1

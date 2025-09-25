@@ -1,0 +1,44 @@
+#! /usr/bin/env bash
+
+set -e
+
+echo ""
+echo "* Source Installs *"
+
+source ./set_envars.sh
+export LOGFILE=$LOGFILES/3-source-installs.log
+echo "LOGFILE: $LOGFILE"
+rm --force $LOGFILE
+
+echo ""
+echo ""
+echo "Installing ChucK and ChuGins in debian-trixie -"
+echo "This will take some time."
+/usr/bin/time distrobox enter debian-trixie -- ./install-ChucK-ChuGins.sh
+
+if [[ "$GRAPHICAL_TARGET" == "1" ]]
+then
+  echo ""
+  echo ""
+  /usr/bin/time distrobox enter debian-trixie -- ./install-FluidSynth-ChuGin.sh
+
+fi
+
+echo ""
+echo ""
+distrobox enter debian-trixie -- ./probe-ChucK.sh
+
+if [[ "$GRAPHICAL_TARGET" == "1" ]]
+then
+  echo ""
+  echo ""
+  echo "Installing miniAudicle in debian-trixie -"
+  echo "This will take some time."
+  echo ""
+  echo ""
+  /usr/bin/time distrobox enter debian-trixie -- ./install-miniAudicle.sh \
+    >> $LOGFILE 2>&1
+
+fi
+
+echo "* Finished Source Installs *" | tee --append $LOGFILE
