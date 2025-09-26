@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "* miniAudicle *"
+echo "** miniAudicle **"
 
 source ./set_envars.sh
 export LOGFILE=$LOGFILES/install-miniAudicle.log
@@ -12,8 +12,6 @@ rm --force $LOGFILE
 
 echo "Installing miniAudicle build dependencies" | tee --append $LOGFILE
 sudo apt-get install -qqy --no-install-recommends \
-  bison \
-  flex \
   libcanberra-gtk3-module \
   libqscintilla2-qt6-dev \
   qt6-base-dev \
@@ -38,5 +36,4 @@ popd > /dev/null
 echo "Exporting miniAudicle to host"
 distrobox-export --bin "$(which miniAudicle)"
 
-echo "* Finished miniAudicle *" | tee --append $LOGFILE
-echo ""
+echo "** Finished miniAudicle **" | tee --append $LOGFILE

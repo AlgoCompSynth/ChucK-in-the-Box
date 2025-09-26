@@ -21,12 +21,7 @@ sudo apt-get install -qqy --no-install-recommends \
   faust \
   "libfaust*" \
   libssl-dev \
-  >> $LOGFILE 2>&1
-
-echo "Installing FluidSynth ChuGin build dependencies" | tee --append $LOGFILE
-sudo apt-get install -qqy --no-install-recommends \
-  libfluidsynth-dev \
+  zlib1g-dev \
   >> $LOGFILE 2>&1
 
 echo "** Finished Default Dependencies **" | tee --append $LOGFILE
-echo ""

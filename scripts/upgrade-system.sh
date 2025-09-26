@@ -23,4 +23,3 @@ sudo apt-get autoremove -qqy \
   >> $LOGFILE 2>&1
 
 echo "** Finished Upgrade System **" | tee --append $LOGFILE
-echo ""

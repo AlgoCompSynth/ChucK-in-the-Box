@@ -17,9 +17,6 @@ sudo apt-get install -qqy --no-install-recommends \
   byobu \
   curl \
   file \
-  fluidsynth \
-  fluid-soundfont-gm \
-  fluid-soundfont-gs \
   git \
   libspa-0.2-bluetooth \
   lynx \
@@ -41,7 +38,18 @@ sudo apt-get install -qqy --no-install-recommends \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
+if [[ "$GRAPHICAL_TARGET" == "1" ]]
+then
+  sudo apt-get install -qqy --no-install-recommends \
+    fluid-soundfont-gm \
+    fluid-soundfont-gs \
+    fluidsynth \
+    opl3-soundfont \
+    polyphone \
+    >> $LOGFILE 2>&1
+
+fi
+
 dpkg-query --list > dpkg-query-list.log
 
 echo "** Finished Apt Packages **" | tee --append $LOGFILE
-echo ""

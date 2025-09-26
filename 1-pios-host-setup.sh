@@ -10,11 +10,11 @@ export LOGFILE=$LOGFILES/1-pios-host-setup.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
-./enlarge-swap.sh
+./scripts/enlarge-swap.sh
 
-sudo cp bookworm-backports.list /etc/apt/sources.list.d/
-./upgrade-system.sh
-./apt-packages.sh
+sudo cp configs/bookworm-backports.list /etc/apt/sources.list.d/
+./scripts/upgrade-system.sh
+./scripts/apt-packages.sh
 
 # https://wiki.debian.org/BluetoothUser
 #echo "Reconfiguring Bluetooth" | tee --append $LOGFILE
@@ -33,7 +33,7 @@ then
 
 fi
 
-./apt-terminal-setup.sh
+./scripts/apt-terminal-setup.sh
 source $HOME/.bash_aliases
 
 echo "Installing distrobox from git repo" | tee --append $LOGFILE

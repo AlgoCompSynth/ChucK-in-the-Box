@@ -21,12 +21,12 @@ echo ""
 
 echo ""
 echo "Setting up debian-trixie command line"
-/usr/bin/time distrobox enter debian-trixie -- ./apt-terminal-setup.sh \
+/usr/bin/time distrobox enter debian-trixie -- ./scripts/apt-terminal-setup.sh \
   >> $LOGFILE 2>&1
 cp --recursive $HOME/.ssh $HOME/dbx-homes/debian-trixie/
 
-/usr/bin/time distrobox enter debian-trixie -- ./clone-ccrma-repos.sh
-/usr/bin/time distrobox enter debian-trixie -- ./install-default-deps.sh
+/usr/bin/time distrobox enter debian-trixie -- ./scripts/clone-ccrma-repos.sh
+/usr/bin/time distrobox enter debian-trixie -- ./scripts/install-default-deps.sh
 
 echo "* Finished Trixie Container Init *" | tee --append $LOGFILE
 echo ""

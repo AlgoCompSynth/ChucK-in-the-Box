@@ -21,4 +21,3 @@ pushd $PROJECTS > /dev/null
 popd > /dev/null
 
 echo "** Finished Clone CCRMA Repos **" | tee --append $LOGFILE
-echo ""

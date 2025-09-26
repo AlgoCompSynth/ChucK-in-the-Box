@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "* FluidSynth ChuGin *"
+echo "** FluidSynth ChuGin **"
 
 source ./set_envars.sh
 export LOGFILE=$LOGFILES/install-FluidSynth-ChuGin.log
@@ -30,5 +30,4 @@ pushd $CHUGINS_PATH/FluidSynth > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-echo "* Finished FluidSynth ChuGin *" | tee --append $LOGFILE
-echo ""
+echo "** Finished FluidSynth ChuGin **" | tee --append $LOGFILE

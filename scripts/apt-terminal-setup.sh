@@ -7,14 +7,13 @@ echo "** Apt Terminal Setup **"
 
 echo "Setting base configuration files"
 echo "source $HOME/.bash_aliases" >> $HOME/.bashrc
-cp bash_aliases $HOME/.bash_aliases; source bash_aliases
-cp vimrc $HOME/.vimrc
+cp configs/bash_aliases $HOME/.bash_aliases; source configs/bash_aliases
+cp configs/vimrc $HOME/.vimrc
 
 echo "Installing Starship"
-./starship.sh
+./scripts/starship.sh
 
 echo "Installing 'nerd fonts'"
-./nerd-fonts.sh
+./scripts/nerd-fonts.sh
 
 echo "** Finished Apt Terminal Setup **"
-echo ""
