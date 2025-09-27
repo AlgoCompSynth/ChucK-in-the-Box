@@ -16,13 +16,6 @@ sudo cp configs/bookworm-backports.list /etc/apt/sources.list.d/
 ./scripts/upgrade-system.sh
 ./scripts/apt-packages.sh
 
-# https://wiki.debian.org/BluetoothUser
-#echo "Reconfiguring Bluetooth" | tee --append $LOGFILE
-#sudo service bluetooth stop
-#diff bluetooth-main.conf /etc/bluetooth/main.conf || true
-#sudo cp bluetooth-main.conf /etc/bluetooth/main.conf
-#sudo service bluetooth start
-
 if [[ "$BLOKAS_PISOUND" == "1" ]]
 then
   echo ""
