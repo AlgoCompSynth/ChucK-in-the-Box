@@ -21,6 +21,10 @@ echo ""
 
 echo ""
 echo "Setting up debian-trixie command line"
+/usr/bin/time distrobox enter debian-trixie -- ./scripts/apt-packages.sh \
+  >> $LOGFILE 2>&1
+/usr/bin/time distrobox enter debian-trixie -- ./scripts/apt-audio-plumbing.sh \
+  >> $LOGFILE 2>&1
 /usr/bin/time distrobox enter debian-trixie -- ./scripts/apt-terminal-setup.sh \
   >> $LOGFILE 2>&1
 cp --recursive $HOME/.ssh $HOME/dbx-homes/debian-trixie/

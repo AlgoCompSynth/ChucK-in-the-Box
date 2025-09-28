@@ -12,8 +12,13 @@ rm --force $LOGFILE
 
 echo "Installing ChucK build dependencies" | tee --append $LOGFILE
 sudo apt-get install -qqy --no-install-recommends \
+  bison \
+  build-essential \
+  cmake \
+  flex \
   libasound2-dev \
   libsndfile1-dev \
+  pkgconf \
   >> $LOGFILE 2>&1
 
 echo "Installing Faust ChuGin build dependencies" | tee --append $LOGFILE
