@@ -15,6 +15,7 @@ rm --force $LOGFILE
 sudo cp configs/bookworm-backports.list /etc/apt/sources.list.d/
 ./scripts/upgrade-system.sh
 ./scripts/apt-packages.sh
+./scripts/apt-audio-plumbing.sh
 
 # https://wiki.debian.org/BluetoothUser
 echo "Reconfiguring Bluetooth" | tee --append $LOGFILE
