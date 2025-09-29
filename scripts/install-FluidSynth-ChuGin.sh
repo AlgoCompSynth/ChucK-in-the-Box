@@ -10,17 +10,6 @@ export LOGFILE=$LOGFILES/install-FluidSynth-ChuGin.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
-echo "" | tee --append $LOGFILE
-echo "Installing FluidSynth ChuGin build dependencies" | tee --append $LOGFILE
-sudo apt-get install -qqy --no-install-recommends \
-  fluid-soundfont-gm \
-  fluid-soundfont-gs \
-  fluidsynth \
-  libfluidsynth-dev \
-  opl3-soundfont \
-  polyphone \
-  >> $LOGFILE 2>&1
-
 pushd $CHUGINS_PATH/FluidSynth > /dev/null
   echo "Building FluidSynth ChuGin" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
