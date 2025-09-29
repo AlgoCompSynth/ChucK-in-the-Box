@@ -11,7 +11,7 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get install -qqy \
+sudo apt-get install -qqy --no-install-recommends \
   apt-file \
   bash-completion \
   byobu \
@@ -30,4 +30,4 @@ sudo apt-get install -qqy \
   wget \
   >> $LOGFILE 2>&1
 
-echo "** Finished Apt Packages **" | tee --append $LOGFILE
+echo "** Finished Apt Packages **"

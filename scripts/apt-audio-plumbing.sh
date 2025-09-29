@@ -11,18 +11,13 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get install -qqy \
-  alsa-topology-conf \
-  alsa-ucm-conf \
-  alsa-utils \
-  libjack-jackd2-dev \
-  libsoxr-dev \
-  libsox-dev \
+sudo apt-get install -qqy --no-install-recommends \
   libsox-fmt-all \
   pipewire \
   pipewire-doc \
   pipewire-pulse \
   pulseaudio \
+  pulseaudio-module-bluetooth \
   pulseaudio-utils \
   rtkit \
   sox \
@@ -30,17 +25,4 @@ sudo apt-get install -qqy \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
-if [[ "$GRAPHICAL_TARGET" == "1" ]]
-then
-  sudo apt-get install -qqy \
-    fluid-soundfont-gm \
-    fluid-soundfont-gs \
-    fluidsynth \
-    libfluidsynth-dev \
-    opl3-soundfont \
-    polyphone \
-    >> $LOGFILE 2>&1
-
-fi
-
-echo "** Finished Audio Plumbing Packages **" | tee --append $LOGFILE
+echo "** Finished Audio Plumbing **"
