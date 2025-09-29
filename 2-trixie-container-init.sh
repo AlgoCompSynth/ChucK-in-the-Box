@@ -20,13 +20,21 @@ echo ""
 /usr/bin/time distrobox assemble create
 
 echo ""
-echo "Setting up chuck-in-the-box command line"
+echo "Installing chuck-in-the-box packages"
 /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-packages.sh \
   >> $LOGFILE 2>&1
 /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-audio-plumbing.sh \
   >> $LOGFILE 2>&1
 /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-terminal-setup.sh \
   >> $LOGFILE 2>&1
+
+if [[ "$GRAPHICAL_TARGET" == "1" ]]
+then
+  /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-graphical-target.sh \
+    >> $LOGFILE 2>&1
+
+fi
+
 cp --recursive $HOME/.ssh $HOME/dbx-homes/chuck-in-the-box/
 
 /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/clone-ccrma-repos.sh

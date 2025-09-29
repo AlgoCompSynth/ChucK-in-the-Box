@@ -12,6 +12,7 @@ rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy --no-install-recommends \
+  alsa-utils \
   libsox-fmt-all \
   pipewire \
   pipewire-doc \
