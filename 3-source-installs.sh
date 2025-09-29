@@ -19,18 +19,12 @@ echo "This will take some time."
 if [[ "$GRAPHICAL_TARGET" == "1" ]]
 then
   /usr/bin/time distrobox enter debian-trixie -- ./scripts/install-FluidSynth-ChuGin.sh
+  /usr/bin/time distrobox enter debian-trixie -- ./scripts/install-miniAudicle.sh \
 
 fi
 
 echo ""
 echo ""
 distrobox enter debian-trixie -- ./scripts/probe-ChucK.sh
-
-if [[ "$GRAPHICAL_TARGET" == "1" ]]
-then
-  /usr/bin/time distrobox enter debian-trixie -- ./scripts/install-miniAudicle.sh \
-    >> $LOGFILE 2>&1
-
-fi
 
 echo "* Finished Source Installs *" | tee --append $LOGFILE
