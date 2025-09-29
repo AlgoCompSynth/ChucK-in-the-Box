@@ -12,7 +12,7 @@ rm --force $LOGFILE
 
 echo ""
 echo ""
-echo "Creating debian-trixie distrobox -"
+echo "Creating chuck-in-the-box distrobox -"
 echo "This will take some time to download"
 echo "and install packages."
 echo ""
@@ -20,17 +20,17 @@ echo ""
 /usr/bin/time distrobox assemble create
 
 echo ""
-echo "Setting up debian-trixie command line"
-/usr/bin/time distrobox enter debian-trixie -- ./scripts/apt-packages.sh \
+echo "Setting up chuck-in-the-box command line"
+/usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-packages.sh \
   >> $LOGFILE 2>&1
-/usr/bin/time distrobox enter debian-trixie -- ./scripts/apt-audio-plumbing.sh \
+/usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-audio-plumbing.sh \
   >> $LOGFILE 2>&1
-/usr/bin/time distrobox enter debian-trixie -- ./scripts/apt-terminal-setup.sh \
+/usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-terminal-setup.sh \
   >> $LOGFILE 2>&1
-cp --recursive $HOME/.ssh $HOME/dbx-homes/debian-trixie/
+cp --recursive $HOME/.ssh $HOME/dbx-homes/chuck-in-the-box/
 
-/usr/bin/time distrobox enter debian-trixie -- ./scripts/clone-ccrma-repos.sh
-/usr/bin/time distrobox enter debian-trixie -- ./scripts/install-default-deps.sh
+/usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/clone-ccrma-repos.sh
+/usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/install-default-deps.sh
 
 echo "* Finished Trixie Container Init *" | tee --append $LOGFILE
 echo ""
