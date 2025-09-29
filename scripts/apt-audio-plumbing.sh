@@ -39,7 +39,6 @@ then
     libfluidsynth-dev \
     opl3-soundfont \
     polyphone \
-    qsynth \
     >> $LOGFILE 2>&1
 
 fi
