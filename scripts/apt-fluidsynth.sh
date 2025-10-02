@@ -3,10 +3,10 @@
 set -e
 
 echo ""
-echo "** Apt Graphical Target **"
+echo "** Apt FluidSynth **"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/apt-graphical-target.log
+export LOGFILE=$LOGFILES/apt-fluidsynth.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
@@ -19,4 +19,4 @@ sudo apt-get install -qqy --no-install-recommends \
   opl3-soundfont \
   >> $LOGFILE 2>&1
 
-echo "** Finished Graphical Target **"
+echo "** Finished FluidSynth **"

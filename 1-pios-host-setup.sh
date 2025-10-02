@@ -15,7 +15,6 @@ rm --force $LOGFILE
 sudo cp configs/bookworm-backports.list /etc/apt/sources.list.d/
 ./scripts/upgrade-system.sh
 ./scripts/apt-packages.sh
-./scripts/apt-audio-plumbing.sh
 ./scripts/apt-terminal-setup.sh
 source $HOME/.bash_aliases
 
@@ -37,9 +36,9 @@ diff configs/bluetooth-main.conf /etc/bluetooth/main.conf || true
 sudo cp configs/bluetooth-main.conf /etc/bluetooth/main.conf
 sudo service bluetooth start
 
-if [[ "$GRAPHICAL_TARGET" == "1" ]]
+if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
-  ./scripts/apt-graphical-target.sh
+  ./scripts/apt-fluidsynth.sh
 
 fi
 

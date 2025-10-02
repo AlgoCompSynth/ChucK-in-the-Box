@@ -23,14 +23,12 @@ echo ""
 echo "Installing chuck-in-the-box packages"
 /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-packages.sh \
   >> $LOGFILE 2>&1
-/usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-audio-plumbing.sh \
-  >> $LOGFILE 2>&1
 /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-terminal-setup.sh \
   >> $LOGFILE 2>&1
 
-if [[ "$GRAPHICAL_TARGET" == "1" ]]
+if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
-  /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-graphical-target.sh \
+  /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/apt-fluidsynth.sh \
     >> $LOGFILE 2>&1
 
 fi

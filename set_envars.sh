@@ -10,13 +10,16 @@ export CHUGINS_PATH=$MINIAUDICLE_PATH/chugins
 export CHUGINS_LIB_PATH=/usr/local/lib/chuck
 export DEBIAN_FRONTEND=noninteractive
 
+export NPROC=$(nproc)
 export RAM_KBYTES=$(grep 'MemTotal:' /proc/meminfo | sed 's/MemTotal:  *//' | sed 's/ .*$//')
-if [[ "$RAM_KBYTES" -gt "3500000" ]]
+if [[ "$RAM_KBYTES" -lt "1500000" || "$NPROC" -lt "4" ]]
 then
-  export MAKE_PARALLEL_LEVEL=$(nproc)
+  export MAKE_PARALLEL_LEVEL=$NPROC
+  export CMAKE_PARALLEL_LEVEL=$NPROC
 
 else
   export MAKE_PARALLEL_LEVEL="1"
+  export CMAKE_PARALLEL_LEVEL="1"
 
 fi
 
@@ -26,14 +29,5 @@ then
 
 else
   export BLOKAS_PISOUND="0"
-
-fi
-
-if [[ "$(systemctl get-default)" == "graphical.target" ]]
-then
-  export GRAPHICAL_TARGET="1"
-
-else
-  export GRAPHICAL_TARGET="0"
 
 fi

@@ -16,7 +16,7 @@ echo "Installing ChucK and ChuGins in chuck-in-the-box -"
 echo "This will take some time."
 /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/install-ChucK-ChuGins.sh
 
-if [[ "$GRAPHICAL_TARGET" == "1" ]]
+if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
   /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/install-FluidSynth-ChuGin.sh
   /usr/bin/time distrobox enter chuck-in-the-box -- ./scripts/install-miniAudicle.sh \
