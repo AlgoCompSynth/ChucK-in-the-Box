@@ -10,7 +10,6 @@ export LOGFILE=$LOGFILES/1-pios-host-setup.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
-sudo cp configs/bookworm-backports.list /etc/apt/sources.list.d/
 ./scripts/upgrade-system.sh
 ./scripts/apt-packages.sh
 ./scripts/apt-terminal-setup.sh
