@@ -40,6 +40,10 @@ if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
   ./scripts/apt-fluidsynth.sh
 
+else
+  echo "Shutting down desktop on next boot to save RAM"
+  sudo systemctl set-default multi-user.target
+
 fi
 
 if [[ "$BLOKAS_PISOUND" == "1" ]]
