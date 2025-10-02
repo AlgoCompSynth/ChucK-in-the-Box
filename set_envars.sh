@@ -14,12 +14,12 @@ export NPROC=$(nproc)
 export RAM_KBYTES=$(grep 'MemTotal:' /proc/meminfo | sed 's/MemTotal:  *//' | sed 's/ .*$//')
 if [[ "$RAM_KBYTES" -lt "1500000" || "$NPROC" -lt "4" ]]
 then
-  export MAKE_PARALLEL_LEVEL=$NPROC
-  export CMAKE_PARALLEL_LEVEL=$NPROC
-
-else
   export MAKE_PARALLEL_LEVEL="1"
   export CMAKE_PARALLEL_LEVEL="1"
+
+else
+  export MAKE_PARALLEL_LEVEL=$NPROC
+  export CMAKE_PARALLEL_LEVEL=$NPROC
 
 fi
 
