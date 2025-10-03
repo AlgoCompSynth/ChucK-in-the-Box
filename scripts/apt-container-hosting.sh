@@ -6,7 +6,7 @@ echo ""
 echo "** Container Hosting Packages **"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/apt-packages.log
+export LOGFILE=$LOGFILES/apt-container-hosting.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 

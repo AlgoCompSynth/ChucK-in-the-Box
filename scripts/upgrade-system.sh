@@ -19,7 +19,5 @@ yes '' | sudo apt-get -qqy \
   -o Dpkg::Options::="--force-confold" \
   full-upgrade \
   >> $LOGFILE 2>&1
-sudo apt-get autoremove -qqy \
-  >> $LOGFILE 2>&1
 
 echo "** Finished Upgrade System **" | tee --append $LOGFILE
