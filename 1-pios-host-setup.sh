@@ -21,7 +21,6 @@ echo "ChucK is installed - building ChuGins from source"
 ./scripts/default-chugins.sh
 ./scripts/warpbuf-chugin.sh
 ./scripts/faust-chugin.sh
-./scripts/probe-ChucK.sh
 
 if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
