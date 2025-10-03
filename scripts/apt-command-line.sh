@@ -3,10 +3,10 @@
 set -e
 
 echo ""
-echo "** Apt Packages **"
+echo "** Command Line Packages **"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/apt-packages.log
+export LOGFILE=$LOGFILES/apt-command-line.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
@@ -20,14 +20,13 @@ sudo apt-get install -qqy --no-install-recommends \
   git \
   lynx \
   plocate \
-  podman \
+  starship \
   time \
   tree \
-  uidmap \
   unzip \
   usbutils \
   vim \
   wget \
   >> $LOGFILE 2>&1
 
-echo "** Finished Apt Packages **"
+echo "** Finished Command Line Packages **"

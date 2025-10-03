@@ -11,18 +11,13 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get install -qqy --no-install-recommends \
-  alsa-utils \
+sudo apt-get install -qqy \
+  chuck \
   libsox-fmt-all \
-  pipewire \
+  pipewire-audio \
   pipewire-doc \
-  pipewire-pulse \
-  pulseaudio \
-  pulseaudio-module-bluetooth \
-  pulseaudio-utils \
-  rtkit \
+  pmidi \
   sox \
-  wireplumber \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 

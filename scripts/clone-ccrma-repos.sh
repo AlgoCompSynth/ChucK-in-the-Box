@@ -15,7 +15,6 @@ pushd $PROJECTS > /dev/null
   rm -fr miniAudicle
   /usr/bin/time git clone \
     --recurse-submodules \
-    --branch $CHUCK_VERSION \
     https://github.com/ccrma/miniAudicle.git \
     >> $LOGFILE 2>&1
 popd > /dev/null

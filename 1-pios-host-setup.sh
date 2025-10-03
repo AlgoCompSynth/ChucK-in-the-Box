@@ -11,37 +11,26 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 ./scripts/upgrade-system.sh
-./scripts/apt-packages.sh
+./scripts/apt-command-line.sh
 ./scripts/apt-terminal-setup.sh
+./scripts/apt-audio-plumbing.sh
 source $HOME/.bash_aliases
 
-echo ""
-echo "Installing distrobox from git repo" | tee --append $LOGFILE
-mkdir --parents $HOME/Projects
-pushd $HOME/Projects
-  sudo rm -fr distrobox
-  git clone --quiet https://github.com/89luca89/distrobox.git
-  cd distrobox
-  sudo ./install
-popd
-
-echo ""
-# https://wiki.debian.org/BluetoothUser
-echo "Reconfiguring Bluetooth" | tee --append $LOGFILE
-sudo service bluetooth stop
-diff configs/bluetooth-main.conf /etc/bluetooth/main.conf || true
-sudo cp configs/bluetooth-main.conf /etc/bluetooth/main.conf
-sudo service bluetooth start
+echo "ChucK is installed - building ChuGins from source"
+./scripts/clone-ccrma-repos.sh
+./scripts/default-chugins.sh
+./scripts/warpbuf-chugin.sh
+./scripts/faust-chugin.sh
+./scripts/probe-ChucK.sh
 
 if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
-  ./scripts/apt-fluidsynth.sh
-
-else
-  echo "Shutting down desktop on next boot to save RAM"
-  sudo systemctl set-default multi-user.target
+  ./scripts/fluidsynth-chugin.sh
+  ./scripts/miniaudicle.sh
 
 fi
+
+./scripts/probe-ChucK.sh
 
 if [[ "$BLOKAS_PISOUND" == "1" ]]
 then

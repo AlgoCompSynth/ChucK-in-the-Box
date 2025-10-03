@@ -10,7 +10,7 @@ echo "source $HOME/.bash_aliases" >> $HOME/.bashrc
 cp configs/bash_aliases $HOME/.bash_aliases; source configs/bash_aliases
 cp configs/vimrc $HOME/.vimrc
 
-echo "Installing Starship"
+echo "Configuring Starship"
 ./scripts/starship.sh
 
 echo "Installing 'nerd fonts'"

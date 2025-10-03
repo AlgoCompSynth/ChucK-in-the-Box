@@ -6,9 +6,18 @@ echo ""
 echo "** FluidSynth ChuGin **"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/install-FluidSynth-ChuGin.log
+export LOGFILE=$LOGFILES/fluidsynth-chugin.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
+
+echo "Installing Linux dependencies"
+sudo apt-get install -qqy --no-install-recommends \
+  fluid-soundfont-gm \
+  fluid-soundfont-gs \
+  fluidsynth \
+  libfluidsynth-dev \
+  opl3-soundfont \
+  >> $LOGFILE 2>&1
 
 pushd $CHUGINS_PATH/FluidSynth > /dev/null
   echo "Building FluidSynth ChuGin" | tee --append $LOGFILE
