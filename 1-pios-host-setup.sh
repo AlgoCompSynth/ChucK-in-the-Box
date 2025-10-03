@@ -15,22 +15,25 @@ rm --force $LOGFILE
 ./scripts/apt-terminal-setup.sh
 source $HOME/.bash_aliases
 
-if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
+if [[ "$MAKE_PARALLEL_LEVEL" == "1" ]]
 then
-  ./scripts/apt-fluidsynth.sh
-  ./scripts/apt-container-hosting.sh
-
-else
-  echo "Low capacity system - using ChucK from distro"
   ./scripts/apt-audio-plumbing.sh
-  ./scripts/clone-ccrma-repos.sh
-  ./scripts/default-chugins.sh
-  ./scripts/warpbuf-chugin.sh
-  ./scripts/faust-chugin.sh
-  ./scripts/probe-ChucK.sh
 
 fi
 
+./scripts/clone-ccrma-repos.sh
+./scripts/default-chugins.sh
+./scripts/warpbuf-chugin.sh
+./scripts/faust-chugin.sh
+./scripts/fluidsynth-chugin.sh
+
+if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
+then
+  ./scripts/miniaudicle.sh
+
+fi
+
+./scripts/probe-ChucK.sh
 
 if [[ "$BLOKAS_PISOUND" == "1" ]]
 then

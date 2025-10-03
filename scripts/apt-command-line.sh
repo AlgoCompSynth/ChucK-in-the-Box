@@ -15,6 +15,7 @@ sudo apt-get install -qqy --no-install-recommends \
   apt-file \
   bash-completion \
   byobu \
+  chuck \
   curl \
   file \
   git \
