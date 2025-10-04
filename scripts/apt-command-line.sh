@@ -20,7 +20,6 @@ sudo apt-get install -qqy --no-install-recommends \
   git \
   lynx \
   plocate \
-  starship \
   time \
   tree \
   unzip \

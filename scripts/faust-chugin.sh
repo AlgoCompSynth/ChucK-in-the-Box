@@ -13,10 +13,18 @@ rm --force $LOGFILE
 echo "Installing Faust and Linux dependencies"
 sudo apt-get install -qqy --no-install-recommends \
   faust \
-  libfaust-static \
   libssl-dev \
   zlib1g-dev \
   >> $LOGFILE 2>&1
+
+if [[ "$(lsb_release -sc 2> /dev/null)" != "bookworm" ]]
+then
+  sudo apt-get install -qqy --no-install-recommends \
+    libfaust-static \
+    >> $LOGFILE 2>&1
+
+fi
+
 echo "Getting LLVM version" | tee --append $LOGFILE
 faust --version > faust-version.log
 export LLVM_VERSION=$(grep "LLVM version" faust-version.log | sed "s/^.*version //" | sed "s/\..*$//")

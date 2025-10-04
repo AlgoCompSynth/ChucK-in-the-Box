@@ -12,7 +12,8 @@ rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy \
-  distrobox \
+  podman \
   >> $LOGFILE 2>&1
+./scripts/distrobox.sh
 
 echo "** Finished Container Hosting Packages **"

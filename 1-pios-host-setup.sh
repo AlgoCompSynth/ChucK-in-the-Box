@@ -15,6 +15,15 @@ rm --force $LOGFILE
 ./scripts/apt-terminal-setup.sh
 source $HOME/.bash_aliases
 
+if [[ "$BLOKAS_PISOUND" == "1" ]]
+then
+  echo ""
+  echo "Installing Blokas Pisound software"
+  curl --silent https://blokas.io/pisound/install.sh | sh \
+    >> $LOGFILE 2>&1
+
+fi
+
 if [[ "$MAKE_PARALLEL_LEVEL" == "1" ]]
 then
   ./scripts/apt-audio-plumbing.sh
@@ -35,14 +44,6 @@ then
 fi
 
 ./scripts/probe-ChucK.sh
-
-if [[ "$BLOKAS_PISOUND" == "1" ]]
-then
-  echo "Installing Blokas Pisound software"
-  curl --silent https://blokas.io/pisound/install.sh | sh \
-    >> $LOGFILE 2>&1
-
-fi
 
 echo ""
 echo "Updating apt-file database"
