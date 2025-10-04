@@ -22,6 +22,7 @@ then
 fi
 
 ./scripts/clone-ccrma-repos.sh
+./scripts/chuck.sh
 ./scripts/default-chugins.sh
 ./scripts/warpbuf-chugin.sh
 ./scripts/faust-chugin.sh
@@ -52,9 +53,4 @@ echo "Updating locate database"
 sudo updatedb \
   >> $LOGFILE 2>&1
 
-echo ""
-echo ""
-echo "Reboot before proceeding!"
-echo ""
-echo ""
 echo "* Finished PiOS Host Setup *" | tee --append $LOGFILE
