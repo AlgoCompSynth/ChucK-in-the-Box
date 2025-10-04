@@ -39,6 +39,7 @@ fi
 
 if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
+  ./scripts/apt-qpwgraph.sh
   ./scripts/miniaudicle.sh
 
 fi
