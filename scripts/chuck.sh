@@ -43,7 +43,4 @@ pushd $CHUCK_PATH > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
-echo "Exporting ChucK to host" | tee --append $LOGFILE
-distrobox-export --bin "$(which chuck)"
-
 echo "** Finished ChucK **" | tee --append $LOGFILE
