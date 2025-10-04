@@ -10,6 +10,8 @@ export LOGFILE=$LOGFILES/2-build-container.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
+./scripts/apt-container-hosting.sh
+
 echo ""
 echo ""
 echo "Creating chuck-in-the-box distrobox -"
