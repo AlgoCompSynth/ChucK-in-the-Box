@@ -12,6 +12,7 @@ rm --force $LOGFILE
 
 echo "Installing Linux dependencies"
 sudo apt-get install -qqy --no-install-recommends \
+  fluid-soundfont-gm \
   libfluidsynth-dev \
   >> $LOGFILE 2>&1
 
