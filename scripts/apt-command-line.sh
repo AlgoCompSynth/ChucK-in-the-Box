@@ -18,11 +18,8 @@ sudo apt-get install -qqy --no-install-recommends \
   curl \
   file \
   git \
-  libsox-fmt-all \
   lynx \
   plocate \
-  pmidi \
-  sox \
   time \
   tree \
   unzip \

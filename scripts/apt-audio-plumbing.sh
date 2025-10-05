@@ -12,9 +12,20 @@ rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy \
-  pipewire-audio \
+  flac \
+  libsox-fmt-all \
+  mp3splt \
+  pipewire \
   pipewire-doc \
-  wireplumber-doc \
+  pipewire-libcamera \
+  pipewire-pulse \
+  pmidi \
+  pulseaudio \
+  pulseaudio-module-bluetooth \
+  pulseaudio-utils \
+  rtkit \
+  sox \
+  wireplumber \
   >> $LOGFILE 2>&1
 
 echo "** Finished Audio Plumbing **"
