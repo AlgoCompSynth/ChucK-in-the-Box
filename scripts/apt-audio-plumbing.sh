@@ -12,8 +12,14 @@ rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy \
+  alsa-utils \
+  wireplumber \
   flac \
+  libpipewire-0.3-common \
   libsox-fmt-all \
+  libspa-0.2-bluetooth \
+  libspa-0.2-libcamera \
+  libspa-0.2-modules \
   mp3splt \
   pipewire \
   pipewire-doc \
@@ -26,6 +32,7 @@ sudo apt-get install -qqy \
   rtkit \
   sox \
   wireplumber \
+  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 echo "** Finished Audio Plumbing **"
