@@ -8,8 +8,6 @@
  alsa-topology-conf 1.2.5.1-3 all ALSA topology configuration files
  alsa-ucm-conf 1.2.14-1 all ALSA Use Case Manager configuration files
  alsa-utils 1.2.14-1+rpt1 arm64 Utilities for configuring and using ALSA
- ant 1.10.15-1 all Java based build tool like make
- ant-optional 1.10.15-1 all Java based build tool like make - optional libraries
  apparmor 4.1.0-1 arm64 user-space parser utility for AppArmor
  apt 3.0.3 arm64 commandline package manager
  apt-listchanges 4.8 all package change history notification tool
@@ -37,25 +35,13 @@
  busybox 1:1.37.0-6+b3 arm64 Tiny utilities for small and embedded systems
  bzip2 1.0.8-6 arm64 high-quality block-sorting file compressor - utilities
  ca-certificates 20250419 all Common CA certificates
- ca-certificates-java 20240118 all Common CA certificates (JKS keystore)
  chromium 1:140.0.7339.207-1~deb13u1+rpt1 arm64 web browser
  chromium-common 1:140.0.7339.207-1~deb13u1+rpt1 arm64 web browser - common resources used by the chromium packages
  chromium-l10n 1:140.0.7339.207-1~deb13u1+rpt1 all web browser - language packs
  chromium-sandbox 1:140.0.7339.207-1~deb13u1+rpt1 arm64 web browser - setuid security sandbox for chromium
  cifs-utils 2:7.4-1 arm64 Common Internet File System utilities
- claws-mail 4.3.1-1 arm64 Fast, lightweight and user-friendly GTK based email client
- claws-mail-i18n 4.3.1-1 all Locale data for Claws Mail (i18n support)
  cloud-guest-utils 0.33-1 all cloud guest utilities
  cloud-init 25.2-1~bpo13+1+rpt15 all initialization system for infrastructure cloud instances
- code 1.104.3-1759409526 arm64 Code editing. Redefined.
- code-the-classics 0.7 all Python games to accompany Code the Classics Volume 1 book
- code-the-classics-2 0.1 all Python games to accompany Code the Classics Volume 2 book
- coinor-libcbc3.1:arm64 2.10.12+ds-1 arm64 Coin-or branch-and-cut mixed integer programming solver (shared libraries)
- coinor-libcgl1:arm64 0.60.9+ds-1 arm64 COIN-OR Cut Generation Library
- coinor-libclp1:arm64 1.17.10+ds-1 arm64 Coin-or linear programming solver (shared libraries)
- coinor-libcoinmp0:arm64 1.8.4+dfsg-2 arm64 Simple C API for COIN-OR Solvers Clp and Cbc -- library
- coinor-libcoinutils3v5:arm64 2.11.11+ds-5 arm64 COIN-OR collection of utility classes (shared libraries)
- coinor-libosi1v5:arm64 0.108.10+ds-2 arm64 COIN-OR Open Solver Interface
  colord 1.4.7-3 arm64 system service to manage device colour profiles -- system daemon
  colord-data 1.4.7-3 all system service to manage device colour profiles -- data files
  console-setup 1.240 all console font and keymap setup program
@@ -97,8 +83,6 @@
  debconf-utils 1.5.91 all debconf utilities
  debian-archive-keyring 2025.1 all OpenPGP archive certificates of the Debian archive
  debianutils 5.23.2 arm64 Miscellaneous utilities specific to Debian
- default-jre 2:1.21-76 arm64 Standard Java or Java compatible Runtime
- default-jre-headless 2:1.21-76 arm64 Standard Java or Java compatible Runtime (headless)
  desktop-file-utils 0.28-1 arm64 Utilities for .desktop files
  device-tree-compiler 1.7.2-2+b1 arm64 Device Tree Compiler for Flat Device Trees
  dhcpcd-base 1:10.1.0-11 arm64 DHCPv4 and DHCPv6 dual-stack client (binaries and exit hooks)
@@ -138,11 +122,6 @@
  file 1:5.46-5 arm64 Recognize the type of data in a file using "magic" numbers
  findutils 4.10.0-3 arm64 utilities for finding files--find, xargs
  fio 3.39-1 arm64 flexible I/O tester
- firebird4.0-common 4.0.5.3140.ds6-17+deb13u1 all common files for firebird 4.0 server, client and utilities
- firebird4.0-common-doc 4.0.5.3140.ds6-17+deb13u1 all copyright, licensing and changelogs of firebird4.0
- firebird4.0-server-core:arm64 4.0.5.3140.ds6-17+deb13u1 arm64 Firebird engine core
- firebird4.0-utils 4.0.5.3140.ds6-17+deb13u1 arm64 Firebird command line utilities
- firebird-utils 4.0.5.3140.ds6-17+deb13u1 all Firebird command line utilities wrapper
  firefox 142.0.1-1+rpt1+b1 arm64 Mozilla Firefox web browser
  firmware-atheros 1:20241210-1+rpt3 all Binary firmware for Qualcomm Atheros wireless cards
  firmware-brcm80211 1:20241210-1+rpt3 all Binary firmware for Broadcom/Cypress 802.11 wireless cards
@@ -153,9 +132,6 @@
  fontconfig 2.15.0-2.3 arm64 generic font configuration library - support binaries
  fontconfig-config 2.15.0-2.3 arm64 generic font configuration library - configuration
  fonts-cantarell 0.303.1-4 all sans serif font family designed for on-screen readability
- fonts-crosextra-caladea 20200211-2 all Serif font metric-compatible with the Cambria font
- fonts-crosextra-carlito 20230309-2 all Sans-serif font metric-compatible with Calibri font
- fonts-dejavu 2.37-8 all metapackage to pull in fonts-dejavu-core, -mono and -extra
  fonts-dejavu-core 2.37-8 all Vera font family derivate with additional characters
  fonts-dejavu-extra 2.37-8 all Vera font family derivate with additional characters (extra variants)
  fonts-dejavu-mono 2.37-8 all Vera font family derivate with additional characters
@@ -165,15 +141,8 @@
  fonts-liberation 1:2.1.5-3 all fonts with the same metrics as Times, Arial and Courier
  fonts-liberation2 1:2.1.5-3 all transitional dummy package
  fonts-liberation-sans-narrow 1:1.07.6-4 all Sans-serif Narrow fonts to replace commonly used Arial Narrow
- fonts-linuxlibertine 5.3.0-6 all Linux Libertine family of fonts
- fonts-noto-core 20201225-2 all "No Tofu" font families with large Unicode coverage (core)
- fonts-noto-extra 20201225-2 all "No Tofu" font families with large Unicode coverage (extra)
  fonts-noto-mono 20201225-2 all "No Tofu" monospaced font family with large Unicode coverage
- fonts-noto-ui-core 20201225-2 all "No Tofu" font families with large Unicode coverage (UI core)
  fonts-nunito-sans 1.0 all Nunito Sans Google font
- fonts-opensymbol 4:102.12+LibO25.2.3-2+deb13u2 all OpenSymbol TrueType font
- fonts-sil-gentium 20081126:1.03-4 all extended Unicode Latin font ("a typeface for the nations")
- fonts-sil-gentium-basic 1.102-1.1 all smart Unicode font families (Basic and Book Basic) based on Gentium
  fonts-urw-base35 20200910-8 all font set metric-compatible with the 35 PostScript Level 2 Base Fonts
  fuse3 3.17.2-3 arm64 Filesystem in Userspace (3.x version)
  g++-14 14.2.0-19 arm64 GNU C++ compiler
@@ -230,12 +199,10 @@
  gsettings-desktop-schemas 48.0-1+rpt1 all GSettings desktop-wide schemas
  gstreamer1.0-alsa:arm64 1.26.2-1 arm64 GStreamer plugin for ALSA
  gstreamer1.0-gl:arm64 1.26.2-1 arm64 GStreamer plugins for GL
- gstreamer1.0-gtk3:arm64 1.26.2-1 arm64 GStreamer plugin for GTK+3
  gstreamer1.0-libav:arm64 1.26.2-1 arm64 ffmpeg plugin for GStreamer
  gstreamer1.0-plugins-bad:arm64 1.26.2-3 arm64 GStreamer plugins from the "bad" set
  gstreamer1.0-plugins-base:arm64 1.26.2-1 arm64 GStreamer plugins from the "base" set
  gstreamer1.0-plugins-good:arm64 1.26.2-1 arm64 GStreamer plugins from the "good" set
- gstreamer1.0-plugins-ugly:arm64 1.26.3-4 arm64 GStreamer plugins from the "ugly" set
  gstreamer1.0-x:arm64 1.26.2-1 arm64 GStreamer plugins for X11 and Pango
  gtk2-engines-pixbuf:arm64 2.24.33-7+rpt1 arm64 pixbuf-based theme for GTK 2
  gtk2-engines-pixflat:arm64 0.5+b1 arm64 PiXflat theme engine for GTK+ 2.x
@@ -272,32 +239,21 @@
  iputils-ping 3:20240905-3 arm64 Tools to test the reachability of network hosts
  iso-codes 4.18.0-1 all ISO language, territory, currency, script codes and their translations
  iw 6.9-1+b1 arm64 tool for configuring Linux wireless devices
- java-common 0.76 all Base package for Java runtimes
  javascript-common 12+nmu1 all Base support for JavaScript library packages
- java-wrappers 0.5 all wrappers for java executables
  kanshi 1.5.1-2+b1 arm64 Define output profiles that are automatically enabled and disabled on hotplug
  kbd 2.7.1-2 arm64 Linux console font and keytable utilities
  keyboard-configuration 1.240 all system-wide keyboard preferences
  keyutils 1.6.3-6 arm64 Linux Key Management Utilities
- kicad 9.0.2+dfsg-1 arm64 Electronic schematic and PCB design software
- kicad-demos 9.0.2+dfsg-1 all Demo projects for kicad
- kicad-footprints 9.0.2-1 all Footprint symbols for KiCad's Pcbnew
- kicad-libraries 9.0.2+dfsg-1 all Virtual package providing common used libraries by kicad
- kicad-symbols 9.0.2-1 all Schematic symbols for KiCad's Eeschema
- kicad-templates 9.0.0-1 all Project templates for KiCad
  klibc-utils 2.0.14-1 arm64 small utilities built with klibc for early boot
  kmod 34.2-2 arm64 tools for managing Linux kernel modules
  kms++-utils 0~git20250807.1813ada-1 arm64 C++ library for kernel mode setting - utilities
  labwc 0.8.4-1+rpt1+b1 arm64 window-stacking Wayland compositor
  laptop-detect 0.16+nmu1 all system chassis type checker
  less 668-1 arm64 pager program similar to more
- liba52-0.7.4:arm64 0.7.4-20+b3 arm64 library for decoding ATSC A/52 streams
  libaa1:arm64 1.4p5-51.1+b1 arm64 ASCII art library
  libabsl20240722:arm64 20240722.0-4 arm64 extensions to the C++ standard library
- libabw-0.1-1:arm64 0.1.3-1+b2 arm64 library for reading and writing AbiWord(tm) documents
  libaccountsservice0:arm64 23.13.9-7 arm64 query and manipulate user account information - shared libraries
  libacl1:arm64 2.3.2-2+b1 arm64 access control list - shared library
- libactivation-java 1.2.0-2 all JavaBeans Activation Framework
  libadwaita-1-0:arm64 1.7.6-1~deb13u1 arm64 Library with GTK widgets for mobile phones
  libaio1t64:arm64 0.3.113-8+b1 arm64 Linux kernel AIO access library - shared library
  libalgorithm-diff-perl 1.201-1 all module to find differences between files
@@ -305,12 +261,10 @@
  libalgorithm-merge-perl 0.08-5 all Perl module for three-way merge of textual data
  libaml0t64:arm64 0.3.0-3 arm64 Andri's Main Loop library (shared library)
  libaom3:arm64 3.12.1-1 arm64 AV1 Video Codec Library
- libapache-pom-java 33-2 all Maven metadata for all Apache Software projects
  libapparmor1:arm64 4.1.0-1 arm64 changehat AppArmor library
  libappstream5:arm64 1.0.5-1 arm64 Library to access AppStream services
  libapt-pkg7.0:arm64 3.0.3 arm64 package management runtime library
  libarchive13t64:arm64 3.7.4-4 arm64 Multi-format archive and compression library (shared library)
- libargon2-1:arm64 0~20190702+dfsg-4+b2 arm64 memory-hard hashing function - runtime library
  libaribb24-0t64:arm64 1.0.3-2.1+b2 arm64 library for ARIB STD-B24 decoding (runtime files)
  libasan8:arm64 14.2.0-19 arm64 AddressSanitizer -- a fast memory error detector
  libasound2-data 1.2.14-1+rpt1 all Configuration files and profiles for ALSA drivers
@@ -324,8 +278,6 @@
  libatk1.0-0t64:arm64 2.56.2-1 arm64 ATK accessibility toolkit
  libatk-bridge2.0-0t64:arm64 2.56.2-1 arm64 AT-SPI 2 toolkit bridge - shared library
  libatkmm-1.6-1v5:arm64 2.28.4-1+b2 arm64 C++ wrappers for ATK accessibility toolkit (shared libraries)
- libatk-wrapper-java 0.40.0-3 all ATK implementation for Java using JNI
- libatk-wrapper-java-jni:arm64 0.40.0-3+b3 arm64 ATK implementation for Java using JNI (JNI bindings)
  libatomic1:arm64 14.2.0-19 arm64 support library providing __atomic built-in functions
  libatopology2t64:arm64 1.2.14-1+rpt1 arm64 shared library for handling ALSA topology definitions
  libatspi2.0-0t64:arm64 2.56.2-1 arm64 Assistive Technology Service Provider Interface - shared library
@@ -345,18 +297,11 @@
  libavif16:arm64 1.2.1-1.2 arm64 Library for handling .avif files
  libavtp0:arm64 0.2.0-2 arm64 Audio Video Transport Protocol (shared library)
  libavutil59:arm64 8:7.1.1-1~+rpt1 arm64 FFmpeg library with functions for simplifying programming - runtime files
- libayatana-appindicator3-1 0.5.94-1 arm64 Ayatana Application Indicators (GTK-3+ version)
  libayatana-ido3-0.4-0:arm64 0.10.4-1 arm64 Widgets and other objects used for Ayatana Indicators
  libayatana-indicator3-7:arm64 0.9.4-1+b1 arm64 panel indicator applet - shared library (GTK-3+ variant)
  libb2-1:arm64 0.98.1-1.1+b2 arm64 BLAKE2 family of hash functions
  libbabeltrace1:arm64 1.5.11-4+b2 arm64 Babeltrace conversion libraries
- libbase-java 1.1.6-3 all general purpose base service library (OOo 3.1 branch)
  libbasicusageenvironment2:arm64 2025.05.24-1 arm64 multimedia RTSP streaming library (BasicUsageEnvironment class)
- libbatik-java 1.18+dfsg-2 all xml.apache.org SVG Library
- libbcmail-java 1.80-3 all Bouncy Castle generators/processors for S/MIME and CMS
- libbcpkix-java 1.80-3 all Bouncy Castle Java API for PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP, and CRMF
- libbcprov-java 1.80-3 all Bouncy Castle Java Cryptographic Service Provider
- libbcutil-java 1.80-3 all Bouncy Castle ASN.1 Extension and Utility APIs
  libbinutils:arm64 2.44-3 arm64 GNU binary utilities (private shared library)
  libblas3:arm64 3.12.1-6 arm64 Basic Linear Algebra Reference implementations, shared library
  libblkid1:arm64 2.41-5 arm64 block device ID library
@@ -373,16 +318,13 @@
  libbluray2:arm64 1:1.3.4-1+b2 arm64 Blu-ray disc playback support library (shared library)
  libboost-filesystem1.83.0:arm64 1.83.0-4.2 arm64 filesystem operations (portable paths, iteration over directories, etc) in C++
  libboost-iostreams1.83.0:arm64 1.83.0-4.2 arm64 Boost.Iostreams Library
- libboost-locale1.83.0:arm64 1.83.0-4.2 arm64 C++ facilities for localization
  libboost-log1.83.0 1.83.0-4.2 arm64 C++ logging library
  libboost-program-options1.83.0:arm64 1.83.0-4.2 arm64 program options library for C++
  libboost-thread1.83.0:arm64 1.83.0-4.2 arm64 portable C++ multi-threading
- libbox2d2:arm64 2.4.1-3+b3 arm64 2D physics engine
  libbpf1:arm64 1:1.5.0-3 arm64 eBPF helper library (shared library)
  libbrotli1:arm64 1.1.0-2+b7 arm64 library implementing brotli encoder and decoder (shared libraries)
  libbs2b0:arm64 3.1.0+dfsg-8+b1 arm64 Bauer stereophonic-to-binaural DSP library
  libbsd0:arm64 0.12.2-2 arm64 utility functions from BSD systems - shared library
- libbsh-java 2.0b4-20 all Java scripting environment (BeanShell) Version 2 (library)
  libbytesize1:arm64 2.11-2 arm64 library for common operations with sizes in bytes
  libbytesize-common 2.11-2 all library for common operations with sizes in bytes - translations
  libbz2-1.0:arm64 1.0.8-6 arm64 high-quality block-sorting file compressor library - runtime
@@ -411,24 +353,14 @@
  libcdio-cdda2t64:arm64 10.2+2.0.2-1+b1 arm64 library to read and control digital audio CDs
  libcdio-paranoia2t64:arm64 10.2+2.0.2-1+b1 arm64 library to read digital audio CDs with error correction
  libcdparanoia0:arm64 3.10.2+debian-14+b1 arm64 audio extraction tool for sampling CDs (library)
- libcdr-0.1-1:arm64 0.1.7-1+b3 arm64 library for reading and converting Corel DRAW files
  libchromaprint1:arm64 1.5.1-7 arm64 audio fingerprint library
  libcjson1:arm64 1.7.18-3.1+deb13u1 arm64 Ultralightweight JSON parser in ANSI C
  libc-l10n 2.41-12+rpt1 all GNU C Library: localization files
  libcloudproviders0:arm64 0.3.6-2 arm64 cloud provider library
- libclucene-contribs1t64:arm64 2.3.3.4+dfsg-1.2+b1 arm64 language specific text analyzers (runtime)
- libclucene-core1t64:arm64 2.3.3.4+dfsg-1.2+b1 arm64 core library for full-featured text search engine (runtime)
- libcmis-0.6-6t64 0.6.2-2.1+b2 arm64 CMIS protocol client library
  libcodec2-1.2:arm64 1.2.0-3 arm64 Codec2 runtime library
- libcolamd3:arm64 1:7.10.1+dfsg-1 arm64 column approximate minimum degree ordering library for sparse matrices
  libcolord2:arm64 1.4.7-3 arm64 system service to manage device colour profiles -- runtime
  libcolorhug2:arm64 1.4.7-3 arm64 library to access the ColorHug colourimeter -- runtime
  libcom-err2:arm64 1.47.2-3+b3 arm64 common error description library
- libcommons-collections3-java 3.2.2-3 all Apache Commons Collections - Extended Collections API for Java
- libcommons-io-java 2.19.0-1 all Common useful IO related classes
- libcommons-logging-java 1.3.0-2 all common wrapper interface for several logging APIs
- libcommons-parent-java 56-1 all Maven metadata for Apache Commons project
- libcompfaceg1 1:1.5.2-6.1 arm64 Compress/decompress images for mailheaders, libc6 runtime
  libconfig++11:arm64 1.7.3-2 arm64 parsing/manipulation of structured configuration files (C++ binding)
  libcpuinfo0:arm64 0.0~git20250327.39ea79a-1 arm64 CPU INFOrmation library (shared object)
  libcrypt1:arm64 1:4.4.38-1 arm64 libcrypt shared library
@@ -480,21 +412,14 @@
  libdw1t64:arm64 0.192-4 arm64 library that provides access to the DWARF debug information
  libeatmydata1:arm64 131-2+b1 arm64 Library and utilities designed to disable fsync and friends - shared library
  libebml5:arm64 1.4.5-1+b1 arm64 access library for the EBML format (shared library)
- libe-book-0.1-1:arm64 0.1.3-2+b4 arm64 library for reading and converting various e-book formats
  libebur128-1:arm64 1.2.6-1+b2 arm64 implementation of the EBU R128 loudness standard
  libedit2:arm64 3.1-20250104-1 arm64 BSD editline and history libraries
  libegl1:arm64 1.7.0-1+b2 arm64 Vendor neutral GL dispatch library -- EGL support
  libegl-mesa0:arm64 25.0.7-2+rpt2 arm64 free implementation of the EGL API -- Mesa vendor library
- libehcache-java 2.6.11-5 all distributed cache library
- libel-api-java 3.0.0-3 all Expression Language API
  libelf1t64:arm64 0.192-4 arm64 library to read and write ELF files
  libenchant-2-2:arm64 2.8.2+dfsg1-3 arm64 Wrapper library for various spell checker engines (runtime libs)
- libeot0:arm64 0.01-5+b2 arm64 Library for parsing/converting Embedded OpenType files
  libepoxy0:arm64 1.5.10-2 arm64 OpenGL function pointer management library
- libepubgen-0.1-1:arm64 0.1.1-1+b2 arm64 EPUB generator library
  liberror-perl 0.17030-1 all Perl module for error/exception handling in an OO-ish way
- libetonyek-0.1-1:arm64 0.1.12-1 arm64 library for reading and converting Apple Keynote presentations
- libetpan20t64:arm64 1.9.4-6 arm64 mail handling library
  libevdev2:arm64 1.13.4+dfsg-1 arm64 wrapper library for evdev devices
  libevdocument3-4t64:arm64 48.1-3 arm64 Document (PostScript, PDF) rendering library
  libevent-2.1-7t64:arm64 2.1.12-stable-10+b1 arm64 Asynchronous event notification library
@@ -506,11 +431,8 @@
  libexpat1:arm64 2.7.1-2 arm64 XML parsing C library - runtime library
  libexpat1-dev:arm64 2.7.1-2 arm64 XML parsing C library - development kit
  libext2fs2t64:arm64 1.47.2-3+b3 arm64 ext2/ext3/ext4 file system libraries
- libexttextcat-2.0-0:arm64 3.4.7-1+b1 arm64 Language detection library
- libexttextcat-data 3.4.7-1 all Language detection library - data files
  libfaad2:arm64 2.11.2-1 arm64 freeware Advanced Audio Decoder - runtime files
  libfakeroot:arm64 1.37.1.1-1 arm64 tool for simulating superuser privileges - shared libraries
- libfbclient2:arm64 4.0.5.3140.ds6-17+deb13u1 arm64 Firebird client library
  libfdisk1:arm64 2.41-5 arm64 fdisk partitioning library
  libfdt1:arm64 1.7.2-2+b1 arm64 Flat Device Trees manipulation library
  libfeedback-0.0-0:arm64 0.8.2-1 arm64 Library for managing haptic/visual/audio feedback
@@ -523,7 +445,6 @@
  libflac14:arm64 1.5.0+ds-2 arm64 Free Lossless Audio Codec - runtime C library
  libflite1:arm64 2.2-7 arm64 Small run-time speech synthesis engine - shared libraries
  libfluidsynth3:arm64 2.4.4+dfsg-1 arm64 Real-time MIDI software synthesizer (runtime library)
- libflute-java 1:1.1.6-5 all Java CSS parser using SAC (JFree version)
  libfm4t64:arm64 1.4.0-2+rpt3 arm64 file management support (core library)
  libfm-data 1.4.0-2+rpt3 all file management support (common data)
  libfm-extra4t64:arm64 1.4.0-2+rpt3 arm64 file management support (extra library)
@@ -534,11 +455,7 @@
  libfontconfig1:arm64 2.15.0-2.3 arm64 generic font configuration library - runtime
  libfontembed1t64:arm64 1.28.17-6 arm64 OpenPrinting CUPS Filters - Font Embed Shared library
  libfontenc1:arm64 1:1.1.8-1+b2 arm64 X11 font encoding library
- libfonts-java 1.1.6.dfsg2-1 all Java fonts layouting library
- libformula-java 1.1.7.dfsg-4 all Excel(tm) style formula expressions library
  libfreeaptx0:arm64 0.2.2-1 arm64 Free implementation of aptX
- libfreehand-0.1-1 0.1.2-3+b1 arm64 Library for parsing the FreeHand file format structure
- libfreeimage3:arm64 3.18.0+ds2-11 arm64 Support library for graphics image formats (library)
  libfreetype6:arm64 2.13.3+dfsg-1 arm64 FreeType 2 font engine, shared library files
  libfribidi0:arm64 1.0.16-1 arm64 Free Implementation of the Unicode BiDi algorithm
  libftdi1-2:arm64 1.5-10 arm64 C Library to control and program the FTDI USB controllers
@@ -568,13 +485,11 @@
  libgfxdr0:arm64 11.1-6 arm64 GlusterFS libgfxdr shared library
  libgif7:arm64 5.2.2-1+b1 arm64 library for GIF images (library)
  libgirepository-1.0-1:arm64 1.84.0-1 arm64 Library for handling GObject introspection data (runtime library)
- libgit2-1.9:arm64 1.9.0+ds-2 arm64 low-level Git library
  libgl1:arm64 1.7.0-1+b2 arm64 Vendor neutral GL dispatch library -- legacy GL support
  libgl1-mesa-dri:arm64 25.0.7-2+rpt2 arm64 free implementation of the OpenGL API -- DRI modules
  libgl-dev:arm64 1.7.0-1+b2 arm64 Vendor neutral GL dispatch library -- GL development files
  libgles1:arm64 1.7.0-1+b2 arm64 Vendor neutral GL dispatch library -- GLESv1 support
  libgles2:arm64 1.7.0-1+b2 arm64 Vendor neutral GL dispatch library -- GLESv2 support
- libglew2.2:arm64 2.2.0-4+b2 arm64 OpenGL Extension Wrangler - runtime environment
  libglib2.0-0t64:arm64 2.84.4-3~deb13u1 arm64 GLib library of C routines
  libglib2.0-bin 2.84.4-3~deb13u1 arm64 Programs for the GLib library
  libglib2.0-data 2.84.4-3~deb13u1 all Common files for GLib library
@@ -641,7 +556,6 @@
  libhandy-1-0:arm64 1.8.3-2+rpt1 arm64 Library with GTK widgets for mobile phones
  libharfbuzz0b:arm64 10.2.0-1+b1 arm64 OpenType text shaping engine (shared library)
  libharfbuzz-gobject0:arm64 10.2.0-1+b1 arm64 OpenType text shaping engine ICU backend (GObject library)
- libharfbuzz-icu0:arm64 10.2.0-1+b1 arm64 OpenType text shaping engine ICU backend
  libharfbuzz-subset0:arm64 10.2.0-1+b1 arm64 OpenType text shaping engine (subset library)
  libheif1:arm64 1.19.8-1 arm64 HEIF and AVIF file format decoder and encoder - shared library
  libheif-plugin-dav1d:arm64 1.19.8-1 arm64 HEIF and AVIF file format decoder and encoder - dav1d plugin
@@ -649,14 +563,11 @@
  libhidapi-hidraw0:arm64 0.14.0-1+b2 arm64 Multi-Platform library for communication with HID devices (hidraw backend)
  libhogweed6t64:arm64 3.10.1-1 arm64 low level cryptographic library (public-key cryptos)
  libhpmud0:arm64 3.22.10+dfsg0-8.1 arm64 HP Multi-Point Transport Driver (hpmud) run-time libraries
- libhsqldb1.8.0-java 1.8.0.10+dfsg-12.1+deb13u1 all Java SQL database engine
- libhttp-parser2.9:arm64 2.9.4-6+b2 arm64 parser for HTTP messages written in C
  libhunspell-1.7-0:arm64 1.7.2+really1.7.2-10+b4 arm64 spell checker and morphological analyzer (shared library)
  libhwasan0:arm64 14.2.0-19 arm64 AddressSanitizer -- a fast memory error detector
  libhwloc15:arm64 2.12.0-4 arm64 Hierarchical view of the machine - shared libs
  libhwloc-plugins:arm64 2.12.0-4 arm64 Hierarchical view of the machine - plugins
  libhwy1t64:arm64 1.2.0-2+b2 arm64 Efficient and performance-portable SIMD wrapper (runtime files)
- libhyphen0:arm64 2.8.8-7+b2 arm64 ALTLinux hyphenation library - shared library
  libi2c0:arm64 4.4-2 arm64 userspace I2C programming library
  libibverbs1:arm64 56.1-1 arm64 Library for direct userspace use of RDMA (InfiniBand/iWARP)
  libice6:arm64 2:1.1.1-1 arm64 X11 Inter-Client Exchange library
@@ -680,24 +591,20 @@
  libinput-tools 1.28.1-1 arm64 input device management and event handling library - command line tools
  libinstpatch-1.0-2:arm64 1.1.6-1+b2 arm64 MIDI instrument editing library
  libisl23:arm64 0.27-1 arm64 manipulating sets and relations of integer points bounded by linear constraints
- libitext-java 2.1.7-16 all Java Library to create and manipulate PDF on the fly
  libitm1:arm64 14.2.0-19 arm64 GNU Transactional Memory Library
  libiw30t64:arm64 30~pre9-18+b1 arm64 Wireless tools - library
  libixml11t64:arm64 1:1.14.20-1 arm64 Portable SDK for UPnP Devices (ixml shared library)
  libjack-jackd2-0:arm64 1.9.22~dfsg-4 arm64 JACK Audio Connection Kit (libraries)
  libjansson4:arm64 2.14-2+b3 arm64 C library for encoding, decoding and manipulating JSON data
- libjaxp1.3-java 1.3.05-6 all Java XML parser and transformer APIs (DOM, SAX, JAXP, TrAX)
  libjaylink0:arm64 0.4.0-1 arm64 library for interacting with J-Link programmers
  libjbig0:arm64 2.1-6.1+b2 arm64 JBIGkit libraries
  libjbig2dec0:arm64 0.20-1+b3 arm64 JBIG2 decoder library - shared libraries
- libjcommon-java 1.0.24+ds-2 all General Purpose library for Java
  libjim0.83:arm64 0.83-2 arm64 small-footprint implementation of Tcl - shared library
  libjpeg62-turbo:arm64 1:2.1.5-4 arm64 libjpeg-turbo JPEG runtime library
  libjs-jquery 3.6.1+dfsg+~3.5.14-1 all JavaScript library for dynamic web applications
  libjson-c5:arm64 0.18+ds-1 arm64 JSON manipulation library - shared library
  libjson-glib-1.0-0:arm64 1.10.6+ds-2 arm64 GLib JSON manipulation library
  libjson-glib-1.0-common 1.10.6+ds-2 all GLib JSON manipulation library (common files)
- libjsp-api-java 2.3.4-3 all JavaServer Pages API
  libjs-sphinxdoc 8.1.3-5 all JavaScript support for Sphinx documentation
  libjs-underscore 1.13.4~dfsg+~1.11.4-3 all JavaScript's functional programming helper library
  libjxl0.11:arm64 0.11.1-4 arm64 JPEG XL Image Coding System - "JXL" (shared libraries)
@@ -714,11 +621,8 @@
  libkrb5-3:arm64 1.21.3-5 arm64 MIT Kerberos runtime libraries
  libkrb5support0:arm64 1.21.3-5 arm64 MIT Kerberos runtime libraries - Support library
  libksba8:arm64 1.6.7-2+b1 arm64 X.509 and CMS support library
- liblangtag1:arm64 0.6.7-1+b2 arm64 library to access tags for identifying languages
- liblangtag-common 0.6.7-1 all library to access tags for identifying languages -- data
  liblapack3:arm64 3.12.1-6 arm64 Library of linear algebra routines 3 - shared version
  liblastlog2-2:arm64 2.41-5 arm64 lastlog2 database shared library
- liblayout-java 0.2.10-5 all Java layouting framework
  liblc3-1:arm64 1.1.3+dfsg-1 arm64 Low Complexity Communication Codec (shared library)
  liblcms2-2:arm64 2.16-2 arm64 Little CMS 2 color management library
  libldacbt-abr2:arm64 2.0.2.3+git20200429+ed310a0-5 arm64 LDAC Bluetooth ABR library (shared library)
@@ -728,7 +632,6 @@
  libldb2:arm64 2:2.11.0+samba4.22.4+dfsg-1~deb13u1 arm64 LDAP-like embedded database - shared library
  liblerc4:arm64 4.0.0+ds-5 arm64 Limited Error Raster Compression library
  liblgpio1:arm64 0.2.2-1~rpt1+trixie arm64 Control GPIO pins via gpiochip devices - shared libraries
- liblibreoffice-java 4:25.2.3-2+deb13u2 all LibreOffice UNO runtime environment -- Java library
  libliftoff0:arm64 0.5.0-1.1+rpt5+b1 arm64 lightweight KMS plane library
  liblightdm-gobject-1-0:arm64 1.32.0-6+rpt2 arm64 simple display manager (GObject library)
  liblilv-0-0:arm64 0.24.26-1 arm64 library for simple use of LV2 plugins
@@ -736,10 +639,7 @@
  liblivemedia116:arm64 2025.05.24-1 arm64 multimedia RTSP streaming library
  libllvm19:arm64 1:19.1.7-3+b1 arm64 Modular compiler and toolchain technologies, runtime library
  liblmdb0:arm64 0.9.31-1+b2 arm64 Lightning Memory-Mapped Database shared library
- libloader-java 1.1.6.dfsg-5 all Java general purpose resource loading framework
  liblocale-gettext-perl 1.07-7+b1 arm64 module using libc functions for internationalization in Perl
- liblockfile1:arm64 1.17-2 arm64 NFS-safe locking library
- liblockfile-bin 1.17-2 arm64 support binaries for and cli utilities based on liblockfile
  liblouis20:arm64 3.33.0-1 arm64 Braille translation library - shared libs
  liblouis-data 3.33.0-1 all Braille translation library - data
  liblouisutdml9t64:arm64 2.12.0-7 arm64 Braille UTDML translation library - shared libs
@@ -767,13 +667,9 @@
  libmagickcore-7.q16-10-extra:arm64 8:7.1.1.43+dfsg1-1+deb13u2 arm64 low-level image manipulation library - extra codecs (Q16)
  libmagickwand-7.q16-10:arm64 8:7.1.1.43+dfsg1-1+deb13u2 arm64 image manipulation library -- quantum depth Q16
  libmagic-mgc 1:5.46-5 arm64 File type determination library using "magic" numbers (compiled magic file)
- libmail-java 1.6.5-3 all JavaMail API Reference Implementation
- libmariadb3:arm64 1:11.8.3-0+deb13u1 arm64 MariaDB database client library
  libmate-desktop-2-17t64:arm64 1.26.2-1.2 arm64 Library with common API for various MATE modules (library)
  libmatroska7:arm64 1.7.1-1+b2 arm64 extensible open standard audio/video container format (shared library)
  libmbedcrypto16:arm64 3.6.4-2 arm64 lightweight crypto and SSL/TLS library - crypto library
- libmbedtls21:arm64 3.6.4-2 arm64 lightweight crypto and SSL/TLS library - tls library
- libmbedx509-7:arm64 3.6.4-2 arm64 lightweight crypto and SSL/TLS library - x509 certificate library
  libmbim-glib4:arm64 1.32.0-1 arm64 Support library to use the MBIM protocol
  libmbim-proxy 1.32.0-1 arm64 Proxy to communicate with MBIM ports
  libmbim-utils 1.32.0-1 arm64 Utilities to use the MBIM protocol from the command line
@@ -781,7 +677,6 @@
  libmd4c0:arm64 0.5.2-2+b1 arm64 Markdown for C
  libmenu-cache3:arm64 1.1.1-1 arm64 LXDE implementation of the freedesktop Menu's cache
  libmenu-cache-bin 1.1.1-1 arm64 LXDE implementation of the freedesktop Menu's cache (libexec)
- libmhash2:arm64 0.9.9.9-10 arm64 Library for cryptographic hashing and message authentication
  libminizip1t64:arm64 1:1.3.dfsg+really1.3.1-1+b1 arm64 compression library - minizip library
  libmjpegutils-2.1-0t64:arm64 1:2.1.0+debian-8.1+b1 arm64 MJPEG capture/editing/replay and MPEG encoding toolset (library)
  libmm-glib0:arm64 1.24.0-1+deb13u1 arm64 D-Bus service for managing modems - shared libraries
@@ -792,20 +687,16 @@
  libmp3lame0:arm64 3.100-6+b3 arm64 MP3 encoding library
  libmpc3:arm64 1.3.1-1+b3 arm64 multiple precision complex floating-point library
  libmpcdec6:arm64 2:0.1~r495-3 arm64 MusePack decoder - library
- libmpeg2-4:arm64 0.5.1-9+b3 arm64 MPEG1 and MPEG2 video decoder library
  libmpeg2encpp-2.1-0t64:arm64 1:2.1.0+debian-8.1+b1 arm64 MJPEG capture/editing/replay and MPEG encoding toolset (library)
  libmpfr6:arm64 4.2.2-1 arm64 multiple precision floating-point computation
  libmpg123-0t64:arm64 1.32.10-1 arm64 MPEG layer 1/2/3 audio decoder (shared library)
  libmplex2-2.1-0t64:arm64 1:2.1.0+debian-8.1+b1 arm64 MJPEG capture/editing/replay and MPEG encoding toolset (library)
  libmsgraph-1-1:arm64 0.3.3-3 arm64 library for accessing the Microsoft Graph API
- libmspub-0.1-1:arm64 0.1.4-3+b5 arm64 library for parsing the mspub file structure
  libmtdev1t64:arm64 1.1.7-1 arm64 Multitouch Protocol Translation Library - shared library
  libmtp9t64:arm64 1.1.22-1 arm64 Media Transfer Protocol (MTP) library
  libmtp-common 1.1.22-1 all Media Transfer Protocol (MTP) common files
  libmtp-runtime 1.1.22-1 arm64 Media Transfer Protocol (MTP) runtime tools
- libmwaw-0.3-3:arm64 0.3.22-1+b2 arm64 import library for some old Mac text documents
  libmysofa1:arm64 1.3.3+dfsg-1 arm64 library to read HRTFs stored in the AES69-2015 SOFA format
- libmythes-1.2-0:arm64 2:1.2.5-1+b2 arm64 simple thesaurus library
  libnbd0 1.22.2-1+b1 arm64 Network Block Device client library -- shared library
  libncurses6:arm64 6.5+20250216-2 arm64 shared libraries for terminal handling
  libncursesw6:arm64 6.5+20250216-2 arm64 shared libraries for terminal handling (wide character support)
@@ -824,7 +715,6 @@
  libnftnl11:arm64 1.2.9-1 arm64 Netfilter nftables userspace API library
  libnghttp2-14:arm64 1.64.0-1.1 arm64 library implementing HTTP/2 protocol (shared library)
  libnghttp3-9:arm64 1.8.0-1 arm64 HTTP/3 library with QUIC and QPACK (library)
- libngspice0:arm64 44.2+ds-1 arm64 Spice circuit simulator - library
  libngtcp2-16:arm64 1.11.0-1 arm64 implementation of QUIC protocol (library)
  libngtcp2-crypto-gnutls8:arm64 1.11.0-1 arm64 implementation of QUIC protocol (library)
  libnice10:arm64 0.1.22-1 arm64 ICE library (shared library)
@@ -834,7 +724,6 @@
  libnm0:arm64 1.52.1-1+rpt3 arm64 GObject-based client library for NetworkManager
  libnma0:arm64 1.10.6-5+rpt1 arm64 NetworkManager GUI library
  libnma-common 1.10.6-5+rpt1 all NetworkManager GUI library - translations
- libnng1:arm64 1.10.1-2 arm64 Lightweight Messaging Library - shared library
  libnorm1t64:arm64 1.5.9+dfsg-3.1+b2 arm64 NACK-Oriented Reliable Multicast (NORM) library
  libnotify4:arm64 0.8.6-1 arm64 sends desktop notifications to a notification daemon
  libnpth0t64:arm64 1.8-3 arm64 replacement for GNU Pth using system threads
@@ -843,21 +732,9 @@
  libnss-mdns:arm64 0.15.1-4+b1 arm64 NSS module for Multicast DNS name resolution
  libntfs-3g89t64:arm64 1:2022.10.3-5 arm64 read/write NTFS driver for FUSE (runtime library)
  libnuma1:arm64 2.0.19-1 arm64 Libraries for controlling NUMA policy
- libnumbertext-1.0-0:arm64 1.0.11-4+b2 arm64 Number to number name and money text conversion library
- libnumbertext-data 1.0.11-4 all Number to number name and money text conversion library -- data files
  libnvme1t64 1.13-2 arm64 NVMe management library (library)
  libobrender32v5 3.6.1-12+rpt1 arm64 rendering library for openbox themes
  libobt2v5:arm64 3.6.1-12+rpt1 arm64 parsing library for openbox
- libocct-data-exchange-7.8:arm64 7.8.1+dfsg1-3 arm64 Open CASCADE Technology module for CAD data format interoperability
- libocct-draw-7.8:arm64 7.8.1+dfsg1-3 arm64 Open CASCADE Technology command interpreter & graphical test library
- libocct-foundation-7.8:arm64 7.8.1+dfsg1-3 arm64 OCCT module underlying all other OCCT classes
- libocct-modeling-algorithms-7.8:arm64 7.8.1+dfsg1-3 arm64 Open CASCADE Technology geometrical & topological algorithms module
- libocct-modeling-data-7.8:arm64 7.8.1+dfsg1-3 arm64 Open CASCADE Technology 2D/3D geometric primitives data structures
- libocct-ocaf-7.8:arm64 7.8.1+dfsg1-3 arm64 Open CASCADE Technology application-specific data and functionality
- libocct-visualization-7.8:arm64 7.8.1+dfsg1-3 arm64 Open CASCADE Technology graphical data visualization module
- libodbc2:arm64 2.3.12-2 arm64 ODBC Driver Manager library for Unix
- libodbccr2:arm64 2.3.12-2 arm64 ODBC Cursor library for Unix
- libodfgen-0.1-1:arm64 0.1.8-2+b2 arm64 library to generate ODF documents
  libogg0:arm64 1.3.5-3+b2 arm64 Ogg bitstream library
  libonnx1t64:arm64 1.17.0-3+b1 arm64 Open Neural Network Exchange (ONNX) (libs)
  libonnxruntime1.21:arm64 1.21.0+dfsg-1 arm64 cross-platform inference and training ML accelerator (shared lib)
@@ -884,12 +761,9 @@
  libopus0:arm64 1.5.2-2 arm64 Opus codec runtime library
  libopusfile0:arm64 0.12-4+b3 arm64 High-level API for basic manipulation of Ogg Opus audio streams
  liborc-0.4-0t64:arm64 1:0.4.41-1 arm64 Library of Optimized Inner Loops Runtime Compiler
- liborcus-0.18-0:arm64 0.19.2-6+b1 arm64 library for processing spreadsheet documents
- liborcus-parser-0.18-0:arm64 0.19.2-6+b1 arm64 library for processing spreadsheet documents - parser library
  libossp-uuid16:arm64 1.6.4-1 arm64 OSSP uuid ISO-C and C++ - shared library
  libp11-kit0:arm64 0.25.5-3 arm64 library for loading and coordinating access to PKCS#11 modules - runtime
  libpackagekit-glib2-18:arm64 1.3.1-1 arm64 Library for accessing PackageKit using GLib
- libpagemaker-0.0-0:arm64 0.0.4-1+b2 arm64 Library for importing and converting PageMaker Documents
  libpam0g:arm64 1.7.0-5 arm64 Pluggable Authentication Modules library
  libpam-chksshpwd:arm64 2.0 arm64 PAM module to enable SSH password checking support
  libpam-modules:arm64 1.7.0-5 arm64 Pluggable Authentication Modules for PAM
@@ -908,12 +782,10 @@
  libpci3:arm64 1:3.13.0-2 arm64 PCI utilities (shared library)
  libpciaccess0:arm64 0.17-3+b3 arm64 Generic PCI access library for X
  libpcre2-16-0:arm64 10.46-1~deb13u1 arm64 New Perl Compatible Regular Expression Library - 16 bit runtime files
- libpcre2-32-0:arm64 10.46-1~deb13u1 arm64 New Perl Compatible Regular Expression Library - 32 bit runtime files
  libpcre2-8-0:arm64 10.46-1~deb13u1 arm64 New Perl Compatible Regular Expression Library- 8 bit runtime files
  libpcsclite1:arm64 2.3.3-1 arm64 Middleware to access a smart card using PC/SC (library)
  libpeas-1.0-0:arm64 1.36.0-3+b4 arm64 Application plugin library
  libpeas-common 1.36.0-3 all Application plugin library (common files)
- libpentaho-reporting-flow-engine-java 0.9.4-6 all report library for java
  libperl5.40:arm64 5.40.1-6 arm64 shared Perl library
  libpgm-5.3-0t64:arm64 5.3.128~dfsg-2.1+b1 arm64 OpenPGM shared library
  libpipeline1:arm64 1.5.8-1 arm64 Unix process pipeline manipulation library
@@ -921,7 +793,6 @@
  libpipewire-0.3-modules:arm64 1.4.2-1+rpt1 arm64 libraries for the PipeWire multimedia server - modules
  libpisp1:arm64 1.2.1-2 arm64 Helper library for the PiSP hardware block (runtime)
  libpisp-common 1.2.1-2 all Helper library for the PiSP hardware block (data files)
- libpixie-java 1:1.1.6-5 all Java Vector Format Viewer Library
  libpixman-1-0:arm64 0.44.0-3+rpt1+b1 arm64 pixel-manipulation library for X and cairo
  libpkgconf3:arm64 1.8.1-4 arm64 shared library for pkgconf
  libplacebo349:arm64 7.349.0-3 arm64 GPU-accelerated video/image rendering primitives (shared library)
@@ -938,7 +809,6 @@
  libpopt0:arm64 1.19+dfsg-2 arm64 lib for parsing cmdline parameters
  libportmidi0:arm64 1:217-6.1+b4 arm64 library for real-time MIDI input/output
  libpostproc58:arm64 8:7.1.1-1~+rpt1 arm64 FFmpeg library for post processing - runtime files
- libpq5:arm64 17.6-0+deb13u1 arm64 PostgreSQL C client library
  libproc2-0:arm64 2:4.0.4-9 arm64 library for accessing process information from /proc
  libprotobuf32t64:arm64 3.21.12-11 arm64 protocol buffers C++ library
  libprotobuf-lite32t64:arm64 3.21.12-11 arm64 protocol buffers C++ library (lite version)
@@ -997,61 +867,18 @@
  libqt6waylandcompositor6:arm64 6.8.2-4 arm64 Qt 6 Wayland Compositor library
  libqt6widgets6:arm64 6.8.2+dfsg-9 arm64 Qt 6 widgets module
  libqt6wlshellintegration6:arm64 6.8.2-4 arm64 Qt 6 Wayland ShellIntegration library
- libqxp-0.0-0 0.0.2-1+b5 arm64 library for reading and converting QuarkXPress files
  librabbitmq4:arm64 0.15.0-1 arm64 AMQP client library written in C
  librados2 18.2.7+ds-1 arm64 RADOS distributed object store client library
  libraptor2-0:arm64 2.0.16-6 arm64 Raptor 2 RDF syntax library
  libraqm0:arm64 0.10.2-1 arm64 Library for complex text layout
- librasqal3t64:arm64 0.9.33-2.1+b2 arm64 Rasqal RDF query library
  librav1e0.7:arm64 0.7.1-9+b2 arm64 Fastest and safest AV1 encoder - shared library
  libraw1394-11:arm64 2.1.2-2+b2 arm64 library for direct access to IEEE 1394 bus (aka FireWire)
  libraw23t64:arm64 0.21.4-2 arm64 raw image decoder library
  librbd1 18.2.7+ds-1 arm64 RADOS block device client library
- librdf0t64:arm64 1.0.17-4+b1 arm64 Redland Resource Description Framework (RDF) library
  librdmacm1t64:arm64 56.1-1 arm64 Library for managing RDMA connections
  libre2-11:arm64 20240702-3+b1 arm64 efficient, principled regular expression library
  libreadline8t64:arm64 8.2-6 arm64 GNU readline and history libraries, run-time libraries
- libreoffice 4:25.2.3-2+deb13u2 arm64 office productivity suite (metapackage)
- libreoffice-base 4:25.2.3-2+deb13u2 arm64 office productivity suite -- database
- libreoffice-base-core 4:25.2.3-2+deb13u2 arm64 office productivity suite -- shared library
- libreoffice-base-drivers 4:25.2.3-2+deb13u2 arm64 Database connectivity drivers for LibreOffice
- libreoffice-calc 4:25.2.3-2+deb13u2 arm64 office productivity suite -- spreadsheet
- libreoffice-common 4:25.2.3-2+deb13u2 all office productivity suite -- arch-independent files
- libreoffice-core 4:25.2.3-2+deb13u2 arm64 office productivity suite -- arch-dependent files
- libreoffice-draw 4:25.2.3-2+deb13u2 arm64 office productivity suite -- drawing
- libreoffice-gtk3 4:25.2.3-2+deb13u2 arm64 office productivity suite -- GTK+ 3 integration
- libreoffice-help-common 4:25.2.3-2+deb13u2 all office productivity suite -- common files for LibreOffice help
- libreoffice-help-en-gb 4:25.2.3-2+deb13u2 all office productivity suite -- English_british help
- libreoffice-impress 4:25.2.3-2+deb13u2 arm64 office productivity suite -- presentation
- libreoffice-java-common 4:25.2.3-2+deb13u2 all office productivity suite -- arch-independent Java support files
- libreoffice-l10n-en-gb 4:25.2.3-2+deb13u2 all office productivity suite -- English_british language package
- libreoffice-math 4:25.2.3-2+deb13u2 arm64 office productivity suite -- equation editor
- libreoffice-nlpsolver 4:0.9+LibO25.2.3-2+deb13u2 all "Solver for Nonlinear Programming" extension for LibreOffice
- libreoffice-pi 1:7.0.4-3+rpt1 all LibreOffice with the GTK theme
- libreoffice-report-builder 4:25.2.3-2+deb13u2 all LibreOffice component for building database reports
- libreoffice-report-builder-bin 4:25.2.3-2+deb13u2 arm64 LibreOffice component for building database reports -- libraries
- libreoffice-script-provider-bsh 4:25.2.3-2+deb13u2 all BeanShell script support provider for LibreOffice scripting framework
- libreoffice-script-provider-js 4:25.2.3-2+deb13u2 all JavaScript script support provider for LibreOffice scripting framework
- libreoffice-script-provider-python 4:25.2.3-2+deb13u2 all Python script support provider for LibreOffice scripting framework
- libreoffice-sdbc-firebird 4:25.2.3-2+deb13u2 arm64 (embedded) Firebird SDBC driver for LibreOffice
- libreoffice-sdbc-hsqldb 4:25.2.3-2+deb13u2 arm64 embedded HSQLDB SDBC driver for LibreOffice
- libreoffice-sdbc-mysql 4:25.2.3-2+deb13u2 arm64 MariaDB/MySQL SDBC driver for LibreOffice
- libreoffice-sdbc-postgresql 4:25.2.3-2+deb13u2 arm64 PostgreSQL SDBC driver for LibreOffice
- libreoffice-style-colibre 4:25.2.3-2+deb13u2 all office productivity suite -- colibre symbol style
- libreoffice-uiconfig-base 4:25.2.3-2+deb13u2 all UI data ("config") for LibreOffice Base
- libreoffice-uiconfig-calc 4:25.2.3-2+deb13u2 all UI data ("config") for LibreOffice Calc
- libreoffice-uiconfig-common 4:25.2.3-2+deb13u2 all UI data ("config") for LibreOffice ("common" set)
- libreoffice-uiconfig-draw 4:25.2.3-2+deb13u2 all UI data ("config") for LibreOffice Draw
- libreoffice-uiconfig-impress 4:25.2.3-2+deb13u2 all UI data ("config") for LibreOffice Impress
- libreoffice-uiconfig-math 4:25.2.3-2+deb13u2 all UI data ("config") for LibreOffice Math
- libreoffice-uiconfig-report-builder 4:25.2.3-2+deb13u2 all UI data ("config") for the LibreOffice Report Builder
- libreoffice-uiconfig-writer 4:25.2.3-2+deb13u2 all UI data ("config") for LibreOffice Writer
- libreoffice-wiki-publisher 4:1.2.0+LibO25.2.3-2+deb13u2 all LibreOffice extension for working with MediaWiki articles
- libreoffice-writer 4:25.2.3-2+deb13u2 arm64 office productivity suite -- word processor
- librepository-java 1.1.6-4 all abstraction library for accessing hierachic bulk content
  libresid-builder0c2a:arm64 2.1.1-16 arm64 SID chip emulation class based on resid
- librevenge-0.0-0:arm64 0.0.5-3+b2 arm64 Base Library for writing document interface filters
- librhino-java 1.7.15-1 all Libraries for rhino Java Script Engine
  librist4:arm64 0.2.11+dfsg-1 arm64 Reliable Internet Stream Transport -- shared library
  libroc0.4:arm64 0.4.0+dfsg-5 arm64 real-time audio streaming over the network (shared library)
  librpicam-app1:arm64 1.9.0-1 arm64 Framework for rpicam-apps camera applications
@@ -1062,7 +889,6 @@
  librtimulib-utils 7.2.1-7 arm64 Versatile C++ and Python 9-dof, 10-dof and 11-dof IMU library (utilities)
  librtmp1:arm64 2.4+20151223.gitfa8646d.1-2+b5 arm64 toolkit for RTMP streams (shared library)
  librubberband2:arm64 3.3.0+dfsg-2+b3 arm64 audio time-stretching and pitch-shifting library
- libsac-java 1.3+dfsg-6 all Simple API for CSS Java library
  libsamplerate0:arm64 0.2.2-4+b2 arm64 Audio sample rate conversion library
  libsane1:arm64 1.3.1-3+b1 arm64 API library for scanners
  libsane-common 1.3.1-3 all API library for scanners -- documentation and support files
@@ -1086,14 +912,10 @@
  libsensors-config 1:3.6.2-2 all lm-sensors configuration files
  libsepol2:arm64 3.8.1-1 arm64 SELinux library for manipulating binary security policies
  libserd-0-0:arm64 0.32.4-1 arm64 lightweight RDF syntax library
- libserializer-java 1.1.6-6 all general serializaton framework
- libservlet3.1-java 1:4.0.1-2 all Java Servlet API 3.1 (transitional package)
- libservlet-api-java 4.0.1-2 all Java Servlet API
  libsframe1:arm64 2.44-3 arm64 Library to handle the SFrame format (runtime library)
  libsharpyuv0:arm64 1.5.0-0.1 arm64 Library for sharp RGB to YUV conversion
  libshine3:arm64 3.1.1-2+b2 arm64 Fixed-point MP3 encoding library - runtime files
  libshout3:arm64 2.4.6-1+b3 arm64 MP3/Ogg Vorbis broadcast streaming library
- libsidplay1v5:arm64 1.36.60-1+b2 arm64 SID (MOS 6581) emulation library
  libsidplay2:arm64 2.1.1-16 arm64 SID (MOS 6581) emulation library
  libsigc++-2.0-0v5:arm64 2.12.1-3 arm64 type-safe Signal Framework for C++ - runtime
  libslang2:arm64 2.3.3-5+b2 arm64 S-Lang programming library - runtime version
@@ -1132,12 +954,10 @@
  libssh2-1t64:arm64 1.11.1-1 arm64 SSH2 client-side library
  libssh-4:arm64 0.11.2-1 arm64 tiny C SSH library (OpenSSL flavor)
  libssl3t64:arm64 3.5.1-1+deb13u1 arm64 Secure Sockets Layer toolkit - shared libraries
- libstaroffice-0.0-0:arm64 0.0.7-1+b2 arm64 Import filter library to import all StarOffice documents
  libstartup-notification0:arm64 0.12-8 arm64 library for program launch feedback (shared library)
  libstdc++-14-dev:arm64 14.2.0-19 arm64 GNU Standard C++ Library v3 (development files)
  libstdc++6:arm64 14.2.0-19 arm64 GNU Standard C++ Library v3
  libstemmer0d:arm64 2.2.0-4+b2 arm64 Snowball stemming algorithms for use in Information Retrieval
- libsuitesparseconfig7:arm64 1:7.10.1+dfsg-1 arm64 configuration routines for all SuiteSparse modules
  libsvtav1enc2:arm64 2.3.0+dfsg-1 arm64 Scalable Video Technology for AV1 (libsvtav1enc shared library)
  libswresample5:arm64 8:7.1.1-1~+rpt1 arm64 FFmpeg library for audio resampling, rematrixing etc. - runtime files
  libswscale8:arm64 8:7.1.1-1~+rpt1 arm64 FFmpeg library for image scaling and various conversions - runtime files
@@ -1167,8 +987,6 @@
  libtirpc3t64:arm64 1.3.6+ds-1 arm64 transport-independent RPC library
  libtirpc-common 1.3.6+ds-1 all transport-independent RPC library - common files
  libtk8.6:arm64 8.6.16-1 arm64 Tk toolkit for Tcl and X11 v8.6 - run-time files
- libtomcrypt1:arm64 1.18.2+dfsg-7+b2 arm64 public domain open source cryptographic toolkit
- libtommath1:arm64 1.3.0-1 arm64 multiple-precision integer library [runtime]
  libts0t64:arm64 1.22-1.1+b1 arm64 touch screen library
  libtsan2:arm64 14.2.0-19 arm64 ThreadSanitizer -- a Valgrind-based detector of data races (runtime)
  libturbojpeg0:arm64 1:2.1.5-4 arm64 TurboJPEG runtime library - SIMD optimized
@@ -1180,12 +998,6 @@
  libudisks2-0:arm64 2.10.1-12.1+deb13u1 arm64 GObject based library to access udisks2
  libunibreak6:arm64 6.1-3 arm64 line breaking library for Unicode (shared library)
  libunistring5:arm64 1.3-2 arm64 Unicode string library for C
- libuno-cppu3t64 4:25.2.3-2+deb13u2 arm64 LibreOffice UNO runtime environment -- CPPU public library
- libuno-cppuhelpergcc3-3t64 4:25.2.3-2+deb13u2 arm64 LibreOffice UNO runtime environment -- CPPU helper library
- libunoloader-java 4:25.2.3-2+deb13u2 all LibreOffice UNO runtime environment -- (Java) UNO loader
- libuno-purpenvhelpergcc3-3t64 4:25.2.3-2+deb13u2 arm64 LibreOffice UNO runtime environment -- "purpose environment" helper
- libuno-sal3t64 4:25.2.3-2+deb13u2 arm64 LibreOffice UNO runtime environment -- SAL public library
- libuno-salhelpergcc3-3t64 4:25.2.3-2+deb13u2 arm64 LibreOffice UNO runtime environment -- SAL helpers for C++ library
  libunwind8:arm64 1.8.1-0.1 arm64 library to determine the call-chain of a program - runtime
  libupnp17t64:arm64 1:1.14.20-1 arm64 Portable SDK for UPnP Devices (shared library)
  libupower-glib3:arm64 1.90.9-1 arm64 abstraction for power management - shared library
@@ -1202,7 +1014,6 @@
  libva-x11-2:arm64 2.22.0-3 arm64 Video Acceleration (VA) API for Linux -- X11 runtime
  libvdpau1:arm64 1.5-3+b1 arm64 Video Decode and Presentation API for Unix (libraries)
  libvidstab1.1:arm64 1.1.0-2+b2 arm64 video stabilization library (shared library)
- libvisio-0.1-1:arm64 0.1.7-1+b5 arm64 library for parsing the visio file structure
  libvisual-0.4-0:arm64 0.4.2-2+b2 arm64 audio visualization framework
  libvlc5:arm64 1:3.0.21-10+rpt2 arm64 multimedia player and streamer library
  libvlc-bin:arm64 1:3.0.21-10+rpt2 arm64 tools for VLC's base library
@@ -1230,20 +1041,13 @@
  libwebpdemux2:arm64 1.5.0-0.1 arm64 Lossy compression of digital photographic images (libwebpdemux library)
  libwebpmux3:arm64 1.5.0-0.1 arm64 Lossy compression of digital photographic images (libwebpmux library)
  libwebrtc-audio-processing-1-3:arm64 1.3-3+b1 arm64 WebRTC Audio Processing library
- libwebsocket-api-java 1.1-2 all Java WebSocket API
  libwidevinecdm0 4.10.2662.3+1 arm64 Widevine CDM
  libwildmidi2:arm64 0.4.3-1+b3 arm64 software MIDI player library
  libwireplumber-0.5-0:arm64 0.5.8-2 arm64 Shared libraries for WirePlumber
  libwlroots-0.18:arm64 0.18.2-3+rpt4+b1 arm64 Modular wayland compositor library - shared library
  libwmflite-0.2-7:arm64 0.2.13-1.1+b3 arm64 Windows metafile conversion lite library
- libwpd-0.10-10:arm64 0.10.3-2+b2 arm64 Library for handling WordPerfect documents (shared library)
- libwpg-0.3-3:arm64 0.3.4-3+b2 arm64 WordPerfect graphics import/convert library (shared library)
- libwps-0.4-4:arm64 0.4.14-2+b2 arm64 Works text file format import filter library (shared library)
  libwrap0:arm64 7.6.q-36 arm64 Wietse Venema's TCP wrappers library
  libwtmpdb0:arm64 0.73.0-3 arm64 wtmp database shared library
- libwxbase3.2-1t64:arm64 3.2.8+dfsg-2 arm64 wxBase library (runtime) - non-GUI support classes of wxWidgets toolkit
- libwxgtk3.2-1t64:arm64 3.2.8+dfsg-2 arm64 wxWidgets Cross-platform C++ GUI toolkit (GTK 3 runtime)
- libwxgtk-gl3.2-1t64:arm64 3.2.8+dfsg-2 arm64 wxWidgets Cross-platform C++ GUI toolkit (GTK 3 gl library runtime)
  libx11-6:arm64 2:1.8.12-1 arm64 X11 client-side library
  libx11-data 2:1.8.12-1 all X11 client-side library
  libx11-dev:arm64 2:1.8.12-1 arm64 X11 client-side library (development headers)
@@ -1305,11 +1109,6 @@
  libxml++2.6-2v5:arm64 2.42.3-2 arm64 C++ interface to the GNOME XML library (libxml2)
  libxml2:arm64 2.12.7+dfsg+really2.9.14-2.1+deb13u1 arm64 GNOME XML library
  libxmlb2:arm64 0.3.22-1 arm64 Binary XML library
- libxml-commons-external-java 1.4.01-6 all XML Commons external code - DOM, SAX, and JAXP, etc
- libxmlgraphics-commons-java 2.10-3 all Reusable components used by Batik and FOP
- libxml-java 1.1.7-1 all namespace aware SAX-Parser utility library
- libxmlsec1t64:arm64 1.2.41-1+b1 arm64 XML security library
- libxmlsec1t64-nss:arm64 1.2.41-1+b1 arm64 Nss engine for the XML security library
  libxmp4:arm64 4.6.2-2 arm64 module file rendering library
  libxmu6:arm64 2:1.1.3-3+b4 arm64 X11 miscellaneous utility library
  libxmuu1:arm64 2:1.1.3-3+b4 arm64 X11 miscellaneous micro-utility library
@@ -1327,7 +1126,6 @@
  libxtst6:arm64 2:1.2.5-1 arm64 X11 Testing -- Record extension library
  libxv1:arm64 2:1.0.11-1.1+b3 arm64 X11 Video extension library
  libxvidcore4:arm64 2:1.3.7-1+b2 arm64 Open source MPEG-4 video codec (library)
- libxxf86dga1:arm64 2:1.1.5-1+b3 arm64 X11 Direct Graphics Access extension library
  libxxf86vm1:arm64 1:1.1.4-1+b4 arm64 X11 XFree86 video mode extension library
  libxxhash0:arm64 0.8.3-2 arm64 shared library for xxhash
  libyajl2:arm64 2.1.0-5+b2 arm64 Yet Another JSON Library
@@ -1337,12 +1135,10 @@
  libzbar0t64:arm64 0.23.93-8 arm64 QR code / bar code scanner and decoder (library)
  libzimg2:arm64 3.0.5+ds1-1+b2 arm64 scaling, colorspace, depth conversion library (shared library)
  libzix-0-0:arm64 0.6.2-1 arm64 library of portability wrappers and data structures (shared library)
- libzmf-0.0-0:arm64 0.0.2-1+b9 arm64 Zoner Draw/Zebra file reading/converting library
  libzmq5:arm64 4.3.5-1+b3 arm64 lightweight messaging kernel (shared library)
  libzstd1:arm64 1.5.7+dfsg-1 arm64 fast lossless compression algorithm
  libzvbi0t64:arm64 0.2.44-1 arm64 Vertical Blanking Interval decoder (VBI) - runtime files
  libzvbi-common 0.2.44-1 all Vertical Blanking Interval decoder (VBI) - common files
- libzxcvbn0:arm64 2.5+dfsg-2+b2 arm64 password strength estimation library
  libzxing3:arm64 2.3.0-4 arm64 C++ port of ZXing library (library files)
  lightdm 1.32.0-6+rpt2 arm64 simple display manager
  lightdm-gtk-greeter 2.0.9-1+b2 arm64 simple display manager (GTK+ greeter)
@@ -1382,7 +1178,6 @@
  lsof 4.99.4+dfsg-2 arm64 utility to list open files
  lua5.1 5.1.5-11 arm64 Simple, extensible, embeddable programming language
  luajit 2.1.0+openresty20250117-2 arm64 OpenResty-maintained branch of LuaJIT (interpreter)
- luit 2.0.20240910-1+b1 arm64 locale and ISO 2022 support for Unicode terminals
  lxmenu-data 0.1.6-3+rpt1 all LXDE freedesktop.org menu specification
  lxpanel-pi 1.1 arm64 Minimal X panel for Raspberry Pi Desktop
  lxpolkit 0.5.6-2+rpt2 arm64 LXDE PolicyKit authentication agent
@@ -1398,7 +1193,6 @@
  man-db 2.13.1-1 arm64 tools for reading manual pages
  manpages 6.9.1-1 all Manual pages about using a GNU/Linux system
  manpages-dev 6.9.1-1 all Manual pages about using GNU/Linux for development
- mariadb-common 1:11.8.3-0+deb13u1 all MariaDB database common config files (/etc/mysql/mariadb.conf.d/)
  mate-desktop-common 1.26.2-1.2 all Library with common API for various MATE modules (common files)
  mate-polkit 1.26.1-4+b2 arm64 MATE authentication agent for PolicyKit-1
  mate-polkit-bin 1.26.1-4 all MATE authentication agent for PolicyKit-1 (executable wrapper script)
@@ -1413,7 +1207,6 @@
  mount 2.41-5 arm64 tools for mounting and manipulating filesystems
  mousepad 0.6.3-1 arm64 simple Xfce oriented text editor
  mypy 1.15.0-5 all optional static typing for Python
- mysql-common 5.8+1.1.1 all MySQL database common files, e.g. /etc/mysql/my.cnf
  nano 8.4-1 arm64 small, friendly text editor inspired by Pico
  ncdu 1.22-1 arm64 ncurses disk usage viewer
  ncurses-base 6.5+20250216-2 all basic terminal type definitions
@@ -1429,16 +1222,10 @@
  nfs-common 1:2.8.3-1 arm64 NFS support files common to client and server
  nftables 1.1.3-1 arm64 Program to control packet filtering rules by Netfilter project
  ninja-build 1.12.1-1+b1 arm64 small build system closest in spirit to Make
- node-clipboard 2.0.11+ds+~cs9.6.11-1 all Node.js module to copy to clipboard without flash
- node-normalize.css 8.0.1-5 all Modern alternative to CSS resets
- node-prismjs 1.29.0+dfsg+~1.26.0-1 all Lightweight, robust, elegant syntax highlighting
  notification-daemon 3.20.0-5 arm64 daemon for displaying passive pop-up notifications
  ntfs-3g 1:2022.10.3-5 arm64 read/write NTFS driver for FUSE
- occt-misc 7.8.1+dfsg1-3 all OCCT CAE platform shared library miscellaneous files
  ocl-icd-libopencl1:arm64 2.3.3-1 arm64 Generic OpenCL ICD Loader
  openbox 3.6.1-12+rpt1 arm64 standards-compliant, fast, light-weight and extensible window manager
- openjdk-21-jre:arm64 21.0.8+9-1 arm64 OpenJDK Java runtime, using Hotspot JIT
- openjdk-21-jre-headless:arm64 21.0.8+9-1 arm64 OpenJDK Java runtime, using Hotspot JIT (headless)
  openocd 0.12.0+rpt20250716.04ae2c329-1 arm64 Open on-chip JTAG/SWD debug solution for embedded target devices
  openssh-client 1:10.0p1-7 arm64 secure shell (SSH) client, for secure access to remote machines
  openssh-server 1:10.0p1-7 arm64 secure shell (SSH) server, for secure access from remote machines
@@ -1511,7 +1298,6 @@
  python3.13-tk 3.13.5-2 arm64 Tkinter - Writing Tk applications with Python (v3.13)
  python3.13-venv 3.13.5-2 arm64 Interactive high-level object-oriented language (pyvenv binary, version 3.13)
  python3 3.13.5-1 arm64 interactive high-level object-oriented language (default python3 version)
- python3-all 3.13.5-1 arm64 package depending on all supported Python 3 runtime versions
  python3-apt 3.0.0 arm64 Python 3 interface to libapt-pkg
  python3-arrow 1.3.0-1.1 all Python3 library to manipulate dates, times, and timestamps
  python3-asgiref 3.8.1-1 all ASGI in-memory channel layer (Python3 version)
@@ -1548,7 +1334,6 @@
  python3-fqdn 1.5.1-2 all Python library to validate fully qualified domain names (FQDNs)
  python3-freetype 2.5.1-1 all Freetype Python bindings for Python 3
  python3-gi 3.50.0-4+b1 arm64 Python 3 bindings for gobject-introspection libraries
- python3-gi-cairo 3.50.0-4+b1 arm64 Python 3 Cairo bindings for the GObject library
  python3-gpiozero 2.0.1-0+rpt1+trixie all Simple API for controlling devices attached to a Pi's GPIO pins
  python3-html5lib 1.2-2 all HTML parser/tokenizer based on the WHATWG HTML5 specification
  python3-idna 3.10-1 all Python IDNA2008 (RFC 5891) handling (Python 3)
@@ -1627,7 +1412,6 @@
  python3-rpi-lgpio 0.6-0~rpt1+trixie all Compatibility shim for lgpio emulating the RPi.GPIO API
  python3-rtimulib 7.2.1-7 arm64 Versatile C++ and Python 9-dof, 10-dof and 11-dof IMU library (Python 3)
  python3-send2trash 1.8.3-1 all Python module for sending file to trash natively
- python3-sense-emu 1.2.2 all Client library for the Raspberry Pi Sense HAT emulator.
  python3-sense-hat 2.6.0-1 all Sense HAT python library (Python 3)
  python3-serial 3.5-2 all pyserial - module encapsulating access for the serial port
  python3-setuptools 78.1.1-0.1 all Python3 Distutils Enhancements
@@ -1645,7 +1429,6 @@
  python3-typeshed 0.0~git20241223.ea91db2-1 all collection of library stubs for Python, with static types
  python3-typing-extensions 4.13.2-1 all Backported and Experimental Type Hints for Python
  python3-uc-micro 1.0.3-1 all python port of uc.micro
- python3-uno 4:25.2.3-2+deb13u2 arm64 Python-UNO bridge
  python3-uritemplate 4.1.1-3 all implementation of RFC6570 - Python 3.x
  python3-urllib3 2.3.0-3 all HTTP library with thread-safe connection pooling for Python3
  python3-venv 3.13.5-1 arm64 venv module for python3 (default python3 version)
@@ -1654,7 +1437,6 @@
  python3-webencodings 0.5.1-5 all Python implementation of the WHATWG Encoding standard
  python3-werkzeug 3.1.3-2 all Collection of utilities for WSGI applications (Python 3.x)
  python3-wheel 0.46.1-2 all built-package format for Python
- python3-wxgtk4.0 4.2.3+dfsg-2 arm64 Python 3 interface to the wxWidgets Cross-platform C++ GUI toolkit
  python3-yaml 6.0.2-1+b2 arm64 YAML parser and emitter for Python3
  python3-zipp 3.21.0-1 all pathlib-compatible Zipfile object wrapper - Python 3.x
  python-apt-common 3.0.0 all Python interface to libapt-pkg (locales)
@@ -1728,15 +1510,12 @@
  rpi-userguide 1.2 arm64 Raspberry Pi Beginner's Guide
  rp-prefapps 1.7 arm64 Raspberry Pi recommended applications
  rsync 3.4.1+ds1-5 arm64 fast, versatile, remote (and local) file-copying tool
- rtimucli 0.1 arm64 Simple command-line utility to read IMU
  runit-helper 2.16.4 all dh-runit implementation detail
  samba-libs:arm64 2:4.22.4+dfsg-1~deb13u1 arm64 Samba core libraries
  sane-airscan 0.99.35-1 arm64 SANE backend for AirScan (eSCL) and WSD document scanner
  sane-utils 1.3.1-3+b1 arm64 API library for scanners -- utilities
- scratch3 3.30.10 arm64 
  scrot 1.12.1-1 arm64 command line screen capture utility
  sed 4.9-2+b1 arm64 GNU stream editor for filtering/transforming text
- sense-emu-tools 1.2.2 all Emulator for the Raspberry Pi Sense HAT.
  sense-hat 1.5 all Sense HAT configuration, libraries and examples
  sensible-utils 0.0.25 all Utilities for sensible alternative selection
  sgml-base 1.31+nmu1 all SGML infrastructure and SGML catalog file support
@@ -1769,12 +1548,9 @@
  ucf 3.0052 all Update Configuration File(s): preserve user changes to config files
  udev 257.8-1~deb13u2 arm64 /dev/ and hotplug management daemon
  udisks2 2.10.1-12.1+deb13u1 arm64 D-Bus service to access and manipulate storage devices
- uno-libs-private 4:25.2.3-2+deb13u2 arm64 LibreOffice UNO runtime environment -- private libraries used by public ones
  unzip 6.0-29 arm64 De-archiver for .zip files
  update-inetd 4.53 all inetd configuration file updater
  upower 1.90.9-1 arm64 abstraction for power management
- ure 4:25.2.3-2+deb13u2 arm64 LibreOffice UNO runtime environment
- ure-java 4:25.2.3-2+deb13u2 arm64 LibreOffice UNO runtime environment -- Java support
  usb.ids 2025.07.26-1 all USB ID Repository
  usb-modeswitch 2.6.1-4+b2 arm64 mode switching tool for controlling "flip flop" USB devices
  usb-modeswitch-data 20191128-7 all mode switching data for usb-modeswitch
@@ -1784,7 +1560,9 @@
  uuid 1.6.4-1 arm64 Universally Unique Identifier Command-Line Tool
  uuid-dev:arm64 2.41-5 arm64 Universally Unique ID library - headers and static libraries
  v4l-utils 1.30.1-1 arm64 Collection of command line video4linux utilities
+ vim 2:9.1.1230-2 arm64 Vi IMproved - enhanced vi editor
  vim-common 2:9.1.1230-2 all Vi IMproved - Common files
+ vim-runtime 2:9.1.1230-2 all Vi IMproved - Runtime files
  vim-tiny 2:9.1.1230-2 arm64 Vi IMproved - enhanced vi editor - compact version
  vlc 1:3.0.21-10+rpt2 arm64 multimedia player and streamer
  vlc-bin 1:3.0.21-10+rpt2 arm64 binaries from VLC
@@ -1829,7 +1607,6 @@
  wpasupplicant 2:2.10-24 arm64 client support for WPA and WPA2 (IEEE 802.11i)
  x11-common 1:7.7+24 all X Window System (X.Org) infrastructure
  x11proto-dev 2024.1-1 all X11 extension protocols and auxiliary headers
- x11-utils 7.7+7 arm64 X11 utilities
  x11-xkb-utils 7.7+9 arm64 X11 XKB utilities
  x11-xserver-utils 7.7+11 arm64 X server utilities
  xarchiver 1:0.5.4.25-2 arm64 GTK+ frontend for most used compression formats
@@ -1841,7 +1618,6 @@
  xdg-user-dirs 0.18-2 arm64 tool to manage well known user directories
  xdg-utils 1.2.1-2 all desktop integration utilities from freedesktop.org
  xfconf 4.20.0-1 arm64 utilities for managing settings in Xfce
- xfonts-100dpi 1:1.0.5 all 100 dpi fonts for X
  xfonts-encodings 1:1.0.4-2.2 all Encodings for X.Org fonts
  xfonts-utils 1:7.7+7 arm64 X Window System font utility programs
  xinit 1.4.2-1+b2 arm64 X server initialisation tool
@@ -1863,7 +1639,6 @@
  xserver-xorg-video-nouveau 1:1.0.18-1 arm64 X.Org X server -- Nouveau display driver
  xserver-xorg-video-radeon 1:22.0.0-1+b2 arm64 X.Org X server -- AMD/ATI Radeon display driver
  xsettingsd 1.0.2-1+b1 arm64 Provides settings to X11 applications
- xsltproc 1.1.35-1.2+deb13u2 arm64 XSLT 1.0 command line processor
  xtrans-dev 1.4.0-1 all X transport library (development files)
  xwayland 2:24.1.6-1+rpt1 arm64 X server for running X clients under Wayland
  xz-utils 5.8.1-1 arm64 XZ-format compression utilities
