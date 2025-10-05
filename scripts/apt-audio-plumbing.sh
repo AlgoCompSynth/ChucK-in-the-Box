@@ -12,12 +12,8 @@ rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy \
-  chuck \
-  libsox-fmt-all \
   pipewire-audio \
   pipewire-doc \
-  pmidi \
-  sox \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
