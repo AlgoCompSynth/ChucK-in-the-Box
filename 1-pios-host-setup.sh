@@ -13,6 +13,7 @@ rm --force $LOGFILE
 ./scripts/upgrade-system.sh
 ./scripts/apt-command-line.sh
 ./scripts/apt-terminal-setup.sh
+./scripts/apt-audio-plumbing.sh
 source $HOME/.bash_aliases
 
 if [[ "$BLOKAS_PISOUND" == "1" ]]
@@ -21,12 +22,6 @@ then
   echo "Installing Blokas Pisound software"
   curl --silent https://blokas.io/pisound/install.sh | sh \
     >> $LOGFILE 2>&1
-
-fi
-
-if [[ "$MAKE_PARALLEL_LEVEL" == "1" ]]
-then
-  ./scripts/apt-audio-plumbing.sh
 
 fi
 
