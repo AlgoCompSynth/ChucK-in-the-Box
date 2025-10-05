@@ -1,0 +1,6 @@
+ alsa-topology-conf 1.2.5.1-3 all ALSA topology configuration files
+ alsa-ucm-conf 1.2.14-1 all ALSA Use Case Manager configuration files
+ alsa-utils 1.2.14-1+rpt1 armhf Utilities for configuring and using ALSA
+ libasound2-data 1.2.14-1+rpt1 all Configuration files and profiles for ALSA drivers
+ libasound2t64:armhf 1.2.14-1+rpt1 armhf shared library for ALSA applications
+ libatopology2t64:armhf 1.2.14-1+rpt1 armhf shared library for handling ALSA topology definitions
