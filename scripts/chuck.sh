@@ -10,6 +10,17 @@ export LOGFILE=$LOGFILES/chuck.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
+if [[ $MAKE_PARALLEL_LEVEL == "1" ]]
+then
+  echo "Low-capacity system - installing distro ChucK package"
+  sudo apt-get install -qqy --no-install-recommends \
+    chuck \
+    >> $LOGFILE 2>&1
+  echo "** Finished ChucK **"
+  exit
+
+fi
+
 echo "Checking out $CHUCK_SOURCE_VERSION"
 pushd $MINIAUDICLE_PATH/.. > /dev/null
   git checkout $CHUCK_SOURCE_VERSION \
@@ -30,16 +41,8 @@ sudo apt-get install -qqy --no-install-recommends \
 
 pushd $CHUCK_PATH > /dev/null
   echo "Building ChucK" | tee --append $LOGFILE
-  if [[ $MAKE_PARALLEL_LEVEL != "1" ]]
-  then 
-    /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
-      >> $LOGFILE 2>&1
-
-  else
-    /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
-      2>&1 | tee --append $LOGFILE
-
-  fi
+  /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
+    >> $LOGFILE 2>&1
   echo "Installing ChucK" | tee --append $LOGFILE
   sudo make install \
     >> $LOGFILE 2>&1
