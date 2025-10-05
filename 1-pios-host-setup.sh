@@ -55,4 +55,7 @@ echo "Updating locate database"
 sudo updatedb \
   >> $LOGFILE 2>&1
 
+echo ""
+echo "Reboot to reset audio daemons"
+echo ""
 echo "* Finished PiOS Host Setup *" | tee --append $LOGFILE
