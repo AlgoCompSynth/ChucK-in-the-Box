@@ -6,6 +6,15 @@ echo ""
 echo "* Build Container *"
 
 source ./set_envars.sh
+
+if [[ "$MAKE_PARALLEL_LEVEL" == "1" ]]
+then
+  echo "Low capacity system - container hosting not supported!!"
+  echo "Exiting with error code -255"
+  exit -255
+
+fi
+
 export LOGFILE=$LOGFILES/2-build-container.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
