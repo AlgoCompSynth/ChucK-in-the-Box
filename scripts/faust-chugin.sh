@@ -26,8 +26,7 @@ then
 fi
 
 echo "Getting LLVM version" | tee --append $LOGFILE
-faust --version > faust-version.log
-export LLVM_VERSION=$(grep "LLVM version" faust-version.log | sed "s/^.*version //" | sed "s/\..*$//")
+export LLVM_VERSION="$(faust --version 2>&1 | grep 'LLVM version' | sed 's/^.*version //' | sed 's/\..*$//')"
 echo "Installing llvm-${LLVM_VERSION}-dev"
 sudo apt-get install -qqy --no-install-recommends \
   llvm-${LLVM_VERSION}-dev \

@@ -13,12 +13,11 @@ rm --force $LOGFILE
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy \
   alsa-utils \
-  wireplumber \
   flac \
   libpipewire-0.3-common \
+  libpipewire-0.3-modules \
   libsox-fmt-all \
   libspa-0.2-bluetooth \
-  libspa-0.2-jack \
   libspa-0.2-libcamera \
   libspa-0.2-modules \
   mp3splt \

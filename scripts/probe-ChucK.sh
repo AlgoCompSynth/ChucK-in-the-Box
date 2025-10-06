@@ -11,9 +11,17 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 echo "" | tee --append $LOGFILE
-echo "chuck --probe" | tee --append $LOGFILE
-chuck --probe | tee --append $LOGFILE > chuck-probe.log
+echo "chuck --probe --driver:alsa" | tee --append $LOGFILE
+chuck --probe --driver:alsa 2>&1 | tee --append $LOGFILE
+
+echo "" | tee --append $LOGFILE
+echo "chuck --probe --driver:pulse" | tee --append $LOGFILE
+chuck --probe --driver:pulse 2>&1 | tee --append $LOGFILE
+
+echo "" | tee --append $LOGFILE
 echo "chuck --chugin-probe" | tee --append $LOGFILE
-chuck --chugin-probe | tee --append $LOGFILE >> chuck-probe.log
+chuck --chugin-probe 2>&1 | tee --append $LOGFILE
+
+cp $LOGFILE ./
 
 echo "** Finished Probe ChucK **" | tee --append $LOGFILE
