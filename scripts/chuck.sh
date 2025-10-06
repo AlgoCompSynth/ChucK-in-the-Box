@@ -10,17 +10,6 @@ export LOGFILE=$LOGFILES/chuck.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
-if [[ $MAKE_PARALLEL_LEVEL == "1" ]]
-then
-  echo "Low-capacity system - installing distro ChucK package"
-  sudo apt-get install -qqy --no-install-recommends \
-    chuck \
-    >> $LOGFILE 2>&1
-  echo "** Finished ChucK **"
-  exit
-
-fi
-
 echo "Checking out $CHUCK_SOURCE_VERSION"
 pushd $MINIAUDICLE_PATH/.. > /dev/null
   git checkout $CHUCK_SOURCE_VERSION \
