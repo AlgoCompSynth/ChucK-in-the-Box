@@ -13,6 +13,7 @@ rm --force $LOGFILE
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy \
   alsa-utils \
+  bluez-alsa-utils \
   flac \
   libpipewire-0.3-common \
   libpipewire-0.3-modules \
