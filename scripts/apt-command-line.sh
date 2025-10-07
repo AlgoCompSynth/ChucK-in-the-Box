@@ -12,14 +12,20 @@ rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy --no-install-recommends \
+  alsa-utils \
   apt-file \
   bash-completion \
   byobu \
   curl \
   file \
+  flac \
   git \
+  libsox-fmt-all \
   lynx \
+  mp3splt \
   plocate \
+  pmidi \
+  sox \
   time \
   tree \
   unzip \
