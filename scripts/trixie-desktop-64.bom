@@ -35,10 +35,10 @@
  busybox 1:1.37.0-6+b3 arm64 Tiny utilities for small and embedded systems
  bzip2 1.0.8-6 arm64 high-quality block-sorting file compressor - utilities
  ca-certificates 20250419 all Common CA certificates
- chromium 1:140.0.7339.207-1~deb13u1+rpt1 arm64 web browser
- chromium-common 1:140.0.7339.207-1~deb13u1+rpt1 arm64 web browser - common resources used by the chromium packages
- chromium-l10n 1:140.0.7339.207-1~deb13u1+rpt1 all web browser - language packs
- chromium-sandbox 1:140.0.7339.207-1~deb13u1+rpt1 arm64 web browser - setuid security sandbox for chromium
+ chromium 1:140.0.7339.185-1~deb13u1+rpt1 arm64 web browser
+ chromium-common 1:140.0.7339.185-1~deb13u1+rpt1 arm64 web browser - common resources used by the chromium packages
+ chromium-l10n 1:140.0.7339.185-1~deb13u1+rpt1 all web browser - language packs
+ chromium-sandbox 1:140.0.7339.185-1~deb13u1+rpt1 arm64 web browser - setuid security sandbox for chromium
  cifs-utils 2:7.4-1 arm64 Common Internet File System utilities
  cloud-guest-utils 0.33-1 all cloud guest utilities
  cloud-init 25.2-1~bpo13+1+rpt15 all initialization system for infrastructure cloud instances
@@ -403,7 +403,7 @@
  libdrm-common 2.4.124-2 all Userspace interface to kernel DRM services -- common files
  libdrm-nouveau2:arm64 2.4.124-2 arm64 Userspace interface to nouveau-specific kernel DRM services -- runtime
  libdrm-radeon1:arm64 2.4.124-2 arm64 Userspace interface to radeon-specific kernel DRM services -- runtime
- libdtovl0:arm64 20251002-1 arm64 Library for manipulating Device Tree overlays
+ libdtovl0:arm64 20250826-1 arm64 Library for manipulating Device Tree overlays
  libduktape207:arm64 2.7.0-2+b2 arm64 embeddable Javascript engine, library
  libdv4t64:arm64 1.0.0-17.1+b1 arm64 software library for DV format digital video (runtime lib)
  libdvbpsi10:arm64 1.3.3-1+b2 arm64 library for MPEG TS and DVB PSI tables decoding and generating
@@ -519,7 +519,7 @@
  libgphoto2-6t64:arm64 2.5.31-4 arm64 gphoto2 digital camera library
  libgphoto2-port12t64:arm64 2.5.31-4 arm64 gphoto2 digital camera port library
  libgpiod3:arm64 2.2.1-2 arm64 C library for interacting with Linux GPIO device - shared libraries
- libgpiolib0:arm64 20251002-1 arm64 GPIO library for Raspberry Pi devices
+ libgpiolib0:arm64 20250826-1 arm64 GPIO library for Raspberry Pi devices
  libgpm2:arm64 1.20.7-11+b2 arm64 General Purpose Mouse - shared library
  libgprofng0:arm64 2.44-3 arm64 GNU Next Generation profiler (runtime library)
  libgraphene-1.0-0:arm64 1.10.8-5 arm64 library of graphic data types
@@ -953,7 +953,7 @@
  libss2:arm64 1.47.2-3+b3 arm64 command-line interface parsing library
  libssh2-1t64:arm64 1.11.1-1 arm64 SSH2 client-side library
  libssh-4:arm64 0.11.2-1 arm64 tiny C SSH library (OpenSSL flavor)
- libssl3t64:arm64 3.5.1-1+deb13u1 arm64 Secure Sockets Layer toolkit - shared libraries
+ libssl3t64:arm64 3.5.1-1+~rpt1 arm64 Secure Sockets Layer toolkit - shared libraries
  libstartup-notification0:arm64 0.12-8 arm64 library for program launch feedback (shared library)
  libstdc++-14-dev:arm64 14.2.0-19 arm64 GNU Standard C++ Library v3 (development files)
  libstdc++6:arm64 14.2.0-19 arm64 GNU Standard C++ Library v3
@@ -1169,7 +1169,7 @@
  lpplug-ejecter 1.2 arm64 Ejecter plugin for lxpanel-pi
  lpplug-gpu 1.1 arm64 GPU plugin for lxpanel-pi
  lpplug-magnifier 1.0 arm64 Magnifier plugin for lxpanel-pi
- lpplug-menu 1.7 arm64 Menu plugin for lxpanel-pi
+ lpplug-menu 1.6 arm64 Menu plugin for lxpanel-pi
  lpplug-netman 1.5 arm64 Network Manager plugin for lxpanel-pi
  lpplug-power 1.1 arm64 Power plugin for lxpanel-pi
  lpplug-updater 1.1 arm64 Updater plugin for lxpanel-pi
@@ -1230,8 +1230,8 @@
  openssh-client 1:10.0p1-7 arm64 secure shell (SSH) client, for secure access to remote machines
  openssh-server 1:10.0p1-7 arm64 secure shell (SSH) server, for secure access from remote machines
  openssh-sftp-server 1:10.0p1-7 arm64 secure shell (SSH) sftp server module, for SFTP access from remote machines
- openssl 3.5.1-1+deb13u1 arm64 Secure Sockets Layer toolkit - cryptographic utility
- openssl-provider-legacy 3.5.1-1+deb13u1 arm64 Secure Sockets Layer toolkit - cryptographic utility
+ openssl 3.5.1-1+~rpt1 arm64 Secure Sockets Layer toolkit - cryptographic utility
+ openssl-provider-legacy 3.5.1-1+~rpt1 arm64 Secure Sockets Layer toolkit - cryptographic utility
  p11-kit 0.25.5-3 arm64 p11-glue utilities
  p11-kit-modules:arm64 0.25.5-3 arm64 p11-glue proxy and trust modules
  p7zip-full 16.02+transitional.1 all transitional package
@@ -1255,7 +1255,7 @@
  pi-package 0.18 arm64 Graphical distribution neutral package manager for GNOME
  pi-package-data 0.18 all Data files for GNOME-PackageKit
  pi-package-session 0.18 arm64 Provides PackageKit session API for GNOME
- pipanel 1:2.3 arm64 Settings application for Raspberry Pi desktop appearance
+ pipanel 1:2.2 arm64 Settings application for Raspberry Pi desktop appearance
  pipewire:arm64 1.4.2-1+rpt1 arm64 audio and video processing engine multimedia server
  pipewire-bin 1.4.2-1+rpt1 arm64 PipeWire multimedia server - programs
  pipewire-libcamera 1.4.2-1+rpt1 all transitional package for libspa-0.2-libcamera
@@ -1453,19 +1453,19 @@
  qt6-svg-plugins:arm64 6.8.2-3 arm64 Qt 6 SVG library plugins
  qt6-wayland:arm64 6.8.2-4 arm64 Qt 6 Wayland platform plugin
  qtwayland5:arm64 5.15.15-3 arm64 QtWayland platform plugin
- raindrop 1.4 arm64 Screen configuration tool for Raspberry Pi Desktop
+ raindrop 1.3 arm64 Screen configuration tool for Raspberry Pi Desktop
  raspberrypi-archive-keyring 2025.1+rpt1 all OpenPGP archive certificates of the Debian archive
  raspberrypi-net-mods 1.4.4 all Network configuration for the Raspberry Pi UI
  raspberrypi-sys-mods 1:20250929 arm64 System tweaks for the Raspberry Pi
  raspi-config 20250918 all Raspberry Pi configuration tool
  raspi-firmware 1:1.20250915-1 all Raspberry Pi family GPU firmware and bootloaders
- raspinfo 20251002-1 all Prints information about the Raspberry Pi for bug reports
- raspi-utils 20251002-1 all Collection of scripts and simple applications
- raspi-utils-core 20251002-1 arm64 Collection of scripts and simple applications
- raspi-utils-dt 20251002-1 arm64 Device Tree overlay utilities
- raspi-utils-eeprom 20251002-1 arm64 Tools for creating and managing EEPROMs for HAT+ and HAT board
- raspi-utils-otp 20251002-1 all Tools for reading and setting Raspberry Pi OTP bits
- rasputin 1.3 arm64 Mouse and keyboard configuration tool for Raspberry Pi Desktop
+ raspinfo 20250826-1 all Prints information about the Raspberry Pi for bug reports
+ raspi-utils 20250826-1 all Collection of scripts and simple applications
+ raspi-utils-core 20250826-1 arm64 Collection of scripts and simple applications
+ raspi-utils-dt 20250826-1 arm64 Device Tree overlay utilities
+ raspi-utils-eeprom 20250826-1 arm64 Tools for creating and managing EEPROMs for HAT+ and HAT board
+ raspi-utils-otp 20250826-1 all Tools for reading and setting Raspberry Pi OTP bits
+ rasputin 1.2 arm64 Mouse and keyboard configuration tool for Raspberry Pi Desktop
  rc-gui 2.4 arm64 GUI for raspi-config
  read-edid 3.0.2-1.1+b1 arm64 hardware information-gathering tool for VESA PnP monitors
  readline-common 8.2-6 all GNU readline and history libraries, common files
@@ -1473,7 +1473,7 @@
  rfkill 2.41-5 arm64 tool for enabling and disabling wireless devices
  rp-bookshelf 1.6 arm64 Raspberry Pi publications
  rpcbind 1.2.7-1 arm64 converts RPC program numbers into universal addresses
- rpcc 0.7 arm64 Raspberry Pi Control Centre
+ rpcc 0.6 arm64 Raspberry Pi Control Centre
  rpcsvc-proto 1.4.3-1+b1 arm64 RPC protocol compiler and definitions
  rpd-applications 1.2 all Raspberry Pi Desktop general applications
  rpd-common 1.2 all Common packages used by X and Wayland
@@ -1508,7 +1508,7 @@
  rpi-systemd-config 1.1.1 all Query systemd configuration files
  rpi-update 20230904 all Raspberry Pi firmware updating tool
  rpi-userguide 1.2 arm64 Raspberry Pi Beginner's Guide
- rp-prefapps 1.7 arm64 Raspberry Pi recommended applications
+ rp-prefapps 1.6 arm64 Raspberry Pi recommended applications
  rsync 3.4.1+ds1-5 arm64 fast, versatile, remote (and local) file-copying tool
  runit-helper 2.16.4 all dh-runit implementation detail
  samba-libs:arm64 2:4.22.4+dfsg-1~deb13u1 arm64 Samba core libraries
@@ -1560,9 +1560,7 @@
  uuid 1.6.4-1 arm64 Universally Unique Identifier Command-Line Tool
  uuid-dev:arm64 2.41-5 arm64 Universally Unique ID library - headers and static libraries
  v4l-utils 1.30.1-1 arm64 Collection of command line video4linux utilities
- vim 2:9.1.1230-2 arm64 Vi IMproved - enhanced vi editor
  vim-common 2:9.1.1230-2 all Vi IMproved - Common files
- vim-runtime 2:9.1.1230-2 all Vi IMproved - Runtime files
  vim-tiny 2:9.1.1230-2 arm64 Vi IMproved - enhanced vi editor - compact version
  vlc 1:3.0.21-10+rpt2 arm64 multimedia player and streamer
  vlc-bin 1:3.0.21-10+rpt2 arm64 binaries from VLC
@@ -1582,16 +1580,16 @@
  wayvnc 0.9.1-1+rpt4 arm64 VNC server for wlroots-based Wayland compositors
  wbritish 2020.12.07-4 all British English dictionary words for /usr/share/dict
  webp-pixbuf-loader:arm64 0.2.7-1+b1 arm64 WebP Image format GdkPixbuf loader
- wf-panel-pi 1.5 arm64 Desktop panel for Raspberry Pi Wayland environments
+ wf-panel-pi 1.4 arm64 Desktop panel for Raspberry Pi Wayland environments
  wfplug-batt 1.1 arm64 Battery monitor plugin for wf-panel-pi
  wfplug-bluetooth 1.3 arm64 Bluetooth plugin for wf-panel-pi
  wfplug-clock 1.0 arm64 Clock plugin for wf-panel-pi
- wfplug-connect 1.6 arm64 Raspberry Pi Connect plugin for wf-panel-pi
+ wfplug-connect 1.5 arm64 Raspberry Pi Connect plugin for wf-panel-pi
  wfplug-cpu 1.1 arm64 CPU plugin for wf-panel-pi
  wfplug-cputemp 1.1 arm64 CPU temperature plugin for wf-panel-pi
  wfplug-ejecter 1.2 arm64 Ejecter plugin for wf-panel-pi
  wfplug-gpu 1.1 arm64 GPU plugin for wf-panel-pi
- wfplug-menu 1.7 arm64 Menu plugin for wf-panel-pi
+ wfplug-menu 1.6 arm64 Menu plugin for wf-panel-pi
  wfplug-netman 1.5 arm64 Network Manager plugin for wf-panel-pi
  wfplug-power 1.1 arm64 Power plugin for wf-panel-pi
  wfplug-squeek 1.0 arm64 Squeekboard plugin for wf-panel-pi
