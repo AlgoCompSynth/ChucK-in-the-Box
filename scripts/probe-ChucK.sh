@@ -22,6 +22,10 @@ echo "" | tee --append $LOGFILE
 echo "chuck --chugin-probe" | tee --append $LOGFILE
 chuck --chugin-probe 2>&1 | tee --append $LOGFILE
 
+echo ""
+echo ""
 echo "Probe results have been saved in $LOGFILE"
+echo ""
+echo ""
 
 echo "** Finished Probe ChucK **" | tee --append $LOGFILE
