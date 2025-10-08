@@ -12,23 +12,10 @@ rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy --no-install-recommends \
-  alsa-utils \
-  bluez-alsa-utils \
-  libpipewire-0.3-common \
-  libpipewire-0.3-modules \
-  libspa-0.2-bluetooth \
-  libspa-0.2-libcamera \
-  libspa-0.2-modules \
-  pipewire \
-  pipewire-doc \
-  pipewire-libcamera \
-  pipewire-pulse \
+  pamixer \
   pulseaudio \
   pulseaudio-module-bluetooth \
   pulseaudio-utils \
-  rtkit \
-  wireplumber \
-  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 echo "** Finished Audio Plumbing **"
