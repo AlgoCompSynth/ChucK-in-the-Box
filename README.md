@@ -12,7 +12,7 @@ SoundFont-based tools, and
 3. The [Faust](https://faust.grame.fr/)
 audio programming language.  
 
-## [Raspberryr Pi Zero 2 W Setup](Raspberry-Pi-Zero-2-W-Setup.md)`
+## [Raspberry Pi Zero 2 W Setup](Raspberry-Pi-Zero-2-W-Setup.md)
 
 ## [Blokas Pisound Setup](docs/Blokas-Pisound-Setup.md)
 
