@@ -1,4 +1,4 @@
-# ChucK-in-the-Box - computer music development tools for Linux
+# ChucK-in-the-Box - Computer music development tools for Linux
 
 ## What is this?
 
