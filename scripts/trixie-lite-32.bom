@@ -247,7 +247,6 @@
  libgpgme11t64:armhf 1.24.2-3 armhf GPGME - GnuPG Made Easy (library)
  libgpiod3:armhf 2.2.1-2+rpi1 armhf C library for interacting with Linux GPIO device - shared libraries
  libgpiolib0:armhf 20251002-1 armhf GPIO library for Raspberry Pi devices
- libgpm2:armhf 1.20.7-11 armhf General Purpose Mouse - shared library
  libgssapi-krb5-2:armhf 1.21.3-5+b1 armhf MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
  libgudev-1.0-0:armhf 238-6 armhf GObject-based wrapper library for libudev
  libhidapi-hidraw0:armhf 0.14.0-1 armhf Multi-Platform library for communication with HID devices (hidraw backend)
@@ -338,8 +337,8 @@
  libpcsclite1:armhf 2.3.3-1 armhf Middleware to access a smart card using PC/SC (library)
  libperl5.40:armhf 5.40.1-6 armhf shared Perl library
  libpipeline1:armhf 1.5.8-1 armhf Unix process pipeline manipulation library
- libpisp1:armhf 1.2.1-2 armhf Helper library for the PiSP hardware block (runtime)
- libpisp-common 1.2.1-2 all Helper library for the PiSP hardware block (data files)
+ libpisp1:armhf 1.3.0-1 armhf Helper library for the PiSP hardware block (runtime)
+ libpisp-common 1.3.0-1 all Helper library for the PiSP hardware block (data files)
  libpkgconf3:armhf 1.8.1-4 armhf shared library for pkgconf
  libpng16-16t64:armhf 1.6.48-1 armhf PNG library - runtime (version 1.6)
  libpolkit-agent-1-0:armhf 126-2 armhf polkit Authentication Agent API
@@ -358,7 +357,7 @@
  libqrtr-glib0:armhf 1.2.2-1+b1 armhf Support library to use the QRTR protocol
  libqt6core6t64:armhf 6.8.2+dfsg-9+rpi1 armhf Qt 6 core module
  libreadline8t64:armhf 8.2-6 armhf GNU readline and history libraries, run-time libraries
- librpicam-app1:armhf 1.9.0-1 armhf Framework for rpicam-apps camera applications
+ librpicam-app1:armhf 1.9.1-1 armhf Framework for rpicam-apps camera applications
  librtmp1:armhf 2.4+20151223.gitfa8646d.1-2+b4 armhf toolkit for RTMP streams (shared library)
  libsamplerate0:armhf 0.2.2-4 armhf Audio sample rate conversion library
  libsasl2-2:armhf 2.1.28+dfsg1-9 armhf Cyrus SASL - authentication abstraction library
@@ -373,13 +372,12 @@
  libsigc++-1.2-5c2 1.2.7-2+b1 armhf type-safe Signal Framework for C++ - runtime
  libslang2:armhf 2.3.3-5 armhf S-Lang programming library - runtime version
  libsmartcols1:armhf 2.41-5 armhf smart column output alignment library
- libsodium23:armhf 1.0.18-1+b1 armhf Network communication, cryptography and signaturing library
  libsource-highlight4t64:armhf 3.1.9-4.3 armhf source highlighting library
  libsource-highlight-common 3.1.9-4.3 all architecture-independent files for source highlighting library
  libsqlite3-0:armhf 3.46.1-7 armhf SQLite 3 shared library
  libss2:armhf 1.47.2-3 armhf command-line interface parsing library
  libssh2-1t64:armhf 1.11.1-1 armhf SSH2 client-side library
- libssl3t64:armhf 3.5.1-1+~rpt1 armhf Secure Sockets Layer toolkit - shared libraries
+ libssl3t64:armhf 3.5.1-1+deb13u1+rpt1 armhf Secure Sockets Layer toolkit - shared libraries
  libstdc++-14-dev:armhf 14.2.0-19+rpi1 armhf GNU Standard C++ Library v3 (development files)
  libstdc++6:armhf 14.2.0-19+rpi1 armhf GNU Standard C++ Library v3
  libsystemd0:armhf 257.8-1~deb13u2+rpi1 armhf systemd utility library
@@ -473,8 +471,8 @@
  openssh-client 1:10.0p1-7 armhf secure shell (SSH) client, for secure access to remote machines
  openssh-server 1:10.0p1-7 armhf secure shell (SSH) server, for secure access from remote machines
  openssh-sftp-server 1:10.0p1-7 armhf secure shell (SSH) sftp server module, for SFTP access from remote machines
- openssl 3.5.1-1+~rpt1 armhf Secure Sockets Layer toolkit - cryptographic utility
- openssl-provider-legacy 3.5.1-1+~rpt1 armhf Secure Sockets Layer toolkit - cryptographic utility
+ openssl 3.5.1-1+deb13u1+rpt1 armhf Secure Sockets Layer toolkit - cryptographic utility
+ openssl-provider-legacy 3.5.1-1+deb13u1+rpt1 armhf Secure Sockets Layer toolkit - cryptographic utility
  p7zip-full 16.02+transitional.1 all transitional package
  pahole 1.30-1 armhf set of advanced DWARF utilities
  parted 3.6-5 armhf disk partition manipulator
@@ -576,8 +574,8 @@
  retry 1.0.5-3 armhf Retry a command until the command succeeds
  rfkill 2.41-5 armhf tool for enabling and disabling wireless devices
  rpcsvc-proto 1.4.3-1 armhf RPC protocol compiler and definitions
- rpicam-apps-core 1.9.0-1 armhf Camera based applications for Raspberry Pi using the libcamera framework
- rpicam-apps-lite 1.9.0-1 all transitional package
+ rpicam-apps-core 1.9.1-1 armhf Camera based applications for Raspberry Pi using the libcamera framework
+ rpicam-apps-lite 1.9.1-1 all transitional package
  rpi-eeprom 28.5-1 all Raspberry Pi 4/5 boot EEPROM updater
  rpi-keyboard-config 1.0 all RPi Keyboard Config
  rpi-keyboard-fw-update 1.0.1 all Keyboard firmware updater
@@ -615,9 +613,7 @@
  util-linux 2.41-5 armhf miscellaneous system utilities
  uuid 1.6.4-1 armhf Universally Unique Identifier Command-Line Tool
  v4l-utils 1.30.1-1 armhf Collection of command line video4linux utilities
- vim 2:9.1.1230-2 armhf Vi IMproved - enhanced vi editor
  vim-common 2:9.1.1230-2 all Vi IMproved - Common files
- vim-runtime 2:9.1.1230-2 all Vi IMproved - Runtime files
  vim-tiny 2:9.1.1230-2 armhf Vi IMproved - enhanced vi editor - compact version
  wget 1.25.0-2 armhf retrieves files from the web
  whiptail 0.52.25-1 armhf Displays user-friendly dialog boxes from shell scripts
