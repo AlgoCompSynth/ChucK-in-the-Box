@@ -25,13 +25,16 @@ sudo apt-get install -qqy --no-install-recommends \
   libfluidsynth3 \
   libldacbt-abr2 \
   libldacbt-enc2 \
+  libopus0 \
   libpipewire-0.3-0t64 \
   libpipewire-0.3-modules \
   libpulse0 \
   libpulsedsp \
+  libsbc1 \
   libspa-0.2-bluetooth \
   libspa-0.2-libcamera \
   libspa-0.2-modules \
+  libspeex1 \
   libwireplumber-0.5-0 \
   pamixer \
   pipewire \
