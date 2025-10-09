@@ -27,6 +27,7 @@ sudo apt-get install -qqy --no-install-recommends \
   libldacbt-enc2 \
   libopus0 \
   libpipewire-0.3-0t64 \
+  libpipewire-0.3-common \
   libpipewire-0.3-modules \
   libpulse0 \
   libsbc1 \
