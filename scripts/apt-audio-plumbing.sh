@@ -29,7 +29,6 @@ sudo apt-get install -qqy --no-install-recommends \
   libpipewire-0.3-0t64 \
   libpipewire-0.3-modules \
   libpulse0 \
-  libpulsedsp \
   libsbc1 \
   libspa-0.2-bluetooth \
   libspa-0.2-libcamera \
