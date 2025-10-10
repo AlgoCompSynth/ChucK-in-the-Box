@@ -5,8 +5,7 @@ set -e
 echo ""
 echo "** Probe ChucK **"
 
-source ./set_envars.sh
-export LOGFILE=$LOGFILES/probe-ChucK.log
+export LOGFILE=$HOME/Logfiles/probe-ChucK.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
