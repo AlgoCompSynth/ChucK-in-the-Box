@@ -29,17 +29,17 @@ fi
 ./scripts/default-chugins.sh
 ./scripts/warpbuf-chugin.sh
 ./scripts/faust-chugin.sh
-./scripts/fluidsynth-chugin.sh
 
 if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
-  ./scripts/apt-qpwgraph.sh
   ./scripts/miniaudicle.sh
-
-else
-  ./scripts/apt-audio-plumbing.sh
+  ./scripts/fluidsynth-chugin.sh
+  ./scripts/apt-qpwgraph.sh
 
 fi
+
+#else
+  #./scripts/apt-audio-plumbing.sh
 
 ./scripts/probe-ChucK.sh
 
