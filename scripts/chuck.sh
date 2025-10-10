@@ -37,4 +37,6 @@ pushd $CHUCK_PATH > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
+cp scripts/probe-ChucK.sh $LOCALBIN
+
 echo "** Finished ChucK **" | tee --append $LOGFILE
