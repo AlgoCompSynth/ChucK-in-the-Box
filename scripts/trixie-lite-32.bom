@@ -177,8 +177,8 @@
  libbz2-1.0:armhf 1.0.8-6 armhf high-quality block-sorting file compressor library - runtime
  libc6:armhf 2.41-12+rpt1 armhf GNU C Library: Shared libraries
  libc6-dev:armhf 2.41-12+rpt1 armhf GNU C Library: Development Libraries and Header Files
- libcamera0.5:armhf 0.5.2+rpt20250903-1 armhf complex camera support library
- libcamera-ipa:armhf 0.5.2+rpt20250903-1 armhf complex camera support library (IPA modules)
+ libcamera0.5:armhf 0.5.2+rpt20250903-1+b1 armhf complex camera support library
+ libcamera-ipa:armhf 0.5.2+rpt20250903-1+b1 armhf complex camera support library (IPA modules)
  libcap2:armhf 1:2.75-10 armhf POSIX 1003.1e capabilities (library)
  libcap2-bin 1:2.75-10 armhf POSIX 1003.1e capabilities (utilities)
  libcap-ng0:armhf 0.8.5-4+b1 armhf alternate POSIX capabilities library
@@ -247,6 +247,7 @@
  libgpgme11t64:armhf 1.24.2-3 armhf GPGME - GnuPG Made Easy (library)
  libgpiod3:armhf 2.2.1-2+rpi1 armhf C library for interacting with Linux GPIO device - shared libraries
  libgpiolib0:armhf 20251002-1 armhf GPIO library for Raspberry Pi devices
+ libgpm2:armhf 1.20.7-11 armhf General Purpose Mouse - shared library
  libgssapi-krb5-2:armhf 1.21.3-5+b1 armhf MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
  libgudev-1.0-0:armhf 238-6 armhf GObject-based wrapper library for libudev
  libhidapi-hidraw0:armhf 0.14.0-1 armhf Multi-Platform library for communication with HID devices (hidraw backend)
@@ -372,6 +373,7 @@
  libsigc++-1.2-5c2 1.2.7-2+b1 armhf type-safe Signal Framework for C++ - runtime
  libslang2:armhf 2.3.3-5 armhf S-Lang programming library - runtime version
  libsmartcols1:armhf 2.41-5 armhf smart column output alignment library
+ libsodium23:armhf 1.0.18-1+b1 armhf Network communication, cryptography and signaturing library
  libsource-highlight4t64:armhf 3.1.9-4.3 armhf source highlighting library
  libsource-highlight-common 3.1.9-4.3 all architecture-independent files for source highlighting library
  libsqlite3-0:armhf 3.46.1-7 armhf SQLite 3 shared library
@@ -613,7 +615,9 @@
  util-linux 2.41-5 armhf miscellaneous system utilities
  uuid 1.6.4-1 armhf Universally Unique Identifier Command-Line Tool
  v4l-utils 1.30.1-1 armhf Collection of command line video4linux utilities
+ vim 2:9.1.1230-2 armhf Vi IMproved - enhanced vi editor
  vim-common 2:9.1.1230-2 all Vi IMproved - Common files
+ vim-runtime 2:9.1.1230-2 all Vi IMproved - Runtime files
  vim-tiny 2:9.1.1230-2 armhf Vi IMproved - enhanced vi editor - compact version
  wget 1.25.0-2 armhf retrieves files from the web
  whiptail 0.52.25-1 armhf Displays user-friendly dialog boxes from shell scripts

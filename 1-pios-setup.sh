@@ -36,10 +36,10 @@ then
   ./scripts/fluidsynth-chugin.sh
   ./scripts/apt-qpwgraph.sh
 
-fi
+else
+  ./scripts/apt-audio-plumbing.sh
 
-#else
-  #./scripts/apt-audio-plumbing.sh
+fi
 
 ./scripts/probe-ChucK.sh
 
