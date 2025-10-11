@@ -12,6 +12,7 @@ rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy \
+  bluez-alsa-utils \
   libspa-0.2-bluetooth \
   pipewire \
   pipewire-doc \
