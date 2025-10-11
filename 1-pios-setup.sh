@@ -6,7 +6,7 @@ echo ""
 echo "* PiOS Host Setup *"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/1-pios-host-setup.log
+export LOGFILE=$LOGFILES/1-pios-setup.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
