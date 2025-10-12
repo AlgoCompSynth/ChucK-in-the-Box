@@ -22,12 +22,3 @@ else
   export CMAKE_PARALLEL_LEVEL=$NPROC
 
 fi
-
-if [[ "$(aplay -l | grep pisound | wc -l)" -gt "0" ]]
-then
-  export BLOKAS_PISOUND="1"
-
-else
-  export BLOKAS_PISOUND="0"
-
-fi
