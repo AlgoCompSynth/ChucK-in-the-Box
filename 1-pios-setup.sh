@@ -12,17 +12,6 @@ rm --force $LOGFILE
 
 ./scripts/upgrade-system.sh
 ./scripts/apt-command-line.sh
-./scripts/apt-terminal-setup.sh
-source $HOME/.bash_aliases
-
-if [[ "$BLOKAS_PISOUND" == "1" ]]
-then
-  echo ""
-  echo "Installing Blokas Pisound software"
-  curl --silent https://blokas.io/pisound/install.sh | sh \
-    >> $LOGFILE 2>&1
-
-fi
 
 ./scripts/clone-ccrma-repos.sh
 ./scripts/chuck.sh

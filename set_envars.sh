@@ -23,12 +23,3 @@ else
   export CHUCK_DRIVERS="linux-alsa linux-pulse"
 
 fi
-
-if [[ "$(aplay -l | grep pisound | wc -l)" -gt "0" ]]
-then
-  export BLOKAS_PISOUND="1"
-
-else
-  export BLOKAS_PISOUND="0"
-
-fi
