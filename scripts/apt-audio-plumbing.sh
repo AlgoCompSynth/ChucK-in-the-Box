@@ -13,11 +13,6 @@ rm --force $LOGFILE
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy \
   bluez-alsa-utils \
-  libspa-0.2-bluetooth \
-  pipewire \
-  pipewire-doc \
-  pulseaudio-utils \
-  wireplumber-doc \
   >> $LOGFILE 2>&1
 
 echo "** Finished Audio Plumbing **"
