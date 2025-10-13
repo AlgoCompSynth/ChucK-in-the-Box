@@ -12,7 +12,7 @@ rm --force $LOGFILE
 
 ./scripts/upgrade-system.sh
 ./scripts/apt-command-line.sh
-
+./scripts/apt-audio-plumbing.sh
 ./scripts/clone-ccrma-repos.sh
 ./scripts/chuck.sh
 ./scripts/default-chugins.sh
@@ -25,12 +25,10 @@ then
   ./scripts/fluidsynth-chugin.sh
   ./scripts/apt-qpwgraph.sh
 
-else
-  ./scripts/apt-audio-plumbing.sh
-
 fi
 
 ./scripts/probe-ChucK.sh
+./scripts/list-alsa-cards.sh
 
 echo ""
 echo "Updating apt-file database"

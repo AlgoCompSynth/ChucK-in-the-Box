@@ -1,26 +1,43 @@
 #! /usr/bin/env bash
 
+set -e
 
 echo ""
-echo "aplay --list-devices"
-aplay --list-devices
+echo "** List ALSA Cards **"
+
+export LOGFILE=$HOME/Logfiles/list-alsa-cards.log
+echo "LOGFILE: $LOGFILE"
+rm --force $LOGFILE
+
+echo "" | tee --append $LOGFILE
+echo "aplay --list-devices" | tee --append $LOGFILE
+aplay --list-devices | tee --append $LOGFILE
+
+echo "" | tee --append $LOGFILE
+echo "aplay --list-pcms" | tee --append $LOGFILE
+aplay --list-pcms | tee --append $LOGFILE
+
+echo "" | tee --append $LOGFILE
+echo "arecord --list-devices" | tee --append $LOGFILE
+arecord --list-devices | tee --append $LOGFILE
+
+echo "" | tee --append $LOGFILE
+echo "arecord --list-pcms" | tee --append $LOGFILE
+arecord --list-pcms | tee --append $LOGFILE
+
+echo "" | tee --append $LOGFILE
+echo "aplaymidi --list" | tee --append $LOGFILE
+aplaymidi --list | tee --append $LOGFILE
+
+echo "" | tee --append $LOGFILE
+echo "arecordmidi --list" | tee --append $LOGFILE
+arecordmidi --list | tee --append $LOGFILE
 
 echo ""
-echo "aplay --list-pcms"
-aplay --list-pcms
-
 echo ""
-echo "arecord --list-devices"
-arecord --list-devices
-
+echo "Results have been saved in $LOGFILE"
 echo ""
-echo "arecord --list-pcms"
-arecord --list-pcms
-
 echo ""
-echo "aplaymidi --list"
-aplaymidi --list
 
-echo ""
-echo "arecordmidi --list"
-arecordmidi --list
+echo "" | tee --append $LOGFILE
+echo "** Finished List ALSA Cards **" | tee --append $LOGFILE

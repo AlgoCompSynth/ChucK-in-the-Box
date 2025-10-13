@@ -14,6 +14,10 @@ echo "chuck --probe --driver:alsa" | tee --append $LOGFILE
 chuck --probe --driver:alsa 2>&1 | tee --append $LOGFILE
 
 echo "" | tee --append $LOGFILE
+echo "chuck --probe --driver:pulse" | tee --append $LOGFILE
+chuck --probe --driver:pulse 2>&1 | tee --append $LOGFILE
+
+echo "" | tee --append $LOGFILE
 echo "chuck --chugin-probe" | tee --append $LOGFILE
 chuck --chugin-probe 2>&1 | tee --append $LOGFILE
 
