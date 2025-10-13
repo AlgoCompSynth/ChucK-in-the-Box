@@ -81,3 +81,29 @@ Finally, run the install scripts:
 cd ChucK-in-the-Box
 ./1-pios-setup.sh
 ```
+
+This takes about 20 minutes. When it is done you will see
+
+```
+Probe results have been saved in /home/znmeb/Logfiles/probe-ChucK.log
+
+
+** Finished Probe ChucK **
+
+Updating apt-file database
+Updating locate database
+
+Reboot to reset audio daemons
+
+* Finished PiOS Host Setup *
+```
+
+If you don't see that, an error has occurred. You can open an issue by
+typing
+
+```
+./scripts/open-issue.sh
+```
+
+and filling out the form the script displays after archiving the logfiles
+from the install.

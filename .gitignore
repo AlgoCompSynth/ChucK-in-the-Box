@@ -1,4 +1,2 @@
 *.log
-cmdline.txt
-config.txt
-.R*
+*.zip
