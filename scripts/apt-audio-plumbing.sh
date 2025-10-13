@@ -14,9 +14,9 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt-get install -qqy \
   bluez-alsa-utils \
   libspa-0.2-bluetooth \
+  pipewire-doc \
   wireplumber \
   wireplumber-doc \
   >> $LOGFILE 2>&1
 
 echo "** Finished Audio Plumbing **"
-# sudo apt-get install --dry-run 
