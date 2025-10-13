@@ -23,7 +23,6 @@ sudo apt-get install -qqy --no-install-recommends \
   cmake \
   flex \
   libasound2-dev \
-  libjack-jackd2-dev \
   libpulse-dev \
   libsndfile1-dev \
   >> $LOGFILE 2>&1
