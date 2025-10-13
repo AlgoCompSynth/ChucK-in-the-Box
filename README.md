@@ -3,34 +3,33 @@
 ## What is this?
 
 ChucK-in-the-Box is a collection of computer music development tools
-for Linux computers. ChucK-in-the-Box contains
+for Raspberry Pi computers. Any 64-bit Raspberry Pi (Raspberry Pi 3 or
+later and the Raspberry Pi Zero 2 W) can be used.
 
-1. The [ChucK](https://chuck.stanford.edu/)
-ecosystem: ChucK, miniAudicle, ChuGins and
-[ChuGL](https://chuck.stanford.edu/chugl/),
-2. The [Faust](https://faust.grame.fr/)
-audio programming language, and
-3. [FluidSynth](https://www.fluidsynth.org/)
-SoundFont-based synthesis tools.
+ChucK-in-the-Box contains
 
-The first release is designed for use on
-[Raspberry Pi](https://www.raspberrypi.com/) single-board computers.
-A command-line version is available for the $15US
-[Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/).
-This board was in fact the original inspiration for ChucK-in-the-Box.
+1. the [ChucK](https://chuck.stanford.edu/)
+computer music language. The current version is 1.5.5.0 from the Debian
+repositories,
+2. the [Faust](https://faust.grame.fr/)
+audio programming language. The current version is 2.79 from the Debian
+repositories, and
+3. the default [ChuGins](https://github.com/ccrma/chugins)
+and the Faust and WarpBuf ChuGins.
 
-The graphical version includes the
-[miniAudicle](https://audicle.cs.princeton.edu/mini/) interactive
-development environment and will run on any Raspberry Pi 4 or 5
-with at least 2 GB of RAM and either the latest PiOS 64-bit desktop
-based on Debian `trixie` or the legacy PiOS 64-bit desktop based on
-Debian `bookworm`. In addition to the host installation, Raspberry
-Pi 4 or 5 users can install 
-[boxed-chuck](docs/boxed-chuck.md), a [Distrobox](https://distrobox.it/)
-container based on Debian `trixie` with the same software as the
-host version.
+This is the minimum version, defined for command line usage on systems
+as small as the Raspberry Pi Zero 2 W running Raspberry Pi OS Lite.
+On larger systems - at least two GiB of RAM and four cores, running the
+Raspberry Pi OS Desktop - ChucK-in-the-Box also contains
 
-## Audio Hardware and Configuration Notes
+1. The [miniAudicle](https://audicle.cs.princeton.edu/mini/)
+integrated development environment for ChucK,
+2. the [FluidSynth](https://www.fluidsynth.org/) and
+[Polyphone](https://www.polyphone.io/en)
+[SoundFont](https://en.wikipedia.org/wiki/SoundFont) synthesis tools, and
+3. the FluidSynth ChuGin.
+
+## Audio Hardware Notes
  
 All of the Raspberry Pi boards I use - Raspberry Pi Zero 2 W,
 Raspberry Pi 4 and Raspberry Pi 5 - have HDMI output. So if you're
@@ -43,11 +42,12 @@ own one, so I can't recommend one. And there's no audio _input_
 by default on a Raspberry Pi - if you need audio input, you'll
 need additional hardware.
 
-Another option is a USB sound card / dongle. There are expensive ones
-and inexpensive ones. Most of the inexpensive ones only do 16 bit /
-48 kilohertz audio, so check the specifications carefully. I have
-had good results with USB gaming headsets, although you'll have to
-use great caution to protect your ears as you would with any headset.
+Another option is a plug-and-play USB audio device. There are
+expensive ones and inexpensive ones. Most of the inexpensive ones
+only do 16 bit / 48 kilohertz audio, so check the specifications
+carefully. I have had good results with USB gaming headsets,
+although you'll have to use great caution to protect your ears
+as you would with any headset.
 
 There are a number of audio HATs for the Raspberry Pi boards, and
 probably dozens of DIY setups if you want to go that route. I have a
@@ -61,7 +61,3 @@ Pi 4 and 5 PiOS desktop and from the command line in the Raspberry
 Pi Zero 2 W.
  
 ## [Raspberry Pi Zero 2 W Setup](docs/Raspberry-Pi-Zero-2-W-Setup.md)
-
-## [Blokas Pisound Setup](docs/Blokas-Pisound-Setup.md)
-
-## The [boxed-chuck](docs/boxed-chuck.md) Container

@@ -12,7 +12,6 @@ rm --force $LOGFILE
 
 ./scripts/upgrade-system.sh
 ./scripts/apt-command-line.sh
-./scripts/apt-audio-plumbing.sh
 ./scripts/clone-ccrma-repos.sh
 ./scripts/chuck.sh
 ./scripts/default-chugins.sh
@@ -27,8 +26,9 @@ then
 
 fi
 
-./scripts/probe-ChucK.sh
+./scripts/apt-audio-plumbing.sh
 ./scripts/list-alsa-cards.sh
+./scripts/probe-ChucK.sh
 
 echo ""
 echo "Updating apt-file database"
