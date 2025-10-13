@@ -31,23 +31,26 @@ You will need at least a 32 GB microSD card and a card writer
 on a Windows, MacOS or Linux computer. Use the
 [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 
-On the first page, select the Raspberry Pi OS Lite (64-bit)
-operating system . ***Make sure you are flashing the most
-recent version, based on Debian `trixie`. Older versions
-contain an obsolete version of ChucK!*** Select the microSD
-card and press the `Next` button.
+On the first page, press the `Operating System` button and
+select the Raspberry Pi OS Lite (64-bit) operating system .
+***Make sure you are flashing the most recent version, based
+on Debian `trixie`. Older versions contain an obsolete version
+of ChucK!*** 
+
+Next, press the `Storage` button and select the microSD
+card. Then press the `Next` button.
 
 Now press the `Edit Settings` button to enter your login and
-WiFi credentials. On the "General" tab, you will need to set
+WiFi credentials. On the `General` tab, you will need to set
 
 1. the hostname,
 2. the username and password,
 3. the wireless LAN SSID, password and wireless LAN country, and
 4. the time zone and keyboard layout.
 
-On the "Services" tab, make sure the "Use password authentication"
-radio button is selected. Then press the "Save" button and
-continue with the flashing.
+On the `Services` tab, make sure the `Enable SSH` checkbox and
+`Use password authentication` radio button are selected. Then
+press the `Save` button and continue with the flashing.
 
 Once the flashing is complete, remove the card from the writer, insert
 it into the Raspberry Pi and boot the system up. Then use Secure Shell
