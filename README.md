@@ -12,7 +12,7 @@ ChucK-in-the-Box contains
 computer music language. The current version is 1.5.5.0 from the Debian
 repositories,
 2. the [Faust](https://faust.grame.fr/)
-audio programming language. The current version is 2.79 from the Debian
+audio programming language. The current version is 2.79.3 from the Debian
 repositories, and
 3. the default [ChuGins](https://github.com/ccrma/chugins)
 and the Faust and WarpBuf ChuGins.
