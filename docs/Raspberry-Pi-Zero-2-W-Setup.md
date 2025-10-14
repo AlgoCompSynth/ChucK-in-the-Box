@@ -117,7 +117,10 @@ and the YouTube playlist
 [Creating Electronic Music with ChucK](https://youtube.com/playlist?list=PL-9SSIBe1phI_r3JsylOZXZyAXuEKRJOS&si=48f53yc_keycYWE0)
 will get you going. USB audio devices and HDMI audio devices should just
 just work in either ALSA (`chuck --driver:alsa`, which is the default) or
-PulseAudio (`chuck --driver:pulse`) mode.
+PulseAudio (`chuck --driver:pulse`) mode. Although the JACK driver
+(`chuck --driver:jack`) is present in the version of ChucK installed from
+the system repositories, the supporting software is not installed. You will
+need to use either ALSA or PulseAudio.
 
 Bluetooth audio is a bit trickier from the command line. Bluetooth packages
 for ALSA and PipeWire, plus the WirePlumber and PipeWire's PulseAudio

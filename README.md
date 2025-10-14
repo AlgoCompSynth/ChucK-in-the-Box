@@ -59,7 +59,7 @@ microphones, speakers, headphones and headsets. Pairing and
 connection setup is done with the control panel on the Raspberry
 Pi 4 and 5 PiOS desktop and from the command line in the Raspberry
 Pi Zero 2 W.
- 
-## [Raspberry Pi Zero 2 W Setup](docs/Raspberry-Pi-Zero-2-W-Setup.md)
 
 ## [Full-Size System Setup](docs/Full-Size-System-Setup.md)
+ 
+## [Raspberry Pi Zero 2 W Setup](docs/Raspberry-Pi-Zero-2-W-Setup.md)
