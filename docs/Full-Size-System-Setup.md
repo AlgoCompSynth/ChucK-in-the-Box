@@ -99,8 +99,8 @@ typing
 ./scripts/open-issue.sh
 ```
 
-and filling out the form the script displays after archiving the logfiles
-from the install.
+and filling out the form at
+<https://github.com/AlgoCompSynth/ChucK-in-the-Box/issues/new>.
 
 ## Next steps
 
