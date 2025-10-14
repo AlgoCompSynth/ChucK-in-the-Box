@@ -130,8 +130,13 @@ and [PipeWire Debian 13](https://wiki.debian.org/PipeWire#Debian_13) for
 PipeWire / PulseAudio. 
 
 From the command line, you can read the PipeWire documentation with
-<`lynx /usr/share/doc/pipewire/html/index.html`> and the WirePlumber
-documentation with
-<`lynx /usr/share/doc/wireplumber/html/index.html`>. WirePlumber can
-be scripted with Lua and this is probably the easiest way to get a
-reproducible Bluetooth audio setup on the Raspberry Pi Zero 2 W.
+
+    lynx /usr/share/doc/pipewire/html/index.html
+
+and the WirePlumber documentation with
+
+    lynx /usr/share/doc/wireplumber/html/index.html
+    
+WirePlumber can be scripted with Lua; this is probably the easiest
+way to get a reproducible Bluetooth audio setup on the Raspberry Pi
+Zero 2 W.
