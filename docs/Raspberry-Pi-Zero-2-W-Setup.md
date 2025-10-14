@@ -107,3 +107,28 @@ typing
 
 and filling out the form the script displays after archiving the logfiles
 from the install.
+
+## Next steps
+
+The system should be ready to use after a reboot. If you're new to ChucK,
+the book
+[Programming for Musicians and Digital Artists: Creating music with ChucK](https://www.manning.com/books/programming-for-musicians-and-digital-artists)
+and the YouTube playlist
+[Creating Electronic Music with ChucK](https://youtube.com/playlist?list=PL-9SSIBe1phI_r3JsylOZXZyAXuEKRJOS&si=48f53yc_keycYWE0)
+will get you going. USB audio devices and HDMI audio devices should just
+just work in either ALSA (`chuck --driver:alsa`, which is the default) or
+PulseAudio (`chuck --driver:pulse`) mode.
+
+Bluetooth audio is a bit trickier from the command line. Bluetooth packages
+for ALSA and PipeWire, plus the WirePlumber and PipeWire's PulseAudio
+emulation services are all installed and should be active. See
+[BluetoothUser a2dp](https://wiki.debian.org/BluetoothUser/a2dp) for ALSA
+and [PipeWire Debian 13](https://wiki.debian.org/PipeWire#Debian_13) for
+PipeWire / PulseAudio. 
+
+From the command line, you can read the PipeWire documentation with
+<`lynx /usr/share/doc/pipewire/html/index.html`> and the WirePlumber
+documentation with
+<`lynx /usr/share/doc/wireplumber/html/index.html`>. WirePlumber can
+be scripted with Lua and this is probably the easiest way to get a
+reproducible Bluetooth audio setup on the Raspberry Pi Zero 2 W.
