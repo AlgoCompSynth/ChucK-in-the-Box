@@ -75,7 +75,8 @@ cd ChucK-in-the-Box
 ./1-pios-setup.sh
 ```
 
-This takes about 20 minutes. When it is done you will see
+This takes about 15 minutes on a Raspberry Pi 4. When it is done
+you will see
 
 ```
 Probe results have been saved in /home/znmeb/Logfiles/probe-ChucK.log
