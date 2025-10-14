@@ -17,8 +17,8 @@ on a Windows, MacOS or Linux computer. Use the
 [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 
 On the first page, press the `Operating System` button and
-select the Raspberry Pi OS Desktop (64-bit) operating system.
-This is currently the first and recommended option for those
+select the Raspberry Pi OS (64-bit) operating system. This
+is currently the first and recommended option for those
 systems.  ***Make sure you are flashing the most recent
 version, based on Debian `trixie`. Older versions contain
 an obsolete version of ChucK!*** 
