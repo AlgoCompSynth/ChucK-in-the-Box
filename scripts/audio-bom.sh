@@ -5,4 +5,4 @@ dpkg-query --list \
   | sed "s/^ii //" \
   | sed "s/  */ /g" \
   | sort \
-  | egrep -i 'pulseaudio|pipewire|alsa|wireplumber|rtkit|bluetooth|libspa-'
+  | egrep -i 'pulseaudio|pipewire|alsa|jack|wireplumber|rtkit|bluetooth|libspa-'
