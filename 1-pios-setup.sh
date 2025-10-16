@@ -24,13 +24,24 @@ then
   ./scripts/miniaudicle.sh
   ./scripts/apt-qpwgraph.sh
 
+else
+  ./scripts/apt-audio-plumbing.sh
+
 fi
 
-./scripts/apt-audio-plumbing.sh
-./scripts/list-alsa-cards.sh
-./scripts/probe-ChucK.sh
-
 echo ""
+echo "Copying aliases to $HOME/.bash_aliases"
+cp ./configs/bash_aliases $HOME/.bash_aliases
+
+echo "Copying status query scripts to $LOCALBIN"
+cp ./scripts/audio-bom.sh $LOCALBIN
+cp ./scripts/list-alsa-cards.sh $LOCALBIN
+cp ./scripts/probe-ChucK.sh $LOCALBIN
+
+echo "Linking PipeWire and WirePlumber docs into $HOME"
+ln -sf /usr/share/doc/pipewire/html/index.html $HOME/pipewire-doc.html
+ln -sf /usr/share/doc/wireplumber/html/index.html $HOME/wireplumber-doc.html
+
 echo "Updating apt-file database"
 sudo apt-file update \
   >> $LOGFILE 2>&1

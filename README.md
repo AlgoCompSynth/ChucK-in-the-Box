@@ -3,23 +3,30 @@
 ## What is this?
 
 ChucK-in-the-Box is a collection of computer music development tools
-for Raspberry Pi computers. Any 64-bit Raspberry Pi (Raspberry Pi 3 or
-later and the Raspberry Pi Zero 2 W) can be used.
+for 64-bit Raspberry Pi computers. Any 64-bit Raspberry Pi (Raspberry
+Pi Zero 2 W, 4 or 5) can be used. It might also run on the Raspberry
+Pi 3B+ but I have no plans to get one to test.
 
 ChucK-in-the-Box contains
 
 1. the [ChucK](https://chuck.stanford.edu/)
-computer music language. The current version is 1.5.5.0 from the Debian
+computer music language. The current version is 1.5.5.5 built from
+[GitHub source](https://github.com/ccrma/chuck).
 repositories,
 2. the [Faust](https://faust.grame.fr/)
 audio programming language. The current version is 2.79.3 from the Debian
-repositories, and
-3. the default [ChuGins](https://github.com/ccrma/chugins)
-and the Faust and WarpBuf ChuGins.
+repositories,
+3. the default [ChuGins](https://github.com/ccrma/chugins),
+the Faust and WarpBuf ChuGins, and
+4. Audio tools:
+    - [WirePlumber](https://pipewire.pages.freedesktop.org/wireplumber/#),
+    - [PipeWire](https://pipewire.org/), PipeWire Bluetooth, PipeWire PulseAudio emulation,
+    - [rtkit](https://venam.net/blog/unix/2025/03/24/rtkit.html), and
+    - [ALSA](https://www.alsa-project.org/wiki/Main_Page).
 
-This is the minimum version, defined for command line usage on systems
+This is the minimum version, designed for command line usage on systems
 as small as the Raspberry Pi Zero 2 W running Raspberry Pi OS Lite.
-On larger systems - at least two GiB of RAM and four cores, running the
+On larger systems - at least one GiB of RAM and four cores, running the
 Raspberry Pi OS Desktop - ChucK-in-the-Box also contains
 
 1. The [miniAudicle](https://audicle.cs.princeton.edu/mini/)
@@ -59,7 +66,7 @@ microphones, speakers, headphones and headsets. Pairing and
 connection setup is done with the control panel on the Raspberry
 Pi 4 and 5 PiOS desktop and from the command line in the Raspberry
 Pi Zero 2 W.
-
-## [Full-Size System Setup](docs/Full-Size-System-Setup.md)
  
 ## [Raspberry Pi Zero 2 W Setup](docs/Raspberry-Pi-Zero-2-W-Setup.md)
+
+## [Full-Size System Setup](docs/Full-Size-System-Setup.md)
