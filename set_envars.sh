@@ -12,7 +12,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 export NPROC=$(nproc)
 export RAM_KBYTES=$(grep 'MemTotal:' /proc/meminfo | sed 's/MemTotal:  *//' | sed 's/ .*$//')
-if [[ "$RAM_KBYTES" -lt "1500000" || "$NPROC" -lt "4" ]]
+if [[ "$RAM_KBYTES" -lt "750000" || "$NPROC" -lt "4" ]]
 then
   export MAKE_PARALLEL_LEVEL="1"
   export CMAKE_PARALLEL_LEVEL="1"
