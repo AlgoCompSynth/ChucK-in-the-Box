@@ -27,15 +27,14 @@ tools are only supported on the larger Pis.
 
 ## Flashing the microSD card
 
-You will need at least a 32 GB microSD card and a card writer
+You will need at least a 64 GB microSD card and a card writer
 on a Windows, MacOS or Linux computer. Use the
 [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 
 On the first page, press the `Operating System` button and
 select the Raspberry Pi OS Lite (64-bit) operating system .
 ***Make sure you are flashing the most recent version, based
-on Debian `trixie`. Older versions contain an obsolete version
-of ChucK!*** 
+on Debian `trixie`.
 
 Next, press the `Storage` button and select the microSD
 card. Then press the `Next` button.
@@ -85,10 +84,6 @@ cd ChucK-in-the-Box
 This takes about 40 minutes. When it is done you will see
 
 ```
-Probe results have been saved in /home/znmeb/Logfiles/probe-ChucK.log
-
-
-** Finished Probe ChucK **
 
 Updating apt-file database
 Updating locate database
@@ -118,16 +113,14 @@ and the YouTube playlist
 will get you going. USB audio devices and HDMI audio devices should just
 just work in either ALSA (`chuck --driver:alsa`, which is the default) or
 PulseAudio (`chuck --driver:pulse`) mode. Although the JACK driver
-(`chuck --driver:jack`) is present in the version of ChucK installed from
-the system repositories, the supporting software is not installed. You will
-need to use either ALSA or PulseAudio.
+(`chuck --driver:jack`) is installed, the supporting software is not
+installed. You will need to use either ALSA or PulseAudio.
 
-Bluetooth audio is a bit trickier from the command line. Bluetooth packages
-for ALSA and PipeWire, plus the WirePlumber and PipeWire's PulseAudio
-emulation services are all installed and should be active. See
-[BluetoothUser a2dp](https://wiki.debian.org/BluetoothUser/a2dp) for ALSA
-and [PipeWire Debian 13](https://wiki.debian.org/PipeWire#Debian_13) for
-PipeWire / PulseAudio. 
+Bluetooth audio is a bit trickier from the command line. The Bluetooth
+package for PipeWire, WirePlumber and PipeWire's PulseAudio emulation
+services are all installed and should be active after the reboot. See
+[PipeWire Debian 13](https://wiki.debian.org/PipeWire#Debian_13) for
+PipeWire documentation.
 
 From the command line, you can read the PipeWire documentation with
 

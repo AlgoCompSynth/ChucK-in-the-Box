@@ -12,6 +12,7 @@ rm --force $LOGFILE
 
 ./scripts/upgrade-system.sh
 ./scripts/apt-command-line.sh
+./scripts/apt-audio-plumbing.sh
 ./scripts/clone-ccrma-repos.sh
 ./scripts/chuck.sh
 ./scripts/default-chugins.sh
@@ -24,9 +25,6 @@ then
   ./scripts/miniaudicle.sh
   ./scripts/apt-qpwgraph.sh
 
-else
-  ./scripts/apt-audio-plumbing.sh
-
 fi
 
 echo ""
@@ -37,10 +35,8 @@ echo "Copying status query scripts to $LOCALBIN"
 cp ./scripts/audio-bom.sh $LOCALBIN
 cp ./scripts/list-alsa-cards.sh $LOCALBIN
 cp ./scripts/probe-ChucK.sh $LOCALBIN
-
-echo "Linking PipeWire and WirePlumber docs into $HOME"
-ln -sf /usr/share/doc/pipewire/html/index.html $HOME/pipewire-doc.html
-ln -sf /usr/share/doc/wireplumber/html/index.html $HOME/wireplumber-doc.html
+cp ./scripts/pipewire-doc.sh $LOCALBIN
+cp ./scripts/wireplumber-doc.sh $LOCALBIN
 
 echo "Updating apt-file database"
 sudo apt-file update \

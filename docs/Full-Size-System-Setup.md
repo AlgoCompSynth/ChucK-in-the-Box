@@ -3,10 +3,9 @@
 ## Introduction
 
 For graphical / desktop applications, ChucK-in-the-Box requires
-a full-sized system - a 64-bit Raspberry Pi with at least two
-GiB of RAM and four cores. This includes some Raspberry 3 and
-4 models and all Raspberry Pi 5s. For smaller quad-core 64-bit
-models, use the
+a full-sized system - a 64-bit Raspberry Pi with at least one
+GiB of RAM and four cores. For smaller quad-core 64-bit models,
+use the
 [Raspberry Pi Zero 2 W Setup](Raspberry-Pi-Zero-2-W-Setup.md)
 instructions.
 
@@ -20,8 +19,7 @@ On the first page, press the `Operating System` button and
 select the Raspberry Pi OS (64-bit) operating system. This
 is currently the first and recommended option for those
 systems.  ***Make sure you are flashing the most recent
-version, based on Debian `trixie`. Older versions contain
-an obsolete version of ChucK!*** 
+version, based on Debian `trixie`.
 
 Next, press the `Storage` button and select the microSD
 card. Then press the `Next` button.
@@ -79,10 +77,6 @@ This takes about 20 minutes on a Raspberry Pi 4 and about 8 on a
 Raspberry Pi 5. When it is done you will see
 
 ```
-Probe results have been saved in /home/znmeb/Logfiles/probe-ChucK.log
-
-
-** Finished Probe ChucK **
 
 Updating apt-file database
 Updating locate database
@@ -112,9 +106,9 @@ and the YouTube playlist
 will get you going. USB audio devices and HDMI audio devices should just
 just work in either ALSA (`chuck --driver:alsa`, which is the default) or
 PulseAudio (`chuck --driver:pulse`) mode. Although the JACK driver
-(`chuck --driver:jack`) is present in the version of ChucK installed from
-the system repositories, the supporting software is not installed. You will
-need to use either ALSA or PulseAudio.
+(`chuck --driver:jack`) is present in the version of ChucK installed,
+the supporting software is not installed. You will need to use either
+ALSA or PulseAudio.
 
 You can connect Bluetooth audio devices using the Bluetooth and Volume
 control tools in the upper right corner of the taskbar. Once connected,
