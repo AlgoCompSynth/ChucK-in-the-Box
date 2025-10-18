@@ -33,7 +33,6 @@ sudo apt-get install -qqy --no-install-recommends \
   usbutils \
   vim \
   wget \
-  zram-tools \
   >> $LOGFILE 2>&1
 
 echo "** Finished Command Line Packages **"
