@@ -11,8 +11,9 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get install --no-install-recommends --dry-run \
-  jackd2 \
+sudo apt-get install --no-install-recommends -qqy \
+  libldacbt-abr2 \
+  libldacbt-enc2 \
   pulseaudio \
   pulseaudio-module-bluetooth \
   rtkit \

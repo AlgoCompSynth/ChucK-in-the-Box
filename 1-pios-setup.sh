@@ -12,6 +12,9 @@ rm --force $LOGFILE
 
 ./scripts/upgrade-system.sh
 ./scripts/apt-command-line.sh
+
+echo "Following script requires your attention"
+./scripts/apt-jackd2.sh
 ./scripts/apt-audio-plumbing.sh
 ./scripts/clone-ccrma-repos.sh
 ./scripts/chuck.sh
@@ -35,8 +38,8 @@ echo "Copying status query scripts to $LOCALBIN"
 cp ./scripts/audio-bom.sh $LOCALBIN
 cp ./scripts/list-alsa-cards.sh $LOCALBIN
 cp ./scripts/probe-ChucK.sh $LOCALBIN
-cp ./scripts/pipewire-doc.sh $LOCALBIN
-cp ./scripts/wireplumber-doc.sh $LOCALBIN
+#cp ./scripts/pipewire-doc.sh $LOCALBIN
+#cp ./scripts/wireplumber-doc.sh $LOCALBIN
 
 echo "Updating apt-file database"
 sudo apt-file update \
