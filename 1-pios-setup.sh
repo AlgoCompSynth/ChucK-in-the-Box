@@ -11,9 +11,8 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 ./scripts/upgrade-system.sh
-./scripts/apt-command-line.sh
+./scripts/command-line.sh
 ./scripts/terminal-setup.sh
-./scripts/apt-audio-plumbing.sh
 ./scripts/clone-ccrma-repos.sh
 ./scripts/chuck.sh
 ./scripts/default-chugins.sh
@@ -24,7 +23,10 @@ if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
   ./scripts/fluidsynth-chugin.sh
   ./scripts/miniaudicle.sh
-  ./scripts/apt-qpwgraph.sh
+  ./scripts/qpwgraph.sh
+
+else
+  ./scripts/pulseaudio.sh
 
 fi
 
@@ -32,6 +34,7 @@ echo "Copying status query scripts to $LOCALBIN"
 cp ./scripts/audio-bom.sh $LOCALBIN
 cp ./scripts/list-alsa-cards.sh $LOCALBIN
 cp ./scripts/probe-ChucK.sh $LOCALBIN
+
 
 echo "Updating apt-file database"
 sudo apt-file update \

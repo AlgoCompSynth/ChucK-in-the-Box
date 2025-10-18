@@ -6,7 +6,7 @@ echo ""
 echo "** qpwgraph **"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/apt-qpwgraph.log
+export LOGFILE=$LOGFILES/qpwgraph.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 

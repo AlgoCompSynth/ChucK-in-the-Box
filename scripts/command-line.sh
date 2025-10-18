@@ -6,7 +6,7 @@ echo ""
 echo "** Command Line Packages **"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/apt-command-line.log
+export LOGFILE=$LOGFILES/command-line.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 

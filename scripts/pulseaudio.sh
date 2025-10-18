@@ -3,10 +3,10 @@
 set -e
 
 echo ""
-echo "** Apt Audio Plumbing **"
+echo "** PulseAudio **"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/apt-audio-plumbing.log
+export LOGFILE=$LOGFILES/pulseaudio.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
@@ -19,4 +19,4 @@ sudo apt-get install --no-install-recommends -qqy \
   rtkit \
   >> $LOGFILE 2>&1
 
-echo "** Finished Audio Plumbing **"
+echo "** Finished PulseAudio **"
