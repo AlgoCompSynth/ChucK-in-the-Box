@@ -11,11 +11,11 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get install -qqy \
-  libspa-0.2-bluetooth \
-  pipewire-doc \
-  wireplumber \
-  wireplumber-doc \
+sudo apt-get install --no-install-recommends --dry-run \
+  jackd2 \
+  pulseaudio \
+  pulseaudio-module-bluetooth \
+  rtkit \
   >> $LOGFILE 2>&1
 
 echo "** Finished Audio Plumbing **"
