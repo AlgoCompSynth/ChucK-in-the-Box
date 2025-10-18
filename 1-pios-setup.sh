@@ -30,6 +30,7 @@ else
 
 fi
 
+echo ""
 echo "Copying status query scripts to $LOCALBIN"
 cp ./scripts/audio-bom.sh $LOCALBIN
 cp ./scripts/list-alsa-cards.sh $LOCALBIN
