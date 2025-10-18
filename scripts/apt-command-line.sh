@@ -29,6 +29,7 @@ sudo apt-get install -qqy --no-install-recommends \
   time \
   tree \
   unzip \
+  upower \
   usbutils \
   vim \
   wget \
