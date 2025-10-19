@@ -106,10 +106,6 @@ typing
 and filling out the form at
 <https://github.com/AlgoCompSynth/ChucK-in-the-Box/issues/new>.
 
-## Setting the locale
-
-
-
 ## Next steps
 
 The system should be ready to use after a reboot. If you're new to ChucK,
@@ -123,20 +119,160 @@ PulseAudio (`chuck --driver:pulse`) mode. Although the JACK driver
 (`chuck --driver:jack`) is installed, the supporting software is not
 installed. You will need to use either ALSA or PulseAudio.
 
-Bluetooth audio is a bit trickier from the command line. The Bluetooth
-package for PipeWire, WirePlumber and PipeWire's PulseAudio emulation
-services are all installed and should be active after the reboot. See
-[PipeWire Debian 13](https://wiki.debian.org/PipeWire#Debian_13) for
-PipeWire documentation.
+## Bluetooth audio example
 
-From the command line, you can read the PipeWire documentation with
+### Connecting the device
 
-    lynx /usr/share/doc/pipewire/html/index.html
+The following is how I connect my Sony ULT Wear Bluetooth headset. The
+steps should be the same for other Bluetooth audio devices, but the MAC
+address and name will differ.
 
-and the WirePlumber documentation with
+1. Make sure the Bluetooth radio is unblocked.
 
-    lynx /usr/share/doc/wireplumber/html/index.html
-    
-WirePlumber can be scripted with Lua; this is probably the easiest
-way to get a reproducible Bluetooth audio setup on the Raspberry Pi
-Zero 2 W.
+```
+❯ rfkill list
+0: hci0: Bluetooth
+        Soft blocked: yes
+        Hard blocked: no
+1: phy0: Wireless LAN
+        Soft blocked: no
+        Hard blocked: no
+```
+
+On my system, the Bluetooth radio is soft blocked. To fix this, do
+
+```
+❯ sudo rfkill unblock all
+```
+
+2. Pair, connect and trust the device. First, put your device in
+pairing mode. On the ULT Wear this is done by holding the 'On' button
+until you hear "pairing". Then enter `bluetoothctl` and at the
+`[bluetoothctl]> ` prompt enter `scan on`:
+
+```
+❯ bluetoothctl
+Agent registered
+hci0 new_settings: powered bondable ssp br/edr le secure-conn 
+[CHG] Controller B8:27:EB:12:87:E8 Pairable: yes
+[bluetoothctl]> scan on
+SetDiscoveryFilter success
+Discovery started
+[CHG] Controller B8:27:EB:12:87:E8 Discovering: yes
+
+...
+
+
+[CHG] Device 40:72:18:EF:03:18 RSSI: 0xffffffc9 (-55)
+[CHG] Device 40:72:18:EF:03:18 Name: ULT WEAR
+[CHG] Device 40:72:18:EF:03:18 Alias: ULT WEAR
+[CHG] Device 40:72:18:EF:03:18 Class: 0x00240404 (2360324)
+[CHG] Device 40:72:18:EF:03:18 Icon: audio-headset
+[CHG] Device 40:72:18:EF:03:18 UUIDs: fa349b5f-8050-0030-0010-00001bbb231d
+[CHG] Device 40:72:18:EF:03:18 UUIDs: 00000000-deca-fade-deca-deafdecacaff
+```
+
+The string of bytes after the "Device" is the MAC address for my ULT Wear.
+You'll see a lot of stuff go by before and after that, but don't worry, 
+eventually you'll get another `[bluetoothctl]> ` prompt. At that point, enter
+`pair ` followed by the device MAC address. There's tab completion, so you
+only need to type the first three characters and `tab` and the rest will be
+filled in!
+
+```
+[bluetoothctl]> pair 40:72:18:EF:03:18 
+Attempting to pair with 40:72:18:EF:03:18
+[CHG] Device 40:72:18:EF:03:18 Connected: yes
+[CHG] Device 40:72:18:EF:03:18 Bonded: yes
+[CHG] Device 40:72:18:EF:03:18 Modalias: usb:v054Cp0F1Ed0207
+...
+
+[CHG] Device 40:72:18:EF:03:18 ServicesResolved: yes
+[CHG] Device 40:72:18:EF:03:18 Paired: yes
+Pairing successful
+[CHG] Device 40:72:18:EF:03:18 ServicesResolved: no
+[CHG] Device 40:72:18:EF:03:18 Connected: no
+```
+
+At the next `[bluetoothctl]> ` prompt enter `connect ` followed by the
+MAC address.
+
+```
+[bluetoothctl]> connect 40:72:18:EF:03:18 
+Attempting to connect to 40:72:18:EF:03:18
+[CHG] Device 40:72:18:EF:03:18 Connected: yes
+
+...
+
+Connection successful
+
+...
+
+```
+
+Now that you're connected, the prompt will change to the device name. In my
+case that's `[ULT WEAR]> `. Enter `trust ` and the MAC address and you're done! 
+
+```
+[ULT WEAR]> trust 40:72:18:EF:03:18 
+[CHG] Device 40:72:18:EF:03:18 Trusted: yes
+Changing 40:72:18:EF:03:18 trust succeeded
+
+...
+
+[ULT WEAR]> 
+```
+
+Type a `CTRL-D` to exit `bluetoothctl`.
+
+### Testing ChucK
+
+1. Go to the examples directory for Chapter 1 of the book referenced above.
+
+```
+pushd ~/Projects/miniAudicle/src/chuck/examples/book/digital-artists/chapter1
+```
+
+2. Type `chuck --verbose --driver:pulse ./WowExample.ck`. You'll see a
+collection of diagnostic information, and then you'll hear random short
+notes from ChucK!
+
+```
+❯ chuck --verbose --driver:pulse ./WowExample.ck 
+[chuck:5:INFORM]: setting log level to: 5 (INFORM)...
+[chuck:2:SYSTEM]: initializing chuck...
+[chuck:2:SYSTEM]:  | initializing system settings...
+[chuck:3:HERALD]:  |  | allocating buffers for 256 x 2 samples...
+[chuck:2:SYSTEM]:  | initializing virtual machine...
+[chuck:3:HERALD]:  |  | locking down special objects...
+[chuck:2:SYSTEM]:  |  | allocating shreduler...
+[chuck:2:SYSTEM]:  |  | allocating messaging buffers...
+[chuck:2:SYSTEM]:  |  | allocating globals manager...
+[chuck:2:SYSTEM]:  | initializing compiler...
+
+...
+
+[chuck:2:SYSTEM]:  | starting OTF command listener on port: 8888...
+[chuck:2:SYSTEM]:  | local time: Sat Oct 18 18:33:56 2025
+[chuck:2:SYSTEM]:  | initializing audio I/O...
+[chuck:2:SYSTEM]:  |  | real-time audio: YES
+[chuck:2:SYSTEM]:  |  | mode: CALLBACK
+[chuck:2:SYSTEM]:  |  | sample rate: 48000
+[chuck:2:SYSTEM]:  |  | buffer size: 256
+[chuck:2:SYSTEM]:  |  | num buffers: 8
+[chuck:2:SYSTEM]:  |  | adaptive block processing: 0
+[chuck:2:SYSTEM]:  |  | audio driver: Pulse
+[chuck:2:SYSTEM]:  |  | adc:1 "Monitor of ULT WEAR"
+[chuck:2:SYSTEM]:  |  | dac:2 "ULT WEAR"
+[chuck:2:SYSTEM]:  |  | channels in: 2 out: 2
+[chuck:2:SYSTEM]:  | chuck version: 1.5.5.5 (chai)
+[chuck:2:SYSTEM]: starting chuck...
+[chuck:2:SYSTEM]:  | starting compilation...
+[chuck:3:HERALD]:  |  | compiling './WowExample.ck'...
+[chuck:5:INFORM]:  |  |  | @import scanning within target 'WowExample.ck'...
+[chuck:2:SYSTEM]:  | starting real-time audio...
+[chuck:2:SYSTEM]:  | starting virtual machine...
+[chuck:2:SYSTEM]:  | starting main loop...
+```
+
+To stop the music, type `CTRL-C`.
