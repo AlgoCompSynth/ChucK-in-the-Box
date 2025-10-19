@@ -124,19 +124,23 @@ ALSA or PulseAudio.
 ### Bluetooth device setup
 
 The Raspberry Pi OS has two audio control systems available, the
-"traditional" PulseAudio and the newer PipeWire. The Raspberry Pi Zero 2
-W version of ChucK-in-the-Box only installs PulseAudio, but the desktop
-version has both, and the default is PipeWire. ChucK and miniAudicle
-do not appear to work with PipeWire for Bluetooth audio devices. So
-you'll need to switch to PulseAudio.
+"traditional" PulseAudio and the newer PipeWire. ChucK and miniAudicle
+do not appear to work with PipeWire for Bluetooth audio devices.
 
+As a result, the Raspberry Pi Zero 2 W version of ChucK-in-the-Box
+only installs PulseAudio, but the desktop version has both, and its
+default is PipeWire. And Bluetooth devices don't work by default with
+ALSA.
+
+So you'll need to use the `pulse` driver in ChucK / miniAudicle, and
+switch the audio control system on desktop installations to PulseAudio.
 In a terminal window, enter `sudo raspi-config`. Go to the "Advanced
 Options" menu, then to "Audio Config". Select "PulseAudio" and "Ok".
 Then select "Finish". It will ask you if you want to reboot. Answer "Yes".
 
 When the system comes back up:
 
-1. Put your device in pairing mode.
+1. Put your Bluetooth device in pairing mode.
 2. Click the Bluetooth icon in the upper right corner of the taskbar
 and add the device.
 3. Right-click the Speaker icon. Make sure your Bluetooth device is
