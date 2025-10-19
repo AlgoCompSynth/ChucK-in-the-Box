@@ -101,6 +101,10 @@ typing
 and filling out the form at
 <https://github.com/AlgoCompSynth/ChucK-in-the-Box/issues/new>.
 
+Raspberry Pi OS ships with the locale set to English Great Britain (en_GB).
+If that's where you are, you don't need to change it. But if you're anywhere
+else, follow the instructions the script displays.
+
 ## Next steps
 
 The system should be ready to use after a reboot. If you're new to ChucK,
