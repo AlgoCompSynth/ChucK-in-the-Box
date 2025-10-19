@@ -85,12 +85,15 @@ This takes about 40 minutes. When it is done you will see
 
 ```
 
-Updating apt-file database
-Updating locate database
+Install finished! Do
 
-Reboot to reset audio daemons
+    sudo raspi-config
+
+and set your locale in the 'Localisation Options' menu.
+Then 'Finish' and reboot to start the audio daemons.
 
 * Finished PiOS Host Setup *
+
 ```
 
 If you don't see that, an error has occurred. You can open an issue by
@@ -102,6 +105,10 @@ typing
 
 and filling out the form at
 <https://github.com/AlgoCompSynth/ChucK-in-the-Box/issues/new>.
+
+## Setting the locale
+
+
 
 ## Next steps
 

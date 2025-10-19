@@ -46,6 +46,11 @@ sudo updatedb \
   >> $LOGFILE 2>&1
 
 echo ""
-echo "Reboot to reset audio daemons"
+echo "Install finished! Do"
+echo ""
+echo "    sudo raspi-config"
+echo ""
+echo "and set your locale in the 'Localisation Options' menu."
+echo "Then 'Finish' and reboot to start the audio daemons."
 echo ""
 echo "* Finished PiOS Host Setup *" | tee --append $LOGFILE

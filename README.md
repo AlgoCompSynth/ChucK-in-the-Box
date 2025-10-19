@@ -7,10 +7,11 @@ for 64-bit Raspberry Pi computers. Any 64-bit Raspberry Pi (Raspberry
 Pi Zero 2 W, 4 or 5) can be used. It might also run on the Raspberry
 Pi 3B+ but I have no plans to get one to test.
 
-ChucK-in-the-Box contains
+ChucK-in-the-Box for the Raspberry Pi Zero 2 W is built on the
+command-line Raspberry Pi OS Lite and contains
 
 1. the [ChucK](https://chuck.stanford.edu/)
-computer music language. The current version is 1.5.5.5 built from
+audio programming language. The current version is 1.5.5.5 built from
 [GitHub source](https://github.com/ccrma/chuck).
 repositories,
 2. the [Faust](https://faust.grame.fr/)
@@ -19,13 +20,10 @@ repositories,
 3. the default [ChuGins](https://github.com/ccrma/chugins),
 the Faust and WarpBuf ChuGins, and
 4. Audio tools:
-    - [WirePlumber](https://pipewire.pages.freedesktop.org/wireplumber/#),
-    - [PipeWire](https://pipewire.org/), PipeWire Bluetooth, PipeWire PulseAudio emulation,
+    - [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/),
     - [rtkit](https://venam.net/blog/unix/2025/03/24/rtkit.html), and
     - [ALSA](https://www.alsa-project.org/wiki/Main_Page).
 
-This is the minimum version, designed for command line usage on systems
-as small as the Raspberry Pi Zero 2 W running Raspberry Pi OS Lite.
 On larger systems - at least one GiB of RAM and four cores, running the
 Raspberry Pi OS Desktop - ChucK-in-the-Box also contains
 

@@ -12,7 +12,4 @@ echo "Setting base configuration files"
 cp ./configs/bash_aliases $HOME/.bash_aliases; source ./configs/bash_aliases
 cp ./configs/vimrc $HOME/.vimrc
 
-./scripts/nerd_fonts.sh
-./scripts/starship.sh
-
 echo "** Finished Terminal Setup **"
