@@ -34,7 +34,7 @@ on a Windows, MacOS or Linux computer. Use the
 On the first page, press the `Operating System` button and
 select the Raspberry Pi OS Lite (64-bit) operating system .
 ***Make sure you are flashing the most recent version, based
-on Debian `trixie`.
+on Debian `trixie`.***
 
 Next, press the `Storage` button and select the microSD
 card. Then press the `Next` button.
