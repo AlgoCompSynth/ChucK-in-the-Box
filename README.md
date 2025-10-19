@@ -67,4 +67,4 @@ Pi Zero 2 W.
  
 ## [Raspberry Pi Zero 2 W Setup](docs/Raspberry-Pi-Zero-2-W-Setup.md)
 
-## [Full-Size System Setup](docs/Full-Size-System-Setup.md)
+## [Desktop System Setup](docs/Desktop-System-Setup.md)

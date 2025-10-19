@@ -1,4 +1,4 @@
-# Full-Sized System Setup
+# Desktop System Setup
 
 ## Introduction
 
@@ -19,7 +19,7 @@ On the first page, press the `Operating System` button and
 select the Raspberry Pi OS (64-bit) operating system. This
 is currently the first and recommended option for those
 systems.  ***Make sure you are flashing the most recent
-version, based on Debian `trixie`.
+version, based on Debian `trixie`.***
 
 Next, press the `Storage` button and select the microSD
 card. Then press the `Next` button.
@@ -52,11 +52,14 @@ monitor and mouse or remote desktop access.
 
 The instructions for setting up remote access are here:
 <https://www.raspberrypi.com/documentation/computers/remote-access.html>.
-In the remainder of this guide, I will only be using command-line access
-via `ssh`. You can also do this from the terminal application of
-the Raspberry Pi desktop.
 
 ## Installing
+
+You can do the installation either
+
+- via an `ssh` command-line connection,
+- in a terminal window on a keyboard / monitor / mouse system, or
+- in a terminal window in a remote access session.
 
 First, clone the ChucK-in-the-Box repository:
 
@@ -78,10 +81,12 @@ Raspberry Pi 5. When it is done you will see
 
 ```
 
-Updating apt-file database
-Updating locate database
+Install finished! Do
 
-Reboot to reset audio daemons
+    sudo raspi-config
+
+and set your locale in the 'Localisation Options' menu.
+Then 'Finish' and reboot to start the audio daemons.
 
 * Finished PiOS Host Setup *
 ```
@@ -110,7 +115,51 @@ PulseAudio (`chuck --driver:pulse`) mode. Although the JACK driver
 the supporting software is not installed. You will need to use either
 ALSA or PulseAudio.
 
-You can connect Bluetooth audio devices using the Bluetooth and Volume
-control tools in the upper right corner of the taskbar. Once connected,
-do `chuck --probe --driver:pulse` in a terminal window to find the
-device number.
+## Testing miniAudicle
+
+### Bluetooth device setup
+
+The Raspberry Pi OS has two audio control systems available, the
+"traditional" PulseAudio and the newer PipeWire. The Raspberry Pi Zero 2
+W version of ChucK-in-the-Box only installs PulseAudio, but the desktop
+version has both, and the default is PipeWire. ChucK and miniAudicle
+do not appear to work with PipeWire for Bluetooth audio devices. So
+you'll need to switch to PulseAudio.
+
+In a terminal window, enter `sudo raspi-config`. Go to the "Advanced
+Options" menu, then to "Audio Config". Select "PulseAudio" and "Ok".
+Then select "Finish". It will ask you if you want to reboot. Answer "Yes".
+
+When the system comes back up:
+
+1. Put your device in pairing mode.
+2. Click the Bluetooth icon in the upper right corner of the taskbar
+and add the device.
+3. Right-click the Speaker icon. Make sure your Bluetooth device is
+selected and the device profile is set to "High Fidelity Playback".
+Then left-click the Speaker icon and set the volume.
+
+### Running miniAudicle
+
+The install process adds miniAudicle to the menu under the "Sound &
+Video" category. So you can start miniAudicle from the menu. You can
+also right-click on the menu entry and add the miniAudicle to your
+desktop or as a launcher on the taskbar.
+
+1. Start miniAudicle. You will get three windows: a virtual machine
+control window, a console log window, and a ChucK code editor window;
+the editor window is the main one. Start the virtual machine with the
+virtual machine control window, then move it and the console log window
+out of the way.
+
+2. In the main miniAudicle window, go to "Edit -> Preferences".
+On the "Audio" tab, select the "Pulse" driver and enter your audio
+device settings. Then press "OK".
+
+3. In the "File" menu, select "Open". You will be in a file browser.
+You should be in your home directory. There will be a file
+"WowExample.ck". This is a copy of an example from the book referenced
+above. Open the file.
+
+4. Press the "Add Shred" button and the music will start. The first
+time you do this, there may be a startup lag.

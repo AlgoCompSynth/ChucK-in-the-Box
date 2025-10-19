@@ -8,6 +8,7 @@ export MINIAUDICLE_PATH=$PROJECTS/miniAudicle/src
 export CHUCK_PATH=$MINIAUDICLE_PATH/chuck/src
 export CHUGINS_PATH=$MINIAUDICLE_PATH/chugins
 export CHUGINS_LIB_PATH=/usr/local/lib/chuck
+export WOW_EXAMPLE=$HOME/Projects/miniAudicle/src/chuck/examples/book/digital-artists/chapter1/WowExample.ck
 export DEBIAN_FRONTEND=noninteractive
 
 export NPROC=$(nproc)

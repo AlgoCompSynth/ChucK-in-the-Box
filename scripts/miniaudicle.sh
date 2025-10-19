@@ -36,4 +36,19 @@ pushd $MINIAUDICLE_PATH > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
+# https://forums.raspberrypi.com/viewtopic.php?t=110098
+echo "Adding miniAudicle to the menu and Desktop" | tee --append $LOGFILE
+sudo mkdir --parents \
+  /usr/local/share/applications \
+  /usr/local/share/icons
+sudo cp \
+  $HOME/Projects/miniAudicle/installer/mac/resources/chuck_logo.png \
+  /usr/local/share/icons/
+sudo cp \
+  ./configs/miniAudicle.desktop \
+  /usr/local/share/applications/
+cp \
+  ./configs/miniAudicle.desktop \
+  $HOME/Desktop/
+
 echo "** Finished miniAudicle **" | tee --append $LOGFILE

@@ -36,4 +36,7 @@ pushd $CHUCK_PATH > /dev/null
     >> $LOGFILE 2>&1
 popd > /dev/null
 
+echo "Copying 'WowExample.ck' to $HOME" | tee --append $LOGFILE
+cp $WOW_EXAMPLE $HOME/
+
 echo "** Finished ChucK **" | tee --append $LOGFILE
