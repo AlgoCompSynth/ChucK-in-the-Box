@@ -11,7 +11,7 @@ ChucK-in-the-Box for the Raspberry Pi Zero 2 W is built on the
 command-line Raspberry Pi OS Lite and contains
 
 1. the [ChucK](https://chuck.stanford.edu/)
-audio programming language. The current version is 1.5.5.5 built from
+audio programming language. The current version is 1.5.5.6 built from
 [GitHub source](https://github.com/ccrma/chuck).
 repositories,
 2. the [Faust](https://faust.grame.fr/)
