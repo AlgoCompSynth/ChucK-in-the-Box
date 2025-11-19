@@ -76,7 +76,7 @@ cd ChucK-in-the-Box
 ./1-pios-setup.sh
 ```
 
-This takes about 20 minutes on a Raspberry Pi 4 and about 8 on a
+This takes about 20 minutes on a Raspberry Pi 4 and about 9 on a
 Raspberry Pi 5. When it is done you will see
 
 ```
