@@ -1,0 +1,130 @@
+● xenakis
+    State: running
+    Units: 414 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 0 units
+    Since: Wed 2025-11-19 10:43:31 PST; 54min ago
+  systemd: 257.8-1~deb13u2
+  Tainted: unmerged-bin
+   CGroup: /
+           ├─init.scope
+           │ └─1 /sbin/init splash
+           ├─system.slice
+           │ ├─ModemManager.service
+           │ │ └─881 /usr/sbin/ModemManager
+           │ ├─NetworkManager.service
+           │ │ └─842 /usr/sbin/NetworkManager --no-daemon
+           │ ├─accounts-daemon.service
+           │ │ └─735 /usr/libexec/accounts-daemon
+           │ ├─avahi-daemon.service
+           │ │ ├─737 "avahi-daemon: running [xenakis.local]"
+           │ │ └─745 "avahi-daemon: chroot helper"
+           │ ├─bluetooth.service
+           │ │ └─738 /usr/libexec/bluetooth/bluetoothd
+           │ ├─cron.service
+           │ │ └─884 /usr/sbin/cron -f
+           │ ├─cups-browsed.service
+           │ │ └─1507 /usr/sbin/cups-browsed
+           │ ├─cups.service
+           │ │ └─1004 /usr/sbin/cupsd -l
+           │ ├─dbus.service
+           │ │ └─741 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+           │ ├─lightdm.service
+           │ │ └─1013 /usr/sbin/lightdm
+           │ ├─nfs-blkmap.service
+           │ │ └─886 /usr/sbin/blkmapd
+           │ ├─polkit.service
+           │ │ └─744 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+           │ ├─rpcbind.service
+           │ │ └─681 /usr/sbin/rpcbind -f -w
+           │ ├─ssh.service
+           │ │ └─1016 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+           │ ├─system-serial\x2dgetty.slice
+           │ │ └─serial-getty@ttyAMA10.service
+           │ │   └─1033 /sbin/agetty -o "-- \\u" --noreset --noclear --keep-baud 115200,57600,38400,9600 - vt220
+           │ ├─systemd-journald.service
+           │ │ └─340 /usr/lib/systemd/systemd-journald
+           │ ├─systemd-logind.service
+           │ │ └─757 /usr/lib/systemd/systemd-logind
+           │ ├─systemd-timesyncd.service
+           │ │ └─391 /usr/lib/systemd/systemd-timesyncd
+           │ ├─systemd-udevd.service
+           │ │ └─udev
+           │ │   └─400 /usr/lib/systemd/systemd-udevd
+           │ ├─udisks2.service
+           │ │ └─764 /usr/libexec/udisks2/udisksd
+           │ └─wpa_supplicant.service
+           │   └─843 /usr/sbin/wpa_supplicant -u -s -O "DIR=/run/wpa_supplicant GROUP=netdev"
+           └─user.slice
+             └─user-1000.slice
+               ├─session-1.scope
+               │ ├─1032 lightdm --session-child 8 13
+               │ ├─1064 /usr/bin/labwc -m
+               │ ├─1120 /usr/bin/ssh-agent /usr/bin/labwc-pi
+               │ ├─1178 /bin/sh /usr/bin/lwrespawn /usr/bin/pcmanfm-pi
+               │ ├─1179 /bin/sh /usr/bin/lwrespawn /usr/bin/wf-panel-pi
+               │ ├─1180 /usr/bin/kanshi
+               │ ├─1227 /usr/libexec/polkit-mate-authentication-agent-1
+               │ ├─1229 /usr/bin/wf-panel-pi
+               │ ├─1230 /bin/sh /usr/bin/pcmanfm-pi
+               │ ├─1233 systemd-inhibit --what=handle-power-key gtk-nop
+               │ ├─1234 pcmanfm --desktop
+               │ ├─1236 gtk-nop
+               │ ├─2570 /usr/lib/menu-cache/menu-cached /run/user/1000/menu-cached-:0
+               │ ├─3299 /usr/bin/x-terminal-emulator
+               │ ├─3311 bash
+               │ └─4412 systemctl status
+               ├─session-3.scope
+               │ ├─1031 "login -- znmeb"
+               │ └─1483 -bash
+               ├─session-5.scope
+               │ ├─2210 "sshd-session: znmeb [priv]"
+               │ ├─2217 "sshd-session: znmeb@pts/0"
+               │ └─2218 -bash
+               └─user@1000.service
+                 ├─app.slice
+                 │ ├─mpris-proxy.service
+                 │ │ └─1079 /usr/bin/mpris-proxy
+                 │ ├─rpi-connect-wayvnc.service
+                 │ │ └─2248 /usr/bin/wayvnc --config /etc/rpi-connect/wayvnc.config --render-cursor --unix-socket --socket=/run/user/1000/rpi-connect-wayvnc-ctl.sock /run/user/1000/rpi-connect-wayvnc.sock
+                 │ ├─rpi-connect.service
+                 │ │ └─2246 /usr/bin/rpi-connectd -socket /run/user/1000/rpi-connect-wayvnc.sock
+                 │ ├─xdg-desktop-portal-gtk.service
+                 │ │ └─1332 /usr/libexec/xdg-desktop-portal-gtk
+                 │ └─xdg-desktop-portal-wlr.service
+                 │   └─1366 /usr/libexec/xdg-desktop-portal-wlr
+                 ├─init.scope
+                 │ ├─1041 /usr/lib/systemd/systemd --user
+                 │ └─1043 "(sd-pam)"
+                 └─session.slice
+                   ├─dbus.service
+                   │ └─1063 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+                   ├─filter-chain.service
+                   │ └─1066 /usr/bin/pipewire -c filter-chain.conf
+                   ├─gvfs-afc-volume-monitor.service
+                   │ └─1356 /usr/libexec/gvfs-afc-volume-monitor
+                   ├─gvfs-daemon.service
+                   │ ├─1275 /usr/libexec/gvfsd
+                   │ ├─1285 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+                   │ └─1367 /usr/libexec/gvfsd-trash --spawner :1.19 /org/gtk/gvfs/exec_spaw/0
+                   ├─gvfs-goa-volume-monitor.service
+                   │ └─1338 /usr/libexec/gvfs-goa-volume-monitor
+                   ├─gvfs-gphoto2-volume-monitor.service
+                   │ └─1348 /usr/libexec/gvfs-gphoto2-volume-monitor
+                   ├─gvfs-mtp-volume-monitor.service
+                   │ └─1333 /usr/libexec/gvfs-mtp-volume-monitor
+                   ├─gvfs-udisks2-volume-monitor.service
+                   │ └─1311 /usr/libexec/gvfs-udisks2-volume-monitor
+                   ├─pipewire-pulse.service
+                   │ └─1072 /usr/bin/pipewire-pulse
+                   ├─pipewire.service
+                   │ └─1065 /usr/bin/pipewire
+                   ├─wireplumber.service
+                   │ └─1071 /usr/bin/wireplumber
+                   ├─xdg-desktop-portal.service
+                   │ └─1301 /usr/libexec/xdg-desktop-portal
+                   ├─xdg-document-portal.service
+                   │ ├─1316 /usr/libexec/xdg-document-portal
+                   │ └─1325 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+                   └─xdg-permission-store.service
+                     └─1310 /usr/libexec/xdg-permission-store
