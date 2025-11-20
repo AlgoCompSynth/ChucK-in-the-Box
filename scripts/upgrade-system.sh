@@ -17,7 +17,7 @@ sudo apt-get update -qq \
 yes '' | sudo apt-get -qqy \
   -o Dpkg::Options::="--force-confdef" \
   -o Dpkg::Options::="--force-confold" \
-  upgrade \
+  dist-upgrade \
   >> $LOGFILE 2>&1
 sudo apt-get -qqy autoremove \
   >> $LOGFILE 2>&1
