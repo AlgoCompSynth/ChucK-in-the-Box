@@ -16,12 +16,11 @@ rm --force $LOGFILE
 ./scripts/clone-ccrma-repos.sh
 ./scripts/chuck.sh
 ./scripts/default-chugins.sh
-./scripts/warpbuf-chugin.sh
 ./scripts/faust-chugin.sh
+./scripts/warpbuf-chugin.sh
 
 if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
-  ./scripts/fluidsynth-chugin.sh
   ./scripts/miniaudicle.sh
   ./scripts/qpwgraph.sh
 
