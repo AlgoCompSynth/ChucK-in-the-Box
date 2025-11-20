@@ -28,11 +28,9 @@ On larger systems - at least one GiB of RAM and four cores, running the
 Raspberry Pi OS Desktop - ChucK-in-the-Box also contains
 
 1. The [miniAudicle](https://audicle.cs.princeton.edu/mini/)
-integrated development environment for ChucK,
-2. the [FluidSynth](https://www.fluidsynth.org/) and
-[Polyphone](https://www.polyphone.io/en)
-[SoundFont](https://en.wikipedia.org/wiki/SoundFont) synthesis tools, and
-3. the FluidSynth ChuGin.
+integrated development environment for ChucK, and
+2. the [qpwgraph](https://gitlab.freedesktop.org/rncbc/qpwgraph)
+PipeWire graph Qt GUI interface.
 
 ## Audio Hardware Notes
  
