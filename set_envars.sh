@@ -1,4 +1,5 @@
 export CHUCK_SOURCE_VERSION=chuck-1.5.5.6
+export CHUGL_SOURCE_VERSION=v0.2.7
 export CHUCK_DRIVERS="linux-all"
 export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES
 export PROJECTS=$HOME/Projects; mkdir --parents $PROJECTS
