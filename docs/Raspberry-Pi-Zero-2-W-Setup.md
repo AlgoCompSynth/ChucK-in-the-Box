@@ -190,7 +190,7 @@ The string of bytes after the "Device" is the MAC address for my ULT Wear.
 You'll see messages go by before and after that, but don't worry;
 eventually you'll get another `[bluetoothctl]> ` prompt. At that point,
 enter `pair ` followed by the device MAC address. There's tab completion,
-so you only need to type the first three characters and `tab` and the rest
+so you only need to type the first few characters and `tab` and the rest
 will be filled in!
 
 ```
