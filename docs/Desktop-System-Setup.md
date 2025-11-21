@@ -130,13 +130,17 @@ desktop or as a launcher on the taskbar.
 
 1. Start miniAudicle. You will get three windows: a virtual machine
 control window, a console log window, and a ChucK code editor window;
-the editor window is the main one. Start the virtual machine with the
-virtual machine control window, then move it and the console log window
-out of the way.
+the editor window is the main one. 
 
-2. In the main miniAudicle window, go to "Edit -> Preferences".
-On the "Audio" tab, select the "Pulse" driver and enter your audio
-device settings. Then press "OK".
+    In the main "miniAudicle" window, go to "Edit -> Preferences".
+    On the "Audio" tab, select the "Pulse" driver and enter your audio
+    device settings. On the "ChuGins" tab, press the "+" button and add
+    `/usr/local/lib/chuck`. Press the "Probe ChuGins" button and verify
+    in the "Console Log" window that the ChuGins are loaded. Then press
+    "OK" in the "Preferences" window.
+
+2. Start the virtual machine in the "Virtual Machine" control window,
+then move it and the console log window out of the way.
 
 3. In the "File" menu, select "Open". You will be in a file browser.
 You should be in your home directory. There will be a file
