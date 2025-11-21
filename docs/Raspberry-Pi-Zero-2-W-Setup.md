@@ -258,7 +258,8 @@ At the next prompt, enter `quit`.
 ```
 [ULT WEAR]> quit
 
-> 
+>
+```
 
 ### Choosing a device for ChucK
 
