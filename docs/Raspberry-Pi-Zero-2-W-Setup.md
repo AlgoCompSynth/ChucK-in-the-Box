@@ -23,10 +23,10 @@ Pi Zero 2 W differs from the Raspberry Pi 4 and 5 versions:
 
 - The Zero 2 W is based on the PiOS Lite version - there is
 no desktop,
-- miniAudicle, FluidSynth, the FluidSynth ChuGin and other SoundFont
-tools are only supported on the larger Pis, and
-- only ALSA and PulseAudio are supported - PipeWire and WirePlumber
-are not installed.
+- miniAudicle and qpwgraph are only supported on the larger
+Pis, and
+- only ALSA and PulseAudio are supported - JACK, PipeWire and
+WirePlumber are not installed.
 
 ## Flashing the microSD card
 
@@ -65,7 +65,7 @@ install ChucK-in-the-Box, log in with `ssh` and type:
 
 ```
 sudo apt update
-sudo apt full-upgrade -y
+sudo apt dist-upgrade -y
 sudo apt install -y git
 ```
 
