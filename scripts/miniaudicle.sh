@@ -37,15 +37,20 @@ pushd $MINIAUDICLE_PATH > /dev/null
 popd > /dev/null
 
 # https://forums.raspberrypi.com/viewtopic.php?t=110098
-echo "Adding miniAudicle to the 'Sound and Video' menu" | tee --append $LOGFILE
-sudo mkdir --parents \
-  /usr/local/share/applications \
-  /usr/local/share/icons
-sudo cp \
-  $HOME/Projects/miniAudicle/installer/mac/resources/chuck_logo.png \
-  /usr/local/share/icons/
-sudo cp \
-  ./configs/miniAudicle.desktop \
-  /usr/local/share/applications/
+echo "Testing for Distrobox"
+if [[ ! -x "/usr/bin/distrobox-export" ]]
+then
+  echo "Adding miniAudicle to the 'Sound and Video' menu" | tee --append $LOGFILE
+  sudo mkdir --parents \
+    /usr/local/share/applications \
+    /usr/local/share/icons
+  sudo cp \
+    $HOME/Projects/miniAudicle/installer/mac/resources/chuck_logo.png \
+    /usr/local/share/icons/
+  sudo cp \
+    ./configs/miniAudicle.desktop \
+    /usr/local/share/applications/
+
+fi
 
 echo "** Finished miniAudicle **" | tee --append $LOGFILE
