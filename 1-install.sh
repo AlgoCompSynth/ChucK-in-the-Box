@@ -22,6 +22,7 @@ rm --force $LOGFILE
 if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
   ./scripts/miniaudicle.sh
+  ./scripts/chugl.sh
   ./scripts/qpwgraph.sh
 
 else
