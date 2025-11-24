@@ -29,6 +29,9 @@ distrobox create \
   --home $DBX_CONTAINER_DIRECTORY \
   --additional-packages "keyboard-configuration libicu-dev lsb-release"
 
+echo "Initializing .ssh in container"
+cp -rp $HOME/.ssh $DBX_CONTAINER_DIRECTORY
+
 echo "Populating distrobox $DBX_CONTAINER_NAME"
 distrobox enter $DBX_CONTAINER_NAME -- ./1-install.sh
 
