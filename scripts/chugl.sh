@@ -33,6 +33,7 @@ pushd $CHUGL_PATH > /dev/null
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL \
     >> $LOGFILE 2>&1
   echo "Installing ChuGL" | tee --append $LOGFILE
+  sudo mkdir --parents $CHUGINS_LIB_PATH
   sudo cp ChuGL.chug $CHUGINS_LIB_PATH
 popd > /dev/null
 

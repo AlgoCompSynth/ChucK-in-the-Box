@@ -31,6 +31,9 @@ distrobox create \
   --additional-packages "keyboard-configuration libicu-dev lsb-release" \
   --additional-packages "libffmpeg-nvenc-dev libnvidia-egl-wayland-dev libnvidia-egl-wayland1 nvidia-vaapi-driver"
 
+echo "Initializing .ssh in container"
+cp -rp $HOME/.ssh $DBX_CONTAINER_DIRECTORY
+
 echo "Populating distrobox $DBX_CONTAINER_NAME"
 distrobox enter $DBX_CONTAINER_NAME -- ./1-install.sh
 
