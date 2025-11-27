@@ -12,7 +12,7 @@ pushd $HOME/Projects > /dev/null
   git clone https://github.com/89luca89/distrobox.git \
     >> $LOGFILE 2>&1
   cd distrobox
-  ./install \
+  sudo ./install \
     >> $LOGFILE 2>&1
 popd > /dev/null
 

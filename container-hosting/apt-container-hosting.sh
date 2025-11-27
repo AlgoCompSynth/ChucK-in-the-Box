@@ -3,7 +3,7 @@
 set -e
 
 echo ""
-echo "* PiOS Container Hosting *"
+echo "* Apt Container Hosting *"
 
 mkdir --parents $HOME/Logfiles
 export LOGFILE=$HOME/Logfiles/2-pios-container-hosting.log
@@ -18,4 +18,4 @@ sudo apt-get install -qqy \
 
 ./distrobox.sh
 
-echo "* Finished PiOS Container Hosting *"
+echo "* Finished Apt Container Hosting *"
