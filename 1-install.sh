@@ -3,10 +3,10 @@
 set -e
 
 echo ""
-echo "* PiOS Host Setup *"
+echo "* Install Packages *"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/1-pios-setup.log
+export LOGFILE=$LOGFILES/1-install.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
@@ -53,4 +53,4 @@ echo ""
 echo "and set your locale in the 'Localisation Options' menu."
 echo "Then 'Finish' and reboot to start the audio daemons."
 echo ""
-echo "* Finished PiOS Host Setup *" | tee --append $LOGFILE
+echo "* Finished Install Packages *" | tee --append $LOGFILE
