@@ -25,8 +25,8 @@ Pi Zero 2 W differs from the Raspberry Pi 4 and 5 versions:
 no desktop,
 - miniAudicle and qpwgraph are only supported on the larger
 Pis, and
-- only ALSA and PulseAudio are supported - JACK, PipeWire and
-WirePlumber are not installed.
+- only `alsa` and `pulse` ChucK drivers are supported - `jack`
+will not work.
 
 ## Flashing the microSD card
 
@@ -81,7 +81,7 @@ Finally, run the install scripts:
 
 ```
 cd ChucK-in-the-Box
-./1-pios-setup.sh
+./1-install.sh
 ```
 
 This takes about 40 minutes. When it is done you will see
