@@ -1,0 +1,3 @@
+[submodule "container-utilities"]
+	path = container-utilities
+	url = https://github.com/AlgoCompSynth/container-utilities.git
