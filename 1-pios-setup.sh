@@ -19,6 +19,7 @@ rm --force $LOGFILE
 ./scripts/faust-chugin.sh
 ./scripts/warpbuf-chugin.sh
 ./scripts/fluidsynth-chugin.sh
+./scripts/chump.sh
 
 if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then

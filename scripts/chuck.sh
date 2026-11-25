@@ -11,8 +11,8 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 pushd $CHUCK_PATH > /dev/null
-  echo "Checking out $CHUCK_SOURCE_VERSION"
-  git checkout $CHUCK_SOURCE_VERSION \
+  echo "Checking out $CHUCK_VERSION"
+  git checkout $CHUCK_VERSION \
     >> $LOGFILE 2>&1
   echo "Building ChucK" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \

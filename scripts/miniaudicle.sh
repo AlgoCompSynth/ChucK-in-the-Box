@@ -24,7 +24,6 @@ export QT_SELECT=qt6
 export PATH=/usr/lib/qt6/bin:$PATH
 
 pushd $MINIAUDICLE_PATH > /dev/null
-  export CHUCK_VERSION="chuck-$(chuck --version 2>&1 | grep version | sed 's/^.*: //' | sed 's/ .*$//')"
   echo "Checking out $CHUCK_VERSION"
   git checkout "$CHUCK_VERSION" \
   >> $LOGFILE 2>&1
