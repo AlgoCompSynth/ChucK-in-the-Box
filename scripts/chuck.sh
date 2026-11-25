@@ -15,6 +15,7 @@ pushd $CHUCK_PATH > /dev/null
   git checkout $CHUCK_VERSION \
     >> $LOGFILE 2>&1
   echo "Building ChucK" | tee --append $LOGFILE
+  cd src
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
     >> $LOGFILE 2>&1
   echo "Installing ChucK" | tee --append $LOGFILE

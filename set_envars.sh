@@ -1,5 +1,6 @@
 export CHUCK_VERSION=chuck-1.5.5.9
 export CHUMP_VERSION=v0.0.4
+export CHUGL_VERSION=v0.3.1
 export CHUCK_DRIVERS="linux-alsa"
 
 export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES
@@ -8,11 +9,13 @@ export LOCALBIN=$HOME/.local/bin; mkdir --parents $LOCALBIN
 
 export MINIAUDICLE_URL=https://github.com/ccrma/miniAudicle.git
 export MINIAUDICLE_PATH=$PROJECTS/miniAudicle/src
-export CHUCK_PATH=$MINIAUDICLE_PATH/chuck/src
+export CHUCK_PATH=$MINIAUDICLE_PATH/chuck
 export CHUGINS_PATH=$MINIAUDICLE_PATH/chugins
 export CHUGINS_LIB_PATH=/usr/local/lib/chuck
 export CHUMP_PATH=$MINIAUDICLE_PATH/chump
 export WOW_EXAMPLE=$HOME/Projects/miniAudicle/src/chuck/examples/book/digital-artists/chapter1/WowExample.ck
+export CHUGL_URL=https://github.com/ccrma/chugl.git
+export CHUGL_PATH=$PROJECTS/chugl
 
 export DEBIAN_FRONTEND=noninteractive
 
