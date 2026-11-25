@@ -18,20 +18,16 @@ rm --force $LOGFILE
 ./scripts/default-chugins.sh
 ./scripts/faust-chugin.sh
 ./scripts/warpbuf-chugin.sh
+./scripts/fluidsynth-chugin.sh
 
 if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
 then
   ./scripts/miniaudicle.sh
-  ./scripts/qpwgraph.sh
-
-else
-  ./scripts/pulseaudio.sh
 
 fi
 
 echo ""
 echo "Copying status query scripts to $LOCALBIN"
-cp ./scripts/audio-bom.sh $LOCALBIN
 cp ./scripts/list-alsa-cards.sh $LOCALBIN
 cp ./scripts/probe-ChucK.sh $LOCALBIN
 
@@ -44,12 +40,5 @@ echo "Updating locate database"
 sudo updatedb \
   >> $LOGFILE 2>&1
 
-echo ""
-echo "Install finished! Do"
-echo ""
-echo "    sudo raspi-config"
-echo ""
-echo "and set your locale in the 'Localisation Options' menu."
-echo "Then 'Finish' and reboot to start the audio daemons."
 echo ""
 echo "* Finished PiOS Host Setup *" | tee --append $LOGFILE
