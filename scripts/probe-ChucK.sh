@@ -10,8 +10,17 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 echo "" | tee --append $LOGFILE
-echo "chuck --probe --driver:alsa" | tee --append $LOGFILE
-chuck --probe --driver:alsa 2>&1 | tee --append $LOGFILE
+if [[ "$(chuck --help 2>&1 | grep PulseAudio | wc -l)" -gt "0" ]]
+then
+    echo "chuck --probe --driver:pulse" | tee --append $LOGFILE
+    chuck --probe --driver:pulse 2>&1 | tee --append $LOGFILE
+
+
+else
+    echo "chuck --probe --driver:alsa" | tee --append $LOGFILE
+    chuck --probe --driver:alsa 2>&1 | tee --append $LOGFILE
+
+fi
 
 echo "" | tee --append $LOGFILE
 echo "chuck --chugin-probe" | tee --append $LOGFILE

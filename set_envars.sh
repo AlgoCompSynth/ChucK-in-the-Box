@@ -1,7 +1,6 @@
 export CHUCK_VERSION=chuck-1.5.5.9
 export CHUMP_VERSION=v0.0.4
 export CHUGL_VERSION=v0.3.1
-export CHUCK_DRIVERS="linux-alsa"
 
 export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES
 export PROJECTS=$HOME/Projects; mkdir --parents $PROJECTS
@@ -25,9 +24,11 @@ if [[ "$RAM_KBYTES" -lt "750000" || "$NPROC" -lt "4" ]]
 then
   export MAKE_PARALLEL_LEVEL="1"
   export CMAKE_PARALLEL_LEVEL="1"
+  export CHUCK_DRIVERS="linux-alsa"
 
 else
   export MAKE_PARALLEL_LEVEL=$NPROC
   export CMAKE_PARALLEL_LEVEL=$NPROC
+  export CHUCK_DRIVERS="linux-alsa linux-pulse"
 
 fi

@@ -16,6 +16,7 @@ sudo apt-get install -qqy --no-install-recommends \
   apt-file \
   bash-completion \
   bison \
+  bluez-alsa-utils \
   build-essential \
   cmake \
   curl \
