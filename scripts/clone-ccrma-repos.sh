@@ -26,11 +26,6 @@ pushd $PROJECTS > /dev/null
   /usr/bin/time git clone --recurse-submodules --branch $CHUGL_VERSION $CHUGL_URL \
     >> $LOGFILE 2>&1
 
-  echo "Cloning $CHUMP_URL" | tee --append $LOGFILE
-  rm -fr $CHUMP_PATH
-  /usr/bin/time git clone --recurse-submodules --branch $CHUMP_VERSION $CHUMP_URL \
-    >> $LOGFILE 2>&1
-
 popd > /dev/null
 
 echo "** Finished Clone CCRMA Repos **" | tee --append $LOGFILE

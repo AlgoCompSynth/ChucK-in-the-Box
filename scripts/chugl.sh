@@ -43,9 +43,4 @@ pushd $CHUGL_PATH/src > /dev/null
   sudo cp ChuGL.chug /usr/local/lib/chuck/
 popd > /dev/null
 
-echo "" >> $LOGFILE
-echo "ldconfig" | tee --append $LOGFILE
-sudo /sbin/ldconfig --verbose \
-  >> $LOGFILE 2>&1
-
 echo "** Finished ChuGL **"

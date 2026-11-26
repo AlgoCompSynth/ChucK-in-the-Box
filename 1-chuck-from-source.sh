@@ -19,7 +19,6 @@ rm --force $LOGFILE
 ./scripts/faust-chugin.sh
 ./scripts/warpbuf-chugin.sh
 ./scripts/fluidsynth-chugin.sh
-./scripts/chump.sh
 ./scripts/chugl.sh
 
 echo ""

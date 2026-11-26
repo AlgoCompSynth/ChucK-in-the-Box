@@ -1,6 +1,5 @@
 export CHUCK_VERSION=chuck-1.5.5.9
 export CHUGINS_VERSION=chuck-1.5.5.9
-export CHUMP_VERSION=v0.0.4
 export CHUGL_VERSION=v0.3.1
 export CHUCK_DRIVERS="linux-alsa"
 #export CHUCK_DRIVERS="linux-alsa linux-pulse"
@@ -20,9 +19,6 @@ export CHUGINS_LIB_PATH=/usr/local/lib/chuck
 
 export CHUGL_URL=https://github.com/ccrma/chugl.git
 export CHUGL_PATH=$PROJECTS/chugl
-
-export CHUMP_URL=https://github.com/ccrma/chump.git
-export CHUMP_PATH=$PROJECTS/chump
 
 export DEBIAN_FRONTEND=noninteractive
 

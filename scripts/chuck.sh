@@ -20,6 +20,7 @@ pushd $CHUCK_PATH > /dev/null
   echo "Installing ChucK" | tee --append $LOGFILE
   sudo make install \
     >> $LOGFILE 2>&1
+
 popd > /dev/null
 
 echo "Copying 'WowExample.ck' to $HOME" | tee --append $LOGFILE
