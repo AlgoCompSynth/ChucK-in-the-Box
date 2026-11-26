@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-set -e
+set -eu
 
 mkdir --parents $HOME/.fonts
 pushd $HOME/.fonts > /dev/null

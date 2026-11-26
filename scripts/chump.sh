@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-set -e
+set -eu
 
 echo ""
 echo "** ChuMP **"
@@ -11,12 +11,11 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 pushd $CHUMP_PATH > /dev/null
-  echo "Checking out $CHUMP_VERSION"
-  git checkout "$CHUMP_VERSION" \
-  >> $LOGFILE 2>&1
+  echo "" >> $LOGFILE
   echo "Building ChuMP" | tee --append $LOGFILE
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL linux \
     >> $LOGFILE 2>&1
+  echo "" >> $LOGFILE
   echo "Installing ChuMP" | tee --append $LOGFILE
   sudo make install \
     >> $LOGFILE 2>&1

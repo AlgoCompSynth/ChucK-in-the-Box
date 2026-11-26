@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
 
-set -e
+set -eu
 
 xdg-open file:///usr/share/doc/wireplumber/html/index.html

@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-set -e
+set -eu
 
 echo ""
 echo "** ChucK **"
@@ -11,13 +11,12 @@ echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
 pushd $CHUCK_PATH > /dev/null
-  echo "Checking out $CHUCK_VERSION"
-  git checkout $CHUCK_VERSION \
-    >> $LOGFILE 2>&1
+  echo "" >> $LOGFILE
   echo "Building ChucK" | tee --append $LOGFILE
   cd src
   /usr/bin/time make --jobs=$MAKE_PARALLEL_LEVEL $CHUCK_DRIVERS \
     >> $LOGFILE 2>&1
+  echo "" >> $LOGFILE
   echo "Installing ChucK" | tee --append $LOGFILE
   sudo make install \
     >> $LOGFILE 2>&1

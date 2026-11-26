@@ -22,12 +22,6 @@ rm --force $LOGFILE
 ./scripts/chump.sh
 ./scripts/chugl.sh
 
-if [[ "$MAKE_PARALLEL_LEVEL" -gt "1" ]]
-then
-  ./scripts/miniaudicle.sh
-
-fi
-
 echo ""
 echo "Copying status query scripts to $LOCALBIN"
 cp ./scripts/list-alsa-cards.sh $LOCALBIN

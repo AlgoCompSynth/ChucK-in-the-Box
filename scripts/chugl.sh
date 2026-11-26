@@ -1,9 +1,9 @@
 #! /usr/bin/env bash
 
-set -e
+set -eu
 
 echo ""
-echo "*** ChuGL ***"
+echo "** ChuGL **"
 
 source ./set_envars.sh
 export LOGFILE=$LOGFILES/chugl.log
@@ -27,18 +27,12 @@ export DEBIAN_FRONTEND=noninteractive
   >> $LOGFILE 2>&1
 
 echo "" >> $LOGFILE
-echo "Cloning $CHUGL_URL" | tee --append $LOGFILE
-pushd $HOME/Projects > /dev/null
-  rm -fr $CHUGL_PATH
-  /usr/bin/time git clone --recurse-submodules $CHUGL_URL \
-    >> $LOGFILE 2>&1
-  cd $CHUGL_PATH/examples/basic
+pushd $CHUGL_PATH/examples/basic > /dev/null
+  echo "Downloading test oscilloscope music file"
   wget --quiet https://ccrma.stanford.edu/~azaday/music/khrang.wav
 popd > /dev/null
 
 pushd $CHUGL_PATH/src > /dev/null
-  git checkout $CHUGL_VERSION \
-    >> $LOGFILE 2>&1
   echo "" >> $LOGFILE
   echo "Building ChuGL" | tee --append $LOGFILE
   /usr/bin/time make linux \
@@ -54,4 +48,4 @@ echo "ldconfig" | tee --append $LOGFILE
 sudo /sbin/ldconfig --verbose \
   >> $LOGFILE 2>&1
 
-echo "*** Finished ChuGL ***"
+echo "** Finished ChuGL **"

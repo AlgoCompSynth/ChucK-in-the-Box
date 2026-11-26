@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-set -e
+set -eu
 
 # https://starship.rs/guide/#%F0%9F%9A%80-installation
 pushd /tmp > /dev/null
