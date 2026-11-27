@@ -10,6 +10,14 @@ export LOGFILE=$LOGFILES/chuck.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
+pushd $PROJECTS > /dev/null
+  echo "Cloning $CHUCK_URL" | tee --append $LOGFILE
+  rm -fr $CHUCK_PATH
+  /usr/bin/time git clone --recurse-submodules --branch $CHUCK_VERSION $CHUCK_URL \
+    >> $LOGFILE 2>&1
+
+popd > /dev/null
+
 pushd $CHUCK_PATH > /dev/null
   echo "" >> $LOGFILE
   echo "Building ChucK" | tee --append $LOGFILE

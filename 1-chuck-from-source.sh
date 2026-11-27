@@ -47,13 +47,11 @@ echo "CHUCK_DRIVERS: $CHUCK_DRIVERS"
 ./scripts/upgrade-system.sh
 ./scripts/command-line.sh
 ./scripts/terminal-setup.sh
-./scripts/clone-ccrma-repos.sh
 ./scripts/chuck.sh
 ./scripts/default-chugins.sh
 ./scripts/faust-chugin.sh
 ./scripts/warpbuf-chugin.sh
 ./scripts/fluidsynth-chugin.sh
-./scripts/chugl.sh
 
 echo ""
 echo "Copying status query scripts to $LOCALBIN"

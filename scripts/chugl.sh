@@ -26,6 +26,14 @@ export DEBIAN_FRONTEND=noninteractive
   libxrandr-dev \
   >> $LOGFILE 2>&1
 
+pushd $PROJECTS > /dev/null
+  echo "Cloning $CHUGL_URL" | tee --append $LOGFILE
+  rm -fr $CHUGL_PATH
+  /usr/bin/time git clone --recurse-submodules --branch $CHUGL_VERSION $CHUGL_URL \
+    >> $LOGFILE 2>&1
+
+popd > /dev/null
+
 echo "" >> $LOGFILE
 pushd $CHUGL_PATH/examples/basic > /dev/null
   echo "Downloading test oscilloscope music file"
