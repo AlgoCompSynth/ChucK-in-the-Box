@@ -1,15 +1,49 @@
 #! /usr/bin/env bash
 
-set -e
+set -eu
 
 echo ""
-echo "* PiOS Host Setup *"
+echo "* ChucK from Source *"
 
 source ./set_envars.sh
-export LOGFILE=$LOGFILES/1-pios-setup.log
+export LOGFILE=$LOGFILES/1-chuck-from-source.log
 echo "LOGFILE: $LOGFILE"
 rm --force $LOGFILE
 
+echo "Testing for installed PulseAudio support"
+if [[ "$(dpkg-query --list | grep -i pulse | wc -l)" == "0" ]]
+then
+  while true; do
+    read -p "Do you want to install PulseAudio (y/n)?" yn
+
+    case $yn in
+      [Yy]* )
+        export CHUCK_DRIVERS="linux-alsa linux-pulse"
+        echo "PulseAudio will be installed."
+        break
+        ;;
+
+      [Nn]* )
+        export CHUCK_DRIVERS="linux-alsa"
+        echo "PulseAudio won't be installed."
+        break
+        ;;
+
+      * )
+        echo "Please answer yes or no."
+        ;;
+
+    esac
+
+  done
+
+else
+  echo "PulseAudio is already installed"
+  export CHUCK_DRIVERS="linux-alsa linux-pulse"
+
+fi
+
+echo "CHUCK_DRIVERS: $CHUCK_DRIVERS"
 ./scripts/upgrade-system.sh
 ./scripts/command-line.sh
 ./scripts/terminal-setup.sh
@@ -36,4 +70,4 @@ sudo updatedb \
   >> $LOGFILE 2>&1
 
 echo ""
-echo "* Finished PiOS Host Setup *" | tee --append $LOGFILE
+echo "* Finished ChucK from Source *" | tee --append $LOGFILE

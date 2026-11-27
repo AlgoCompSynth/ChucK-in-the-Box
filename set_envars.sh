@@ -1,8 +1,6 @@
 export CHUCK_VERSION=chuck-1.5.5.9
 export CHUGINS_VERSION=chuck-1.5.5.9
 export CHUGL_VERSION=v0.3.1
-export CHUCK_DRIVERS="linux-alsa"
-#export CHUCK_DRIVERS="linux-alsa linux-pulse"
 
 # you should not need to change anything below here
 export LOGFILES=$HOME/Logfiles; mkdir --parents $LOGFILES

@@ -27,7 +27,10 @@ sudo apt-get install -qqy --no-install-recommends \
   libasound2-dev \
   libsndfile1-dev \
   libssl-dev \
-  libsox-fmt-all \
+  libsox-fmt-alsa \
+  libsox-fmt-ao \
+  libsox-fmt-mp3 \
+  libsox-fmt-opus \
   luajit \
   lynx \
   mp3splt \
@@ -48,6 +51,12 @@ sudo apt-get install -qqy --no-install-recommends \
   wget \
   zlib1g-dev \
   >> $LOGFILE 2>&1
+
+if [[ "$CHUCK_DRIVERS" =~ "pulse" ]]
+then
+  ./scripts/pulseaudio.sh
+
+fi
 
 echo "Enabling / starting rtkit"
 sudo systemctl enable --now rtkit-daemon.service
